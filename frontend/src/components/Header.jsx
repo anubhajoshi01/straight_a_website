@@ -2,6 +2,8 @@ import React from 'react'
 import {Link} from 'react-router-dom'
 import logo from '../res/LOGO_edited.jpg'
 import './Header.css';
+import Box from '@mui/material/Box'
+import HeaderMenu from './HeaderMenu';
 
 function Header() {
   return (
@@ -12,7 +14,7 @@ function Header() {
                 <img className='logoimg' src={logo}/>   
             </li>
             <li className='litext'>
-                About
+                <HeaderMenu title='About' items={[{id: 1, value: 'Our Story'}, {id: 2, value: 'Our Team'}]}/>
             </li>
             <li className='litext'>
                 Private Counseling
@@ -26,8 +28,10 @@ function Header() {
             <li className='litext'>
                 Blog 
             </li>
-            <li className='litext'>
-                Start Now
+            <li className='startnow'>
+                <div className='rectangle'>
+                    Start Now
+                </div>
             </li>
         </ul>
     </header>

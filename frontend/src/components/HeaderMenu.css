@@ -1,0 +1,21 @@
+.dropdown{
+    height: 2rem;
+}
+
+.dropdown-menu{
+    text-align: center;
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-menu ul{
+    flex-direction: column;
+}
+
+.dropdown-list ul{
+    margin-top: 20%;
+    flex-direction: column;
+}
+
+
