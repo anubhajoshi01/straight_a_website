@@ -19,43 +19,25 @@ function HeaderMenu({title, items=[], multiSelect= false}){
     }
 
     return (
-       /* <div>
-            <ul className='ul1'>
-            <li>
-            <div className='dd-wrapper' tabIndex={0} role="button" onKeyPress={() => toggle(!open)} onClick={() => toggle(!open)}>
-                
-                 <p>{title}</p>
-                
-               
-            </div>
-            </li>
-            
-            {open && (
-                <li>
-                     {items.map(item => (
-                        <li key={item.id}>
-                            <button type="button" onClick={()=> handleOnClick(item)}>
-                                {item.value}
-                            </button>
-                        </li>
-                    ))}
-                </li>
-            )}
-            
-            </ul>
-        </div> */
+
        <div className='dropdown'>
             <div className="dropdown-menu" onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
+                <div title='title'>
                 {title}
-                {open ? (<ul className='dropdown-list'>
+                </div>
+                {open ? (
+                <div className='ddcontainer'>
+                <ul className='dropdown-list'>
                     {items.map((item) => (
                         <li>
-                            <div>
+                            <div className='text' type='button'>
                             {item.value}
                             </div>
                         </li>
                     ))}
-                </ul>) : null }
+                </ul>
+                </div>) 
+                 : null }
                 
             </div>
        </div>

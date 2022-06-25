@@ -14,16 +14,20 @@ function Header() {
                 <img className='logoimg' src={logo}/>   
             </li>
             <li className='litext'>
-                <HeaderMenu title='About' items={[{id: 1, value: 'Our Story'}, {id: 2, value: 'Our Team'}]}/>
+                <HeaderMenu title='About' items={[{id: 1, value: 'Our Story'}, {id: 2, value: 'Our Team'}, {id: 3, value: 'Case Studies'}, {id: 4, value: "Testimonials"},
+            {id: 5, value: "Partners"}, {id: 6, value: "Pro Bono Services"}]}/>
             </li>
             <li className='litext'>
-                Private Counseling
+                <HeaderMenu title='Private Counseling' items={[{id: 1, value: '6-8 Grade Admission'}, {id: 2, value: '8-11 Grade Admission'}, {id: 3, value: 'College Admission'}, {
+                    id: 4, value: 'College Transfer'
+                }]}/>
             </li>
             <li className='litext'>
-                Elite Services
+                <HeaderMenu title="Elite Services" items={[{id: 1, value:"Elite Test Prep"}, {id: 2, value: 'Elite Private Academic Tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad'},
+                {id: 4, value: 'Career Counseling & Placement'}]}></HeaderMenu>
             </li>
             <li className='litext'>
-                Resources 
+                <HeaderMenu title="Resources" items={[{id: 1, value: "FAQ"}]}/>
             </li>
             <li className='litext'>
                 Blog 
