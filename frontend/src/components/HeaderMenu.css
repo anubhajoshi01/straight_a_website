@@ -1,0 +1,38 @@
+.dropdown{
+    height: 2rem;
+}
+
+.dropdown-menu{
+    text-align: center;
+    color: black;
+    position: relative;
+    display: inline-block;
+}
+
+.ddcontainer{
+    margin-top: 20%;
+}
+
+.dropdown-menu ul{
+    flex-direction: column;
+}
+
+.dropdown-list ul{
+    margin-top: 20%;
+    flex-direction: column;
+}
+
+.text{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: small;
+}
+
+.text:hover{
+    color: purple;
+}
+
+.title:hover{
+    color: purple;
+}
+
+
