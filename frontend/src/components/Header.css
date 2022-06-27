@@ -1,9 +1,10 @@
 .header{
     position: absolute;
+    align-content: center;
     width: 90%;
     height: 10%;
-    top: 10%;
-    
+    top: 5%;
+    /*border: solid 1px rgb(255, 0, 0);//for an idea of where the parameters are*/
     background: #FFFFFF;
 }
 
@@ -14,7 +15,6 @@ ul{
 
 .header ul{
     display: flex;
-    align-items: left;
     align-content: center;
     top: 50%;
     -ms-transform: translateY(-30%);
@@ -24,21 +24,23 @@ ul{
 .logoimg{
     height: 100%;
     width: 40%;
-    -ms-transform: translateY(-30%);
-    transform: translateY(-30%)
+    transform: translateY(-10%);
+    
 }
 
 .header ul li{
+    flex: 1;
+    text-align: center;
+    /*border: solid 1px #777;*/
     position: relative;
-    margin-left: auto;
-    align-items: left;
     resize: none;
 }
 
 .litext{
-    align-content: left;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
+    -ms-transform: translateY(50%);
+    transform: translateY(35%);
 }
 
 .litext:hover{
@@ -57,7 +59,6 @@ ul{
 }
 
 .rectangle{
-    
     background: purple;
     display: inline-flex; 
     flex-direction: column;
@@ -66,9 +67,10 @@ ul{
     vertical-align: middle;
     height: 30px;
     width: 100px;
+    -ms-transform: translateY(50%);
+    transform: translateY(50%);
 }
 
 .rectangle:hover{
     background: orange;
 }
-
