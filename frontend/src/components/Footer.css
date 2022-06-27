@@ -1,5 +1,5 @@
 .box{
-    position: absolute;
+    position: relative;
     background: purple;
     display: flex; 
     flex-direction: row;
