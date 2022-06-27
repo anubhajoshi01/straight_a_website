@@ -2,6 +2,7 @@ import React from 'react';
 import Header from './components/Header';
 import {BrowserRouter as Router, Routes, Route} from 'react-router-dom'
 import HeaderMenu from './components/HeaderMenu'
+import Footer from './components/Footer';
 
 const items = [
   {
@@ -21,9 +22,11 @@ const items = [
 
 function App() {
   return (
-    <>
+    <div style={{display:'flex', flexDirection:'column'}}>
       <Header/>
-    </>
+
+      <Footer/>
+    </div>
   );
 }
 

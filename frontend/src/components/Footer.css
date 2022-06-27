@@ -1,0 +1,39 @@
+.box{
+    position: absolute;
+    background: purple;
+    display: flex; 
+    flex-direction: row;
+    justify-content:space-around;
+    vertical-align: middle;
+    height: 50%;
+    width: 100%;
+    bottom: 0;
+}
+
+.horizontal{
+    position: relative;
+    margin-left: 5%;
+    margin-right: 5%;
+    width: 75%;
+}
+
+.text-li{
+    position: relative;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 2%; 
+}
+
+.text-li-link{
+    position: inherit;
+    font-weight: 300;
+    font-size: 90%;
+    color: white;
+    margin-top: 2%;
+    margin-bottom: 2%; 
+}
+
+.text-li-link:hover{
+    text-decoration: underline;
+}
+

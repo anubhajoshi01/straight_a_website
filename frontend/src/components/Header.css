@@ -1,5 +1,5 @@
 .header{
-    position: absolute;
+    position: relative;
     width: 90%;
     height: 10%;
     top: 10%;
@@ -17,15 +17,15 @@ ul{
     align-items: left;
     align-content: center;
     top: 50%;
-    -ms-transform: translateY(-30%);
-    transform: translateY(-30%);
+    -ms-transform: translateY(-15%);
+    transform: translateY(-15%);
 }
 
 .logoimg{
     height: 100%;
     width: 40%;
-    -ms-transform: translateY(-30%);
-    transform: translateY(-30%)
+    -ms-transform: translateY(-15%);
+    transform: translateY(-15%)
 }
 
 .header ul li{
