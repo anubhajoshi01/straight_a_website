@@ -1,0 +1,12 @@
+.readmorebtn:hover {
+    border-color: purple;
+    color: purple;
+    position:absolute;
+    height: 40px;
+    width: 90px;
+    top: 85%;
+    left: 47%;
+    color: white;
+    background: transparent;
+    border: solid;
+}
