@@ -15,11 +15,15 @@
     color: black;
     margin-top: 20%;
     background-color: rgba(255, 255, 255, 0.3);
+
     flex-direction: column;
+    background-color: white;
 }
 
 .dropdown-list ul{
+    margin-top: 40%;
     flex-direction: column;
+    background-color: white;
 }
 
 .text{

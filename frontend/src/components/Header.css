@@ -2,9 +2,12 @@
     position: absolute;
     align-content: center;
     width: 90%;
+
     height: 8%;
     top: 1%;
-    background: #ffffff;
+    z-index: 2;
+    background: #FFFFFF;
+    top:0;
 }
 
 ul{
@@ -23,12 +26,12 @@ ul{
 .logoimg{
     height: 100%;
     width: 40%;
+    transform: translateY(-10%);
 }
 
 .header ul li{
     flex: 1;
     text-align: center;
-    /*border: solid 1px rgb(30, 255, 0);*/
     position: relative;
     resize: none;
 }
@@ -40,6 +43,7 @@ ul{
     transform: translateY(35%);
     margin:auto;
     text-align: center;
+
 }
 
 .litext:hover{
@@ -69,7 +73,6 @@ ul{
     border-radius: 3px;
     -ms-transform: translateY(65%);
     transform: translateY(65%);
-
 }
 
 .rectangle:hover{
