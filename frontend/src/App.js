@@ -8,6 +8,7 @@ import sliderImg2 from './res/slider_img2.jpg'
 import sliderImg3 from './res/slider_img3.jpg'
 import sliderImg4 from './res/slider_img4.jpg'
 import ImageSlider from './components/ImageSlider';
+import Form from './components/Form';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -22,6 +23,7 @@ function App() {
     <div style={{display:'flex', flexDirection:'column'}}>
       <Header/>
       <ImageSlider slides={slides}/>
+      <Form/>
       <Footer/>
     </div>
   );

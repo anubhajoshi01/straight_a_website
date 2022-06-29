@@ -14,12 +14,15 @@
 }
 
 .dropdown-menu ul{
+    position: relative;
     flex-direction: column;
+    background-color: white;
 }
 
 .dropdown-list ul{
-    margin-top: 20%;
+    margin-top: 40%;
     flex-direction: column;
+    background-color: white;
 }
 
 .text{
