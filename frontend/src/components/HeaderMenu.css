@@ -3,18 +3,19 @@
 }
 
 .dropdown-menu{
-    text-align: center;
-    color: black;
-    position: relative;
     display: inline-block;
 }
 
 .ddcontainer{
-    margin-top: 20%;
+    -ms-transform: translateX(-10%);
+    transform: translateX(-10%);
 }
 
 .dropdown-menu ul{
-    position: relative;
+    color: black;
+    margin-top: 20%;
+    background-color: rgba(255, 255, 255, 0.3);
+
     flex-direction: column;
     background-color: white;
 }
@@ -26,6 +27,8 @@
 }
 
 .text{
+    margin-top: 2px;
+    margin-bottom: 2px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
 }
