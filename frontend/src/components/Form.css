@@ -1,0 +1,13 @@
+.form-group{
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.form-vertical ul{
+    display: block;
+}
+
+.form-horizontal ul{
+    display: inline;
+}
