@@ -19,6 +19,7 @@ const slides = [
 ]
 
 function App() {
+  console.log("Hello")
   return (
     <div style={{display:'flex', flexDirection:'column'}}>
       <Header/>
