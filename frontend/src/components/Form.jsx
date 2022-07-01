@@ -1,4 +1,6 @@
 import React, {useState} from 'react'
+import { useDispatch } from 'react-redux';
+import { createForm } from '../features/forms/formSlice';
 import './Form.css'
 
 const Form = () => {
@@ -10,7 +12,26 @@ const Form = () => {
     const [school, setSchool] = useState("")
     const [more, setMore] = useState("")
 
-    const onSubmit = () => {}
+    const dispatch = useDispatch()
+
+    const onSubmit = (e) => {
+
+        e.preventDefault()
+        try{
+            console.log('trying..')
+            dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+        }catch(e){
+            console.log(e)
+        }
+
+        setParentName('')
+        setStudentName('')
+        setEmail('')
+        setPhone('')
+        setGrade('')
+        setSchool('')
+        setMore('')
+    }
 
   return (
     <section className='form-group'>
@@ -33,7 +54,7 @@ const Form = () => {
                 </ul>
                 <ul className='form-horizontal'>
                 <label htmlFor='email'>Email</label>
-                <input type='text' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
+                <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/>
                 <label htmlFor='phone'>Phone</label>
                 <input type='text' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                 </ul>
