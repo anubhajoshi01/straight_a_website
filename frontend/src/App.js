@@ -21,12 +21,17 @@ const slides = [
 function App() {
   console.log("Hello")
   return (
-    <div style={{display:'flex', flexDirection:'column'}}>
-      <Header/>
-      <ImageSlider slides={slides}/>
-      <Form/>
-      <Footer/>
-    </div>
+    <>
+      
+        <div style={{display:'flex', flexDirection:'column'}}>
+          <Header/>
+          <ImageSlider slides={slides}/>
+          <Form/>
+          <Footer/>
+          
+        </div>
+    
+    </>
   );
 }
 
