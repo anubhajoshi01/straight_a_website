@@ -1,0 +1,52 @@
+.categoryview {
+    position: inherit;
+    height: fit-content;
+    width: fit-content;
+    margin-left: 6%;
+    background-color: white;
+}
+
+.categoryview:hover{
+    height: 110%;
+    background-color: goldenrod;
+}
+
+.categoryimg{
+    margin-top: 2%;
+    margin-left: 5%;
+    width: 90%;
+    height: 60%;
+}
+
+.categorytitle{
+    top: 5%;
+    bottom: 5%;
+    font-size: 100%;
+    margin-left: 6%;
+    margin-right: 6%;
+    color: purple;
+    align-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+.categoryctn{
+    top: 2%;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-size: 70%;
+    font-style: italic;
+    color: black;
+    font-weight: 500;
+}
+
+.learnmore{
+    top: 10%;
+    font-size: 80%;
+    margin-left: 6%;
+    margin-right: 6%;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    color: purple;
+}
+
