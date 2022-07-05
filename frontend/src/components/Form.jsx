@@ -11,6 +11,7 @@ const Form = () => {
     const [grade, setGrade] = useState("")
     const [school, setSchool] = useState("")
     const [more, setMore] = useState("")
+    const [showError, setShowError] = useState(false)
 
     const dispatch = useDispatch()
 
@@ -19,7 +20,13 @@ const Form = () => {
         e.preventDefault()
         try{
             console.log('trying..')
-            dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+            if(studentName.length > 0 && email.length > 0 && phone.length > 0){
+                setShowError(false)
+                dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+            }
+            else{
+                setShowError(true);
+            }
         }catch(e){
             console.log(e)
         }
@@ -97,6 +104,7 @@ const Form = () => {
                 </ul>
             </li>
         </ul>
+        <div className='error-msg'>{showError ? "Please fill in all the required fields" : ""}</div>
         <button type='submit' className='submit-form-btn'> Submit </button>
     </form>
 </section>
