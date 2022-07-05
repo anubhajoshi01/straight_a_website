@@ -10,6 +10,7 @@ import sliderImg4 from './res/slider_img4.jpg'
 import ImageSlider from './components/ImageSlider';
 import Form from './components/Form';
 import CategoryViewCard from './components/CategoryViewCard';
+import Login from './pages/Login';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -30,16 +31,23 @@ function App() {
     <>
       
         <div style={{display:'flex', flexDirection:'column'}}>
-          <Header/>
-          <ImageSlider slides={slides}/>
-          <ul style={{display:'flex', flexDirection:'row'}}>
-            <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-            <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-            <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-            <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-          </ul>
-          <Form/>
-          <Footer/>
+          <Router>
+            <Header/>
+            <Routes>
+              //temporary form for dev purposes
+            <Route path='/login' element={<Login/>} />
+            </Routes>
+            <ImageSlider slides={slides}/>
+            <ul style={{display:'flex', flexDirection:'row'}}>
+              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
+              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
+              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
+              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
+            </ul>
+            <Form/>
+            <Footer/>
+          </Router>
+          
         </div>
     
     </>
