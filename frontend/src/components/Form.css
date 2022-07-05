@@ -1,14 +1,61 @@
-.form-group{
-    top: 10%;
+.formgroup{
     position: relative;
-    width: 100%;
-    height: auto;
+    align-content: center;
 }
 
-.form-vertical ul{
+h1 {
+    margin-left: 5%;
+}
+
+.inputs-vertical{
+    display: flex;
+    flex-direction: column;
+    align-content: space-between;
+}
+
+.inputs-horizontal{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+}
+
+.input-container{
+    top: 20%;
+    left: 2%;
+    right: 10%;
+    margin-left: 1%;
+    margin-right: 6%;
+}
+
+input {
+ border-top: 0px;
+ border-left: 0px;
+ border-right: 0px;
+ border-bottom: 80%;
+}
+
+input, label{
     display: block;
 }
 
-.form-horizontal ul{
-    display: inline;
+label{
+    font-size: 70%;
+    padding: 10%;
+}
+
+.submit-form-btn{
+    background-color: purple;
+    color: white;
+    padding: 12px 28px;
+    text-align: center;
+    display: inline-block;
+    margin-top: 3%;
+    margin-left: 18%;
+    margin-bottom: 10%;
+    border: none;
+}
+
+.submit-form-btn:hover{
+    background-color: goldenrod;
+    color: black;
 }
