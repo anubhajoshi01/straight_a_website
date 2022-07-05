@@ -29,14 +29,16 @@ function App() {
   console.log("Hello")
   return (
     <>
-      
-        <div style={{display:'flex', flexDirection:'column'}}>
-          <Router>
+      <div>
+      <Router>
             <Header/>
             <Routes>
               //temporary form for dev purposes
-            <Route path='/login' element={<Login/>} />
+              <Route path='/login' element={<Login/>} />
             </Routes>
+          </Router>
+      </div>
+        <div style={{display:'flex', flexDirection:'column'}}>
             <ImageSlider slides={slides}/>
             <ul style={{display:'flex', flexDirection:'row'}}>
               <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
@@ -46,7 +48,7 @@ function App() {
             </ul>
             <Form/>
             <Footer/>
-          </Router>
+          
           
         </div>
     
