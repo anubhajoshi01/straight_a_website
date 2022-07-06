@@ -1,14 +1,14 @@
 //rfce
-import { useState, useEffect } from 'react'
+import { useState } from 'react';
 
 
 function Login() {
   const [formData, setFormData] = useState({
-    email: '',
-    password:''
+    username: '',
+    password:'',
   })
 
-  const {email, password} = formData
+  const {username, password} = formData
   const onChange = (e) =>{
     setFormData((prevState) =>({
       ...prevState,
@@ -22,26 +22,23 @@ function Login() {
   return (<>
     <section className="heading">
       <h1>
-       Login
+      Login
       </h1>
-      <p>Please login with given admin account</p>
+      <p>Please login with given account</p>
     </section>
 
     <section className = "form">
       <form onSubmit={onSubmit}>
-       
-        
         <div className="form-group">
-          <input 
-          type="text" 
+          <input type="text" 
           className="form-control" 
-          id="email" 
-          email = 'email' 
-          value = {email} 
-          placeholder = 'Enter your email' 
+          id="username" 
+          name = 'username' 
+          value = {username} 
+          placeholder = 'Enter your username' 
           onChange={onChange} />
         </div>
-
+   
         <div className="form-group">
           <input 
           type="password" 
@@ -58,7 +55,6 @@ function Login() {
             Submit
           </button>
         </div>
-
       </form>
     </section>
   
