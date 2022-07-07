@@ -36,7 +36,7 @@ function App() {
               //temporary form for dev purposes
               <Route path='/login' element={<Login/>} />
             </Routes>
-          </Router>
+      </Router>
       </div>
         <div style={{display:'flex', flexDirection:'column'}}>
             <ImageSlider slides={slides}/>
