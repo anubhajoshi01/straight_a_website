@@ -34,8 +34,11 @@ const registerUser = async (req, res) => {
 // @access  Public
 const loginUser = async (req, res) => {
   const { name, password } = req.body
+  console.log(`name is ${name}`)
+  console.log(`pwd is ${password}`)
  
   try {
+
     if (name === user.name && bcrypt.compare(password, user.password)){
       res.json({
         name: "straightaprep@gmail.com",
@@ -43,12 +46,14 @@ const loginUser = async (req, res) => {
         token: generateToken(process.env.TOKEN_GEN),
       })
     } else {
+      console.log(name)
+      console.log(password)
       res.status(401)
       throw new Error('Invalid credentials')
     }
     
   } catch (error) {
-    console.log(error.stack)
+    console.log(error)
   }
   
 }

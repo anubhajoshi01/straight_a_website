@@ -44,7 +44,7 @@ function Login() {
           type="password" 
           className="form-control" 
           id="password" 
-          name = 'password' 
+          password = 'password' 
           value = {password} 
           placeholder = 'Enter your password' 
           onChange={onChange} />
