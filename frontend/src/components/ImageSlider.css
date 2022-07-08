@@ -1,7 +1,7 @@
 .readmorebtn:hover {
     border-color: purple;
     color: purple;
-    position:absolute;
+    position: absolute;
     height: 40px;
     width: 90px;
     top: 85%;
@@ -9,4 +9,15 @@
     color: white;
     background: transparent;
     border: solid;
+}
+
+div.dots {
+    position: 'absolute';
+        color:'black';
+        margin: '0 3px';
+        cursor: 'pointer';
+        fontSize: '60px';
+        top:'60%';
+        left:"50%"
+
 }

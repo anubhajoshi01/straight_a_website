@@ -32,11 +32,36 @@ const ImageSlider = ({slides}) => {
         justifyContent: 'center'
     }
 
-    const dotStyles = {
+    const dot1Style = {
+        position:'absolute',
+        color:'#696969',
         margin: '0 3px',
         cursor: 'pointer',
-        fontSize: '20px'
+        fontSize: '70px',
+        top:'77%',
+        left:"49%"
     }
+
+    const dot2Style = {
+        position:'absolute',
+        color:'#696969',
+        margin: '0 3px',
+        cursor: 'pointer',
+        fontSize: '70px',
+        top:'77%',
+        left:"50%"
+    }
+    const dot3Style = {
+        position:'absolute',
+        color:'#696969',
+        margin: '0 3px',
+        cursor: 'pointer',
+        fontSize: '70px',
+        top:'77%',
+        left:"51%"
+    }
+   
+
 
     const titleStyle = {
         position:'absolute',
@@ -75,10 +100,24 @@ const ImageSlider = ({slides}) => {
     }
     console.log(slides[currentIndex].img)
 
+    const dot1 = () =>{
+        setCurrentIndex(0)
+    }
+    const dot2 = () =>{
+        setCurrentIndex(1)
+    }
+    const dot3 = () =>{
+        setCurrentIndex(2)
+    }
+
   return (
     <div style={{height:'70%', width:'100%' , position:'relative', display:'flex'}}>
         <div style={leftArrowStyles} onClick={goToPrevious}> {'<'} </div>
         <div style={rightArrowStyles} onClick={goToNext}> {'>'} </div>
+        <div style={dot1Style} onClick={dot1} > {'.'} </div>
+        <div style={dot2Style} onClick={dot2}> {'.'} </div>
+        <div style={dot3Style} onClick={dot3}> {'.'} </div>
+        
         <div style={titleStyle}> Title</div>
         <div className='rectangle' style={btnStyle}> Read More</div>
         <div style={{ width:'100%', height:'70%',display:'flex', justifyContent:'center'}}>
