@@ -1,0 +1,29 @@
+.blog-list-view{
+    top: 30%;
+    margin-top: 10%;
+    position: relative;
+}
+
+.navigate-horizontal{
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    margin-left: 35%;
+    margin-right: 35%;
+    width: 50%;
+}
+
+.navigate-item{
+    margin-left: 3%;
+    margin-right: 3%;
+}
+
+.navigate-item-arrow{
+    margin-left: 3%;
+    margin-right: 3%;
+    color: purple;
+}
+
+.navigate-item-arrow:hover{
+    font-weight: 700;
+}

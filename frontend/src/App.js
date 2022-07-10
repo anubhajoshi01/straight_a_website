@@ -12,6 +12,7 @@ import Form from './components/Form';
 import CategoryViewCard from './components/CategoryViewCard';
 import Login from './pages/admin-portal/Login';
 import Admin from './pages/admin-portal/Admin';
+import Blog from './pages/website/Blog'
 import BlogListCard from './components/BlogListCard';
 
 const slides = [
@@ -38,6 +39,7 @@ function App() {
               //temporary form for dev purposes
               <Route path='/login' element={<Login/>} />
               <Route path='/me' element={<Admin/>}/>
+              <Route path='/blog' element={<Blog/>}></Route>
             </Routes>
       </Router>
       </div>

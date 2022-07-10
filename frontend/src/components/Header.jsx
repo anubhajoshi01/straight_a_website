@@ -30,7 +30,7 @@ function Header() {
                 <HeaderMenu title="Resources" items={[{id: 1, value: "FAQ"}]}/>
             </li>
             <li className='litext'>
-                Blog 
+                <Link to='/blog'>Blog</Link>
             </li>
             <li className='startnow'>
                 <div className='rectangle'>
