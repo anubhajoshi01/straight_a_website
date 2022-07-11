@@ -8,7 +8,6 @@ const ImageSlider = ({slides}) => {
     const [isActive, setIsActive] = useState(true)
     const [isActive1, setIsActive1] = useState(false)
     const [isActive2, setIsActive2] = useState(false)
-    const dots = [true, true, true];
 
     const leftArrowStyles = {
         position:'absolute',
