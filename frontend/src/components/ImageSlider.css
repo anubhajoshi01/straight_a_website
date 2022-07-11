@@ -10,14 +10,3 @@
     background: transparent;
     border: solid;
 }
-
-div.dots {
-    position: 'absolute';
-        color:'black';
-        margin: '0 3px';
-        cursor: 'pointer';
-        fontSize: '60px';
-        top:'60%';
-        left:"50%"
-
-}
