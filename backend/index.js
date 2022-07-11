@@ -5,6 +5,7 @@ const connectDB = require('./config/db');
 const dotenv = require('dotenv').config();
 var cors = require('cors')
 
+
 connectDB();
 
 const app = express();
@@ -16,7 +17,7 @@ app.use(express.urlencoded({extended: false}))
 
 app.use('/api', require('./routes/userRoutes'))
 app.use('/api/forms', require('./routes/formRoutes'))
-
+app.use('/api/blogs', require('./routes/blogRoutes'))
 app.use(express.static(path.join(__dirname, '../frontend/build')));
 
 app.get('*', (req, res) =>
