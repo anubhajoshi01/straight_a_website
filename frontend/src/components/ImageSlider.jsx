@@ -63,7 +63,6 @@ const ImageSlider = ({slides}) => {
         top:'76%',
         left:"51%"
     }
-   
 
 
     const titleStyle = {
