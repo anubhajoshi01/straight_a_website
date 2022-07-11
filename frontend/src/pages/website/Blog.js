@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from "react";
 import BlogListCard from '../../components/BlogListCard'
+import Footer from "../../components/Footer";
+import Header from "../../components/Header";
 import './Blog.css'
 
 const blogList = [
@@ -55,6 +57,7 @@ function Blog() {
         }
     }
     return <>
+     <Header/>
         <div className='blog-list-view'>
             <ul className="blog-list-show">
                 {
@@ -82,7 +85,9 @@ function Blog() {
                     <div className="arrow" onClick={goToLastPage}>{'>>'}</div>
                 </li>
             </ul>
+            
         </div>
+        <Footer/>
     </>
 }
 

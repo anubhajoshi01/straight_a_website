@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
+import AdminHeader from '../../components/AdminHeader'
 
 const Admin = () => {
 
@@ -22,7 +23,9 @@ const Admin = () => {
     )
 
   return (
-    <div>Admin</div>
+    <div>
+        <AdminHeader/>
+    </div>
   )
 }
 
