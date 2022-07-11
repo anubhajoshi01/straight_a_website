@@ -14,6 +14,7 @@ import Login from './pages/admin-portal/Login';
 import Admin from './pages/admin-portal/Admin';
 import Blog from './pages/website/Blog'
 import BlogListCard from './components/BlogListCard';
+import Home from './pages/website/Home';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -34,32 +35,16 @@ function App() {
     <>
       <div>
       <Router>
-            <Header/>
+
             <Routes>
               //temporary form for dev purposes
               <Route path='/login' element={<Login/>} />
               <Route path='/me' element={<Admin/>}/>
-              <Route path='/blog' element={<Blog/>}></Route>
+              <Route path='/blog' element={<Blog/>}/>
+              <Route path='/' element={<Home/>}/>
             </Routes>
       </Router>
       </div>
-        <div style={{display:'flex', flexDirection:'column'}}>
-            <ImageSlider slides={slides}/>
-            <ul style={{display:'flex', flexDirection:'row'}}>
-              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-              <li><CategoryViewCard imgUrl={imgUrlCategoryViewDefault} title={'TITLE'} content={defaultContent}/></li>
-            </ul>
-            <BlogListCard img={'https://images.unsplash.com/photo-1481627834876-b7833e8f5570?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8Ym9va3xlbnwwfHwwfHw%3D&auto=format&fit=crop&w=600&q=60'} 
-            title={'This is the Title'} content={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.'}
-
-          />
-            <Form/>
-            <Footer/>
-          
-          
-        </div>
     
     </>
   );

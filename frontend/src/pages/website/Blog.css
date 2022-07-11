@@ -4,6 +4,10 @@
     position: relative;
 }
 
+.blog-list-show{
+    position: relative;
+}
+
 .navigate-horizontal{
     display: flex;
     flex-direction: row;
@@ -27,3 +31,4 @@
 .navigate-item-arrow:hover{
     font-weight: 800;
 }
+

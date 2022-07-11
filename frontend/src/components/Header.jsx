@@ -1,11 +1,14 @@
 import React from 'react'
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 import logo from '../res/LOGO_edited.jpg'
 import './Header.css';
 import Box from '@mui/material/Box'
 import HeaderMenu from './HeaderMenu';
 
 function Header() {
+
+    const navigate = useNavigate()
+
   return (
     <header className='header'>
        
@@ -29,8 +32,8 @@ function Header() {
             <li className='litext'>
                 <HeaderMenu title="Resources" items={[{id: 1, value: "FAQ"}]}/>
             </li>
-            <li className='litext'>
-                <Link to='/blog'>Blog</Link>
+            <li className='litext' onClick={() => navigate('/blog')}>
+                <div>Blog</div>
             </li>
             <li className='startnow'>
                 <div className='rectangle'>

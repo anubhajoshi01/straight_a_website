@@ -45,6 +45,16 @@ ul{
 
 }
 
+.link{
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: purple;
+}
+
 .litext:hover{
     color: purple;
 }
