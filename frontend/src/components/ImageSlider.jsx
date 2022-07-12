@@ -89,12 +89,47 @@ const ImageSlider = ({slides}) => {
         const isFirstSlide = currentIndex === 0
         const newIndex = isFirstSlide ? 3 : currentIndex-1
         setCurrentIndex(newIndex)
+        if (newIndex === 0 ){
+            setIsActive(true);
+            setIsActive1(false);
+            setIsActive2(false);
+        }
+        if (newIndex === 1){
+            setIsActive1(true);
+            setIsActive(false);
+            setIsActive2(false);
+        }
+        if (newIndex === 2){
+            setIsActive2(true);
+            setIsActive(false);
+            setIsActive1(false);
+        }
     }
 
     const goToNext = () => {
         const isLastSlide = currentIndex === slides.length -1;
         const newIndex = isLastSlide ? 0 : currentIndex+1
         setCurrentIndex(newIndex)
+        if (newIndex === 0 ){
+            setIsActive(true);
+            setIsActive1(false);
+            setIsActive2(false);
+        }
+         else if (newIndex === 1){
+            setIsActive1(true);
+            setIsActive(false);
+            setIsActive2(false);
+        }
+        else if (newIndex === 2){
+            setIsActive2(true);
+            setIsActive(false);
+            setIsActive1(false);
+        }
+        else{
+            setIsActive2(false);
+            setIsActive(false);
+            setIsActive1(false);
+        }
     }
 
     const goToSlide = slideIndex => {
