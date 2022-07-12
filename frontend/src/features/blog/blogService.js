@@ -9,7 +9,7 @@ const createPost = async(data, token) => {
         },
     }
     try{
-        const response = await axios.post(API_URL, goalData, config)
+        const response = await axios.post(API_URL, data, config)
         return response.data
     }catch(e){
         console.log(e)
@@ -19,7 +19,7 @@ const createPost = async(data, token) => {
 
 const getPosts = async() => {
     try{
-        const response = await axios.get(API_URL, config)
+        const response = await axios.get(API_URL)
         return response.data
     }catch(e){
         console.log(e)

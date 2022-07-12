@@ -82,7 +82,7 @@ export const blogSlice = createSlice({
                 state.isError = true
                 state.message = action.payload
             })
-            addCase(getPosts.pending, (state) => {
+            .addCase(getPosts.pending, (state) => {
                 state.isLoading = true
             })
             .addCase(getPosts.fulfilled, (state, action) => {
@@ -95,7 +95,7 @@ export const blogSlice = createSlice({
                 state.isError = true
                 state.message = action.payload
             })
-            addCase(deletePost.pending, (state) => {
+            .addCase(deletePost.pending, (state) => {
                 state.isLoading = true
             })
             .addCase(deletePost.fulfilled, (state, action) => {
