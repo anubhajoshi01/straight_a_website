@@ -13,9 +13,6 @@ const auth = async (req, res, next) =>{
             // varify token 
             const decoded = jwt.verify(token, process.env.JWT_SECRET)
 
-            // get user from token 
-            //req.user = await user.findById(decoded.id).select('-password')
-
             next()
         }catch(err){
             console.log(err)
