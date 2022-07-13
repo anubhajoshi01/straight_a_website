@@ -49,6 +49,26 @@ export const updateForm = createAsyncThunk(
     }
 )
 
+export const getForms = createAsyncThunk(
+    'forms/getAll',
+    async (_, thunkAPI) => {
+      try {
+        const token = thunkAPI.getState().auth.user.token
+        return await formService.getForms(token)
+        await formService.getForms()
+      } catch (error) {
+        const message =
+          (error.response &&
+            error.response.data &&
+            error.response.data.message) ||
+          error.message ||
+          error.toString()
+        return thunkAPI.rejectWithValue(message)
+      }
+    }
+  )
+
+
 export const formSlice = createSlice({
     name: 'form',
     initialState,

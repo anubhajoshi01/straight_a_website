@@ -46,10 +46,23 @@ const updateForm = async (id,data,token) => {
     }
 }
 
+const getForms = async (token) => {
+    const config = {
+      headers: {
+        Authorization: `Bearer ${token}`,
+      },
+    }
+  
+    const response = await axios.get(API_URL)
+  
+    return response.data
+  }
+
 const formService = {
     createForm,
     deleteForm,
-    updateForm
+    updateForm,
+    getForms
 }
 
 export default formService

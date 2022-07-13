@@ -30,15 +30,17 @@ function Blog() {
 
             dispatch(getPosts())
             setDisplayList([])
+            
             let showFromIndex = pageNum*3
-            console.log(`show from ${showFromIndex}`)
+            //console.log(`show from ${showFromIndex}`)
             let append = []
             for(let i = showFromIndex; i < showFromIndex+3 && i < blogs.length; i++){
                 append.push(blogs[i])
                 
             }
             setDisplayList(append)
-            console.log(displayList.length)
+            //console.log(displayList.length)
+            
         },
         [pageNum, blogs, isSuccess]
     )
