@@ -22,6 +22,10 @@ const formSchema = mongoose.Schema(
         },
         more: {
             type: String
+        },
+        resolved: {
+            type: Boolean,
+            required: true
         }
     },
     {

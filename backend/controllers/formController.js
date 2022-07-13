@@ -9,7 +9,8 @@ const addForm = async (req, res) => {
             phone: (req.body.phone) ? req.body.phone : "",
             grade: (req.body.grade) ? req.body.grade : "",
             school: (req.body.school) ? req.body.school : "",
-            more: (req.body.more) ? req.body.more : ""
+            more: (req.body.more) ? req.body.more : "",
+            resolved: (false)
         })
 
         res.status(200).json(form)
@@ -52,8 +53,27 @@ const deleteForm = async (req, res) => {
 
 }
 
+const resolveForm = async (req, res) => {
+    try {
+        const form = Form.findById(req.params.id)
+        if(!form){
+            res.status(400)
+            throw new Error('form not found')
+        }
+        const resolvedForm = await Form.findByIdAndUpdate(req.params.id, req.body,{
+            new: true
+        });
+        res.json(resolvedForm);
+    
+    } catch (error) {
+        console.log(error)
+        res.status(400)
+        throw new Error("couldn't resolve form")
+    }
+}
 module.exports = {
     addForm,
     getForms,
-    deleteForm
+    deleteForm,
+    resolveForm
 }
