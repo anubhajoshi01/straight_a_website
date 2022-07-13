@@ -53,6 +53,7 @@ const deleteForm = async (req, res) => {
 
 }
 
+// Resolve form can only change one column, which is the boolean variable "resolved"
 const resolveForm = async (req, res) => {
     try {
         const form = Form.findById(req.params.id)

@@ -1,3 +1,4 @@
+import { responsiveProperty } from '@mui/material/styles/cssUtils'
 import axios from 'axios'
 
 const API_URL = 'http://localhost:5000/api/forms/'
@@ -14,8 +15,41 @@ const createForm = async(formData) => {
     }
 }
 
+const deleteForm = async (id, token) => {
+    try {
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+        console.log('trying to delete form')
+        const response = await axios.delete(API_URL+id, config)
+        return response.data
+
+    } catch (error) {
+        console.log(error)
+    }
+}
+
+const updateForm = async (id,data,token) => {
+    try {
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+        console.log('trying to update form')
+        const response = await axios.update(API_URL+id, data, config)
+        return response.data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 const formService = {
-    createForm
+    createForm,
+    deleteForm,
+    updateForm
 }
 
 export default formService
