@@ -25,6 +25,7 @@ export const createPost = createAsyncThunk(
 export const getPosts = createAsyncThunk(
     'blog/getAll', 
     async(_, thunkAPI) => {
+        console.log('blog get all')
         try{
             return await blogService.getPosts()
         }

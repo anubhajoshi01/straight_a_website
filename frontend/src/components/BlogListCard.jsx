@@ -2,7 +2,6 @@ import React from 'react'
 import './BlogListCard.css'
 
 const BlogListCard = ({img, title, content}) => {
-    console.log(`content is ${content}`)
   return (
     <div className='blog-list-card-container'>
         <ul className='blog-listviewcard-horizontal'>
