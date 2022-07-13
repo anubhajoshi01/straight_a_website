@@ -1,5 +1,5 @@
 import React, { useEffect } from 'react'
-import { useNavigate } from 'react-router-dom'
+import { Outlet, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import AdminHeader from '../../components/AdminHeader'
 
@@ -25,6 +25,7 @@ const Admin = () => {
   return (
     <div>
         <AdminHeader/>
+        <Outlet/>
     </div>
   )
 }
