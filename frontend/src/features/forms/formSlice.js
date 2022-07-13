@@ -94,8 +94,8 @@ export const formSlice = createSlice({
         .addCase(deleteForm.fulfilled, (state, action) => {
             state.isLoading = false
             state.isSuccess = true
-            state.blogs = state.goals.filter(
-                (goal) => goal._id !== action.payload.id
+            state.forms = state.forms.filter(
+                (form) => form._id !== action.payload.id
             )
         })
         .addCase(deleteForm.rejected, (state, action) => {
@@ -109,13 +109,26 @@ export const formSlice = createSlice({
         .addCase(updateForm.fulfilled, (state, action) => {
             state.isSuccess = true
             state.isLoading = false
-            for(let i = 0; i < state.blogs.length; i++){
-                if(state.blogs[i]._id === action.payload.id){
-                    state.blogs[i] = action.payload
+            for(let i = 0; i < state.forms.length; i++){
+                if(state.forms[i]._id === action.payload.id){
+                    state.forms[i] = action.payload
                 }
             }
         })
         .addCase(updateForm.rejected, (state, action) => {
+            state.isLoading = false
+            state.isError = true
+            state.message = action.payload
+        })
+        .addCase(getForms.pending, (state) => {
+            state.isLoading = true
+        })
+        .addCase(getForms.fulfilled, (state,action) => {
+            state.isLoading = false
+            state.isSuccess = true   
+            state.forms = action.payload        
+        })
+        .addCase(getForms.rejected, (state, action) => {
             state.isLoading = false
             state.isError = true
             state.message = action.payload
