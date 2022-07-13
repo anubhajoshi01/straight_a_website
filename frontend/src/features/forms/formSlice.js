@@ -23,6 +23,19 @@ export const createForm = createAsyncThunk(
     }
 )
 
+export const deleteForm = createAsyncThunk(
+    'forms/delete', 
+    async(id, thunkAPI) => {
+        try{
+            const token = thunkAPI.getState().auth.user.token
+            return await formService.deleteForm(id, token)
+        }catch(e){
+            const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
+            return thunkAPI.rejectWithValue(message)
+        }
+    }
+)
+
 export const formSlice = createSlice({
     name: 'form',
     initialState,
@@ -42,7 +55,21 @@ export const formSlice = createSlice({
             state.isLoading = false
             state.isError = true
         })
-
+        .addCase(deleteForm.pending, (state) => {
+            state.isLoading = true
+        })
+        .addCase(deleteForm.fulfilled, (state, action) => {
+            state.isLoading = false
+            state.isSuccess = true
+            state.blogs = state.goals.filter(
+                (goal) => goal._id !== action.payload.id
+            )
+        })
+        .addCase(deleteForm.rejected, (state, action) => {
+            state.isLoading = false
+            state.isError = true
+            state.message = action.payload
+        })
     }
 })
 
