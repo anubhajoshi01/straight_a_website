@@ -36,6 +36,19 @@ export const deleteForm = createAsyncThunk(
     }
 )
 
+export const updateForm = createAsyncThunk(
+    'forms/update', 
+    async(id,data,thunkAPI) => {
+        try{
+            const token = thunkAPI.getState().auth.user.token
+            return await formService.deleteForm(id, data, token)
+        }catch(e){
+            const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
+            return thunkAPI.rejectWithValue(message)
+        }
+    }
+)
+
 export const formSlice = createSlice({
     name: 'form',
     initialState,
@@ -66,6 +79,23 @@ export const formSlice = createSlice({
             )
         })
         .addCase(deleteForm.rejected, (state, action) => {
+            state.isLoading = false
+            state.isError = true
+            state.message = action.payload
+        })
+        .addCase(updateForm.pending, (state) => {
+            state.isLoading = false
+        })
+        .addCase(updateForm.fulfilled, (state, action) => {
+            state.isSuccess = true
+            state.isLoading = false
+            for(let i = 0; i < state.blogs.length; i++){
+                if(state.blogs[i]._id === action.payload.id){
+                    state.blogs[i] = action.payload
+                }
+            }
+        })
+        .addCase(updateForm.rejected, (state, action) => {
             state.isLoading = false
             state.isError = true
             state.message = action.payload

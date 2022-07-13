@@ -31,9 +31,25 @@ const deleteForm = async (id, token) => {
     }
 }
 
+const updateForm = async (id,data,token) => {
+    try {
+        const config = {
+            headers: {
+                Authorization: `Bearer ${token}`
+            }
+        }
+        console.log('trying to update form')
+        const response = await axios.update(API_URL+id, data, config)
+        return response.data
+    } catch (error) {
+        console.log(error)
+    }
+}
+
 const formService = {
     createForm,
-    deleteForm
+    deleteForm,
+    updateForm
 }
 
 export default formService
