@@ -15,6 +15,7 @@ import Admin from './pages/admin-portal/Admin';
 import Blog from './pages/website/Blog'
 import BlogListCard from './components/BlogListCard';
 import Home from './pages/website/Home';
+import ViewForms from './pages/admin-portal/ViewForms';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -38,10 +39,13 @@ function App() {
 
             <Routes>
               //temporary form for dev purposes
-              <Route path='/login' element={<Login/>} />
-              <Route path='/me' element={<Admin/>}/>
-              <Route path='/blog' element={<Blog/>}/>
               <Route path='/' element={<Home/>}/>
+              <Route path='login' element={<Login/>} />
+              <Route path='blog' element={<Blog/>}/>
+              <Route path='me' element={<Admin/>}>
+                <Route path='view-forms' element={<ViewForms/>}/>
+              </Route>
+              
             </Routes>
       </Router>
       </div>

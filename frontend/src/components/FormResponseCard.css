@@ -1,0 +1,51 @@
+.form-card-container{
+    margin-top: 10%;
+    margin-right: 10%;
+    margin-left: 5%;
+    width: 90%;
+    height: 10%;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px;
+    border-style: solid;
+    box-shadow: 1px 2px gray;
+}
+
+.form-horizontal-ul{
+    display: flex;
+    flex: 0 0 auto;
+    flex-direction: row;
+    justify-content: left;
+    align-items: flex-start;
+    align-self: stretch;
+    align-content: space-between;
+}
+
+.form-vertical-ul{
+    display: flex;
+    flex-direction: column;
+}
+
+li.form-vertical-ul{
+    padding: 2%;
+}
+
+.right-side{
+    position: relative;
+    width: 500%;
+    margin-right: 20%;
+    
+}
+
+.left-side{
+    position: relative;
+    width: 50%
+}
+
+b {
+    font-size: 90%;
+}
+
+p {
+    font-size: 70%;
+
+}
