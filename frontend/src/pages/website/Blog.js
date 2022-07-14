@@ -9,7 +9,7 @@ import {getPosts} from '../../features/blog/blogSlice'
 
 function Blog() {
 
-    const dispatch = useDispatch()
+    /*const dispatch = useDispatch()
 
     dispatch(getPosts())
 
@@ -43,7 +43,37 @@ function Blog() {
             
         },
         [pageNum, blogs, isSuccess]
-    )
+    )*/
+
+    const dispatch = useDispatch()
+
+    const {blogs, isLoading, isError, isSuccess, message} = useSelector((state) => state.blogs)
+
+    const [pageNum, setPageNum] = useState(0)
+    const [displayList, setDisplayList] = useState([])
+    const [numTotalPages, setNumTotalPages] = useState(0);
+
+    useEffect(() => {
+        dispatch(getPosts())
+        
+        if(isSuccess){
+            console.log("success")
+
+            setDisplayList([])
+            setNumTotalPages(Math.ceil(blogs.length/3))
+
+            let showFromIndex = pageNum*3
+            let append = []
+
+            for(let i = showFromIndex; i < showFromIndex+3 && i < blogs.length; i++){
+                console.log(blogs[i])
+                //append.push(blogs[i])
+            }
+
+            setDisplayList(append)
+        }
+
+    }, [pageNum, blogs, isError, isSuccess, message, isLoading])
 
     const goToFirstPage = () => {
         setPageNum(0)
