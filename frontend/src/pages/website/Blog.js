@@ -56,7 +56,8 @@ function Blog() {
     useEffect(() => {
         dispatch(getPosts())
         
-        if(isSuccess){
+        if(!isLoading && isSuccess){
+
             console.log("success")
 
             setDisplayList([])
@@ -73,7 +74,7 @@ function Blog() {
             setDisplayList(append)
         }
 
-    }, [pageNum, blogs, isError, isSuccess, message, isLoading])
+    }, [pageNum, blogs, dispatch])
 
     const goToFirstPage = () => {
         setPageNum(0)
