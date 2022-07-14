@@ -26,10 +26,13 @@ export const getPosts = createAsyncThunk(
     'blog/getAll', 
     async(_, thunkAPI) => {
         try{
-            return await blogService.getPosts()
+            const data = await blogService.getPosts()
+            //console.log(data)
+            return data
         }
         catch(e){
             const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
+            console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -88,7 +91,7 @@ export const blogSlice = createSlice({
             .addCase(getPosts.fulfilled, (state, action) => {
                 state.isLoading = false
                 state.isSuccess = true
-                state.goals = action.payload
+                state.blogs = action.payload
             })
             .addCase(getPosts.rejected, (state, action) => {
                 state.isLoading = false

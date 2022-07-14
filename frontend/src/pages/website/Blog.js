@@ -55,6 +55,10 @@ function Blog() {
 
     useEffect(() => {
         dispatch(getPosts())
+
+        if(isError){
+            console.log(message)
+        }
         
         if(!isLoading && isSuccess){
 
@@ -66,15 +70,17 @@ function Blog() {
             let showFromIndex = pageNum*3
             let append = []
 
+            console.log(blogs)
+
             for(let i = showFromIndex; i < showFromIndex+3 && i < blogs.length; i++){
-                console.log(blogs[i])
-                //append.push(blogs[i])
+                //console.log(`${i} is ${blogs[i]}`)
+                append.push(blogs[i])
             }
 
             setDisplayList(append)
         }
 
-    }, [pageNum, blogs, dispatch])
+    }, [pageNum, isError, message, blogs, dispatch])
 
     const goToFirstPage = () => {
         setPageNum(0)
@@ -102,7 +108,7 @@ function Blog() {
                 {
                     displayList.map((item) => (
                         <li>
-                            <BlogListCard img={item.imageUrls} title={item.title} content={item.content}/>
+                            <BlogListCard key={item._id} img={item.imageUrls} title={item.title} content={item.content}/>
                         </li>
                     ))
                 }
