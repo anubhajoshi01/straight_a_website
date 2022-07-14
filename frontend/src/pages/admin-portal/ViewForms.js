@@ -9,7 +9,7 @@ function ViewForms() {
 
     const dispatch = useDispatch()
     const [displayList, setDisplayList] = useState([])
-
+    const [displayResolved, setDisplayResolved] = useState([])
     const { forms, isLoading, isError, message } = useSelector(
         (state) => state.forms
     )
@@ -20,23 +20,53 @@ function ViewForms() {
         }
 
         dispatch(getForms())
-        console.log(forms[0])
+
+
+        let resolvedForms = []
+        for (let i = 0; i < forms.length; i++) {
+            if (forms[i].resolved === true) {
+                resolvedForms.push(forms[i])
+            }
+        }
         setDisplayList(forms)
+        setDisplayResolved(resolvedForms)
 
 
     }, [forms, isError, message, dispatch])
 
-   
+
+    // <div onClick = {() => {
+    //     displayResolved.map((item) => {
+    //         <li>
+    //         <FormResponseCard timestamp={""} studentName={item.name} parentName={item.parentName}
+    //         phone={item.phone} email={item.email} school={item.school} id={item._id} />
+    //         </li> 
+    //     })}}>
+    //     toggle
+    // </div>
 
     return (
-        displayList.map((item) => (
-        <li>
-            <FormResponseCard timestamp={""} studentName={item.name} parentName={item.parentName}
-            phone={item.phone} email={item.email} school={item.school}  />
-        </li>
-    ))
-        
+            displayList.length > 0 ?
+
+            displayList.map((item) => (
+            <li>
+                <FormResponseCard timestamp={item.timestamps} studentName={item.studentName} parentName={item.parentName}
+                    phone={item.phone} email={item.email} school={item.school} id={item._id} />
+            </li>
+            )
+            ):
+
+            <div>
+                There is no forms unresolved.
+            </div>
+
+
     )
+
+
+
 }
+
+
 
 export default ViewForms

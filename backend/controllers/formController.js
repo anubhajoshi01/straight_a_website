@@ -12,8 +12,8 @@ const addForm = async (req, res) => {
             more: (req.body.more) ? req.body.more : "",
             resolved: (false)
         })
-
         res.status(200).json(form)
+        
     }catch(e){
         console.log(e)
         res.status(400)
