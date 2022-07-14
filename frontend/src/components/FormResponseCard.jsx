@@ -1,9 +1,11 @@
 import React from 'react'
 import { useState } from 'react'
 import './FormResponseCard.css'
-
-const FormResponseCard = ({timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}) => {
-
+import { useDispatch } from 'react-redux'
+import { deleteForm } from '../features/forms/formSlice'
+const FormResponseCard = (form) => {
+   // {timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}
+    const dispatch = useDispatch()
     const [containerColour, setContainerColour] = useState('white') 
 
     const checkboxChange = () => {
@@ -16,9 +18,7 @@ const FormResponseCard = ({timestamp, studentName, parentName, phone, email, sch
         console.log('changed')
     }
 
-    const onDeleteForm = () => {
-
-    }
+    
 
   return (
     <div className='form-card-container' style={{backgroundColor:containerColour}}>
@@ -28,20 +28,22 @@ const FormResponseCard = ({timestamp, studentName, parentName, phone, email, sch
                 <div className='right-side'>
                 <div>
                     
-                       <p> <b>timestamp:</b> {timestamp}</p>
-                        <p> <b>Student:</b> {studentName} <b>Parent:</b> {parentName}</p>
-                        <p> <b>Email:</b> {email} <b>Phone:</b> {phone} </p>
-                        <p> <b>School: </b> {school} <b>Grade: </b> {grade}</p>
+                       <p> <b>timestamp:</b> {form.timestamps}</p>
+                        <p> <b>Student:</b> {form.studentName} <b>Parent:</b> {form.parentName}</p>
+                        <p> <b>Email:</b> {form.email} <b>Phone:</b> {form.phone} </p>
+                        <p> <b>School: </b> {form.school} <b>Grade: </b> {form.grade}</p>
                 
                         <ul className='form-horizontal-ul' style={{alignContent:'flex-start'}}>
                             <li>
                                 <ul className='form-horizontal-ul'>
                                     <li>
                                         <label htmlFor="resolved" style={{fontSize:'60%'}}> Mark Resolved </label>
-                                        <input type='checkbox' defaultChecked={resolved} id='resolved' onChange={checkboxChange}/>
+                                        <input type='checkbox' defaultChecked={form.resolved} id='resolved' onChange={checkboxChange}/>
                                     </li>
                                     <li>
-                                        <div onClick={onDeleteForm}>
+                                        <div onClick={() => {
+                                            dispatch(deleteForm(form.id))
+                                        }}>
                                             Delete
                                         </div>
                                     </li>
@@ -61,7 +63,7 @@ const FormResponseCard = ({timestamp, studentName, parentName, phone, email, sch
                         <b>Comments:</b>
                     </li>
                     <li>
-                        <p> {comments} </p>
+                        <p> {form.comments} </p>
                     </li>
                 </ul>
                 </div>
