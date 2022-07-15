@@ -46,7 +46,7 @@ function App() {
               <Route path='blog' element={<Blog/>}/>
               <Route path='me' element={<Admin/>}>
                 <Route path='view-forms' element={<ViewForms/>}/>
-                <Route path='blog-input' element={<BlogInput id={'62ceec6d28479afefa5e300d'}/>}/> 
+                <Route path='blog-input' element={<BlogInput id={'62ceec8228479afefa5e3011'}/>}/> 
               </Route>
               
             </Routes>

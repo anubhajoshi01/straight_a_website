@@ -4,13 +4,14 @@ import { useDispatch, useSelector } from "react-redux"
 import { useNavigate } from "react-router-dom"
 import { createPost, getPostById, reset, updatePost } from "../../features/blog/blogSlice"
 import './BlogInput.css'
+import { deletePost } from '../../features/blog/blogSlice'
 
 function BlogInput({id}){
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
 
-    const {showBlog,isUpdated, isLoading, isError, isSuccess, message} = useSelector((state) => state.blogs)
+    const {showBlog,isUpdated, isLoading, isError, isSuccess, message, isDeleted} = useSelector((state) => state.blogs)
 
     const [imageUrl, setImageUrl] = useState(null)
     const [title, setTitle] = useState('')
@@ -73,6 +74,12 @@ function BlogInput({id}){
             setDisplayed(true)
         }
 
+        if(isDeleted){
+            console.log('success delete')
+            dispatch(reset())
+            navigate('/blog')
+        }
+
         if(isLoading){
             console.log('loading')
         }
@@ -86,6 +93,7 @@ function BlogInput({id}){
         setImageUrl(imageUrlText)
     }
 
+   
     return (
         <div className="blog-input-container">
             <h1>Blog Post</h1>
@@ -108,7 +116,9 @@ function BlogInput({id}){
             </div>
             <ul className="blog-input-horizontal-ul">
                 <button className="blog-input-btn" onClick={onSubmit}>Submit</button>
-                <button className="blog-input-btn">Delete</button>
+                <button className="blog-input-btn" onClick = {() =>{
+                    dispatch(deletePost(id))
+                }}>Delete</button>
             </ul>
         </div>
     )
