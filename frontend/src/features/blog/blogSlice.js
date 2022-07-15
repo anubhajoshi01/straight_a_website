@@ -3,9 +3,11 @@ import blogService from "./blogService";
 
 const initialState = {
     blogs: [],
+    showBlog: null,
     isError: false,
     isSuccess: false,
     isLoading: false,
+    isUpdated: false,
     message: ''
 }
 
@@ -16,7 +18,9 @@ export const createPost = createAsyncThunk(
             const token = thunkAPI.getState().auth.user.token
             return await blogService.createPost(data, token)
         }catch(e){
-            const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
+            console.log(e)
+            const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
+            console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -31,7 +35,24 @@ export const getPosts = createAsyncThunk(
             return data
         }
         catch(e){
-            const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
+            console.log(e)
+            const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
+            console.log(message)
+            return thunkAPI.rejectWithValue(message)
+        }
+    }
+)
+
+export const getPostById = createAsyncThunk(
+    'blog/get', 
+    async(id, thunkAPI) => {
+        try{
+            const data = await blogService.getPostById(id)
+            return data
+        }
+        catch(e){
+            console.log(e)
+            const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
             console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
@@ -40,12 +61,18 @@ export const getPosts = createAsyncThunk(
 
 export const updatePost = createAsyncThunk(
     'blog/update',
-    async(id, data, thunkAPI) => {
+    async( allData, thunkAPI) => {
         try{
+            const {id, data} = allData
             const token = thunkAPI.getState().auth.user.token
-            return await blogService.updatePost(id, data, token)
+            console.log(`token ${token}`)
+            const result = await blogService.updatePost(id, data, token)
+            console.log(result)
+            return result
         }catch(e){
-            const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
+            console.log(e)
+            const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
+            console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -58,7 +85,9 @@ export const deletePost = createAsyncThunk(
             const token = thunkAPI.getState().auth.user.token
             return await blogService.deletePost(id, token)
         }catch(e){
+            console.log(e)
             const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
+            console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -114,18 +143,33 @@ export const blogSlice = createSlice({
                 state.message = action.payload
             })
             .addCase(updatePost.pending, (state) => {
-                state.isLoading = false
+                state.isLoading = true
             })
             .addCase(updatePost.fulfilled, (state, action) => {
-                state.isSuccess = true
+                //state.isSuccess = true
                 state.isLoading = false
-                for(let i = 0; i < state.blogs.length; i++){
+               /* for(let i = 0; i < state.blogs.length; i++){
                     if(state.blogs[i]._id === action.payload.id){
                         state.blogs[i] = action.payload
                     }
-                }
+                } */
+                state.isUpdated = true
+                console.log(action.payload)
             })
             .addCase(updatePost.rejected, (state, action) => {
+                state.isLoading = false
+                state.isError = true
+                state.message = action.payload
+            })
+            .addCase(getPostById.pending, (state) => {
+                state.isLoading = true
+            })
+            .addCase(getPostById.fulfilled, (state, action) => {
+                state.isLoading = false
+                state.isSuccess = true
+                state.showBlog = action.payload
+            })
+            .addCase(getPostById.rejected, (state, action) => {
                 state.isLoading = false
                 state.isError = true
                 state.message = action.payload

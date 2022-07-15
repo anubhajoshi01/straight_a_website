@@ -16,6 +16,7 @@ import Blog from './pages/website/Blog'
 import BlogListCard from './components/BlogListCard';
 import Home from './pages/website/Home';
 import ViewForms from './pages/admin-portal/ViewForms';
+import BlogInput from './pages/admin-portal/BlogInput';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -32,6 +33,7 @@ const defaultContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 
 function App() {
   console.log("Hello")
+  //for blog input: remove id prop here, this is for testing, must be connected to list view later
   return (
     <>
       <div>
@@ -44,6 +46,7 @@ function App() {
               <Route path='blog' element={<Blog/>}/>
               <Route path='me' element={<Admin/>}>
                 <Route path='view-forms' element={<ViewForms/>}/>
+                <Route path='blog-input' element={<BlogInput id={'62ceec6d28479afefa5e300d'}/>}/> 
               </Route>
               
             </Routes>

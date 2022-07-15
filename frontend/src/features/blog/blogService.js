@@ -28,6 +28,16 @@ const getPosts = async() => {
     }
 }
 
+const getPostById = async(id) => {
+    try{
+        const response = await axios.get(API_URL + id)
+        return response.data
+    }catch(e){
+        console.log(e)
+        throw new Error('Unable to get post')
+    }
+}
+
 const updatePost = async(id, data, token) => {
     const config = {
         headers: {
@@ -61,7 +71,7 @@ const deletePost = async(id, token) => {
 }
 
 const blogService = {
-    createPost, getPosts, updatePost, deletePost
+    createPost, getPosts, updatePost, deletePost, getPostById
 }
 
 export default blogService

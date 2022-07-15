@@ -15,11 +15,22 @@ const getBlogs = async (req, res) => {
 
 }
 
+const getBlogById = async (req, res) => {
+    try{
+        const blog = await Blog.findById(req.params.id)
+        res.status(200).json(blog);
+    }catch(error){
+        console.log(error)
+        res.status(200)
+        throw new Error(`could not find blog with id ${req.params.id}`)
+    }
+}
+
 //POST request
 const addBlog = async (req, res) => {
     try {
         const d = new Date();
-        const { title, content, imageUrls, dateCreated } = req.body
+        const { title, content, imageUrls } = req.body
         if (!title || !content) {
             res.status(400);
             throw new Error('plz add all required fields');
@@ -75,7 +86,9 @@ const deleteBlog = async (req, res) => {
 const updateBlog =  async (req, res) => {
     try {
         const date = new Date()
-        const blog = Blog.findById(req.params.id)
+        const blog = await Blog.findById(req.params.id)
+        console.log(`id is ${req.params.id}`)
+        console.log(`found is ${blog}`)
         if(!blog){
             res.status(400)
             throw new Error('Blog not found')
@@ -96,6 +109,7 @@ const updateBlog =  async (req, res) => {
 
 module.exports = {
     getBlogs,
+    getBlogById,
     addBlog,
     deleteBlog,
     updateBlog
