@@ -4,6 +4,7 @@
 
 .dropdown-menu{
     display: inline-block;
+    flex-direction: column;
 }
 
 .ddcontainer{
@@ -14,16 +15,12 @@
 .dropdown-menu ul{
     color: black;
     margin-top: 20%;
-    background-color: rgba(255, 255, 255, 0.3);
-
     flex-direction: column;
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.3);
 }
 
 .dropdown-list ul{
-    margin-top: 40%;
     flex-direction: column;
-    background-color: white;
 }
 
 .text{
@@ -31,10 +28,12 @@
     margin-bottom: 2px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: small;
+    font-weight: 200;
 }
 
 .text:hover{
     color: purple;
+    font-weight: 700;
 }
 
 .title:hover{
