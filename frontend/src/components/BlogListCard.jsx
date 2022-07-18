@@ -1,9 +1,21 @@
 import React from 'react'
+import { useSelector } from 'react-redux'
+import { useNavigate } from 'react-router-dom'
 import './BlogListCard.css'
 
-const BlogListCard = ({img, title, content}) => {
+const BlogListCard = ({img, title, content, id}) => {
+    const navigate = useNavigate()
+
+    const {user} = useSelector((state) => state.auth)
+
+    const onClick = () => {
+       // navigate('/')
+       if(user){
+            navigate(`../me/blog-input/${id}`, {replace:true})
+       }
+    }
   return (
-    <div className='blog-list-card-container'>
+    <div className='blog-list-card-container' onClick={onClick}>
         <ul className='blog-listviewcard-horizontal'>
             <li>
                 <img className='blog-list-card-img' src={img}/>

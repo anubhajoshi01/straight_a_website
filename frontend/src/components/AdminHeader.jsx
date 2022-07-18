@@ -20,6 +20,10 @@ const AdminHeader = () => {
         navigate('/login')
     }
 
+    const navToBlog = () => {
+        navigate('/blog')
+    }
+
   return (
     <header style={{top:'2%'}} className='header'>
        
@@ -30,7 +34,7 @@ const AdminHeader = () => {
             <li className='litext'>
                 <div>Forms</div>
             </li>
-            <li className='litext'>
+            <li className='litext' onClick={navToBlog}>
                 <div>Blog</div>
             </li>
             <li className='litext' onClick={onLogout}>

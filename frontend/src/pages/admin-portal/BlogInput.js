@@ -1,12 +1,14 @@
 import { set } from "mongoose"
 import { useEffect, useState } from "react"
 import { useDispatch, useSelector } from "react-redux"
-import { useNavigate } from "react-router-dom"
+import { useNavigate, useParams } from "react-router-dom"
 import { createPost, getPostById, reset, updatePost } from "../../features/blog/blogSlice"
 import './BlogInput.css'
 import { deletePost } from '../../features/blog/blogSlice'
 
-function BlogInput({id}){
+function BlogInput(){
+
+    const {id} = useParams()
 
     const navigate = useNavigate()
     const dispatch = useDispatch()
@@ -21,12 +23,13 @@ function BlogInput({id}){
     const [fetchedPost, setFetchedPost] = useState(false)
     const [displayed, setDisplayed] = useState(false)
 
+
     const onSubmit = (e) => {
         console.log('click')
         e.preventDefault()
         setSubmitted(true)
         try{
-            if(id){
+            if(id !== 'create'){
                 console.log('updating')
                 const allData = {id, data:{title, content, imageUrls:imageUrl}}
                 dispatch(updatePost(allData))
@@ -43,7 +46,7 @@ function BlogInput({id}){
     useEffect(() => {
         console.log('in')
 
-        if(id){
+        if(id != 'create'){
             dispatch(getPostById(id))
             setFetchedPost(true)
         }
@@ -64,7 +67,7 @@ function BlogInput({id}){
             navigate('/blog')
         }
 
-        if(isSuccess && fetchedPost && !displayed){
+        if(isSuccess && fetchedPost && !displayed && showBlog){
             console.log('success fetched')
            // console.log(blogShow)
             setImageUrl(showBlog.imageUrls)
