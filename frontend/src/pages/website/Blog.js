@@ -5,9 +5,9 @@ import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import './Blog.css'
 import {getPosts} from '../../features/blog/blogSlice'
+import { useNavigate } from "react-router-dom";
 
-
-function Blog() {
+function Blog({create}) {
 
     /*const dispatch = useDispatch()
 
@@ -46,8 +46,10 @@ function Blog() {
     )*/
 
     const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const {blogs, isLoading, isError, isSuccess, message} = useSelector((state) => state.blogs)
+    const {user} = useSelector((state) => state.auth)
 
     const [pageNum, setPageNum] = useState(0)
     const [displayList, setDisplayList] = useState([])
@@ -101,14 +103,24 @@ function Blog() {
             setPageNum(pageNum-1)
         }
     }
+
+    const navToCreatePost = () => {
+        navigate('../me/blog-input/create', {replace:true})
+    }
+
     return <>
      <Header/>
         <div className='blog-list-view'>
+            {
+             user ? <button className="create-post-btn" onClick={navToCreatePost}>Create</button> : null
+            }
             <ul className="blog-list-show">
                 {
                     displayList.map((item) => (
                         <li>
-                            <BlogListCard key={item._id} img={item.imageUrls} title={item.title} content={item.content}/>
+                           
+                            <BlogListCard key={item._id} img={item.imageUrls} title={item.title} content={item.content} id={item._id}/>
+                        
                         </li>
                     ))
                 }

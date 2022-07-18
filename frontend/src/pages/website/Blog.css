@@ -32,3 +32,12 @@
     font-weight: 800;
 }
 
+.create-post-btn{
+    margin-inline: 40%;
+    color: white;
+    background-color: purple;
+    width: 5%;
+    height: 2%;
+    padding: 0.5%;
+}
+
