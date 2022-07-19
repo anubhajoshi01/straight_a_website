@@ -42,8 +42,8 @@ const Form = () => {
 
   return (
     <section className='form-group'>
-    <h1>SIGN UP FOR A FREE CONSULTATION TODAY</h1>
     <form onSubmit={onSubmit}>
+        <div className='form-container'>
         <ul className='inputs-vertical'>
             <li>
                 <ul className='inputs-horizontal'>
@@ -106,6 +106,7 @@ const Form = () => {
         </ul>
         <div className='error-msg'>{showError ? "Please fill in all the required fields" : ""}</div>
         <button type='submit' className='submit-form-btn'> Submit </button>
+        </div>
     </form>
 </section>
     

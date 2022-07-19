@@ -1,9 +1,12 @@
 import { toggleButtonClasses } from '@mui/material';
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeaderMenu.css'
 
 function HeaderMenu({title, items=[], multiSelect= false}){
     const [open, setOpen] = useState(false);
+
+    const navigate= useNavigate()
 
     const toggle = () => setOpen(!open)
 
@@ -30,7 +33,7 @@ function HeaderMenu({title, items=[], multiSelect= false}){
                 <ul className='dropdown-list'>
                     {items.map((item) => (
                         <li>
-                            <div className='text' type='button'>
+                            <div className='text' type='button' onClick={() => {navigate(item.nav)}}>
                             {item.value}
                             </div>
                         </li>
