@@ -43,6 +43,10 @@ label{
     padding: 10%;
 }
 
+form {
+    margin-left: 30%;
+}
+
 .submit-form-btn{
     background-color: purple;
     color: white;
