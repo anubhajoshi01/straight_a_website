@@ -1,6 +1,40 @@
 .container{
-    width: 100%;
-    padding-bottom: 5%;
+    width: 80%;
+    height: 70%;
+    margin-bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    
+}
+.title{
+    margin-top:5%;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+.img{
+    display: block;
+    height: auto;
+    width:30%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.content-container{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+h2{
+    
+    font-size: 40px;
+}
+
+p{
+    text-align: center;
+    font-size: 30px;
 }
 
 
