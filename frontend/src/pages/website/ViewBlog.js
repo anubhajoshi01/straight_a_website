@@ -35,8 +35,9 @@ function ViewBlog(){
 
         if(isSuccess){
             console.log('success')
-            
-            
+            console.log(showBlog)
+            console.log(showBlog.title)
+            console.log(showBlog.content)
         }
     }, [showBlog, isLoading, isSuccess, isError, dispatch])
 
