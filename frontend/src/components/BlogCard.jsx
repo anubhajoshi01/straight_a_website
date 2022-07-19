@@ -2,12 +2,12 @@ import React from 'react'
 
 
 
-function BlogCard({ img,title,content }) {
+function BlogCard({ title, content, imageUrls }) {
   return (
     <div className="container">
-      {/* <img className = 'img' src={img}> </img> */}
+      {/* { <img className = 'img' src={blog.imageUrls}> </img> } */}
       <p>
-        {img}
+        {imageUrls}
       </p>
       <h5 className='title'>
         {title}

@@ -12,16 +12,16 @@ function ViewBlog(){
     const {id} = useParams()
     //console.log(id)
     const dispatch = useDispatch()
-    const [viewBlog, setViewBlog] = useState(null)
-    const { blog, isLoading, isError, message, isSuccess } = useSelector(
+    const [viewBlog, setViewBlog] = useState('')
+    const [title, setTitle] = useState('')
+    const { showBlog, isLoading, isError, message, isSuccess } = useSelector(
         (state) => state.blogs
     )
     
     useEffect(() => {
         if(id){
             dispatch(getPostById(id))
-            console.log(blog)
-            setViewBlog(blog)
+            console.log(showBlog)
         }
             
         if(isError){
@@ -35,15 +35,15 @@ function ViewBlog(){
 
         if(isSuccess){
             console.log('success')
-            dispatch(reset())
+            
             
         }
-    }, [blog, isLoading, isSuccess, isError, dispatch])
+    }, [showBlog, isLoading, isSuccess, isError, dispatch])
 
     return (
         <>
         <Header />
-            {/* { <BlogCard img={viewBlog.imageUrls} content={viewBlog.content} title={viewBlog.title}/> } */}
+        
         <Footer />
         </>
         
