@@ -45,7 +45,7 @@ function App() {
               <Route path='/' element={<Home/>}/>
               <Route path='login' element={<Login/>} />
               <Route path='blog' element={<Blog/>}/>
-              <Route path='view-blog' element={<ViewBlog id={'62d17f6872f938517728aa60'}/>} />
+              <Route path='view-blog/:id' element={<ViewBlog/>} />
               <Route path='me' element={<Admin/>}>
                 <Route path='view-forms' element={<ViewForms/>}/>
                 <Route path='blog-input/:id' element={<BlogInput create={false}/>}/> 

@@ -4,26 +4,26 @@ import BlogCard from "../../components/BlogCard"
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPostById, getPosts, reset } from '../../features/blog/blogSlice';
+import { useParams } from "react-router-dom"
 
 
 
-
-function ViewBlog({id}){
+function ViewBlog(){
+    const {id} = useParams()
+    //console.log(id)
     const dispatch = useDispatch()
-    const [viewBlog, setViewBlog] = useState('')
+    const [viewBlog, setViewBlog] = useState(null)
     const { blog, isLoading, isError, message, isSuccess } = useSelector(
         (state) => state.blogs
     )
     
     useEffect(() => {
-        console.log('in')
-        try {
+        if(id){
             dispatch(getPostById(id))
+            console.log(blog)
             setViewBlog(blog)
-        } catch (error) {
-            console.log(error)
         }
-        
+            
         if(isError){
             console.log('in is error')
             console.log(message)
@@ -35,17 +35,15 @@ function ViewBlog({id}){
 
         if(isSuccess){
             console.log('success')
-            
-        }
-        return () => {
             dispatch(reset())
+            
         }
     }, [blog, isLoading, isSuccess, isError, dispatch])
 
     return (
         <>
         <Header />
-            {/* <BlogCard img={viewBlog.imageUrls} content={viewBlog.content} title={viewBlog.title}/> */}
+            {/* { <BlogCard img={viewBlog.imageUrls} content={viewBlog.content} title={viewBlog.title}/> } */}
         <Footer />
         </>
         
