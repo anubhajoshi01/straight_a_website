@@ -1,20 +1,22 @@
 import React from 'react'
-
+import './BlogCard.css'
+import '../res/slider_img1.jpg'
 
 
 function BlogCard({ title, content, imageUrls }) {
   return (
     <div className="container">
-      {/* { <img className = 'img' src={blog.imageUrls}> </img> } */}
-      <p>
-        {imageUrls}
-      </p>
-      <h5 className='title'>
+      
+      <img className='img' src={imageUrls} alt='w' /> 
+      <h2 className='title'>
         {title}
-      </h5>
-      <p className='content'>
-        {content}
-      </p>
+      </h2>
+      <div className='content-container'>
+        <p className='content'>
+          {content}
+        </p>
+      </div>
+      
     </div>
   )
 }

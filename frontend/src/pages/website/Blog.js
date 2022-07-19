@@ -81,7 +81,7 @@ function Blog({create}) {
 
             setDisplayList(append)
         }
-
+        
     }, [pageNum, isError, message, blogs, dispatch])
 
     const goToFirstPage = () => {

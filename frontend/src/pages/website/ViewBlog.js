@@ -14,6 +14,9 @@ function ViewBlog(){
     const dispatch = useDispatch()
     const [viewBlog, setViewBlog] = useState('')
     const [title, setTitle] = useState('')
+    const [imgUrl, setImgUrl] = useState('')
+    const [content, setContent] = useState('')
+    
     const { showBlog, isLoading, isError, message, isSuccess } = useSelector(
         (state) => state.blogs
     )
@@ -33,18 +36,27 @@ function ViewBlog(){
             console.log('loading')
         }
 
-        if(isSuccess){
+        if(isSuccess ){
             console.log('success')
-            console.log(showBlog)
-            console.log(showBlog.title)
-            console.log(showBlog.content)
+            
+            setImgUrl(showBlog.imageUrls)
+            
+            setTitle(showBlog.title)
+            
+            setContent(showBlog.content)
+            
         }
+        return () =>{
+            dispatch(reset())
+        }
+
     }, [showBlog, isLoading, isSuccess, isError, dispatch])
 
     return (
         <>
         <Header />
-        
+            <BlogCard title={title} content={content} imageUrls={imgUrl}/>
+            
         <Footer />
         </>
         
