@@ -1,0 +1,83 @@
+.our-team-container {
+    height: inherit;
+    width: 90%;
+    margin: 5%;
+}
+
+.our-story-hl-team{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+}
+
+.our-story-hl-stack{
+    display: flex;
+    flex-direction: row;
+}
+
+.our-story-vl-stack{
+    display: flex;
+    flex-direction: column;
+}
+
+.team-img {
+    height: 160px;
+    width: 160px;
+    border-radius: 50%;
+}
+
+.descr {
+    margin-right: 20%;
+    
+}
+
+.profile{
+    margin: 3%;
+    height: 170px;
+    width: 420px;
+}
+
+h1 {
+    font-size: 200%;
+    color: black;
+}
+
+.sunny-img {
+    height: 80%;
+    left: 60%;
+    
+}
+
+.our-team-hl{
+    display: flex;
+    margin: 5%;
+    flex-direction: row;
+    justify-content:baseline;
+}
+
+.our-team-hl p {
+    font-size: 120%;
+}
+
+.descr-sunny p {
+    text-align: left;
+    margin: 2%;
+
+}
+
+h6 {
+    position: relative;
+    font-weight: 300;
+    margin-block: 2%;
+    bottom: 0;
+    font-size: 80%;
+    align-self: flex-end;
+}
+
+.title {
+    text-decoration: underline;
+}
+
+section{
+    margin-block: 2%;
+}

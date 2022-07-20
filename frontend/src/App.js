@@ -19,6 +19,8 @@ import ViewForms from './pages/admin-portal/ViewForms';
 import BlogInput from './pages/admin-portal/BlogInput';
 import ViewBlog from './pages/website/ViewBlog';
 import OurStory from './pages/website/about-pages/OurStory'
+import OurTeam from './pages/website/about-pages/OurTeam';
+import TeamProfile from './pages/website/about-pages/TeamProfile';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -53,7 +55,8 @@ function App() {
                 <Route path='blog-input' element={<BlogInput create={true}/>}/>
               </Route>
               <Route path='our-story' element={<OurStory/>}/>
-              
+              <Route path='our-team' element={<OurTeam/>}/>
+              <Route path='our-team/:id'  element={<TeamProfile/>}/>
             </Routes>
       </Router>
       </div>
