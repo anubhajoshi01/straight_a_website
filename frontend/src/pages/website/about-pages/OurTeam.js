@@ -8,7 +8,8 @@ function OurTeam() {
 
     const navigate = useNavigate()
 
-    const teamList = [{id: "laura-m", name:"Laura M.", title:"Education Consultant", img:"https://static.wixstatic.com/media/660eee_f2aa7652f1704ebfbe5f7f0f49c73148~mv2.png/v1/crop/x_0,y_23,w_574,h_548/fill/w_394,h_376,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Laura%20pic.png", hasNavigate:true},
+    const teamList = [
+    {id: "laura-m", name:"Laura M.", title:"Education Consultant", img:"https://static.wixstatic.com/media/660eee_f2aa7652f1704ebfbe5f7f0f49c73148~mv2.png/v1/crop/x_0,y_23,w_574,h_548/fill/w_394,h_376,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/Laura%20pic.png", hasNavigate:true},
     {id:"alan-g", name:"Alan G.", title:"Education Consultant", img:"https://static.wixstatic.com/media/660eee_4851ac85c2044723b3a29c958cab1c3d~mv2.jpg/v1/crop/x_0,y_0,w_200,h_199/fill/w_280,h_279,al_c,lg_1,q_80,enc_auto/Garcia_prof%20headshot.jpg", hasNavigate:true},
     {id:"chistina-l", name:"Christina L", title:"Education Consultant", img:"https://static.wixstatic.com/media/660eee_9f8fb24f1c50458591f97e19914bcdc2~mv2.png/v1/crop/x_0,y_50,w_370,h_350/fill/w_398,h_376,al_c,lg_1,q_85,enc_auto/Christina%20pic.png", hasNavigate:true},
     {id:'darrian-h', name:"Darrian H", title:"Essay Writer", img:'https://static.wixstatic.com/media/660eee_4bb054c404ef4783a9be017e3305db42~mv2.png/v1/crop/x_25,y_0,w_587,h_581/fill/w_398,h_394,al_c,q_85,usm_0.66_1.00_0.01,enc_auto/WeChat%20Screenshot_20211203145932.png', hasNavigate:true},
