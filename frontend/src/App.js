@@ -21,6 +21,7 @@ import ViewBlog from './pages/website/ViewBlog';
 import OurStory from './pages/website/about-pages/OurStory'
 import OurTeam from './pages/website/about-pages/OurTeam';
 import TeamProfile from './pages/website/about-pages/TeamProfile';
+import Main from './pages/website/Main';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -45,7 +46,7 @@ function App() {
 
             <Routes>
               //temporary form for dev purposes
-              <Route path='/' element={<Home/>}/>
+              <Route path='/' element={<Main/>}/>
               <Route path='login' element={<Login/>} />
               <Route path='blog' element={<Blog/>}/>
               <Route path='view-blog/:id' element={<ViewBlog/>} />

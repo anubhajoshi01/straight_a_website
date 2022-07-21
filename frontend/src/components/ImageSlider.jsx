@@ -2,12 +2,15 @@ import React, {useState} from 'react'
 import sliderimg1 from '../res/slider_img1.jpg'
 import qrcode from '../res/qrcode.jpg'
 import { borderRadius, color, fontSize } from '@mui/system';
+import { useNavigate } from 'react-router-dom';
 
 const ImageSlider = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isActive, setIsActive] = useState(true)
     const [isActive1, setIsActive1] = useState(false)
     const [isActive2, setIsActive2] = useState(false)
+
+    const navigate = useNavigate()
 
     const leftArrowStyles = {
         position:'absolute',
@@ -68,10 +71,11 @@ const ImageSlider = ({slides}) => {
     const titleStyle = {
         position:'absolute',
         top:'30%',
-        left: '45%',
+        left:'15%',
         fontSize:'200%',
         fontWeight: '700',
-        color: 'white'
+        color: 'white',
+        wordWrap:'break-word'
     }
 
     const btnStyle = {
@@ -86,6 +90,7 @@ const ImageSlider = ({slides}) => {
     }
 
     const goToPrevious = () => {
+        console.log("line 92")
         const isFirstSlide = currentIndex === 0
         const newIndex = isFirstSlide ? 3 : currentIndex-1
         setCurrentIndex(newIndex)
@@ -107,6 +112,7 @@ const ImageSlider = ({slides}) => {
     }
 
     const goToNext = () => {
+        console.log("line 114")
         const isLastSlide = currentIndex === slides.length -1;
         const newIndex = isLastSlide ? 0 : currentIndex+1
         setCurrentIndex(newIndex)
@@ -135,7 +141,7 @@ const ImageSlider = ({slides}) => {
     const goToSlide = slideIndex => {
         setCurrentIndex(slideIndex)
     }
-    console.log(slides[currentIndex].img)
+    //console.log(slides[currentIndex].img)
 
     const dot1 = () =>{
         setIsActive(true);
@@ -166,7 +172,7 @@ const ImageSlider = ({slides}) => {
         <div style={dot2Style} onClick={dot2}> {'.'} </div>
         <div style={dot3Style} onClick={dot3}> {'.'} </div>
         
-        <div style={titleStyle}> Title</div>
+        <div style={titleStyle}> {slides[currentIndex].title}</div>
         <div className='rectangle' style={btnStyle}> Read More</div>
         <div style={{ width:'100%', height:'70%',display:'flex', justifyContent:'center'}}>
             <img src={slides[currentIndex].img} width='80%'></img>
