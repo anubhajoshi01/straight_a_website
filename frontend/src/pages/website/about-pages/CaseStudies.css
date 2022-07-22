@@ -1,0 +1,51 @@
+
+.case-studies-container {
+    margin: 6%;
+}
+
+h1{
+    font-size: 350%;
+    color: black;
+}
+
+h2 {
+    font-size: 150%;
+    text-align: left;
+}
+
+h3 {
+    font-size: 170%;
+    text-align: left;
+}
+
+h4 {
+    font-size: 170%;
+    font-style: italic;
+    color: purple;
+}
+
+.left {
+    float: left;
+    margin: 5px;
+    height: 500px;
+}
+
+.right {
+    float: right;
+    margin: 5px;
+    height: 500px;
+}
+
+.case-content{
+    position: relative;
+    top: 20%;
+    text-align: justify;
+}
+
+section{
+    position: relative;
+}
+
+p {
+    font-size: 150%;
+}
