@@ -6,6 +6,8 @@ import img3 from '../../res/main-img3.jpeg'
 import Header from '../../components/Header'
 import Footer from '../../components/Footer'
 import ImageSlider from '../../components/ImageSlider'
+import ImgSlider from '../../components/ImgSlider'
+import Form from '../../components/Form'
 
 function Main(){
 
@@ -15,6 +17,11 @@ function Main(){
         {title:'College Transfer Program: Transfer Application Services', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'}
     ]
 
+    const slides2 = [
+        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://static-cse.canva.com/blob/558554/studyingtips1.jpg"},
+        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://www.thoughtco.com/thmb/hQC8gjfZ4Rd421J4i3UeRwr6eZY=/3865x2576/filters:fill(auto,1)/teenage-students-in-classroom--141090063-5a653ed40c1a8200366bdd66.jpg"},
+        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://www.gettingsmart.com/wp-content/uploads/2018/06/Diverse-Students-Working-on-Maps-Project-with-teacher-Feature-Image.jpg"}
+    ]
     return (
         <>
             <Header/>
@@ -114,6 +121,36 @@ function Main(){
                             </div>
                         </li>
                     </ul>
+                </section>
+                <section>
+                    <h1><b>|BLOG</b> POSTS</h1>
+                    <ImgSlider slides={slides2}/>
+                    <div className='seperate-container'>
+                        <div className='purple-background'>
+                            <h1>
+                                Hello, Welcome
+                            </h1>
+                            <h3>
+                                STRIGHT A PREP
+                            </h3>
+                            <p>
+                            Straight A Prep provide students with coaching, guidance, mentoring, administrative support, and institutional insights to give them a competitive edge when applying to the college or university of their dreams. 
+                            </p>
+                            <p>
+                            We understand and are ready to lend a helping hand!
+                            </p>
+                            <p>
+                            Let our senior counselors give you a full assessment and lead you to the path of fully realizing your potential in academics, extra-curriculum, and many more achievements in personal growth.
+                            </p>
+                        </div>
+                        <div className='white-background'>
+                            <h3>
+                                Sign up for a consultant today
+                            </h3>
+                            <Form/>
+                        </div>
+
+                    </div>
                 </section>
             </div>
             <Footer/>
