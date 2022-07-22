@@ -17,7 +17,7 @@ function Header() {
                 <img className='logoimg' src={logo}/>   
             </li>
             <li className='litext'>
-                <HeaderMenu title='About' items={[{id: 1, value: 'Our Story', nav:'/our-story'}, {id: 2, value: 'Our Team', nav:'/our-team'}, {id: 3, value: 'Case Studies'}, {id: 4, value: "Testimonials"},
+                <HeaderMenu title='About' items={[{id: 1, value: 'Our Story', nav:'/our-story'}, {id: 2, value: 'Our Team', nav:'/our-team'}, {id: 3, value: 'Case Studies', nav:'/case-studies'}, {id: 4, value: "Testimonials"},
             {id: 5, value: "Partners"}, {id: 6, value: "Pro Bono Services"}]}/>
             </li>
             <li className='litext'>
