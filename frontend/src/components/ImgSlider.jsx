@@ -13,8 +13,8 @@ const ImgSlider = ({slides}) => {
     const leftArrowStyles = {
         position:'absolute',
         top: '50%',
-        transform: 'translate(0, -50%',
-        left: '32px',
+        transform: 'translate(0, -50%)',
+        left: '-50px',
         fontSize: '45px',
         color: 'black',
         zIndex: '1',
@@ -23,8 +23,8 @@ const ImgSlider = ({slides}) => {
     const rightArrowStyles = {
         position:'absolute',
         top: '50%',
-        transform: 'translate(0, -50%',
-        right: '32px',
+        transform: 'translate(0, -50%)',
+        right: '-50px',
         fontSize: '45px',
         color: 'black',
         zIndex: '1',
@@ -159,7 +159,9 @@ const ImgSlider = ({slides}) => {
     }
 
   return (
-    <div style={{height:'70%', width:'100%' , position:'relative', display:'flex'}}>
+    <div style={{height:'70%', width:'95%' , position:'relative', display:'flex'}}>
+        <div style={leftArrowStyles} onClick={goToPrevious}> {'<'} </div>
+        <div style={rightArrowStyles} onClick={goToNext}> {'>'} </div>
         <div style={dot1Style} onClick={dot1} > {'.'} </div>
         <div style={dot2Style} onClick={dot2}> {'.'} </div>
         <div style={dot3Style} onClick={dot3}> {'.'} </div>

@@ -129,3 +129,11 @@ h3 {
 .white-background h3{
     margin-left: 30%;
 }
+
+.white-background h3 {
+    font-size: 80%;
+}
+
+.form {
+    width: 300%;
+}

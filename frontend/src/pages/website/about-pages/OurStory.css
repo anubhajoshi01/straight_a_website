@@ -27,10 +27,15 @@ p {
     height: 450px;
 }
 
-h2 {
-    text-align: center;
+.consult h2 {
+    margin-top: 10%;
     font-size: 165%;
     color: purple;
+    margin-left: 40%;
+}
+
+section {
+    margin-bottom: 10%;
 }
 
 .side-img{
