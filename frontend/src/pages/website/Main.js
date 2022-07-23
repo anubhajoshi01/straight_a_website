@@ -145,9 +145,11 @@ function Main(){
                         </div>
                         <div className='white-background'>
                             <h3>
-                                Sign up for a consultant today
+                                Sign up for a consultation 
                             </h3>
+                            <div className='form'>
                             <Form/>
+                            </div>
                         </div>
 
                     </div>

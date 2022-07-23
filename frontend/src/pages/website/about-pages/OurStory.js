@@ -52,9 +52,11 @@ function OurStory(){
                     <li><p>Provide every student with the highest quality individual consulting and learning materials.</p></li>
                 </ul>
             </section>
+            <h2 className='consult'> Sign up for a free consultation today</h2>
+            <Form/>
         </div>
-        <h2> Sign up for a free consultation today</h2>
-        <Form/>
+
+        
         <Footer/>
         </>
     )
