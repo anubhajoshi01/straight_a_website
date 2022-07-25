@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect, useRef} from 'react'
 import { borderRadius, color, fontSize } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 
@@ -7,8 +7,28 @@ const ImgSlider = ({slides}) => {
     const [isActive, setIsActive] = useState(true)
     const [isActive1, setIsActive1] = useState(false)
     const [isActive2, setIsActive2] = useState(false)
+    const timeoutRef = useRef(null)
+    const delay = 2500;
 
     const navigate = useNavigate()
+    function resetTimeout() {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+      }
+
+      useEffect(() => {
+        resetTimeout();
+        timeoutRef.current = setTimeout(
+          () =>
+            goToNext(),
+            delay
+        );
+    
+        return () => {
+          resetTimeout();
+        };
+      }, [currentIndex]);
 
     const leftArrowStyles = {
         position:'absolute',
