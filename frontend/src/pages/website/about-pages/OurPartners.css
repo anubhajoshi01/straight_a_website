@@ -1,0 +1,9 @@
+.our-partners-container {
+    margin-inline: 5%;
+    margin-block: 10%;
+    justify-content: center;
+}
+
+.our-partners-container img{
+    margin-inline: 7%;
+}
