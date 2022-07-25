@@ -131,7 +131,7 @@ function Main(){
                                 Hello, Welcome
                             </h1>
                             <h3>
-                                STRIGHT A PREP
+                                STRAIGHT A PREP
                             </h3>
                             <p>
                             Straight A Prep provide students with coaching, guidance, mentoring, administrative support, and institutional insights to give them a competitive edge when applying to the college or university of their dreams. 
