@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HeaderMenu.css'
 
-function HeaderMenu({title, items=[], multiSelect= false}){
+function HeaderMenu({title, nav, items=[], multiSelect= false}){
     const [open, setOpen] = useState(false);
 
     const navigate= useNavigate()
@@ -25,7 +25,7 @@ function HeaderMenu({title, items=[], multiSelect= false}){
 
        <div className='dropdown'>
             <div className="dropdown-menu" onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
-                <div title='title'>
+                <div onClick={() => {navigate(nav)}} title='title'>
                 {title}
                 </div>
                 {open ? (
