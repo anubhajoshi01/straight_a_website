@@ -10,23 +10,3 @@
     background: transparent;
     border: solid;
 }
-
-.slideshowDots {
-    text-align: center;
-  }
-  
-.slideshowDot {
-    display: inline-block;
-    height: 20px;
-    width: 20px;
-    border-radius: 50%;
-  
-    cursor: pointer;
-    margin: 15px 7px 0px;
-  
-    background-color: black;
-}
-  
-  .slideshowDot.active {
-    background-color: #6a0dad;
-  }
