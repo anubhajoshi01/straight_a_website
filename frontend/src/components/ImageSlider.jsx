@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useState, useRef, useEffect} from 'react'
 import sliderimg1 from '../res/slider_img1.jpg'
 import qrcode from '../res/qrcode.jpg'
 import { borderRadius, color, fontSize } from '@mui/system';
@@ -6,12 +6,33 @@ import { useNavigate } from 'react-router-dom';
 
 const ImageSlider = ({slides}) => {
     const [currentIndex, setCurrentIndex] = useState(0);
+    const timeoutRef = useRef(null);
     const [isActive, setIsActive] = useState(true)
     const [isActive1, setIsActive1] = useState(false)
     const [isActive2, setIsActive2] = useState(false)
+    const delay = 2500;
 
     const navigate = useNavigate()
 
+    function resetTimeout() {
+        if (timeoutRef.current) {
+          clearTimeout(timeoutRef.current);
+        }
+      }
+
+      useEffect(() => {
+        resetTimeout();
+        timeoutRef.current = setTimeout(
+          () =>
+            goToNext(),
+            delay
+        );
+    
+        return () => {
+          resetTimeout();
+        };
+      }, [currentIndex]);
+    
     const leftArrowStyles = {
         position:'absolute',
         top: '50%',
@@ -88,6 +109,7 @@ const ImageSlider = ({slides}) => {
         background: 'Transparent',
         border: 'solid',
     }
+
 
     const goToPrevious = () => {
         console.log("line 92")
