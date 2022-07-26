@@ -18,7 +18,7 @@ function Header() {
             </li>
             <li className='litext'>
                 <HeaderMenu title='About' nav='/' items={[{id: 1, value: 'Our Story', nav:'/our-story'}, {id: 2, value: 'Our Team', nav:'/our-team'}, {id: 3, value: 'Case Studies', nav:'/case-studies'}, {id: 4, value: "Testimonials", nav:'/testimonials'},
-            {id: 5, value: "Partners", nav:'/our-partners'}, {id: 6, value: "Pro Bono Services"}]}/>
+            {id: 5, value: "Partners", nav:'/our-partners'}, {id: 6, value: "Pro Bono Services", nav:'/pro-bono'}]}/>
             </li>
             <li className='litext'>
                 <HeaderMenu title='Private Counseling' items={[{id: 1, value: '6-8 Grade Admission'}, {id: 2, value: '8-11 Grade Admission'}, {id: 3, value: 'College Admission'}, {
