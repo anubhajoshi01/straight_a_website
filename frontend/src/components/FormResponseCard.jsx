@@ -1,14 +1,19 @@
 import React from 'react'
 import { useState } from 'react'
 import './FormResponseCard.css'
-import { useDispatch } from 'react-redux'
-import { deleteForm } from '../features/forms/formSlice'
+import { useDispatch, useSelector } from 'react-redux'
+import { deleteForm, updateForm } from '../features/forms/formSlice'
 const FormResponseCard = (form) => {
    // {timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}
-    const dispatch = useDispatch()
-    const [containerColour, setContainerColour] = useState('white') 
+    const dispatch = useDispatch();
+
+    const defaultColor = form.resolved === true ? 'gray' : 'white'
+
+    const [containerColour, setContainerColour] = useState(defaultColor) 
 
     const checkboxChange = () => {
+        console.log(form.id)
+        dispatch(updateForm(form.id))
         if(containerColour === 'white'){
             setContainerColour('gray')
         }
@@ -63,7 +68,7 @@ const FormResponseCard = (form) => {
                         <b>Comments:</b>
                     </li>
                     <li>
-                        <p> {form.comments} </p>
+                        <p> {form.more} </p>
                     </li>
                 </ul>
                 </div>

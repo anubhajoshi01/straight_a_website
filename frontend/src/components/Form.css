@@ -77,10 +77,12 @@ label{
 }
 
 .error-msg{
-    margin-left: 8%;
+    margin-left: 40%;
     color: red;
+    font-size: 50%;
 }
 
 .input-container input {
     width: 80%;
 }
+

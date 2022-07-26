@@ -196,8 +196,8 @@ const ImageSlider = ({slides}) => {
         
         <div style={titleStyle}> {slides[currentIndex].title}</div>
         <div className='rectangle' style={btnStyle}> Read More</div>
-        <div style={{ width:'100%', height:'70%',display:'flex', justifyContent:'center'}}>
-            <img src={slides[currentIndex].img} width='80%'></img>
+        <div style={{ width:'100%', height:'50%',display:'flex', justifyContent:'center'}}>
+        <img src={slides[currentIndex].img} style={{width:'80%'}}></img>
         </div>
     </div>
   )
