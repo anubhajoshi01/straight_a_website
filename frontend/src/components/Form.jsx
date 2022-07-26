@@ -11,21 +11,33 @@ const Form = () => {
     const [grade, setGrade] = useState("")
     const [school, setSchool] = useState("")
     const [more, setMore] = useState("")
-    const [showError, setShowError] = useState(false)
+   
+    const [errorMsg, setErrorMsg] = useState("")
 
     const dispatch = useDispatch()
+
+
+    const validateEmail = (email) => {
+        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    }
 
     const onSubmit = (e) => {
 
         e.preventDefault()
         try{
             console.log('trying..')
+
             if(studentName.length > 0 && email.length > 0 && phone.length > 0){
-                setShowError(false)
-                dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+                if(!validateEmail(email)){
+                    setErrorMsg("Please enter a valid email address")
+                    
+                }
+                else{
+                    dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+                }
             }
             else{
-                setShowError(true);
+                setErrorMsg("Please fill in the required fields")
             }
         }catch(e){
             console.log(e)
@@ -39,6 +51,7 @@ const Form = () => {
         setSchool('')
         setMore('')
     }
+
 
   return (
     
@@ -60,7 +73,7 @@ const Form = () => {
                     <li>
                         <div className='input-container'>
                         
-                            <label htmlFor='studentname'>Student's Name</label>
+                            <label htmlFor='studentname'>Student's Name*</label>
                             <input type='text' name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
                         
                         </div>
@@ -73,7 +86,7 @@ const Form = () => {
                     <li>
                     <div className='input-container'>
                         
-                            <label htmlFor="email"> Email </label>
+                            <label htmlFor="email"> Email (*) </label>
                             <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
                         
                     </div>
@@ -81,8 +94,8 @@ const Form = () => {
                     <li>
                     <div  className='input-container'>
                     
-                            <label htmlFor='phone'>Phone</label>
-                            <input type='text' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                            <label htmlFor='phone'>Phone (*)</label>
+                            <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                         
                     </div>
                     </li>
@@ -115,7 +128,7 @@ const Form = () => {
                 </div>
             </li>
         </ul>
-        <div className='error-msg'>{showError ? "Please fill in all the required fields" : ""}</div>
+        <div className='error-msg'>{errorMsg}</div>
         <button type='submit' className='submit-form-btn'> Submit </button>
         
     </form>

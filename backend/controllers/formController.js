@@ -66,11 +66,13 @@ const resolveForm = async (req, res) => {
        
         let resolvedForm;
         if(!currentForm.resolved){
+            console.log('line 69)')
             resolvedForm = await Form.findByIdAndUpdate(req.params.id, {$set: {
                 resolved: true
             }});
         }
         else{
+            console.log('line 75')
             resolvedForm = await Form.findByIdAndUpdate(req.params.id, {$set: {
                 resolved: false
             }});

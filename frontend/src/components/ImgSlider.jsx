@@ -97,7 +97,7 @@ const ImgSlider = ({slides}) => {
         height: '40px',
         width: '90px',
         top: '60%',
-        left: '5%',
+        left: '47%',
         color: 'white',
         background: 'purple',
         border: 'transparent',
@@ -188,9 +188,9 @@ const ImgSlider = ({slides}) => {
         
         <div style={titleStyle}> {slides[currentIndex].title}</div>
         <div className='rectangle' style={btnStyle}> Read More</div>
-        <div style={{ width:'100%', height:'70%',display:'flex', justifyContent:'center'}}>
-            <img src={slides[currentIndex].img} style={{width:'100%', height:'30%'}}></img>
-        </div>
+        <div style={{ width:'100%', height:'50%',display:'flex', justifyContent:'center'}}>
+            <img src={slides[currentIndex].img} style={{ height:'80%'}}></img>
+        </div> 
     </div>
   )
 }

@@ -52,8 +52,8 @@ const Footer = () => {
                         <li className='text-li' style={{fontWeight:'500', fontSize:'100%'}}>
                             Email
                         </li>
-                        <li className='text-li' style={{fontWeight:'200', fontSize:'80%', textDecoration:'underline'}}>
-                            info@straightaprep.com
+                        <li className='text-li' >
+                            <a href='mailto:info@straightaprep.com' >info@straightaprep.com </a>
                         </li>
 
                     </ul>
