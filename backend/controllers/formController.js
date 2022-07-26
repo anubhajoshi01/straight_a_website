@@ -55,16 +55,28 @@ const deleteForm = async (req, res) => {
 
 // Resolve form can only change one column, which is the boolean variable "resolved"
 const resolveForm = async (req, res) => {
+    console.log("resolving")
     try {
         const form = Form.findById(req.params.id)
         if(!form){
             res.status(400)
             throw new Error('form not found')
         }
-        const resolvedForm = await Form.findByIdAndUpdate(req.params.id, req.body,{
-            new: true
-        });
+        const currentForm = await Form.findById(req.params.id)
+       
+        let resolvedForm;
+        if(!currentForm.resolved){
+            resolvedForm = await Form.findByIdAndUpdate(req.params.id, {$set: {
+                resolved: true
+            }});
+        }
+        else{
+            resolvedForm = await Form.findByIdAndUpdate(req.params.id, {$set: {
+                resolved: false
+            }});
+        }
         res.json(resolvedForm);
+        console.log(resolvedForm)
     
     } catch (error) {
         console.log(error)

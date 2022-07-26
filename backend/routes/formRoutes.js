@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router()
+const {auth} = require('../middlewares/authMiddleware');
 
 const {
     addForm,
@@ -9,8 +10,8 @@ const {
 } = require('../controllers/formController')
 
 router.post('/', addForm)
-router.get('/', getForms)
-router.delete('/:id', deleteForm)
-router.put('/:id', resolveForm)
+router.get('/', auth, getForms)
+router.delete('/:id', auth, deleteForm)
+router.put('/:id', auth, resolveForm)
 
 module.exports = router
