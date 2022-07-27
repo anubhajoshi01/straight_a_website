@@ -21,7 +21,7 @@ function Header() {
             {id: 5, value: "Partners", nav:'/our-partners'}, {id: 6, value: "Pro Bono Services", nav:'/pro-bono'}]}/>
             </li>
             <li className='litext'>
-                <HeaderMenu title='Private Counseling' items={[{id: 1, value: '6-8 Grade Admission'}, {id: 2, value: '8-11 Grade Admission'}, {id: 3, value: 'College Admission'}, {
+                <HeaderMenu title='Private Counseling' items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
                     id: 4, value: 'College Transfer'
                 }]}/>
             </li>

@@ -1,0 +1,119 @@
+.grade-admissions-container {
+    margin-top: 10%;
+    margin-inline: 7%;
+}
+
+.grade-adm-hl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.grade-adm-hl img{
+    width: 180%;
+    margin-inline: 10%;
+}
+
+.grade-adm-hl div{
+    margin-left: 30%;
+    width: 60%;
+}
+
+.grade-adm-hl p{
+    font-size: 120%;
+}
+
+.start-now-btn {
+    width: 80px;
+    height: 40px;
+    margin-left: 40%;
+    background-color: goldenrod;
+    color: white;
+    border-style: none;
+}
+
+.start-now-btn:hover {
+    background-color: purple;
+}
+
+section {
+    position: relative;
+    margin-top: 17%;
+  
+}
+
+.grade-admissions-container h2 {
+    font-size: 200%;
+}
+
+.grade-admissions-container h3 {
+    font-size: 170%;
+}
+
+.grade-admissions-container p{
+    font-size: 130%;
+}
+
+.left-rect {
+    float: left;
+    width: 67%;
+    margin-bottom: 7%;
+    background-image: linear-gradient(to right, white, #bb4eed);
+}
+
+.left-rect h3{
+    font-size: 150%;
+}
+
+.right-img {
+    width: 33%;
+}
+
+.left-img-adm img{
+  
+  position: relative;
+    width: 42%;
+}
+
+.right-box {
+    width: 50%;
+    float: right;
+}
+
+.right-box h3 {
+    font-size: 120%;
+}
+
+.right-box p {
+    font-size: 100%;
+}
+
+.grade-adm-title {
+    font-size: 250%;
+    color: purple;
+}
+
+.img-text-container {
+    position: relative;
+}
+
+.img-text-container img{
+    width: 100%;
+}
+
+.center-txt {
+    position: absolute;
+    bottom: 40%;
+    left: 20%;
+    font-size: 250%;
+    color: white;
+}
+
+.list-school h3{
+    font-size: 180%;
+}
+
+.list-school {
+    width: 50%;
+  
+}
