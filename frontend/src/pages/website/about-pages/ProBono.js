@@ -14,7 +14,7 @@ function ProBono(){
         <>
         <Header />
         <div className='img'>
-            <img src="https://www.sjsu.edu/diversity/pics/community-resources/community-banner.jpg" alt='banner'/>
+            <img id="pic" src="https://www.sjsu.edu/diversity/pics/community-resources/community-banner.jpg" alt='banner'/>
         </div>
         
         <section>
@@ -24,7 +24,7 @@ function ProBono(){
         </section>
         <div className='square'>
             <div className='wrap-pic'>
-                <img src= "https://www.commonsense.org/education/sites/default/files/styles/16_9_medium/public/blog-share/7-ways-to-make-distance-learning-more-equitable-article.png?itok=ki1Ssfnc"/>
+                <img id="pic" src= "https://www.commonsense.org/education/sites/default/files/styles/16_9_medium/public/blog-share/7-ways-to-make-distance-learning-more-equitable-article.png?itok=ki1Ssfnc"/>
             </div>
             
         <section>
@@ -42,7 +42,7 @@ function ProBono(){
                 customized programs for families of different races and backgrounds based on their specific needs.
             </p>
             <div className='wrap-pic1'>
-                <img  src='https://www.arborwell.com/wp-content/uploads/2017/10/Los-Angeles-Banner.jpg' alt='la'/>
+                <img id="pic" src='https://www.arborwell.com/wp-content/uploads/2017/10/Los-Angeles-Banner.jpg' alt='la'/>
             </div>
             <p>
                 To promote a healthier and fairer education environment, Straight A Prep partners with local public schools, 

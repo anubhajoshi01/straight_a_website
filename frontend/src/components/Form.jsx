@@ -1,7 +1,8 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { useDispatch } from 'react-redux';
 import { createForm } from '../features/forms/formSlice';
-import './Form.css'
+import './Form.css';
+import emailjs from '@emailjs/browser'
 
 const Form = () => {
     const [parentName, setParentName] = useState("");
@@ -20,43 +21,65 @@ const Form = () => {
     const validateEmail = (email) => {
         return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
     }
+    
+    // email blast
+        const form = useRef();
+      
+        const sendEmail = (e) => {
+          e.preventDefault();
+      
+          emailjs.sendForm('service_kggikeu', 'template_exwhmh5', form.current, '27KtUw9_4Sazxt3vn')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+            emailjs.sendForm('service_kggikeu', 'template_spoaqm7', form.current, '27KtUw9_4Sazxt3vn')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        };
 
     const onSubmit = (e) => {
-
-        e.preventDefault()
-        try{
-            console.log('trying..')
-
-            if(studentName.length > 0 && email.length > 0 && phone.length > 0){
-                if(!validateEmail(email)){
-                    setErrorMsg("Please enter a valid email address")
-                    
+            sendEmail(e);
+            e.preventDefault()
+            try{
+                console.log('trying..')
+    
+                if(studentName.length > 0 && email.length > 0 && phone.length > 0){
+                    if(! validateEmail(email)){
+                        setErrorMsg("Please enter a valid email address")
+                        
+                    }
+                    else{
+                        dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+                    }
                 }
                 else{
-                    dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+                    setErrorMsg("Please fill in the required fields")
                 }
+            }catch(e){
+                console.log(e)
             }
-            else{
-                setErrorMsg("Please fill in the required fields")
-            }
-        }catch(e){
-            console.log(e)
+    
+            setParentName('')
+            setStudentName('')
+            setEmail('')
+            setPhone('')
+            setGrade('')
+            setSchool('')
+            setMore('')
         }
-
-        setParentName('')
-        setStudentName('')
-        setEmail('')
-        setPhone('')
-        setGrade('')
-        setSchool('')
-        setMore('')
-    }
+      
 
 
   return (
     
     <div className='form-container'>
-    <form onSubmit={onSubmit}>
+    <form  ref={form} onSubmit={onSubmit}>
         
         <ul className='inputs-vertical'>
             <li>
@@ -133,9 +156,8 @@ const Form = () => {
         
     </form>
     </div>
-
-    
   )
 }
+
 
 export default Form
