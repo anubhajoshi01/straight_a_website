@@ -21,16 +21,16 @@ function Header() {
             {id: 5, value: "Partners", nav:'/our-partners'}, {id: 6, value: "Pro Bono Services", nav:'/pro-bono'}]}/>
             </li>
             <li className='litext'>
-                <HeaderMenu title='Private Counseling' items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
+                <HeaderMenu title='Private Counseling' nav={'/private-counseling'} items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
                     id: 4, value: 'College Transfer', nav:'/college-transfer'
                 }]}/>
             </li>
             <li className='litext'>
-                <HeaderMenu title="Elite Services" items={[{id: 1, value:"Elite Test Prep"}, {id: 2, value: 'Elite Private Academic Tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad'},
+                <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep"}, {id: 2, value: 'Elite Private Academic Tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad'},
                 {id: 4, value: 'Career Counseling & Placement'}]}></HeaderMenu>
             </li>
             <li className='litext'>
-                <HeaderMenu title="Resources" items={[{id: 1, value: "FAQ"}]}/>
+                <HeaderMenu title="Resources" nav={'/resources'} items={[{id: 1, value: "FAQ"}]}/>
             </li>
             <li className='litext' onClick={() => navigate('/blog')}>
                 <div>Blog</div>

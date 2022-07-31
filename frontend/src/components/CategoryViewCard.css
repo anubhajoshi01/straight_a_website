@@ -1,9 +1,7 @@
 .categoryview {
-    position: inherit;
-    height: fit-content;
-    width: fit-content;
-    margin-left: 6%;
+    width: 100%;
     background-color: white;
+  
 }
 
 .categoryview:hover{
@@ -12,10 +10,9 @@
 }
 
 .categoryimg{
-    margin-top: 2%;
-    margin-left: 5%;
+    margin-block: 2%;
+    margin-inline: 5%;
     width: 90%;
-    height: 60%;
 }
 
 .categorytitle{
