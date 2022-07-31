@@ -1,0 +1,15 @@
+.college-transfer-container {
+    margin-inline: 7%;
+    margin-top: 7%;
+    margin-bottom: 10%;
+}
+
+.span-img-college-transfer img {
+    width: 100%;
+}
+
+.college-transfer-container h2 {
+    color: purple;
+    margin-left: 5%;
+}
+

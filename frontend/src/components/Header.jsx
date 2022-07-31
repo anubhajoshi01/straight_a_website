@@ -22,7 +22,7 @@ function Header() {
             </li>
             <li className='litext'>
                 <HeaderMenu title='Private Counseling' items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
-                    id: 4, value: 'College Transfer'
+                    id: 4, value: 'College Transfer', nav:'/college-transfer'
                 }]}/>
             </li>
             <li className='litext'>
