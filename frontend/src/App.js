@@ -29,6 +29,7 @@ import ProBono from './pages/website/about-pages/ProBono';
 import GradeAdmission6to8 from './pages/website/private-counseling-pages/GradeAdmission6to8';
 import GradeAdmission8to11 from './pages/website/private-counseling-pages/GradeAdmission8to11';
 import CollegeAdmission from './pages/website/private-counseling-pages/CollegeAdmission';
+import CollegeTransfer from './pages/website/private-counseling-pages/CollegeTransfer';
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -73,7 +74,7 @@ function App() {
               <Route path='6-8-grade-admission' element={<GradeAdmission6to8/>}/>
               <Route path='8-11-grade-admission' element={<GradeAdmission8to11/>}/>
               <Route path='college-admission' element={<CollegeAdmission/>}/>
-
+              <Route path='college-transfer' element={<CollegeTransfer/>}/>
             </Routes>
       </Router>
       </div>
