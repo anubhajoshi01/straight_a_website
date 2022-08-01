@@ -1,0 +1,28 @@
+.elite-test-prep-container {
+    margin-inline: 7%;
+    margin-block: 5%;
+}
+
+.elite-test-prep-container p {
+    font-size: 100%;
+    margin-block: 2%;
+}
+
+.left-img {
+    float: left;
+}
+
+.right-img {
+    float: right;
+    margin-top: 6%;
+}
+
+.elite-test-prep-container h3 {
+    font-size: 120%;
+}
+
+.elite-test-prep-container h4 {
+    font-size: 130%;
+    font-weight: 450;
+    text-decoration: underline;
+}
