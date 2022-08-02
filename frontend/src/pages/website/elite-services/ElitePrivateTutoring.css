@@ -1,0 +1,58 @@
+.advantage p{
+    margin-left:5%;
+    margin-right:5%;
+}
+.curriculum p{
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:-13%;
+}
+.subjects li{
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right:5%;
+    font-size: 32px;
+    margin-top:5%;
+}
+.subjects h3{
+    margin-top:30%;
+    margin-left:5%;
+    font-size: 35px;
+}
+.qualities{
+    display:flex;
+    flex-direction: row;
+    font-weight:bold;
+
+}
+
+.lists{
+    display:flex;
+    flex-direction: row;
+    padding-right:3%;
+}
+
+.left-img-2{
+    float:left;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:5%;
+    width:40%;
+}
+
+.curriculum{
+    margin-top:7%;
+}
+
+.subjects{
+    margin-top:10%;
+}
+.elite-content-box{
+    margin:5% 3% 5% 3%;
+}
+.elite-content-box h4{
+    font-size: 130%;
+    font-weight: 450;
+    text-decoration: underline;
+}
+

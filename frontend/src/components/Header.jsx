@@ -28,7 +28,7 @@ const Header = ({lang}) => {
                 }]}/>
             </li>
             <li className='litext'>
-                <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep", nav:'/elite-test-prep'}, {id: 2, value: 'Elite Private Academic Tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad'},
+                <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep", nav:'/elite-test-prep'}, {id: 2, value: 'Elite Private Academic Tutoring',nav:'/elite-private-tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad'},
                 {id: 4, value: 'Career Counseling & Placement'}]}></HeaderMenu>
             </li>
             <li className='litext'>

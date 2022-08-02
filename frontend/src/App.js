@@ -34,6 +34,7 @@ import PrivateCounselingCategory from './pages/website/private-counseling-pages/
 import EliteServiceCategory from './pages/website/elite-services/EliteServiceCategory'
 import ResourceCategory from './pages/website/resources/ResourceCategory';
 import EliteTestPrep from './pages/website/elite-services/EliteTestPrep';
+import ElitePrivateTutoring from './pages/website/elite-services/ElitePrivateTutoring'
 
 const slides = [
   {img: 'https://static.wixstatic.com/media/03c5c59e7e2748159fa0d753985f1052.jpg/v1/fill/w_1895,h_1032,al_b,q_85,usm_0.66_1.00_0.01,enc_auto/03c5c59e7e2748159fa0d753985f1052.jpg', title:'img1'},
@@ -84,7 +85,7 @@ function App() {
 
               <Route path='elite-services' element={<EliteServiceCategory/>}/>
               <Route path='elite-test-prep' element={<EliteTestPrep/>}/>
-
+              <Route path='elite-private-tutoring' element={<ElitePrivateTutoring/>}/>
               <Route path='resources' element={<ResourceCategory/>}/>
             </Routes>
       </Router>
