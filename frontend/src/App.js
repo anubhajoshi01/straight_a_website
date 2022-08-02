@@ -59,6 +59,7 @@ function App() {
             <Routes>
               //temporary form for dev purposes
               <Route path='/' element={<Main/>}/>
+              <Route path='/:lang' element={<Main/>}/>
               <Route path='login' element={<Login/>} />
               <Route path='blog' element={<Blog/>}/>
               <Route path='view-blog/:id' element={<ViewBlog/>} />
