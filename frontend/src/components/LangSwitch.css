@@ -1,0 +1,84 @@
+.selected-lang {
+    cursor: pointer;
+    width: 70px;
+    text-align: center;
+}
+
+.lang-menu {
+    margin-top: 10px;
+    position: relative;
+    height: 40px;
+    width: 100px;
+    border-style: solid;
+    border-width: 0.01px;
+    border-color: purple;
+}
+
+.selected-lang img {
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+
+.selected-lang h6{
+    margin-left: 10%;
+    font-size: 150%;
+
+}
+
+.other-lang {
+    width: 70px;
+}
+
+.other-lang:hover {
+    background-color: #f8f8f8;
+}
+
+.other-lang img {
+    height: 30px;
+    width: 30px;
+    float: left;
+}
+
+.other-lang h6{
+    margin-left: 10%;
+    font-size: 150%;
+
+}
+
+
+.selected-lang-en:before {
+    content: '';
+    display: block;
+    width: 20px;
+    height: 20px;
+    background-image: url(https://cdn.countryflags.com/thumbs/united-states-of-america/flag-square-500.png);
+} 
+
+.selected-lang-zh:before {
+    content: '';
+    display: block;
+    width: 32px;
+    height: 32px;
+    background-image: url(https://cdn.countryflags.com/thumbs/china/flag-square-500.png);
+} 
+
+.lang-menu ul {
+    margin-top: 30%;
+    background-color: white;
+    border: 1px solid #f8f8f8;
+    box-shadow: 0px 1px 10px rgba(0,0,0,0.2);
+    border-radius: 5px;
+    display: none;
+    position: absolute;
+}
+
+.lang-menu ul li {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.lang-menu:hover ul{
+    display: block;
+}

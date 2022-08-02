@@ -126,7 +126,7 @@ const ImgSlider = ({slides}) => {
     }
 
     const goToNext = () => {
-        console.log("line 114")
+       // console.log("line 114")
         const isLastSlide = currentIndex === slides.length -1;
         const newIndex = isLastSlide ? 0 : currentIndex+1
         setCurrentIndex(newIndex)

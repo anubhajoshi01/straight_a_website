@@ -4,7 +4,7 @@ import { createForm } from '../features/forms/formSlice';
 import './Form.css';
 import emailjs from '@emailjs/browser'
 
-const Form = () => {
+const Form = ({lang}) => {
     const [parentName, setParentName] = useState("");
     const [studentName, setStudentName] = useState("")
     const [email, setEmail] = useState("")
@@ -74,7 +74,89 @@ const Form = () => {
             setMore('')
         }
       
-
+    if(lang === 'zh') {
+        return (
+    
+            <div className='form-container'>
+            <form  ref={form} onSubmit={onSubmit}>
+                
+                <ul className='inputs-vertical'>
+                    <li>
+                        <div className='in-line-form'>
+                        <ul className='inputs-horizontal'>
+                            <li>
+                                <div className='input-container'>
+                            
+                                    <label htmlFor="parentname"> Parent's Name </label>
+                                    <input type='text' name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
+                                
+                                </div>
+                            </li>
+                            <li>
+                                <div className='input-container'>
+                                
+                                    <label htmlFor='studentname'>Student's Name*</label>
+                                    <input type='text' name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
+                                
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <ul className='inputs-horizontal'>
+                            <li>
+                            <div className='input-container'>
+                                
+                                    <label htmlFor="email"> Email* </label>
+                                    <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
+                                
+                            </div>
+                            </li>
+                            <li>
+                            <div  className='input-container'>
+                            
+                                    <label htmlFor='phone'>Phone*</label>
+                                    <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                                
+                            </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul className='inputs-horizontal'>
+                            <li>
+                            <div className='input-container'>
+                                
+                                    <label htmlFor="grade"> Grade </label>
+                                    <input type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
+                                
+                            </div>
+                            </li>
+                            <li>
+                            <div  className='input-container'>
+                                
+                                    <label htmlFor='school'>School</label>
+                                    <input type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
+                                
+                            </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div className='input-container-long'>
+                        <label htmlFor='more'>Tell us More</label>
+                        <input style={{width:'100%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
+                        </div>
+                    </li>
+                </ul>
+                <div className='error-msg'>{errorMsg}</div>
+                <button type='submit' className='submit-form-btn'> Submit </button>
+                
+            </form>
+            </div>
+          )
+    }
 
   return (
     
@@ -109,7 +191,7 @@ const Form = () => {
                     <li>
                     <div className='input-container'>
                         
-                            <label htmlFor="email"> Email (*) </label>
+                            <label htmlFor="email"> Email* </label>
                             <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
                         
                     </div>
@@ -117,7 +199,7 @@ const Form = () => {
                     <li>
                     <div  className='input-container'>
                     
-                            <label htmlFor='phone'>Phone (*)</label>
+                            <label htmlFor='phone'>Phone*</label>
                             <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                         
                     </div>

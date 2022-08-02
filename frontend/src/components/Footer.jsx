@@ -3,7 +3,10 @@ import qrcodeimg from '../res/qrcode.jpg'
 import './Footer.css'
 import logo from '../res/LOGO_edited.jpg'
 
-const Footer = () => {
+const Footer = ({lang}) => {
+
+    console.log(`footer ${lang}`)
+
   return (
     <div className='footer'>
         <div className='box'>

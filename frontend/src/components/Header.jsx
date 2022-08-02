@@ -4,10 +4,12 @@ import logo from '../res/LOGO_edited.jpg'
 import './Header.css';
 import Box from '@mui/material/Box'
 import HeaderMenu from './HeaderMenu';
+import LangSwitch from './LangSwitch';
 
-function Header() {
+const Header = ({lang}) => {
 
     const navigate = useNavigate()
+    console.log(`header ${lang}`)
 
   return (
     <header className='header'>
@@ -39,6 +41,9 @@ function Header() {
                 <div className='rectangle'>
                     Start Now
                 </div>
+            </li>
+            <li>
+                <LangSwitch lang={lang}/>
             </li>
         </ul>
     </header>
