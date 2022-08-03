@@ -2,7 +2,7 @@ import React, {useState} from 'react'
 import { useNavigate } from 'react-router-dom'
 import './LangSwitch.css'
 
-const LangSwitch = ({lang}) => {
+const LangSwitch = ({lang, currPath}) => {
 
   console.log(lang)
 
@@ -21,7 +21,12 @@ const LangSwitch = ({lang}) => {
     const newSelected = otherLang
     setOtherLang(selectedLang)
     setSelectedLang(newSelected)
-    navigate(`/${otherLang}`)
+    
+    currPath = currPath.substring(0, currPath.lastIndexOf('/'))
+    console.log(currPath)
+    navigate({
+      pathname: `${currPath}/${otherLang}`,
+    })
   }
 
   return (
