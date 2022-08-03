@@ -18,6 +18,8 @@ function BlogInput(){
     const [imageUrl, setImageUrl] = useState(null)
     const [title, setTitle] = useState('')
     const [imageUrlText, setImageUrlText] = useState('')
+    const [chineseTitle, setChineseTitle] = useState('')
+    const [chineseContent, setChineseContent] = useState('')
     const [content, setContent] = useState('')
     const [submitted, setSubmitted] = useState(false)
     const [fetchedPost, setFetchedPost] = useState(false)
@@ -31,12 +33,13 @@ function BlogInput(){
         try{
             if(id !== 'create'){
                 console.log('updating')
-                const allData = {id, data:{title, content, imageUrls:imageUrl}}
+                const allData = {id, data:{title, content, imageUrls:imageUrl,chineseTitle, chineseContent}}
                 dispatch(updatePost(allData))
             }
             else{
-                dispatch(createPost({title, content, imageUrls:imageUrl}))
+                dispatch(createPost({title, content, imageUrls:imageUrl,chineseContent,chineseTitle}))
             }
+
 
         }catch(e){
             console.log(e)
@@ -74,6 +77,8 @@ function BlogInput(){
             setTitle(showBlog.title)
             setImageUrlText(showBlog.imageUrls)
             setContent(showBlog.content)
+            setChineseContent(showBlog.chineseContent)
+            setChineseTitle(showBlog.chineseTitle)
             setDisplayed(true)
         }
 
@@ -98,12 +103,20 @@ function BlogInput(){
 
    
     return (
+        <>
+        
         <div className="blog-input-container">
             <h1>Blog Post</h1>
             <div className="title-container">
                 <h3> Title:</h3>
                 <input type='text' id='title' value={title} onChange={(e) => {setTitle(e.target.value)}}/>
             </div>
+            
+            <div className="title-container">
+                <h3> Chinese Title:</h3>
+                <input type='text' id='chineseTitle' value={chineseTitle} onChange={(e) => {setChineseTitle(e.target.value)}}/>
+            </div>
+
             <div className="image-text-container">
                 <h3>Image Url:</h3>
                 <input type='text' id='imagetext' value={imageUrlText} onChange={(e) => {setImageUrlText(e.target.value)}}/>
@@ -117,6 +130,10 @@ function BlogInput(){
                 <h2>Content:</h2>
                 <textarea className='scrollable-text-box' value={content} name='content' onChange={(e) => setContent(e.target.value)}/>
             </div>
+            <div className="content-container">
+                <h2> Chinese Content:</h2>
+                <textarea className='scrollable-text-box' value={chineseContent} name='chineseContent' onChange={(e) => setChineseContent(e.target.value)}/>
+            </div>
             <ul className="blog-input-horizontal-ul">
                 <button className="blog-input-btn" onClick={onSubmit}>Submit</button>
                 <button className="blog-input-btn" onClick = {() =>{
@@ -124,6 +141,7 @@ function BlogInput(){
                 }}>Delete</button>
             </ul>
         </div>
+        </>
     )
 }
 

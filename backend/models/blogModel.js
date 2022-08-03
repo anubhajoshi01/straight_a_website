@@ -11,6 +11,12 @@ const blogSchema = mongoose.Schema(
             type: String,
             required: [true, 'please add content']
         },
+        chineseTitle: {
+            type: String,
+        },
+        chineseContent: {
+            type:String,
+        },
         imageUrls: {
             type: String,
         },
