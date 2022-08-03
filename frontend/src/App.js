@@ -65,6 +65,7 @@ function App() {
               <Route path='/:lang' element={<Main/>}/>
               <Route path='login' element={<Login/>} />
               <Route path='blog' element={<Blog/>}/>
+              <Route path='blog/:lang' element={<Blog/>}/>
               <Route path='view-blog/:id' element={<ViewBlog/>} />
               <Route path='me' element={<Admin/>}>
                 <Route path='view-forms' element={<ViewForms/>}/>

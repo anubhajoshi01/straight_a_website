@@ -14,6 +14,8 @@ const BlogListCard = ({img, title, content, id}) => {
             navigate(`../me/blog-input/${id}`, {replace:true})
        }
     }
+
+
   return (
     <div className='blog-list-card-container' onClick={onClick}>
         <ul className='blog-listviewcard-horizontal'>
@@ -24,7 +26,8 @@ const BlogListCard = ({img, title, content, id}) => {
                 <div className='blog-card-content-container'>
                 <ul className='blog-listviewcard-vertical'>
                     <h5 className='blog-card-title'> {`|${title}`} </h5>
-                    <p className='blog-card-content'> {content.length <= 450 ? content : content.substring(0,450)}</p>
+                    <p className='blog-card-content'> {content}</p>
+                    {/* <p className='blog-card-content'> {content.length <= 450 ? content : content.substring(0,450)}</p> */}
                     <p className='blog-card-learnmore'>Learn more {'>'}</p>
                 </ul>
                 </div>
