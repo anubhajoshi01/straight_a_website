@@ -6,7 +6,7 @@ import Box from '@mui/material/Box'
 import HeaderMenu from './HeaderMenu';
 import LangSwitch from './LangSwitch';
 
-const Header = ({lang}) => {
+const Header = ({lang, currPath}) => {
 
     const navigate = useNavigate()
     console.log(`header ${lang}`)
@@ -28,7 +28,7 @@ const Header = ({lang}) => {
                 }]}/>
             </li>
             <li className='litext'>
-                <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep", nav:'/elite-test-prep'}, {id: 2, value: 'Elite Private Academic Tutoring',nav:'/elite-private-tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad'},
+                <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep", nav:'/elite-test-prep'}, {id: 2, value: 'Elite Private Academic Tutoring',nav:'/elite-private-tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad', nav:'/summer-intern'},
                 {id: 4, value: 'Career Counseling & Placement'}]}></HeaderMenu>
             </li>
             <li className='litext'>
@@ -43,7 +43,7 @@ const Header = ({lang}) => {
                 </div>
             </li>
             <li>
-                <LangSwitch lang={lang}/>
+                <LangSwitch lang={lang} currPath={currPath}/>
             </li>
         </ul>
     </header>

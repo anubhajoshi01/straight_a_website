@@ -8,15 +8,21 @@ import Footer from '../../components/Footer'
 import ImageSlider from '../../components/ImageSlider'
 import ImgSlider from '../../components/ImgSlider'
 import Form from '../../components/Form'
-import { useParams } from 'react-router-dom'
+import { useLocation, useNavigate, useParams } from 'react-router-dom'
+import { useEffect } from 'react'
 
 function Main(){
 
-    let {lang} = useParams()
+    const {lang} = useParams()
+    const navigate = useNavigate()
+    const location = useLocation()
 
-    if(lang == null) {
-        lang = 'en'
-    }
+    useEffect(() => {
+        if(lang == null) {
+          navigate('en')
+          
+        }
+      }, [])
 
     console.log(`lang is ${lang}`)
 
@@ -35,7 +41,7 @@ function Main(){
     if(lang === 'zh') {
         return (
            <>
-             <Header lang={lang}/>
+             <Header lang={'zh'} currPath={location.pathname}/>
             <ImageSlider slides={slides}/>
             <div className='main-container'>
                 <section>
@@ -176,7 +182,7 @@ function Main(){
     return (
         
         <>
-            <Header lang={lang}/>
+            <Header lang={'en'} currPath={location.pathname}/>
             <ImageSlider slides={slides}/>
             <div className='main-container'>
                 <section>
