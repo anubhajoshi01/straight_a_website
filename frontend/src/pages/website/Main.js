@@ -32,17 +32,29 @@ function Main(){
         {title:'College Transfer Program: Transfer Application Services', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'}
     ]
 
+    const slides_zh = [
+        {title:"私教辅导：实现你梦想，创造你未来", img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2aWNlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'},
+        {title: "精英服务: 考试辅导, 私教辅导, 职业规划", img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHV0b3J8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'},
+        {title:'大学转学服务: 常青藤名校转学', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'}
+    ]
+    
+
     const slides2 = [
         {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
         {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
         {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"}
+    ]
+    const slides2_zh = [
+        {title:"为什么 Straight A Prep 能帮到你? 经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
+        {title:"为什么 Straight A Prep 能帮到你? 经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
+        {title:"为什么 Straight A Prep 能帮到你? 经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"}
     ]
 
     if(lang === 'zh') {
         return (
            <>
              <Header lang={'zh'} currPath={location.pathname}/>
-            <ImageSlider slides={slides}/>
+            <ImageSlider slides={slides_zh}/>
             <div className='main-container'>
                 <section>
                     <h1>我们的服务</h1>
@@ -143,7 +155,7 @@ function Main(){
                 </section>
                 <section>
                     <h1>博文</h1>
-                    <ImgSlider slides={slides2}/>
+                    <ImgSlider slides={slides2_zh}/>
                     <div className='seperate-container'>
                         <div className='purple-background'>
                             <h1>
