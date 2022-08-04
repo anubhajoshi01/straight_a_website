@@ -87,7 +87,7 @@ const Form = ({lang}) => {
                             <li>
                                 <div className='input-container'>
                             
-                                    <label htmlFor="parentname"> Parent's Name </label>
+                                    <label htmlFor="parentname"> 家长姓名 </label>
                                     <input type='text' name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
                                 
                                 </div>
@@ -95,7 +95,7 @@ const Form = ({lang}) => {
                             <li>
                                 <div className='input-container'>
                                 
-                                    <label htmlFor='studentname'>Student's Name*</label>
+                                    <label htmlFor='studentname'>学生姓名*</label>
                                     <input type='text' name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
                                 
                                 </div>
@@ -108,7 +108,7 @@ const Form = ({lang}) => {
                             <li>
                             <div className='input-container'>
                                 
-                                    <label htmlFor="email"> Email* </label>
+                                    <label htmlFor="email"> 邮件地址* </label>
                                     <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
                                 
                             </div>
@@ -116,7 +116,7 @@ const Form = ({lang}) => {
                             <li>
                             <div  className='input-container'>
                             
-                                    <label htmlFor='phone'>Phone*</label>
+                                    <label htmlFor='phone'>电话*</label>
                                     <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                                 
                             </div>
@@ -128,7 +128,7 @@ const Form = ({lang}) => {
                             <li>
                             <div className='input-container'>
                                 
-                                    <label htmlFor="grade"> Grade </label>
+                                    <label htmlFor="grade"> 现在年级 </label>
                                     <input type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
                                 
                             </div>
@@ -136,7 +136,7 @@ const Form = ({lang}) => {
                             <li>
                             <div  className='input-container'>
                                 
-                                    <label htmlFor='school'>School</label>
+                                    <label htmlFor='school'>当前学校</label>
                                     <input type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
                                 
                             </div>
@@ -145,7 +145,7 @@ const Form = ({lang}) => {
                     </li>
                     <li>
                         <div className='input-container-long'>
-                        <label htmlFor='more'>Tell us More</label>
+                        <label htmlFor='more'>告诉我们更多关于学生的信息</label>
                         <input style={{width:'100%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
                         </div>
                     </li>
