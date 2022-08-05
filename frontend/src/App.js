@@ -91,8 +91,6 @@ function App() {
               <Route path='elite-private-tutoring' element={<ElitePrivateTutoring/>}/>
               <Route path='summer-intern' element={<SummerIntern/>}/>
               <Route path='summer-intern/:lang' element={<SummerIntern/>}/>
-              <Route path='summer-intern/:lang' element={<SummerIntern/>}/>
-              
               
               <Route path='resources' element={<ResourceCategory/>}/>
 
