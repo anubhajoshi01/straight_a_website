@@ -51,6 +51,8 @@ function Blog({ create }) {
             for (let i = showFromIndex; i < showFromIndex + 3 && i < blogs.length; i++) {
                 //console.log(`${i} is ${blogs[i]}`)
                 append.push(blogs[i])
+                
+                console.log(`type is ${typeof blogs[i].createdAt}`)
             }
 
             setDisplayList(append)

@@ -5,8 +5,10 @@ const Blog = require('../models/blogModel')
 const getBlogs = async (req, res) => {
     try {
         const blogs = await Blog.find()
+        const blogsReversed = blogs.reverse()
        // console.log(blogs)
-        res.status(200).json(blogs);
+        res.status(200).json(blogsReversed);
+
     } catch (error) {
         console.log(error)
         res.status(400)

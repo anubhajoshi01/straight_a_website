@@ -72,7 +72,7 @@ const Header = ({lang, currPath}) => {
             </li>
             <li className='litext'>
                 <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep", nav:'/elite-test-prep'}, {id: 2, value: 'Elite Private Academic Tutoring',nav:'/elite-private-tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad', nav:'/summer-intern'},
-                {id: 4, value: 'Career Counseling & Placement'}]}></HeaderMenu>
+                {id: 4, value: 'Career Counseling & Placement', nav:'/career-counseling'}]}></HeaderMenu>
             </li>
             <li className='litext'>
                 <HeaderMenu title="Resources" nav={'/resources'} items={[{id: 1, value: "FAQ"}]}/>
