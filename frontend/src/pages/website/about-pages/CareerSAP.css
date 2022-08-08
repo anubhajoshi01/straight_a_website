@@ -1,0 +1,13 @@
+.career-sap-container {
+    margin-inline: 7%;
+    margin-bottom: 10%;
+}
+
+.career-sap-hl-ul {
+    display: flex;
+    flex-direction: row;
+}
+
+.career-sap-dotted-ul li{
+    list-style-type: disc;
+}

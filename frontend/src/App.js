@@ -26,6 +26,7 @@ import CaseStudies from './pages/website/about-pages/CaseStudies';
 import OurReviews from './pages/website/about-pages/OurReviews';
 import OurPartners from './pages/website/about-pages/OurPartners';
 import ProBono from './pages/website/about-pages/ProBono';
+import CareerSAP from './pages/website/about-pages/CareerSAP';
 import GradeAdmission6to8 from './pages/website/private-counseling-pages/GradeAdmission6to8';
 import GradeAdmission8to11 from './pages/website/private-counseling-pages/GradeAdmission8to11';
 import CollegeAdmission from './pages/website/private-counseling-pages/CollegeAdmission';
@@ -37,6 +38,8 @@ import EliteTestPrep from './pages/website/elite-services/EliteTestPrep';
 import ElitePrivateTutoring from './pages/website/elite-services/ElitePrivateTutoring'
 import SummerIntern from './pages/website/elite-services/SummerIntern'
 import CareerCounseling from './pages/website/elite-services/CareerCounseling'
+import TermsOfService from './pages/website/TermsOfService'
+import PrivacyPolicy from './pages/website/PrivacyPolicy'
 
 
 const slides = [
@@ -80,6 +83,8 @@ function App() {
               <Route path='testimonials' element={<OurReviews/>}/>
               <Route path='our-partners' element={<OurPartners/>}/>
               <Route path='pro-bono' element={<ProBono/>}/>
+              <Route path='career-sap' element={<CareerSAP/>}/>
+              <Route path='career-sap/:lang' element={<CareerSAP/>}/>
 
               <Route path='private-counseling' element={<PrivateCounselingCategory/>}/>
               <Route path='6-8-grade-admission' element={<GradeAdmission6to8/>}/>
@@ -97,6 +102,11 @@ function App() {
               <Route path='career-counseling/:lang' element={<CareerCounseling/>}/>
               
               <Route path='resources' element={<ResourceCategory/>}/>
+
+              <Route path='terms-and-conditions' element={<TermsOfService/>}/>
+              <Route path='terms-and-conditions/:lang' element={<TermsOfService/>}/>
+              <Route path='privacy-policy' element={<PrivacyPolicy/>}/>
+              <Route path='privacy-policy/:lang' element={<PrivacyPolicy/>}/>
 
             </Routes>
       </Router>

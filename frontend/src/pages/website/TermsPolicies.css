@@ -1,0 +1,20 @@
+.terms-margin {
+    margin-inline: 7%;
+}
+
+.terms-page a {
+    color: black;
+}
+
+.terms-dotted-list li{
+    list-style-type: disc;
+}
+
+.terms-page {
+    margin-block: 10%;
+}
+
+.terms-page p {
+    font-style: normal;
+    font-size: 100%;
+}

@@ -63,7 +63,7 @@ const Header = ({lang, currPath}) => {
             </li>
             <li className='litext'>
                 <HeaderMenu title='About' nav='/' items={[{id: 1, value: 'Our Story', nav:'/our-story'}, {id: 2, value: 'Our Team', nav:'/our-team'}, {id: 3, value: 'Case Studies', nav:'/case-studies'}, {id: 4, value: "Testimonials", nav:'/testimonials'},
-            {id: 5, value: "Partners", nav:'/our-partners'}, {id: 6, value: "Pro Bono Services", nav:'/pro-bono'}]}/>
+            {id: 5, value: "Partners", nav:'/our-partners'}, {id: 6, value: "Pro Bono Services", nav:'/pro-bono'}, {id:7, value:'Career At SAP', nav:'/career-sap'}]}/>
             </li>
             <li className='litext'>
                 <HeaderMenu title='Private Counseling' nav={'/private-counseling'} items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
