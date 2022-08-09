@@ -37,6 +37,7 @@ import ResourceCategory from './pages/website/resources/ResourceCategory';
 import EliteTestPrep from './pages/website/elite-services/EliteTestPrep';
 import ElitePrivateTutoring from './pages/website/elite-services/ElitePrivateTutoring'
 import SummerIntern from './pages/website/elite-services/SummerIntern'
+import FAQ from './pages/website/resources/FAQ'
 
 import CareerCounseling from './pages/website/elite-services/CareerCounseling'
 import TermsOfService from './pages/website/TermsOfService'
@@ -104,6 +105,7 @@ function App() {
               <Route path='career-counseling/:lang' element={<CareerCounseling/>}/>
               
               <Route path='resources' element={<ResourceCategory/>}/>
+
               
               {/* <Route path='FAQ/:lang' element={<FAQ/>}/> */}
 
@@ -111,6 +113,7 @@ function App() {
               <Route path='terms-and-conditions/:lang' element={<TermsOfService/>}/>
               <Route path='privacy-policy' element={<PrivacyPolicy/>}/>
               <Route path='privacy-policy/:lang' element={<PrivacyPolicy/>}/>
+
 
             </Routes>
       </Router>
