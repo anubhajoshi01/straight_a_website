@@ -1,0 +1,21 @@
+.faq-container h3{
+    color: purple;
+    font-size: 22px;
+    margin-left:10%;
+    
+}
+
+.faq-container p{
+    color:black;
+    text-align: center;
+}
+
+.content{
+    width: 80%;
+    height: 70%;
+    margin-bottom: 50%;
+    display: flex;
+    flex-direction: column;
+    margin:auto;
+    
+}

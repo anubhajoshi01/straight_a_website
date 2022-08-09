@@ -105,9 +105,8 @@ function App() {
               <Route path='career-counseling/:lang' element={<CareerCounseling/>}/>
               
               <Route path='resources' element={<ResourceCategory/>}/>
-
-              
-              {/* <Route path='FAQ/:lang' element={<FAQ/>}/> */}
+              <Route path='faq' element={<FAQ/>}/>
+              <Route path='faq/:lang' element={<FAQ/>}/>
 
               <Route path='terms-and-conditions' element={<TermsOfService/>}/>
               <Route path='terms-and-conditions/:lang' element={<TermsOfService/>}/>
