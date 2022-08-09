@@ -34,7 +34,7 @@ const Header = ({lang, currPath}) => {
                {id: 4, value: '职业规划和就业'}]}></HeaderMenu>
            </li>
            <li className='litext'>
-               <HeaderMenu title="资源" nav={'/resources/zh'} items={[{id: 1, value: "常见问题"}]}/>
+               <HeaderMenu title="资源" nav={'/resources/zh'} items={[{id: 1, value: "常见问题",nav:'/FAQ/zh'}]}/>
            </li>
            <li className='litext' onClick={() => navigate('/blog/zh')}>
                <div>博客</div>
@@ -75,7 +75,7 @@ const Header = ({lang, currPath}) => {
                 {id: 4, value: 'Career Counseling & Placement', nav:'/career-counseling'}]}></HeaderMenu>
             </li>
             <li className='litext'>
-                <HeaderMenu title="Resources" nav={'/resources'} items={[{id: 1, value: "FAQ"}]}/>
+                <HeaderMenu title="Resources" nav={'/resources'} items={[{id: 1, value: "FAQ", nav:'/FAQ'}]}/>
             </li>
             <li className='litext' onClick={() => navigate('/blog')}>
                 <div>Blog</div>

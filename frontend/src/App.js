@@ -37,9 +37,11 @@ import ResourceCategory from './pages/website/resources/ResourceCategory';
 import EliteTestPrep from './pages/website/elite-services/EliteTestPrep';
 import ElitePrivateTutoring from './pages/website/elite-services/ElitePrivateTutoring'
 import SummerIntern from './pages/website/elite-services/SummerIntern'
+
 import CareerCounseling from './pages/website/elite-services/CareerCounseling'
 import TermsOfService from './pages/website/TermsOfService'
 import PrivacyPolicy from './pages/website/PrivacyPolicy'
+
 
 
 const slides = [
@@ -102,6 +104,8 @@ function App() {
               <Route path='career-counseling/:lang' element={<CareerCounseling/>}/>
               
               <Route path='resources' element={<ResourceCategory/>}/>
+              
+              {/* <Route path='FAQ/:lang' element={<FAQ/>}/> */}
 
               <Route path='terms-and-conditions' element={<TermsOfService/>}/>
               <Route path='terms-and-conditions/:lang' element={<TermsOfService/>}/>

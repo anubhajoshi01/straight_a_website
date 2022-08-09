@@ -20,7 +20,6 @@ function Main(){
     useEffect(() => {
         if(lang == null) {
           navigate('en')
-          
         }
       }, [])
 
