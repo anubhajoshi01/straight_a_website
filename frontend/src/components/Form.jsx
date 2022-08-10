@@ -77,7 +77,7 @@ const Form = ({lang}) => {
     if(lang === 'zh') {
         return (
     
-            <div className='form-container'>
+            <div className='form-container-zh'>
             <form  ref={form} onSubmit={onSubmit}>
                 
                 <ul className='inputs-vertical'>

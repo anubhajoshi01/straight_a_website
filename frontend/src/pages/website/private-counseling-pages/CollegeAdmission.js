@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import Footer from '../../../components/Footer'
 import Header from '../../../components/Header'
 import './GradeAdmission.css'
 
 function GradeAdmission6to8(){
+
+    const navigate = useNavigate()
     
     return (
         <>
@@ -19,7 +22,7 @@ function GradeAdmission6to8(){
                             <p>We are well-equipped to help students and families who want assistance in navigating the selective private/independent school admission process. Our experienced consultants will analyze your student profile to help finalize your school list ad provide the most effective aid to your applications. Services are customized to meet student's unique needs and goals.</p>
                             <p><br/></p>
                             <p>The preperatory school package includes assistance with both student and parent essays, activity sheet completion guidance, help to secure the best letters of reccomendation, interview preperation, school visitation guidance, SAT preparation, how to use social media to your advantage, and application completion guidance. Assistance for athletes and artists is also included as appropriate.</p>
-                            <button className="start-now-btn"> Start Now </button>
+                            <button className="start-now-btn" onClick={() => navigate('/start-now')}> Start Now </button>
                         </div>
                     </li>
                 </ul>
@@ -49,9 +52,7 @@ function GradeAdmission6to8(){
                     <p><br/></p>
                     <h3>"It was a very personal experience where I was encouraged to pursue my interests. If you're wondering about how effective the process is, I would say that I accomplished more than I expected and got into schools that would have been our of my reach otherwise.</h3>
                 </div>
-                <div className="right-img">
-                    <img src="https://images.unsplash.com/photo-1568822617270-2c1579f8dfe2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjR8fHN0dWRlbnR8ZW58MHwyfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
-                </div>
+                
             </section>
             <p><br/></p>
             <section>
@@ -84,7 +85,7 @@ function GradeAdmission6to8(){
             <section>
                 <div className='grade-adm-title'>Let Straight A Prep help you create your future in the most efficient way</div>
                 <p><br/></p>
-                <button className="start-now-btn"> Start Now </button>
+                <button className="start-now-btn" onClick={() => navigate('/start-now')}> Start Now </button>
             </section>
             <section>
                     <h3>Social Media Guidance</h3>

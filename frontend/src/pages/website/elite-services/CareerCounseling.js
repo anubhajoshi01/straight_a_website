@@ -35,7 +35,7 @@ function SummerIntern() {
                     <h1>获得你的第一份工作</h1>
                     <p>获得你的第一份工作我们与美国最大的企业合作，专门为国际学生提供美国就业机会</p>
                     
-                    <button className='si-start-btn-top'>开始咨询</button>
+                    <button onClick={()=> navigate('/start-now/zh')} className='si-start-btn-top'>开始咨询</button>
                     <p><br/></p>
                     
                 </div>
@@ -138,7 +138,7 @@ function SummerIntern() {
                     <h1>Get Your First Job</h1>
                     <p>We specialize in providing international students with internship opportunities in the United States by partnering with the largest enterprises in the United States.</p>
                     
-                    <button className='si-start-btn-top'>Start Now</button>
+                    <button onClick={()=> navigate('/start-now')} className='si-start-btn-top'>Start Now</button>
                     <p><br/></p>
                     
                 </div>

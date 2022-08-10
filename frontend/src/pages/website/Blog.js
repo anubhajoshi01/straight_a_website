@@ -97,7 +97,7 @@ function Blog({ create }) {
                             displayList.map((item) => (
                                 <li>
 
-                                    <BlogListCard key={item._id} img={item.imageUrls} title={item.chineseTitle} content={item.chineseContent} id={item._id} />
+                                    <BlogListCard key={item._id} img={item.imageUrls} title={item.chineseTitle} content={item.chineseContent} id={item._id} lang={lang}/>
 
                                 </li>
                             ))
@@ -137,7 +137,7 @@ function Blog({ create }) {
                     displayList.map((item) => (
                         <li>
 
-                            <BlogListCard key={item._id} img={item.imageUrls} title={item.title} content={item.content} id={item._id} />
+                            <BlogListCard key={item._id} img={item.imageUrls} title={item.title} content={item.content} id={item._id} lang={lang}/>
 
                         </li>
                     ))

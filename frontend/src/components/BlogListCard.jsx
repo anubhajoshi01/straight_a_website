@@ -3,7 +3,7 @@ import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import './BlogListCard.css'
 
-const BlogListCard = ({img, title, content, id}) => {
+const BlogListCard = ({img, title, content, id, lang}) => {
     const navigate = useNavigate()
 
     const {user} = useSelector((state) => state.auth)
@@ -12,6 +12,9 @@ const BlogListCard = ({img, title, content, id}) => {
        // navigate('/')
        if(user){
             navigate(`../me/blog-input/${id}`, {replace:true})
+       }
+       else{
+            navigate(`../../view-blog/${id}/${lang}`, {replace:true})
        }
     }
 

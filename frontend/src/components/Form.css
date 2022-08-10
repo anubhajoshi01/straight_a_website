@@ -83,6 +83,14 @@ label{
 }
 
 .input-container input {
-    width: 100%;
+    width: 80%;
 }
 
+.form-container-zh {
+    width: 170%;
+    
+}
+
+.form-container-zh label{
+    margin-inline: 10%;
+}
