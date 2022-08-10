@@ -26,15 +26,15 @@ function Main(){
     console.log(`lang is ${lang}`)
 
     const slides = [
-        {title:"Private Counseling: Realize your dream, create your future", img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2aWNlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'},
-        {title: "Elite Services: Test Prep, Tutoring, Career Counseling", img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHV0b3J8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'},
-        {title:'College Transfer Program: Transfer Application Services', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'}
+        {title:"Private Counseling: Realize your dream, create your future", img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2aWNlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/private-counseling'},
+        {title: "Elite Services: Test Prep, Tutoring, Career Counseling", img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHV0b3J8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/elite-services'},
+        {title:'College Transfer Program: Transfer Application Services', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/college-transfer'}
     ]
 
     const slides_zh = [
-        {title:"私教辅导：实现你梦想，创造你未来", img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2aWNlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'},
-        {title: "精英服务: 考试辅导, 私教辅导, 职业规划", img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHV0b3J8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'},
-        {title:'大学转学服务: 常青藤名校转学', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/'}
+        {title:"私教辅导：实现你梦想，创造你未来", img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2aWNlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/prvate-counseling/zh'},
+        {title: "精英服务: 考试辅导, 私教辅导, 职业规划", img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHV0b3J8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/elite-services/zh'},
+        {title:'大学转学服务: 常青藤名校转学', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/college-transfer/zh'}
     ]
     
 
@@ -64,25 +64,25 @@ function Main(){
                 <section>
                     <ul className="main-ul-hl">
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/8-11-grade-admission/zh')}>
                                 <img src="https://images.unsplash.com/photo-1604882737278-6aeefeb2c827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmVydGljYWwlMjBzdHVkeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot">高中申请</div>
                             </div>
                         </li>
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/college-admission/zh')}>
                                 <img src="https://images.unsplash.com/photo-1594750852563-5ed8e0421d40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fHZlcnRpY2FsJTIwc3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot">大学申请</div>
                             </div>
                         </li>
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/elite-private-tutoring/zh')}>
                                 <img src="https://images.unsplash.com/photo-1476459216969-94c7100f88a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fHZlcnRpY2FsJTIwc2Nob29sfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot">​私人辅导</div>
                             </div>
                         </li>
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/career-counseling/zh')}>
                                 <img src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dmVydGljYWwlMjBjYXJlZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot">职业咨询/就业</div>
                             </div>
@@ -205,25 +205,25 @@ function Main(){
                 <section>
                     <ul className="main-ul-hl">
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/8-11-grade-admission')}>
                                 <img src="https://images.unsplash.com/photo-1604882737278-6aeefeb2c827?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8dmVydGljYWwlMjBzdHVkeXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot"><b>HIGH SCHOOL</b> ADMISSION</div>
                             </div>
                         </li>
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/college-admission')}>
                                 <img src="https://images.unsplash.com/photo-1594750852563-5ed8e0421d40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NTN8fHZlcnRpY2FsJTIwc3R1ZGVudHN8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot"><b>COLLEGE</b> ADMISSION</div>
                             </div>
                         </li>
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/elite-private-tutoring')}>
                                 <img src="https://images.unsplash.com/photo-1476459216969-94c7100f88a2?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NzF8fHZlcnRpY2FsJTIwc2Nob29sfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot"><b>PRIVATE</b> TUTORING</div>
                             </div>
                         </li>
                         <li>
-                            <div className="main-img-container">
+                            <div className="main-img-container" onClick={() => navigate('/career-counseling')}>
                                 <img src="https://images.unsplash.com/photo-1491975474562-1f4e30bc9468?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8dmVydGljYWwlMjBjYXJlZXJ8ZW58MHx8MHx8&auto=format&fit=crop&w=800&q=60"/>
                                 <div className="img-label-bot"><b>CAREER COUNSELING</b> PLACEMENT</div>
                             </div>

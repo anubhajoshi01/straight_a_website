@@ -107,7 +107,7 @@ function ElitePrivateTutoring(){
                 </p>
             </div>
             </section>
-            <h4> 立即注册咨询 </h4>
+            <div onClick={() => navigate('/start-now/zh')}><h4> 立即注册咨询 </h4></div>
         </div>
         <Form lang={'zh'}/>
         <Footer />
@@ -207,7 +207,7 @@ function ElitePrivateTutoring(){
                 </p>
             </div>
             </section>
-            <h4> Sign up for a free consultation today</h4>
+            <div onClick={() => navigate('/start-now')}><h4> Sign up for a free consultation today</h4></div>
         </div>
         <Form/>
         <Footer />

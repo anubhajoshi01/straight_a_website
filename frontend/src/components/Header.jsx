@@ -40,7 +40,7 @@ const Header = ({lang, currPath}) => {
                <div>博客</div>
            </li>
            <li className='startnow'>
-               <div className='rectangle'>
+               <div className='rectangle' onClick={() => navigate('/start-now/zh')}>
                    Start Now
                </div>
            </li>
@@ -81,7 +81,7 @@ const Header = ({lang, currPath}) => {
                 <div>Blog</div>
             </li>
             <li className='startnow'>
-                <div className='rectangle'>
+                <div className='rectangle' onClick={() => navigate('/start-now')}>
                     Start Now
                 </div>
             </li>

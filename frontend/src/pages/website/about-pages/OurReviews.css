@@ -1,5 +1,6 @@
 .our-reviews-container {
-    margin-inline: 10%;
+    margin-inline: 7%;
+
 }
 
 .left-img  {
@@ -9,8 +10,11 @@
 }
 
 .right-img {
+  
     float: right;
     width: 25%;
+    margin-right: -7%;
+    
 }
 
 .review-inline {
@@ -42,8 +46,8 @@
 }
 
 .content-box-left {
-    width: 70%;
-    border-style: solid;
+    width: 100%;
+    border-style:double;
     margin-right: 35%;
     padding-inline: 2%;
     padding-block: 3%;

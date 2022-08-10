@@ -24,7 +24,7 @@ function OurReviews() {
                     </div>
                 </div>
                 <div className="review-inline">
-                    <img className="right-img" src="https://images.unsplash.com/photo-1639765766830-d829d2fe4219?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Z3JhZHVhdGlvbnxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                    
                     <div className="content-box-left">
                         <div className="left-content">
                             <h2>Jason H.</h2>
@@ -35,6 +35,7 @@ function OurReviews() {
                             <p>"It was a very personal experience where I was encouraged to pursue my interests. If you're wondering about how effective the process is, I would say that I accomplished more than I expected and got into schools that would have been out of my reach otherwise."</p>
                         </div>
                     </div>
+                    
                 </div>
                 <div className="review-inline">
                     <img className="left-img" src="https://images.unsplash.com/photo-1644211492216-8a5e874023f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGJvb2tzfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
@@ -50,7 +51,7 @@ function OurReviews() {
                     </div>
                 </div>
                 <div className="review-inline">
-                    <img className="right-img" src="https://images.unsplash.com/photo-1602542165232-0b7f56fe660a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2xhc3Nyb29tfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
+                   
                     <div className="content-box-left">
                         <div className="left-content">
                             <h2>Chloe T.</h2>
@@ -61,6 +62,7 @@ function OurReviews() {
                             <p>"I found the services extremely helpful. The best part about the process is that empowerly writing specialists worked through every sentence in order to fabricate a polished essay through guidance rather than direct edits"</p>
                         </div>
                     </div>
+                  
                 </div>
             </section>
         </div>

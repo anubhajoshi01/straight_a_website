@@ -1,8 +1,11 @@
+import { useNavigate } from 'react-router-dom'
 import Footer from '../../../components/Footer'
 import Header from '../../../components/Header'
 import './EliteTestPrep.css'
 
 function EliteTestPrep(){
+
+    const navigate = useNavigate()
 
     return (
         <>
@@ -59,7 +62,9 @@ function EliteTestPrep(){
                         <p>IELTS is an international standardized test of English language proficiency for non-native English language speakers. An IELTS result or Test Report Form is issued to all test takers with a score from "band 1" ("non-user") to "band 9" ("expert user") and each institution sets a different threshold. </p>
                     </div>
                 </div>
+                <div onClick={() => navigate('/start-now')}>
                <h4> Sign up for a free consultation today</h4>
+               </div>
             </div>
             <Footer/>
         </>

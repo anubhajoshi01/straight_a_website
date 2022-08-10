@@ -42,6 +42,7 @@ import FAQ from './pages/website/resources/FAQ'
 import CareerCounseling from './pages/website/elite-services/CareerCounseling'
 import TermsOfService from './pages/website/TermsOfService'
 import PrivacyPolicy from './pages/website/PrivacyPolicy'
+import StartNow from './pages/website/StartNow'
 
 
 
@@ -73,7 +74,9 @@ function App() {
               <Route path='login' element={<Login/>} />
               <Route path='blog' element={<Blog/>}/>
               <Route path='blog/:lang' element={<Blog/>}/>
+              <Route path='view-blog/:id/:lang' element={<ViewBlog/>} />
               <Route path='view-blog/:id' element={<ViewBlog/>} />
+
               <Route path='me' element={<Admin/>}>
                 <Route path='view-forms' element={<ViewForms/>}/>
                 <Route path='blog-input/:id' element={<BlogInput create={false}/>}/> 
@@ -112,6 +115,8 @@ function App() {
               <Route path='terms-and-conditions/:lang' element={<TermsOfService/>}/>
               <Route path='privacy-policy' element={<PrivacyPolicy/>}/>
               <Route path='privacy-policy/:lang' element={<PrivacyPolicy/>}/>
+              <Route path='start-now' element={<StartNow/>}/>
+              <Route path='start-now/:lang' element={<StartNow/>}/>
 
 
             </Routes>
