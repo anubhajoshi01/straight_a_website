@@ -6,7 +6,7 @@ import Header from "../../components/Header";
 import './Blog.css'
 import { getPosts } from '../../features/blog/blogSlice'
 import { useNavigate, useParams, useLocation } from "react-router-dom";
-
+import Spinner from "../../components/Spinner";
 function Blog({ create }) {
     const { lang } = useParams()
     const navigate = useNavigate()
@@ -34,6 +34,10 @@ function Blog({ create }) {
 
         if (isError) {
             console.log(message)
+        }
+
+        if(isLoading){
+            return <Spinner/>
         }
 
         if (!isLoading && isSuccess) {
