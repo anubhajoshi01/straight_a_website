@@ -26,9 +26,12 @@ function ViewBlog(){
     const dispatch = useDispatch()
     const [viewBlog, setViewBlog] = useState('')
     const [title, setTitle] = useState('')
+    const [titleZh, setTitleZh] = useState('')
     const [imgUrl, setImgUrl] = useState('')
     const [content, setContent] = useState('')
+    const [contentZh, setContentZh] = useState('')
     const [displayed, setDisplayed] = useState(false)
+  
     
     const { showBlog, isLoading, isError, message, isSuccess } = useSelector(
         (state) => state.blogs
@@ -41,7 +44,7 @@ function ViewBlog(){
             
         }
 
-        if(id){
+        if(id && !displayed){
             dispatch(getPostById(id))
             console.log(showBlog)
         }
@@ -60,10 +63,10 @@ function ViewBlog(){
             
             setImgUrl(showBlog.imageUrls)
             
-            setTitle(lang === 'zh' ? showBlog.chineseTitle : showBlog.title)
-            
-            setContent(lang === 'en' ? showBlog.content : showBlog.chineseContent)
-
+            setTitle(showBlog.title)
+            setTitleZh(showBlog.chineseTitle)
+            setContent(showBlog.content)
+            setContentZh(showBlog.chineseContent)
             setDisplayed(true)
             
         }
@@ -75,15 +78,16 @@ function ViewBlog(){
     }, [showBlog, isLoading, isSuccess, isError, dispatch, displayed])
 
     if(lang === 'zh') {
-        <>
+        return (<>
             <Header lang={'zh'} currPath={location.pathname}/>
             <img className="blog-image-sample" src={imgUrl} />
             <p><br/></p>
-            <h1>{title}</h1>
+            <h1>{titleZh}</h1>
             <p><br/></p>
-            <p>{content}</p>
+            <p>{contentZh}</p>
             <Footer lang={lang}/>
         </>
+        )
     }
 
     return (

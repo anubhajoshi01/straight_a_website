@@ -83,23 +83,37 @@ function App() {
                 <Route path='blog-input' element={<BlogInput create={true}/>}/>
               </Route>
               <Route path='our-story' element={<OurStory/>}/>
+              <Route path='our-story/:lang' element={<OurStory/>}/>
               <Route path='our-team' element={<OurTeam/>}/>
+              <Route path='our-team/:lang' element={<OurTeam/>}/>
               <Route path='our-team/:id'  element={<TeamProfile/>}/>
+              <Route path='our-team/:id/:lang'  element={<TeamProfile/>}/>
               <Route path='case-studies' element={<CaseStudies/>}/>
+              <Route path='case-studies/:lang' element={<CaseStudies/>}/>
               <Route path='testimonials' element={<OurReviews/>}/>
+              <Route path='testimonials/:lang' element={<OurReviews/>}/>
               <Route path='our-partners' element={<OurPartners/>}/>
+              <Route path='our-partners/:lang' element={<OurPartners/>}/>
               <Route path='pro-bono' element={<ProBono/>}/>
+              <Route path='pro-bono/:lang' element={<ProBono/>}/>
               <Route path='career-sap' element={<CareerSAP/>}/>
               <Route path='career-sap/:lang' element={<CareerSAP/>}/>
 
               <Route path='private-counseling' element={<PrivateCounselingCategory/>}/>
+              <Route path='private-counseling/:lang' element={<PrivateCounselingCategory/>}/>
               <Route path='6-8-grade-admission' element={<GradeAdmission6to8/>}/>
+              <Route path='6-8-grade-admission/:lang' element={<GradeAdmission6to8/>}/>
               <Route path='8-11-grade-admission' element={<GradeAdmission8to11/>}/>
+              <Route path='8-11-grade-admission/:lang' element={<GradeAdmission8to11/>}/>
               <Route path='college-admission' element={<CollegeAdmission/>}/>
+              <Route path='college-admission/:lang' element={<CollegeAdmission/>}/>
               <Route path='college-transfer' element={<CollegeTransfer/>}/>
+              <Route path='college-transfer/:lang' element={<CollegeTransfer/>}/>
 
               <Route path='elite-services' element={<EliteServiceCategory/>}/>
+              <Route path='elite-services/:lang' element={<EliteServiceCategory/>}/>
               <Route path='elite-test-prep' element={<EliteTestPrep/>}/>
+              <Route path='elite-test-prep/:lang' element={<EliteTestPrep/>}/>
               <Route path='elite-private-tutoring' element={<ElitePrivateTutoring/>}/>
               <Route path='elite-private-tutoring/:lang' element={<ElitePrivateTutoring/>}/>
               <Route path='summer-intern' element={<SummerIntern/>}/>

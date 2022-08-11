@@ -4,7 +4,7 @@ import { createForm } from '../features/forms/formSlice';
 import './Form.css';
 import emailjs from '@emailjs/browser'
 
-const Form = ({lang}) => {
+const Form = ({lang, type}) => {
     const [parentName, setParentName] = useState("");
     const [studentName, setStudentName] = useState("")
     const [email, setEmail] = useState("")
@@ -77,7 +77,7 @@ const Form = ({lang}) => {
     if(lang === 'zh') {
         return (
     
-            <div className='form-container-zh'>
+            <div className={type === 'below' ? 'form-container-zh-2' : 'form-container-zh'}>
             <form  ref={form} onSubmit={onSubmit}>
                 
                 <ul className='inputs-vertical'>
@@ -229,7 +229,7 @@ const Form = ({lang}) => {
             <li>
                 <div className='input-container-long'>
                 <label htmlFor='more'>Tell us More</label>
-                <input style={{width:'100%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
+                <input style={{width:'80%', marginLeft:'10%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
                 </div>
             </li>
         </ul>

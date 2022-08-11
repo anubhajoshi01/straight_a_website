@@ -21,7 +21,7 @@ const Header = ({lang, currPath}) => {
                <img className='logoimg' src={logo}/>   
            </li>
            <li className='litext'>
-               <HeaderMenu title='关于我们' nav='/' items={[{id: 1, value: '我们的故事', nav:'/our-story/zh'}, {id: 2, value: '我们的团队', nav:'/our-team/zh'}, {id: 3, value: '成功案例', nav:'/case-studies/zh'}, {id: 4, value: "学生感言", nav:'/testimonials/zh'},
+               <HeaderMenu title='关于我们' nav='/zh' items={[{id: 1, value: '我们的故事', nav:'/our-story/zh'}, {id: 2, value: '我们的团队', nav:'/our-team/zh'}, {id: 3, value: '成功案例', nav:'/case-studies/zh'}, {id: 4, value: "学生感言", nav:'/testimonials/zh'},
            {id: 5, value: "合作伙伴", nav:'/our-partners/zh'}, {id: 6, value: "公益服务", nav:'/pro-bono/zh'}]}/>
            </li>
            <li className='litext'>
