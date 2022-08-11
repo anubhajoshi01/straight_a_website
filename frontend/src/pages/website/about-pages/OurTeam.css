@@ -18,6 +18,7 @@
 .our-story-vl-stack{
     display: flex;
     flex-direction: column;
+    width: 70px;
 }
 
 .team-img {
@@ -34,7 +35,8 @@
 .profile{
     margin: 3%;
     height: 170px;
-    width: 420px;
+    width: 460px;
+  
 }
 
 h1 {
@@ -76,6 +78,7 @@ h6 {
 
 .title {
     text-decoration: underline;
+    width: fit-content;
 }
 
 section{

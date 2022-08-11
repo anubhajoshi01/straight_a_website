@@ -2,10 +2,103 @@ import Footer from '../../../components/Footer'
 import Header from '../../../components/Header'
 import './OurReviews.css'
 
+import { useLocation, useNavigate } from "react-router-dom"
+import { useEffect } from "react"
+import { useParams } from "react-router-dom"
+
 function OurReviews() {
+
+    const location = useLocation()
+    console.log(location.pathname)
+    const navigate = useNavigate()
+
+    let {lang} = useParams()
+    console.log(`lang ${lang}`)
+
+
+    console.log(lang)
+
+    useEffect(() => {
+      if(lang == null) {
+        navigate('en')
+        
+      }
+    }, [])
+
+    if(lang === 'zh') {
+
+        return (
+            <>
+                <Header lang={'zh'} currPath={location.pathname}/>
+                <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
+                <div className="our-reviews-container">
+                <h1>学生感言</h1>
+                <section>
+                    <div className="review-inline">
+                        <img className="left-img" src="https://images.unsplash.com/photo-1624567644499-c9df255d150b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZWR1Y2F0aW9ufGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
+                        <div className="content-box">
+                            <div className="left-content">
+                                <h2>格雷格 Q</h2>
+                                <h3>耶鲁大学</h3>
+                                <h3>2023届</h3>
+                            </div>
+                            <div className="right-content">
+                                <p>"我在标准化考试中很挣扎，我总是表现不佳，对自己的能力没有多大信心。Straight A Prep帮助我制定了一个具体的学习计划，并跟踪我的每一个进步，帮助我实现了我的名校梦想"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="review-inline">
+                        
+                        <div className="content-box-left">
+                            <div className="left-content">
+                                <h2>杰森 H</h2>
+                                <h3>宾夕法尼亚大学</h3>
+                                <h3>2024届</h3>
+                            </div>
+                            <div className="right-content">
+                                <p>"这是一次非常私人的经历，Straight A Prep鼓励我追求自己的目标学校。如果你想知道这个过程到底有多有效，我想说的是，我完成的比我预想的要多，进入了一些我原本无法进入的学校。"</p>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    <div className="review-inline">
+                        <img className="left-img" src="https://images.unsplash.com/photo-1644211492216-8a5e874023f4?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NDB8fGJvb2tzfGVufDB8MnwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
+                        <div className="content-box">
+                            <div className="left-content">
+                                <h2>卡利 K</h2>
+                                <h3>加州大学伯克利分校</h3>
+                                <h3>2023届</h3>
+                            </div>
+                            <div className="right-content">
+                                <p>"关于如何申请私立学校，我有一个很模糊的想法。我的想法到处都是，我很难把我的经历变成一个关于我自己的有力的故事。Straight A Prep的升学顾问们非常有帮助，我可以很容易地安排与他们的电话会议来集思广益，并在他们的帮助下申请上心仪大学。"</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="review-inline">
+                       
+                        <div className="content-box-left">
+                            <div className="left-content">
+                                <h2>克洛伊 T</h2>
+                                <h3>加州大学洛杉矶分校</h3>
+                                <h3>2024届</h3>
+                            </div>
+                            <div className="right-content">
+                                <p>"我发现Straight A Prep的服务非常有帮助。这个过程最好的部分是写作专家通过指导而不是直接编辑来完成每一个句子，以完成一篇精美的文章。"</p>
+                            </div>
+                        </div>
+                      
+                    </div>
+                </section>
+            </div>
+            <Footer lang={lang}/>
+            </>
+        )
+
+    }
+
     return (
         <>
-        <Header/>
+            <Header lang={'en'} currPath={location.pathname}/>
             <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
             <div className="our-reviews-container">
             <h1> Our Reviews </h1>
@@ -66,7 +159,7 @@ function OurReviews() {
                 </div>
             </section>
         </div>
-        <Footer/>
+        <Footer lang={lang}/>
         </>
     )
 }

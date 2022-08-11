@@ -5,11 +5,97 @@ import lisaImg from '../../../res/case-studies-lisa.png'
 import sarahImg from '../../../res/case-studies-sarah.png'
 import './CaseStudies.css'
 
+import { useLocation, useNavigate } from "react-router-dom"
+import { useEffect } from "react"
+import { useParams } from "react-router-dom"
+
 function CaseStudies(){
+
+    const location = useLocation()
+    console.log(location.pathname)
+    const navigate = useNavigate()
+
+    let {lang} = useParams()
+    console.log(`lang ${lang}`)
+
+
+    console.log(lang)
+
+    useEffect(() => {
+      if(lang == null) {
+        navigate('en')
+        
+      }
+    }, [])
+
+    if(lang === 'zh') {
+        return (
+            <>
+                <Header lang={'zh'} currPath={location.pathname}/>
+                <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
+                <h1>成功案例</h1>
+                <section>
+                    <div className="case-studies-container">
+                        <img className='left' src={jasonImg}/>
+                        <div className='case-content'>
+                            <h2>申请人背景</h2>
+                            <p>学校：国际学校</p>
+                            <p>基本成绩：GPA 3.0+/4.0，托福100+</p>
+                            <p>专业：工程</p>
+                            <p>目标大学：纽约大学</p>
+                            <p><br/></p>
+                            <h3>Straigh A Prep的帮助</h3>
+                            <p>Straight A Prep在了解了Jason的个人资料并规划了他未来的职业规划后，知道他对互联网公司非常感兴趣。于是我们安排Jason Wang准备实习，终于找到了理想的工作。借助Straight A Prep的后台提升项目，Jason系统地学习了机器学习的基本概念和模型，理解了线性模型的求解和优化方法。这次经历让他对机器学习处理数据的科学方法有了完整的概念性理解。在之前实习的基础上，Jason获得了实习机会。Jason独特的背景和申请新专业的经验使他在众多申请者中脱颖而出，他是第一批收到梦想学校录取通知书的人之一</p>
+                        </div>
+                        <div className='quote'>
+                            <h4>"三月份收到NYU的录取通知书后，很高兴Straight A Prep的顾问在申请中帮我的合理规划，这是我学年中最好的咨询服务。" -Jason Wang</h4>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="case-studies-container">
+                        <img className='right' src={lisaImg}/>
+                        <div className='case-content'>
+                            <h2>申请人背景</h2>
+                            <p>学校：私立学校</p>
+                            <p>基本成绩：托福100+，SAT1460+</p>
+                            <p>专业：经济学</p>
+                            <p>目标大学：宾夕法尼亚大学</p>
+                            <p><br/></p>
+                            <h3>Straight A Prep 的帮助</h3>
+                            <p>Straight A Prep 帮助丽莎提高了她的整体GPA。在分析了GPA对申请的影响以及与学生的其他经历讨论后，探索实习中的学习机会，展示学习成果，Straight A Prep让学生在申请文件上有很大的差异。在个人陈述写作方面，我们针对不同的项目内容，对学生的个人经历进行一一修改和优化，使之更好地契合项目的培养目标。同时，申请人以适当的方式强调了丽莎的一些个人经历​​。最后，考虑到GPA的不足，我们以补充论文的形式解释GPA，用事实和进步打破GPA对招生官的限制。</p>
+                        </div>
+                        <div className='quote'>
+                            <h4>"老师们不仅在申请上帮助了我，而且在很多方面都帮助了我。老师们通过仔细比较我的学术背景、活动经历、工作经历以及各种优缺点，为我的申请大学指明了方向，鼓励我多思考自己的未来生活。" - Lisa</h4>
+                        </div>
+                    </div>
+                </section>
+                <section>
+                    <div className="case-studies-container">
+                        <img className='left' src={sarahImg}/>
+                        <div className='case-content'>
+                            <h2>申请人背景</h2>
+                            <p>学校：私立学校</p>
+                            <p>基本成绩：GPA 3.53/4.0</p>
+                            <p>专业：工程</p>
+                            <p>目标大学：康奈尔大学</p>
+                            <p><br/></p>
+                            <h3>Straight A Prep 的帮助</h3>
+                            <p> Straight A Prep 帮助了负责在线申请的学生，我们在整个过程中给予了他们很大的支持，尤其是文档的写作部分。学生之所以能拿到这么好的申请成绩，与Straight A Prep的量身定做的essay密切相关。在写作过程中，学生与Straight A Prep保持着密切的沟通。学生写作的总体思路是突出优秀的英语能力和浓厚的科研兴趣。整个申请过程非常顺利。特别是，Straight A Prep 帮助学生选择学校，根据申请要求选择两三所合适的学校，然后根据学生的综合能力、专业排名和位置再选择几所学校。</p>
+                        </div>
+                        <div className='quote'>
+                            <h4>"我要感谢参与我申请的Straight A Prep 的老师们。他们的完美的合作和高效的工作作风帮助我实现了进入美国名校的梦想。" - Sarah</h4>
+                        </div>
+                    </div>
+                </section>
+                <Footer lang={lang}/>
+            </>
+        )
+    }
 
     return (
         <>
-            <Header/>
+            <Header lang={'en'} currPath={location.pathname}/>
             <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
             <h1>Case Studies</h1>
             <section>
@@ -66,7 +152,7 @@ function CaseStudies(){
                     </div>
                 </div>
             </section>
-            <Footer/>
+            <Footer lang={lang}/>
         </>
     )
 }

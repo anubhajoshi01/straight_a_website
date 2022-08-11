@@ -23,7 +23,7 @@ h1 {
 .inputs-horizontal{
     display: flex;
     flex-direction: row;
-    justify-content: space-between;
+    justify-content: space-around;
 }
 
 .input-container{
@@ -83,12 +83,16 @@ label{
 }
 
 .input-container input {
-    width: 80%;
+    width: 50%;
 }
 
 .form-container-zh {
     width: 170%;
     
+}
+
+.form-container-zh-2 {
+    width: 80%;
 }
 
 .form-container-zh label{
