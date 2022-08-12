@@ -46,8 +46,10 @@ export const getPosts = createAsyncThunk(
 export const getPostById = createAsyncThunk(
     'blog/get', 
     async(id, thunkAPI) => {
+        console.log('getting by id ', id)
         try{
             const data = await blogService.getPostById(id)
+            console.log(data)
             return data
         }
         catch(e){

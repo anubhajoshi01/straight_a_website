@@ -9,6 +9,7 @@ import { useParams } from "react-router-dom"
 import { useLocation, useNavigate } from "react-router-dom"
 
 import './ViewBlog.css'
+import Spinner from "../../components/Spinner";
 
 function ViewBlog(){
 
@@ -77,7 +78,13 @@ function ViewBlog(){
 
     }, [showBlog, isLoading, isSuccess, isError, dispatch, displayed])
 
-    if(lang === 'zh') {
+    if(isLoading) {
+        return (
+            <Spinner/>
+        )
+    }
+
+    else if(lang === 'zh') {
         return (<>
             <Header lang={'zh'} currPath={location.pathname}/>
             <img className="blog-image-sample" src={imgUrl} />
