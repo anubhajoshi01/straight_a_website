@@ -107,7 +107,7 @@ function Main(){
                     <ul className="main-ul-hl">
                         <li>
                             <div className="main-img-container-2">
-                                <img className='img1' src="https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2NlbmVyeXxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                                <img className='img1' src="https://cdn.pixabay.com/photo/2015/01/22/23/59/purple-608575_1280.jpg"/>
                                 <div className="top-left">
                                     <b>Jason H.</b>
                                     <p>宾夕法尼亚大学</p>
@@ -122,7 +122,7 @@ function Main(){
                         </li>
                         <li>
                             <div className="main-img-container-2">
-                                <img className='img2' src="https://images.unsplash.com/photo-1623578540859-adf2416e09b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNjZW5lcnl8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+                                <img className='img2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILszxiJ4kFWBW9PU_x6ohcPlUjPnpaWmPRw&usqp=CAU"/>
                                 <div className="top-left">
                                     <b>Kali K.</b>
                                     <p>伯克利大学</p>
@@ -137,7 +137,7 @@ function Main(){
                         </li>
                         <li>
                             <div className="main-img-container-2">
-                                <img className='img3' src="https://images.unsplash.com/photo-1610533090386-11dce1436c4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNjZW5lcnl8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+                                <img className='img3' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJwi5tJn4pr90rgfhD7Z9Xobv6yGB3XY1HKw&usqp=CAU"/>
                                 <div className="top-left">
                                     <b>Greg Q.</b>
                                     <p>耶鲁大学</p>
@@ -248,7 +248,7 @@ function Main(){
                     <ul className="main-ul-hl">
                         <li>
                             <div className="main-img-container-2">
-                                <img className='img1' src="https://images.unsplash.com/photo-1500485035595-cbe6f645feb1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8c2NlbmVyeXxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                                <img className='img1' src="https://cdn.pixabay.com/photo/2015/01/22/23/59/purple-608575_1280.jpg"/>
                                 <div className="top-left">
                                     <b>Jason H.</b>
                                     <p>University of Pennsylvania</p>
@@ -263,7 +263,7 @@ function Main(){
                         </li>
                         <li>
                             <div className="main-img-container-2">
-                                <img className='img2' src="https://images.unsplash.com/photo-1623578540859-adf2416e09b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHNjZW5lcnl8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+                                <img className='img2' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTILszxiJ4kFWBW9PU_x6ohcPlUjPnpaWmPRw&usqp=CAU"/>
                                 <div className="top-left">
                                     <b>Kali K.</b>
                                     <p>UC Berkeley</p>
@@ -278,7 +278,7 @@ function Main(){
                         </li>
                         <li>
                             <div className="main-img-container-2">
-                                <img className='img3' src="https://images.unsplash.com/photo-1610533090386-11dce1436c4b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mjh8fHNjZW5lcnl8ZW58MHwxfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
+                                <img className='img3' src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJwi5tJn4pr90rgfhD7Z9Xobv6yGB3XY1HKw&usqp=CAU"/>
                                 <div className="top-left">
                                     <b>Greg Q.</b>
                                     <p>Yale University</p>

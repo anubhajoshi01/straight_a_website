@@ -26,13 +26,16 @@
     width: 75%;
     height: 100%;
     margin-left: 10%;
-    margin-right: 10%;
+    align-content: flex-start;
+    border-style: dashed;
 }
 
 .blog-card-title{
     font-size: 150%;
     color: purple;
     font-weight: 700;
+    text-align: left;
+
 }
 
 .blog-card-content{

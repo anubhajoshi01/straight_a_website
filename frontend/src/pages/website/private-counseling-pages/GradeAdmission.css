@@ -1,6 +1,11 @@
 .grade-admissions-container {
-    margin-top: 10%;
     margin-inline: 7%;
+    margin-top: -7%;
+
+}
+
+.grade-admissions{
+    margin-top: 15%;
 }
 
 .grade-adm-hl {
@@ -38,7 +43,6 @@
 
 section {
     position: relative;
-    margin-top: 17%;
   
 }
 
@@ -56,9 +60,11 @@ section {
 
 .left-rect {
     float: left;
-    width: 100%;
+    width: 70%;
+    height: 300px;
     margin-bottom: 7%;
     background-image: linear-gradient(to right, white, #bb4eed);
+    padding: 5%;
 }
 
 .left-rect h3{
@@ -92,6 +98,7 @@ section {
 .grade-adm-title {
     font-size: 250%;
     color: purple;
+    text-align: center;
 }
 
 .img-text-container {
@@ -117,4 +124,13 @@ section {
 .list-school {
     width: 50%;
   
+}
+
+.gradient-img-box {
+    display: inline-flex;
+}
+
+.gradient-img-box img {
+    width: 30%;
+    height: 2%;
 }
