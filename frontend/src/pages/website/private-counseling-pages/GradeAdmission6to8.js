@@ -28,12 +28,13 @@ function GradeAdmission6to8(){
         return (
             <>
             <Header lang={'zh'} currPath={location.pathname}/>
+            <div className="grade-admissions">
             <div className="grade-admissions-container">
                 <h1>6-8年级申请</h1>
                 <section>
                     <ul className="grade-adm-hl">
                         <li>
-                            <img src="https://images.unsplash.com/photo-1495968283540-e1df41995ba6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODV8fHNjaG9vbHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                            <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60"/>
                         </li>
                         <li>
                             <div>
@@ -62,17 +63,20 @@ function GradeAdmission6to8(){
                     <p>家长文书为学校提供有关申请人及其家人的见解。我们为您提供了与我们一起讨论文书问题的机会，并讨论如何最好地书写以支持您孩子的申请。我们还会审核草稿并会提出修改建议。</p>
              
                 </section>
-                <section>
-                    <div className="left-rect">
+            </div>
+            <section>
+                <div className="gradient-img-box">
+                <div className="left-rect">
                         <h3>杰森 H</h3>
                         <h3>宾夕法尼亚大学</h3>
                         <h3>2024届</h3>
                         <p><br/></p>
                         <h3>"这是一次非常私人的经历，Straight A Prep鼓励我追求自己的目标学校。如果你想知道这个过程到底有多有效，我想说的是，我完成的比我预想的要多，进入了一些我原本无法进入的学校"</h3>
                     </div>
-                   
-                </section>
-                <p><br/></p>
+                    <img src="https://images.unsplash.com/photo-1526315060860-f05bd462eb60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3R1ZGVudHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                </div>
+            </section>
+            <div className="grade-admissions-container">
                 <section>
                    
                     <div className="right-box">
@@ -154,6 +158,7 @@ function GradeAdmission6to8(){
                     </li>
                 </ul>
             </div>
+            </div>
             <Footer lang={lang}/>
             </>
         )
@@ -162,12 +167,13 @@ function GradeAdmission6to8(){
     return (
         <>
         <Header lang={'en'} currPath={location.pathname}/>
+        <div className="grade-admissions">
         <div className="grade-admissions-container">
             <h1>6-8 Grade Admissions</h1>
             <section>
                 <ul className="grade-adm-hl">
                     <li>
-                        <img src="https://images.unsplash.com/photo-1495968283540-e1df41995ba6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8ODV8fHNjaG9vbHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                        <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60"/>
                     </li>
                     <li>
                         <div>
@@ -196,17 +202,23 @@ function GradeAdmission6to8(){
                 <p>Parent Essay provides the school with insights into the applicant and their family. We provide an opportunity for you to review essay questions with us and discuss how responses may be best tailored in support of your child's application. We also review drafts and may suggest edits.</p>
          
             </section>
-            <section>
-                <div className="left-rect">
-                    <h3 > Jason H.</h3>
-                    <h3 > University of Pennsylvania</h3>
-                    <h3 > Class of 2024</h3>
-                    <p><br/></p>
-                    <h3>"It was a very personal experience where I was encouraged to pursue my interests. If you're wondering about how effective the process is, I would say that I accomplished more than I expected and got into schools that would have been our of my reach otherwise."</h3>
+            
+
+        </div>
+        <section>
+                <div className="gradient-img-box">
+                    <div className="left-rect">
+                        <h3 > Jason H.</h3>
+                        <h3 > University of Pennsylvania</h3>
+                        <h3 > Class of 2024</h3>
+                        <p><br/></p>
+                        <h3>"It was a very personal experience where I was encouraged to pursue my interests. If you're wondering about how effective the process is, I would say that I accomplished more than I expected and got into schools that would have been out of my reach otherwise."</h3>
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1526315060860-f05bd462eb60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8NHx8c3R1ZGVudHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
                 </div>
-               
-            </section>
-            <p><br/></p>
+        </section>
+        <div className="grade-admissions-container">
+      
             <section>
                
                 <div className="right-box">
@@ -287,6 +299,7 @@ function GradeAdmission6to8(){
                     </div>
                 </li>
             </ul>
+        </div>
         </div>
         <Footer lang={lang}/>
         </>
