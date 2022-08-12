@@ -117,9 +117,11 @@ export const blogSlice = createSlice({
                 state.message = action.payload
             })
             .addCase(getPosts.pending, (state) => {
+                console.log('get posts pending')
                 state.isLoading = true
             })
             .addCase(getPosts.fulfilled, (state, action) => {
+                console.log('get posts fulfiled')
                 state.isLoading = false
                 state.isSuccess = true
                 state.blogs = action.payload

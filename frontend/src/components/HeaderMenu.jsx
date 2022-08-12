@@ -25,7 +25,7 @@ function HeaderMenu({title, nav, items=[], multiSelect= false}){
 
        <div className='dropdown'>
             <div className="dropdown-menu" onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
-                <div onClick={() => {navigate(nav)}} title='title'>
+                <div className='dropdown-title' onClick={() => {navigate(nav)}}>
                 {title}
                 </div>
                 {open ? (

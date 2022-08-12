@@ -4,7 +4,7 @@ import BlogListCard from '../../components/BlogListCard'
 import Footer from "../../components/Footer";
 import Header from "../../components/Header";
 import './Blog.css'
-import { getPosts } from '../../features/blog/blogSlice'
+import { getPosts, reset } from '../../features/blog/blogSlice'
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import Spinner from "../../components/Spinner";
 function Blog({ create }) {
@@ -36,7 +36,9 @@ function Blog({ create }) {
             console.log(message)
         }
 
-       
+        if(isLoading) {
+            console.log('loading')    
+        }
 
         if (!isLoading && isSuccess) {
 
@@ -60,7 +62,8 @@ function Blog({ create }) {
             setDisplayList(append)
         }
 
-    }, [pageNum, isError, message, blogs, dispatch])
+
+    }, [pageNum, isLoading, isError, message, blogs, dispatch])
 
     const goToFirstPage = () => {
         setPageNum(0)
@@ -86,7 +89,8 @@ function Blog({ create }) {
         navigate('../me/blog-input/create', { replace: true })
     }
 
-    if(isLoading){
+    if(isLoading && !isSuccess){
+        console.log(isSuccess)
         return (<Spinner/>)
     }
 
@@ -132,7 +136,7 @@ function Blog({ create }) {
             </>
         )
     }
-    return <>
+    return (<>
         <Header lang={'en'} currPath={location.pathname} />
         <div className='blog-list-view'>
             {
@@ -169,7 +173,7 @@ function Blog({ create }) {
 
         </div>
         <Footer />
-    </>
+    </> )
 }
 
 export default Blog

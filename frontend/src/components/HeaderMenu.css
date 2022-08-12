@@ -7,13 +7,17 @@
 }
 
 .ddcontainer{
-    -ms-transform: translateX(-10%);
+    -ms-transform: translateX(-20%);
     transform: translateX(-10%);
+    width: 110%;
+    align-items: center;
+  
 }
+
 
 .dropdown-menu ul{
     color: black;
-    margin-top: 25%;
+    margin-top: 35%;
     background-color: rgba(255, 255, 255, 0.3);
 
     flex-direction: column;
@@ -21,9 +25,16 @@
 }
 
 .dropdown-list ul{
-    margin-top: 40%;
+    margin-top: 30%;
     flex-direction: column;
     background-color: white;
+    width: 120%;
+}
+
+.dropdown-list li{
+    text-align: center;
+  
+    margin-right: 15%;
 }
 
 .text{
