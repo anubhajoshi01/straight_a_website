@@ -2,6 +2,7 @@
 import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
+import Spinner from '../../components/Spinner';
 import { login, reset } from '../../features/auth/authSlice';
 
 function Login() {
@@ -44,6 +45,9 @@ function Login() {
     dispatch(login(loginData))
   }
 
+  if(isLoading) {
+    return (<Spinner/>)
+  }
   return (<>
     <section className="heading">
       <h1>

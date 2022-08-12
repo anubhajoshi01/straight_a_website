@@ -5,6 +5,7 @@ import { useNavigate, useParams } from "react-router-dom"
 import { createPost, getPostById, reset, updatePost } from "../../features/blog/blogSlice"
 import './BlogInput.css'
 import { deletePost } from '../../features/blog/blogSlice'
+import Spinner from "../../components/Spinner"
 
 function BlogInput(){
 
@@ -39,7 +40,7 @@ function BlogInput(){
             else{
                 dispatch(createPost({title, content, imageUrls:imageUrl,chineseContent,chineseTitle}))
             }
-
+            navigate('/blog')
 
         }catch(e){
             console.log(e)
@@ -90,19 +91,28 @@ function BlogInput(){
 
         if(isLoading){
             console.log('loading')
+        
         }
 
         return () => {
+            console.log('returning')
             dispatch(reset())
-        }
+        };
     }, [showBlog, isLoading, isSuccess, isError, message, dispatch])
 
     const onFindImage = () => {
         setImageUrl(imageUrlText)
     }
 
+    if(isLoading && !fetchedPost) {
+        
+        return (<Spinner/>)
+    }
    
     return (
+
+
+
         <>
         
         <div className="blog-input-container">

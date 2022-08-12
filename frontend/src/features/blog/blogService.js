@@ -9,6 +9,7 @@ const createPost = async(data, token) => {
         },
     }
     try{
+        console.log(data.toString())
         const response = await axios.post(API_URL, data, config)
         return response.data
     }catch(e){

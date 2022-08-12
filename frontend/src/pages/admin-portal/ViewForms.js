@@ -2,6 +2,7 @@ import FormResponseCard from "../../components/FormResponseCard"
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { getForms, reset } from '../../features/forms/formSlice'
+import Spinner from "../../components/Spinner";
 
 
 function ViewForms() {
@@ -48,6 +49,10 @@ function ViewForms() {
     //     })}}>
     //     toggle
     // </div>
+
+    if(isLoading) {
+        return <Spinner/>
+    }
 
     return (
             forms.length > 0 ?

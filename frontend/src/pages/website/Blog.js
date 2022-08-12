@@ -13,12 +13,6 @@ function Blog({ create }) {
     const location = useLocation()
     const dispatch = useDispatch()
 
-    useEffect(() => {
-        if (lang == null) {
-            navigate('en')
-
-        }
-    }, [])
 
     console.log(`lang is ${lang}`)
 
@@ -30,15 +24,19 @@ function Blog({ create }) {
     const [numTotalPages, setNumTotalPages] = useState(0);
 
     useEffect(() => {
+
+        if (lang == null) {
+            navigate('en')
+
+        }
+
         dispatch(getPosts())
 
         if (isError) {
             console.log(message)
         }
 
-        if(isLoading){
-            return <Spinner/>
-        }
+       
 
         if (!isLoading && isSuccess) {
 
@@ -88,7 +86,11 @@ function Blog({ create }) {
         navigate('../me/blog-input/create', { replace: true })
     }
 
-    if (lang === 'zh') {
+    if(isLoading){
+        return (<Spinner/>)
+    }
+
+    else if (lang === 'zh') {
         return (
             <>
                 <Header lang={'zh'} currPath={location.pathname} />
