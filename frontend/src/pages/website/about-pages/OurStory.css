@@ -1,12 +1,19 @@
 .our-story-container {
-    margin-inline: 12%;
+    margin-inline: 7%;
+    
+}
 
+.our-story-container h3 {
+    font-size: 160%;
+    text-align: center;
+    color: black;
+    font-weight: 500;
 }
 
 h1 {
     text-align: center;
     font-size: 200%;
-    color: purple;
+    color:#56009A
 }
 
 b {
@@ -14,11 +21,20 @@ b {
     color: goldenrod;
 }
 
-p {
-    font-size: 120%;
+.center-left {
+    margin-left: 15%;
+    color: #554E5A;
+}
+
+.our-story-container p{
+    font-size: 170%;
     color: grey;
     font-style: italic;
     text-align: center;
+}
+
+.our-story-container h2 {
+    font-size: 190%;
 }
 
 .img-span{
@@ -27,11 +43,15 @@ p {
     height: 450px;
 }
 
+.consult {
+    text-align: center;
+}
+
 .consult h2 {
     margin-top: 10%;
     font-size: 165%;
     color: purple;
-    margin-left: 40%;
+    text-align: center;
 }
 
 section {

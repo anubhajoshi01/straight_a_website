@@ -172,7 +172,8 @@ function OurTeam() {
                     </ul>
                 </section>
                 <section>
-                    <h2><b>|Our</b> Excellent Team is Always in Support of You</h2>
+                <h2 style={{textAlign:'center', fontSize:'200%', color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Our</strong> Excellent Team is Always in Support of You</h2>
+                <p><br/></p>
                     <p>Straught A Prep is rooted in New York City, USA. Our expert counselors are familiar with the American higher education system, and have developed personalized admission planning for students, and accompany students to grow together in the United States. Our expert counselors control the entire application process and dig out students' highlights in-depth; Accurate analysis of university application procedure, efficient communication with each partner university, comprehensively help students get the offer and the best overseas study experience.</p>
                 </section>
                 <section>

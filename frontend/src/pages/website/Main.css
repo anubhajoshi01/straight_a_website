@@ -4,7 +4,7 @@
 }
 
 h1 {
-    color:purple
+    color:#56009A
 }
 
 .main-ul-hl{
@@ -43,7 +43,7 @@ section{
 }
 
 h3 {
-    color: purple;
+    color: #56009A;
     text-align: left;
     margin: 1%;
 }
@@ -90,7 +90,7 @@ h3 {
     color: white;
 }
 .purple-background{
-    background-color: purple;
+    background-color: #56009A;
     padding-bottom: 20%;
     padding-right: 400px;
     /* margin: 5% 3% 10% 0%; */
@@ -139,11 +139,10 @@ h3 {
 .white-background h3{
     margin-left: 30%;
     font-size: 30px;
+    color: #56009A;
 }
 
-.white-background h3 {
-    font-size: 80%;
-}
+
 
 .form {
     width: 220%;
