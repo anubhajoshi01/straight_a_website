@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import { useNavigate } from 'react-router-dom';
 import './HeaderMenu.css'
 
-function HeaderMenu({title, nav, items=[], multiSelect= false}){
+function HeaderMenu({title, nav, items=[], multiSelect= false, margin}){
     const [open, setOpen] = useState(false);
 
     const navigate= useNavigate()
@@ -29,8 +29,9 @@ function HeaderMenu({title, nav, items=[], multiSelect= false}){
                 {title}
                 </div>
                 {open ? (
-                <div className='ddcontainer'>
-                <ul className='dropdown-list'>
+                <div className='ddcontainer' style={{marginTop:{margin}}}>
+                <ul style={{marginTop:{margin}}} className='dropdown-list'>
+                  
                     {items.map((item) => (
                         <li>
                             <div className='text' type='button' onClick={() => {navigate(item.nav)}}>
@@ -40,7 +41,7 @@ function HeaderMenu({title, nav, items=[], multiSelect= false}){
                     ))}
                 </ul>
                 </div>) 
-                 : null }
+                 : <div/> }
                 
             </div>
        </div>

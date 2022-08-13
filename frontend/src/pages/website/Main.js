@@ -26,22 +26,22 @@ function Main(){
     console.log(`lang is ${lang}`)
 
     const slides = [
-        {title:"Private Counseling: Realize your dream, create your future", img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2aWNlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/private-counseling'},
-        {title: "Elite Services: Test Prep, Tutoring, Career Counseling", img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHV0b3J8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/elite-services'},
-        {title:'College Transfer Program: Transfer Application Services', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/college-transfer'}
+        {title:"Private Counseling: Realize your dream, create your future", img:"https://images.unsplash.com/photo-1549383028-df014fa3a325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxpYnJhcnl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/private-counseling'},
+        {title: "Elite Services: Test Prep, Tutoring, Career Counseling", img:"https://images.unsplash.com/photo-1599689868384-59cb2b01bb21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJlYWR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/elite-services'},
+        {title:'College Transfer Program: Transfer Application Services', img:"https://images.unsplash.com/photo-1558168674-2505c71112eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE1fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/college-transfer'}
     ]
 
     const slides_zh = [
-        {title:"私教辅导：实现你梦想，创造你未来", img:"https://images.unsplash.com/photo-1551836022-d5d88e9218df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8YWR2aWNlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/prvate-counseling/zh'},
-        {title: "精英服务: 考试辅导, 私教辅导, 职业规划", img:"https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8dHV0b3J8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/elite-services/zh'},
-        {title:'大学转学服务: 常青藤名校转学', img:"https://images.unsplash.com/photo-1567167273284-b39c9c601b6b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OTB8fGNvbGxlZ2V8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/college-transfer/zh'}
+        {title:"私教辅导：实现你梦想，创造你未来", img:"https://images.unsplash.com/photo-1549383028-df014fa3a325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxpYnJhcnl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/prvate-counseling/zh'},
+        {title: "精英服务: 考试辅导, 私教辅导, 职业规划", img:"https://images.unsplash.com/photo-1599689868384-59cb2b01bb21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJlYWR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/elite-services/zh'},
+        {title:'大学转学服务: 常青藤名校转学', img:"https://images.unsplash.com/photo-1558168674-2505c71112eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE1fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/college-transfer/zh'}
     ]
     
 
     const slides2 = [
-        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
+        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
         {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
-        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1571260899304-425eee4c7efc?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"}
+        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2UlMjBkaXZlcnNpdHl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
     ]
     const slides2_zh = [
         {title:"为什么 Straight A Prep 能帮到你? 经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1434030216411-0b793f4b4173?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8N3x8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},

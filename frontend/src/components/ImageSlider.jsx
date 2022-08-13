@@ -92,7 +92,7 @@ const ImageSlider = ({slides}) => {
     const titleStyle = {
         position:'absolute',
         top:'30%',
-        left:'15%',
+        left:'22%',
         fontSize:'200%',
         fontWeight: '700',
         color: 'white',

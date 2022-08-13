@@ -29,12 +29,13 @@
 }
 
 .start-now-btn {
-    width: 80px;
+    width: 120px;
     height: 40px;
     margin-left: 40%;
     background-color: goldenrod;
     color: white;
     border-style: none;
+    font-size: 120%;
 }
 
 .start-now-btn:hover {
