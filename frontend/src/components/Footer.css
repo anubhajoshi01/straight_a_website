@@ -1,6 +1,6 @@
 .box{
     position: relative;
-    background: purple;
+    background: #56009A;
     display: flex; 
     flex-direction: row;
     justify-content:space-around;

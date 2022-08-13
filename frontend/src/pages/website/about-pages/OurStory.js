@@ -6,6 +6,7 @@ import './OurStory.css'
 import { useLocation, useNavigate } from "react-router-dom"
 import { useEffect } from "react"
 import { useParams } from "react-router-dom"
+import Consultation from '../../../components/Consultation'
 
 function OurStory(){
 
@@ -75,8 +76,9 @@ function OurStory(){
                     </ul>
                 </section>
                 <h2 className='consult'> 开始咨询</h2>
+                <Consultation lang={lang}/>
                 
-                <Form lang={'zh'} type={'below'}/>
+                      
             </div>
     
             
@@ -90,29 +92,31 @@ function OurStory(){
         <>
         <Header lang={'en'} currPath={location.pathname}/>
         <div className='our-story-container'>
+         
             <section>
-                <h1><b>"New Era"</b> Education Consulting</h1>
-                <p>Straight A Prep is a concierge-style, full-service academic consulting firm based in Manhattan founded by UPenn entrepreneurs and educators with a shared vision to redefine the future of K-12 and College Counseling and Admission locally, and around the globe.</p>
+                <h1 style={{color:'#56009A'}}><b>"New Era"</b> Education Consulting</h1>
+                <p style={{textAlign:'center'}}>Straight A Prep is a concierge-style, full-service academic consulting firm based in Manhattan founded by UPenn entrepreneurs and educators with a shared vision to redefine the future of K-12 and College Counseling and Admission locally, and around the globe.</p>
             </section>
         </div>
             <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
         <div className='our-story-container'>
             <section>
-                <h1>Emphasize the <b>"FIT"</b></h1>
+                <h1 style={{color:'#56009A'}}>Emphasize the <b>"FIT"</b></h1>
 
-                <p> We are a dynamic team taht emphasizes the 'fit' in all things - and can find the right for for your secondary school or college choice by byuldig upon your strengths, giving you the necessary tools to stay ahead of the curve, and manage stress.</p>
+                <p> We are a dynamic team that emphasizes the 'fit' in all things - and can find the right for for your secondary school or college choice by byuldig upon your strengths, giving you the necessary tools to stay ahead of the curve, and manage stress.</p>
 
             </section>
             <section>
+            <h2 className='center-left'><b>|</b> <strong style={{color:'#56009A'}}>Our</strong> Philosophy</h2>
                 <ul className="our-story-hl">
                     <li className='left-side'>
-                        <h2><b>|Our</b> Philosophy</h2>
+                        
          
-                        <p>Straight A Prep's philosophy us student-oriented; we are about personally guiding our students through a process of self-discovery and articulation that leads to successful applications,w e well as happiness and success in the school itself. We are committed to helping students find and apply to independant schools, international schools, colleges and universities. We choose schools that provide teh best fit academically and personally are affordable for their families</p>
-                        <p><br/></p>
+                        <p>Straight A Prep's philosophy us student-oriented; we are about personally guiding our students through a process of self-discovery and articulation that leads to successful applications, as well as happiness and success in the school itself. We are committed to helping students find and apply to independant schools, international schools, colleges and universities. We choose schools that provide teh best fit academically and personally are affordable for their families</p>
+                    
                         <p>We believe that the applicayion process sould be a journey of self-discovery, one in which students grow to understand the factors that matter the most to them as they plan their future educational paths.</p>
-                        <p><br/></p>
-                        <p>We see our role as guies and mentors, jelping students stay on track throughout the process. Our goal is to minimize the stress on families while maximizing opportunities.</p>
+                
+                        <p>We see our role as guides and mentors, helping students stay on track throughout the process. Our goal is to minimize the stress on families while maximizing opportunities.</p>
                     </li>
                     <li>
                         <img className='side-img' src="https://images.unsplash.com/photo-1604872428066-4407f25e6d2d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8Z2lybCUyMHN0dWR5aW5nfGVufDB8fDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"/>
@@ -120,11 +124,12 @@ function OurStory(){
                 </ul>
             </section>
             <section>
-                <h2><b>|Straight A Prep</b> Advantage</h2>
+            <h2 style={{textAlign:'center'}}><b>|</b> <strong style={{color:'#56009A'}}>Straight A Prep</strong> Advantage</h2>
                 <p><br/></p>
                 <h3>Straight A Prep affirms that all our services will:</h3>
+                <p><br/></p>
                 <ul className='bullet'>
-                    <li><p>Treat every stydent with respect, courtesy, and personal attention.</p></li>
+                    <li><p>Treat every student with respect, courtesy, and personal attention.</p></li>
 
                     <li><p>Honor the highest professional ethical standards.</p></li>
 
@@ -133,9 +138,10 @@ function OurStory(){
                     <li><p>Provide every student with the highest quality individual consulting and learning materials.</p></li>
                 </ul>
             </section>
-            <h2 className='consult'> Sign up for a free consultation today</h2>
-            <Form/>
+            <p><br/></p>
         </div>
+         <Consultation lang={lang}/>
+        
 
         
         <Footer lang ={lang}/>

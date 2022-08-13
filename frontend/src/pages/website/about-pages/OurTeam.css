@@ -4,6 +4,11 @@
     margin: 5%;
 }
 
+.our-team-container p {
+    font-style: italic;
+    text-align: center;
+}
+
 .our-story-hl-team{
     display: flex;
     flex-direction: row;
@@ -39,8 +44,8 @@
   
 }
 
-h1 {
-    font-size: 200%;
+.our-team-container h1 {
+    font-size: 300%;
     color: black;
 }
 
@@ -63,8 +68,21 @@ h1 {
 
 .descr-sunny p {
     text-align: left;
-    margin: 2%;
+    margin-left: -25%;
+    width: 120%;
+    font-style: italic;
+  
+}
 
+.descr-sunny h5 {
+    color: black;
+    text-align: left;
+    font-weight: 400;
+    font-size: 180%;
+    margin-left: -30%;
+    width: 200%;
+    font-style: normal;
+    
 }
 
 h6 {
@@ -79,8 +97,4 @@ h6 {
 .title {
     text-decoration: underline;
     width: fit-content;
-}
-
-section{
-    margin-block: 2%;
 }

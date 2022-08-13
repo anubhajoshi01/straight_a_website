@@ -46,6 +46,7 @@ ul{
     font-size: 90%;
     text-align: center;
     width: fit-content;
+
  
 }
 
@@ -56,11 +57,11 @@ ul{
 }
 
 .link:hover{
-    color: purple;
+    color: #56009A;
 }
 
 .litext:hover{
-    color: purple;
+    color: #56009A;
 }
 
 .startnow{
@@ -71,11 +72,11 @@ ul{
 }
 
 .headermenu:hover{
-    color: purple;
+    color: #56009A
 }
 
 .rectangle{
-    background: purple;
+    background: #56009A;
     display: inline-flex; 
     flex-direction: column;
     justify-content: center;
@@ -89,7 +90,7 @@ ul{
 }
 
 .rectangle:hover{
-    background: orange;
+    background: goldenrod;
 }
 
 
@@ -104,7 +105,7 @@ ul{
 }
 
 .litext:hover{
-    color: purple;
+    color: #56009A;
 }
 
 .startnow{
@@ -115,11 +116,11 @@ ul{
 }
 
 .headermenu:hover{
-    color: purple;
+    color: #56009A;
 }
 
 .rectangle{
-    background: purple;
+    background: #56009A;
     display: inline-flex; 
     flex-direction: column;
     justify-content: center;

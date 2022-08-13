@@ -99,7 +99,7 @@ const ImgSlider = ({slides}) => {
         top: '60%',
         left: '47%',
         color: 'white',
-        background: 'purple',
+        background: '#56009A',
         border: 'transparent',
     }
 
