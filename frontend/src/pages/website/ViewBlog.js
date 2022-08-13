@@ -71,10 +71,7 @@ function ViewBlog(){
             setDisplayed(true)
             
         }
-        return () =>{
-            console.log('reset')
-            dispatch(reset())
-        }
+      
 
     }, [showBlog, isLoading, isSuccess, isError, dispatch, displayed])
 
@@ -85,13 +82,16 @@ function ViewBlog(){
     }
 
     else if(lang === 'zh') {
-        return (<>
+        return (
+            <>
             <Header lang={'zh'} currPath={location.pathname}/>
-            <img className="blog-image-sample" src={imgUrl} />
-            <p><br/></p>
-            <h1>{titleZh}</h1>
-            <p><br/></p>
-            <p>{contentZh}</p>
+            <div className="view-blog-page">
+                <img src={imgUrl} />
+                <p><br/></p>
+                <h1>{titleZh}</h1>
+                <p><br/></p>
+                <p>{contentZh}</p>
+            </div>
             <Footer lang={lang}/>
         </>
         )

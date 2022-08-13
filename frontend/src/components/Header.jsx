@@ -62,21 +62,27 @@ const Header = ({lang, currPath}) => {
                 <img className='logoimg' src={logo}/>   
             </li>
             <li className='litext'>
-                <HeaderMenu title='About' nav='/' items={[{id: 1, value: 'Our Story', nav:'/our-story'}, {id: 2, value: 'Our Team', nav:'/our-team'}, {id: 3, value: 'Case Studies', nav:'/case-studies'}, {id: 4, value: "Testimonials", nav:'/testimonials'},
+                <HeaderMenu title='About' nav='/' margin='50%' items={[{id: 1, value: 'Our Story', nav:'/our-story'}, {id: 2, value: 'Our Team', nav:'/our-team'}, {id: 3, value: 'Case Studies', nav:'/case-studies'}, {id: 4, value: "Testimonials", nav:'/testimonials'},
             {id: 5, value: "Partners", nav:'/our-partners'}, {id: 6, value: "Pro Bono Services", nav:'/pro-bono'}, {id:7, value:'Career At SAP', nav:'/career-sap'}]}/>
             </li>
         
             <li className='litext'>
-                <HeaderMenu title='Private Counseling' nav={'/private-counseling'} items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
+                <div style={{marginLeft:'1%'}}>
+                <HeaderMenu title='Private Counseling'  nav={'/private-counseling'} items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
                     id: 4, value: 'College Transfer', nav:'/college-transfer'
                 }]}/>
+                </div>
             </li>
             <li className='litext'>
+              <div style={{marginLeft:'32.225%'}}>
                 <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep", nav:'/elite-test-prep'}, {id: 2, value: 'Elite Private Academic Tutoring',nav:'/elite-private-tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad', nav:'/summer-intern'},
                 {id: 4, value: 'Career Counseling & Placement', nav:'/career-counseling'}]}></HeaderMenu>
+                </div>
             </li>
             <li className='litext'>
+                <div style={{marginLeft:'35%'}}>
                 <HeaderMenu title="Resources" nav={'/resources'} items={[{id: 1, value: "FAQ", nav:'/FAQ'}]}/>
+                </div>
             </li>
             <li className='litext' onClick={() => navigate('/blog')}>
                 <div>Blog</div>

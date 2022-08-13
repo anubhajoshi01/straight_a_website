@@ -5,19 +5,22 @@
 .dropdown-menu{
     display: inline-block;
 }
+.dropdown-list {
+    resize: none;
+}
+
 
 .ddcontainer{
     -ms-transform: translateX(-20%);
     transform: translateX(-10%);
-    width: 110%;
+    width: 120%;
     align-items: center;
-  
+    padding-top: 39%;
 }
-
 
 .dropdown-menu ul{
     color: black;
-    margin-top: 35%;
+
     background-color: rgba(255, 255, 255, 0.3);
 
     flex-direction: column;
@@ -25,23 +28,27 @@
 }
 
 .dropdown-list ul{
-    margin-top: 30%;
+
     flex-direction: column;
+    justify-items: space-between;
     background-color: white;
-    width: 120%;
+    width: 200%;
+
 }
 
 .dropdown-list li{
-    text-align: center;
-  
-    margin-right: 15%;
+    text-align:left;
+
+    margin-right: 30%;
+    width: 100%;
+    align-self: center;
 }
 
 .text{
     margin-top: 2px;
     margin-bottom: 2px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: small;
+    font-size: 75%;
 }
 
 .text:hover{
