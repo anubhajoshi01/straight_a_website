@@ -39,14 +39,14 @@ function Main(){
     
 
     const slides2 = [
-        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
-        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
-        {title:"Why do you need Straight A Prep? Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2UlMjBkaXZlcnNpdHl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
+        {title:"Why do you need Straight A Prep?",content:"Straight A Prep is a concierge-style, full-service academic consulting firm founded by" ,img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
+        {title:"Why do you need Straight A Prep?",content:"Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
+        {title:"Why do you need Straight A Prep?",content:"Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2UlMjBkaXZlcnNpdHl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
     ]
     const slides2_zh = [
-        {title:"为什么 Straight A Prep 能帮到你? 经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
-        {title:"为什么 Straight A Prep 能帮到你? 经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
-        {title:"为什么 Straight A Prep 能帮到你? 经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2UlMjBkaXZlcnNpdHl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
+        {title:"为什么 Straight A Prep 能帮到你?", content: "经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
+        {title:"为什么 Straight A Prep 能帮到你?", content: "经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
+        {title:"为什么 Straight A Prep 能帮到你?", content: "经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2UlMjBkaXZlcnNpdHl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
     ]
 
     if(lang === 'zh') {
@@ -195,10 +195,10 @@ function Main(){
             <ImageSlider slides={slides}/>
             <div className='main-container'>
                 <section>
-                    <h1 style={{color:'554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>OUR</strong> SERVICES</h1>
+                    <h1 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>OUR</strong> SERVICES</h1>
                     <p><br/></p>
                     <p><br/></p>
-                    <p>Straight A Prep provides students with counseling, guidance, mentoring, administrative support, and institutional insights to give them a competitive edge when applying to the college or university of their dreams.</p>
+                    <p className='p-italic'>Straight A Prep provides students with counseling, guidance, mentoring, administrative support, and institutional insights to give them a competitive edge when applying to the college or university of their dreams.</p>
                 </section>
                 <section>
                     <ul className="main-ul-hl">
@@ -292,7 +292,7 @@ function Main(){
                     </ul>
                 </section>
                 <section>
-                <h1 style={{color:'554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>BLOG</strong> POSTS</h1>
+                <h1 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>BLOG</strong> POSTS</h1>
                     <ImgSlider slides={slides2}/>
                     <div className='seperate-container'>
                         <div className='purple-background'>

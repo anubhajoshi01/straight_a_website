@@ -4,6 +4,21 @@
     justify-content: center;
 }
 
+.our-partners-container h1 {
+    font-size: 78px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+
 .our-partners-container img{
     margin-inline: 7%;
+}
+
+.our-partners-container p {
+    font-size: 31px;
+    font-weight: 400;
+    text-align: center;
+    font-style: italic;
+    color: black;
 }

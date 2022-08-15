@@ -33,9 +33,11 @@ function CaseStudies(){
             <>
                 <Header lang={'zh'} currPath={location.pathname}/>
                 <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
-                <h1>成功案例</h1>
+                
                 <section>
                     <div className="case-studies-container">
+                    <h1>成功案例</h1>
+                    <p><br/></p>
                         <img className='left' src={jasonImg}/>
                         <div className='case-content'>
                             <h2>申请人背景</h2>
@@ -97,17 +99,22 @@ function CaseStudies(){
         <>
             <Header lang={'en'} currPath={location.pathname}/>
             <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
-            <h1>Case Studies</h1>
+            
             <section>
+            
                 <div className="case-studies-container">
+                <h1>Case Studies</h1>
+                <p><br/></p>
                     <img className='left' src={jasonImg}/>
                     <div className='case-content'>
-                        <h2><b>|Applicant</b> Background</h2>
+                        <p><br/></p>
+                       
+                        <h2 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>Applicant</strong> Background</h2>
                         <p>School: International School</p>
                         <p>Basic scores: GPA 3.0+/4.0, TOEFL 100+</p>
                         <p>Major: Engineering</p>
                         <p>Target University: New York University</p>
-                        <p><br/></p>
+                        
                         <h3>Straight A Prep's <b>Support</b></h3>
                         <p>Jason Wang was very interested in internet companies after Straight A Prep studied his profile and talked about his future career plans. So we arranged for Json Wang to prepare for an internship and finally found the ideal jpb. With the help of the background improvement project of Straight A Prep, Jason Wang systematically learned the basic concepts and models of machine learning and understood the solution and optimization methods of a linear model. This experience gave him complete conceptual understanding of the scientific methods of processing data with machine learning. With the foundation of his pervious internship, Jason Wang got the internship opportunity. Jason Wang's unique background and experience in applying for a new major made him stand out from many other applicants, and he was one of the first ones to recieve the offer from his dream school.</p>
                     </div>
@@ -120,7 +127,7 @@ function CaseStudies(){
                 <div className="case-studies-container">
                     <img className='right' src={lisaImg}/>
                     <div className='case-content'>
-                        <h2><b>|Applicant</b> Background</h2>
+                        <h2 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>Applicant</strong> Background</h2>
                         <p>School: Private School</p>
                         <p>Basic scores: TOEFL 100+, SAT 1460+</p>
                         <p>Major: Economics</p>
@@ -138,7 +145,7 @@ function CaseStudies(){
                 <div className="case-studies-container">
                     <img className='left' src={sarahImg}/>
                     <div className='case-content'>
-                        <h2><b>|Applicant</b> Background</h2>
+                        <h2 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>Applicant</strong> Background</h2>
                         <p>School: Private School</p>
                         <p>Basic scores: GPA 3.53/4.0</p>
                         <p>Major: Engineering</p>

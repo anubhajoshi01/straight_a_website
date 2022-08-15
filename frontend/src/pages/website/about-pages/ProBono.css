@@ -23,7 +23,7 @@
 
 .ul-container{
     margin-top:-20px;
-    list-style-type: circle;
+    list-style-type:disc;
     font-size: 20px;
 }
 
@@ -39,4 +39,46 @@ p.purple{
 .square h3{
     margin-left:-1%;
     margin-bottom:5%;
+}
+
+.pro-bono-page h1 {
+    font-size: 78px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+
+.pro-bono-page p {
+    font-weight: 400;
+    font-size: 31px;
+}
+
+.pro-bono-page h3 {
+    font-size: 37px;
+    font-weight: 500;
+    font-style: italic;
+    color: #56009A;
+}
+
+.pro-bono-page li {
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.pro-bono-page b {
+    font-size: 28px;
+    font-weight: 500;
+    color: #56009A;
+}
+
+.pro-bono-page h4 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 36px;
+}
+
+.pro-bono-page strong {
+    font-weight: 500;
+    size: 42px;
+    color: #56009A;
 }

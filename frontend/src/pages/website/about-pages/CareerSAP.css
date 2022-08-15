@@ -6,8 +6,62 @@
 .career-sap-hl-ul {
     display: flex;
     flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.career-sap-container li{
+    width: fit-content;
 }
 
 .career-sap-dotted-ul li{
     list-style-type: disc;
+}
+
+.career-sap-container h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 78px;
+    text-align: center;
+    color: black;
+}
+
+.career-sap-container p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 31px;
+    text-align: center;
+    font-style: italic;
+}
+
+.career-sap-container h4 {
+    font-weight: 600;
+    font-size: 31px;
+    text-align: center;
+    color: #56009A;
+}
+
+.career-sap-container h2 {
+    font-style: italic;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 61px;
+    color: #56009A;
+}
+
+.career-sap-container b {
+    color: goldenrod;
+}
+
+.career-sap-container h3 {
+    font-weight: 500;
+    font-size: 37px;
+    line-height: 45px;
+    font-style: italic;
+    color: #56009A;
+}
+
+.career-sap-container li {
+    font-weight: 400;
+    font-size: 28px;
+    line-height: 34px;
 }
