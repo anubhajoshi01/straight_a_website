@@ -46,6 +46,8 @@ function GradeAdmission6to8(){
                         </li>
                     </ul>
                 </section>
+                <div className="grade-adm-margin">
+                <div className="grade-adm-descr">
                 <section>
                     
                     <h2>Straight A Prep 的专业服务</h2>
@@ -63,6 +65,8 @@ function GradeAdmission6to8(){
                     <p>家长文书为学校提供有关申请人及其家人的见解。我们为您提供了与我们一起讨论文书问题的机会，并讨论如何最好地书写以支持您孩子的申请。我们还会审核草稿并会提出修改建议。</p>
              
                 </section>
+                </div>
+                </div>
             </div>
             <section>
                 <div className="gradient-img-box">
@@ -78,7 +82,7 @@ function GradeAdmission6to8(){
             </section>
             <div className="grade-admissions-container">
                 <section>
-                   
+                
                     <div className="right-box">
                         <h3>活动表完成指导</h3>
                         <p>课外活动表的呈现方式与其列出的活动和成就一样重要。我们会建议包括哪些活动和荣誉，以及如何在简历或申请的“活动表”部分最好地展示它们。</p>
@@ -102,13 +106,15 @@ function GradeAdmission6to8(){
                     <div className="left-img-adm">
                         <img src="https://images.unsplash.com/photo-1628258474669-5edf1004ed7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudCUyMGhpamFifGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
                     </div>
+              
                 </section>
-             
+                <div className="grade-adm-margin">
                 <section>
                     <div className='grade-adm-title'>Straight A Prep 帮助你成就你未来</div>
                     <p><br/></p>
                     <button className="start-now-btn" onClick={() => navigate('/start-now/zh')}>开始咨询</button>
                 </section>
+                
                 <section>
                         <h3>社交媒体指导</h3>
                         <p>招生官员可以使用社交媒体审查申请人。事实上，如果使用得当，社交媒体可以成为您应用程序的主要积极补充。我们帮助您优化适当的社交媒体帐户以支持您的申请程序。</p>
@@ -117,6 +123,7 @@ function GradeAdmission6to8(){
                         <p>我们提供有关如何最好地激发教练的指导，包括如何制作视频和推荐信的兴趣。</p>
                         
                 </section>
+                </div>
                 
             </div>
             <section>
@@ -171,7 +178,7 @@ function GradeAdmission6to8(){
         <div className="grade-admissions-container">
             <h1>6-8 Grade Admissions</h1>
             <section>
-                <ul className="grade-adm-hl">
+                <ul className="grade-adm-hl-1">
                     <li>
                         <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60"/>
                     </li>
@@ -179,17 +186,19 @@ function GradeAdmission6to8(){
                         <div>
                             <p>We are well-equipped to help students and families who want assistance in navigating the selective private/independent school admission process. Our experienced consultants will analyze your student profile to help finalize your school list ad provide the most effective aid to your applications. Services are customized to meet student's unique needs and goals.</p>
                             <p><br/></p>
-                            <p>The preperatory school package includes assistance with both student and parent essays, activity sheet completion guidance, help to secure the best letters of reccomendation, interview preperation, school visitation guidance, SAT preparation, how to use social media to your advantage, and application completion guidance. Assistance for athletes and artists is also included as appropriate.</p>
+                            <p>The preparatory school package includes assistance with both student and parent essays, activity sheet completion guidance, help to secure the best letters of reccomendation, interview preperation, school visitation guidance, SAT preparation, how to use social media to your advantage, and application completion guidance. Assistance for athletes and artists is also included as appropriate.</p>
+                            <p><br/></p>
                             <button className="start-now-btn" onClick={() => navigate('/start-now')}> Start Now </button>
                         </div>
                     </li>
                 </ul>
             </section>
-            <section>
+            <div className="grade-adm-margin">
+            <div className="grade-adm-descr">
                 
                 <h2>Straight A Prep's <b>Professional Services</b></h2>
                 <p><br/></p>
-                <h3>Profle Analysis</h3>
+                <h3>Profile Analysis</h3>
                 <p>After fully understanding your interests and goal, we do a thorough review and analysis of transcripts, standardized test scores, extracurricular activities, and personal history. </p>
                 <p><br/></p>
                 <h3>School Search and Selection</h3>
@@ -201,7 +210,8 @@ function GradeAdmission6to8(){
                 <h3>Parent Essay Completion Guide</h3>
                 <p>Parent Essay provides the school with insights into the applicant and their family. We provide an opportunity for you to review essay questions with us and discuss how responses may be best tailored in support of your child's application. We also review drafts and may suggest edits.</p>
          
-            </section>
+            </div>
+            </div>
             
 
         </div>
@@ -245,7 +255,7 @@ function GradeAdmission6to8(){
                     <img src="https://images.unsplash.com/photo-1628258474669-5edf1004ed7d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudCUyMGhpamFifGVufDB8MXwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
                 </div>
             </section>
-         
+            <div className="grade-adm-margin">
             <section>
                 <div className='grade-adm-title'>Let Straight A Prep help you create your future in the most efficient way</div>
                 <p><br/></p>
@@ -259,7 +269,7 @@ function GradeAdmission6to8(){
                     <p>We provide guidance on how best to generate coach interest including how to produce a recruitment video, and develop letters of interest.</p>
                     
             </section>
-            
+            </div>
         </div>
         <section>
                 <div className="img-text-container">

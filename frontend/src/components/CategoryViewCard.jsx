@@ -10,7 +10,7 @@ const CategoryViewCard = ({imgUrl, title, content, navLink, msg}) => {
         <img className='categoryimg' src={imgUrl}/>
         <h5 className='categorytitle'> {`|${title}`} </h5>
         <p className='categoryctn'> {content} </p>
-        <p className='learnmore'> {msg} {'>'}`</p>
+        <p className='learnmore'> {msg} {'->'}</p>
     </div>
   )
 }
