@@ -45,7 +45,7 @@ function EliteServiceCategory(){
             <>
                 <Header lang={'zh'} currPath={location.pathname}/>
                 <div className="category-container">
-                    <h1>精英服务</h1>
+                    <h2 style={{textAlign:'center'}}><b>|</b>精英服务</h2>
                     <ul className="category-flex">
                        {
                         categoriesZh.map((item) => (
@@ -63,7 +63,7 @@ function EliteServiceCategory(){
         <>
             <Header lang={'en'} currPath={location.pathname}/>
             <div className="category-container">
-                <h1>Elite Services</h1>
+            <h2 style={{textAlign:'center'}}><b>|</b> <strong style={{color:'#56009A'}}>Elite</strong> Services</h2>
                 <ul className="category-flex">
                    {
                     categories.map((item) => (

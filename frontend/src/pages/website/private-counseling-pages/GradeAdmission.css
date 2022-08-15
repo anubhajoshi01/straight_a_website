@@ -1,6 +1,7 @@
 .grade-admissions-container {
-    margin-inline: 7%;
+
     margin-top: -7%;
+
 
 }
 
@@ -48,24 +49,39 @@ section {
 }
 
 .grade-admissions-container h2 {
-    font-size: 200%;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 59px;
+    text-align: center;
+    color: #56009A;
 }
 
 .grade-admissions-container h3 {
-    font-size: 170%;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 36px;
+    color: #56009A;
 }
 
 .grade-admissions-container p{
-    font-size: 130%;
+   font-weight: 400;
+   font-style: italic;
+   font-size: 30px;
+   text-align: center;
+}
+
+
+.grade-adm-hl-1 img {
+    width: 100%;
 }
 
 .left-rect {
     float: left;
     width: 70%;
-    height: 300px;
+    height: 390px;
     margin-bottom: 7%;
     background-image: linear-gradient(to right, white, #bb4eed);
-    padding: 5%;
+    padding: 2%;
 }
 
 .left-rect h3{
@@ -84,16 +100,19 @@ section {
 }
 
 .right-box {
+
     width: 50%;
     float: right;
+    margin-right: 5%;
 }
 
 .right-box h3 {
-    font-size: 120%;
+    font-size: 28px;
 }
 
 .right-box p {
-    font-size: 100%;
+    font-size: 18px;
+    font-style: normal;
 }
 
 .grade-adm-title {
@@ -133,5 +152,52 @@ section {
 
 .gradient-img-box img {
     width: 30%;
-    height: 2%;
+    height: 450px;
+}
+
+.grade-admissions-container h1 {
+    font-weight: 500;
+    font-size: 78px;
+    text-align: center;
+    color: black;
+}
+
+.offers-list {
+
+    margin-left: -10%;
+    margin-bottom: 10%;
+}
+
+
+.grade-adm-hl-1 {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.grade-adm-hl-1 li{
+
+    padding: 3%;
+    width: 100%;
+
+}
+
+
+.grade-adm-margin {
+    margin-inline: 7%;
+}
+
+.grade-adm-descr p{
+    font-style: normal;
+    font-weight: 400;
+    font-size: 27px;
+    text-align: center;
+}
+
+.grade-adm-title {
+    font-weight: 600;
+    font-style: italic;
+    font-size: 64px;
+    text-align: center;
+    color: #56009A;
 }

@@ -46,7 +46,8 @@ function PrivateCounselingCategory(){
             <>
                 <Header lang={'zh'} currPath={location.pathname}/>
                 <div className="category-container">
-                    <h1>留学咨询</h1>
+                <h2 style={{textAlign:'center'}}><b>|</b>留学咨询</h2>
+           
                     <p><br/></p>
                     <ul className="category-flex">
                        {
@@ -65,7 +66,7 @@ function PrivateCounselingCategory(){
         <>
             <Header lang={'en'} currPath={location.pathname}/>
             <div className="category-container">
-                <h1>Private Counseling</h1>
+                <h2 style={{textAlign:'center'}}><b>|</b> <strong style={{color:'#56009A'}}>Private</strong> Counseling</h2>
                 <p><br/></p>
                 <ul className="category-flex">
                    {
