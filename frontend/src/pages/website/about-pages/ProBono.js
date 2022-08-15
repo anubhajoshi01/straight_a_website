@@ -29,9 +29,8 @@ function ProBono(){
         return (
             <>
             <Header lang={'zh'} currPath={location.pathname}/>
-            <div className='img'>
-                <img id="pic" src="https://www.sjsu.edu/diversity/pics/community-resources/community-banner.jpg" alt='banner'/>
-            </div>
+            <div className='pro-bono-page'>
+            <img className='img-span' src='https://www.sjsu.edu/diversity/pics/community-resources/community-banner.jpg'/>
             
             <section>
                 <h1>
@@ -89,8 +88,7 @@ function ProBono(){
     
             
             </div>
-            
-    
+            </div>
             <Footer lang={lang}/>
             
             
@@ -104,9 +102,8 @@ function ProBono(){
     return (
         <>
         <Header lang={'en'} currPath={location.pathname}/>
-        <div className='img'>
-            <img id="pic" src="https://www.sjsu.edu/diversity/pics/community-resources/community-banner.jpg" alt='banner'/>
-        </div>
+        <div className='pro-bono-page'>
+        <img className='img-span' src='https://www.sjsu.edu/diversity/pics/community-resources/community-banner.jpg'/>
         
         <section>
             <h1>
@@ -164,22 +161,15 @@ function ProBono(){
             and verify financial needs. Due to high application volume, our pro bono consulting service will be provided 
             on a first-come, first-serve basis.
             </p>
-            <p>
-                Please email  
-            </p>
-            <p className='purple'>
-            info@straightaprep.com
-            </p>
-            <p>
-            with all of the necessary application requirements.
-            </p>
-            <h3>
-                Thank you, and let us help lift our students and reach their full potential.
-            </h3>
+           
 
+            <p>Please email <b>info@straightaprep.com</b> with all of the necessary application requirements</p>
+            <p><br/></p>
+            <h4><strong>Thank You,</strong> and let us help lift our students and help them reach their full potential</h4>
+            <p><br/></p>
         
         </div>
-        
+        </div>
 
         <Footer lang={lang}/>
         

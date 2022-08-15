@@ -3,8 +3,10 @@
     width: 90%;
 }
 
-h1 {
-    color:#56009A
+.main-container h1 {
+    font-weight: 800px;
+    font-size: 44px;
+    text-align: center;
 }
 
 .main-ul-hl{
@@ -51,6 +53,9 @@ h3 {
  .p2 {
     
     font-style: normal;
+    text-align: center;
+    font-weight: 400;
+    font-size: 27px;
 }
 
 .main-img-container-2 {
@@ -88,6 +93,10 @@ h3 {
 
 .center p{
     color: white;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 24px;
+    text-align: center;
 }
 .purple-background{
     background-color: #56009A;
@@ -113,14 +122,7 @@ h3 {
     padding-top: 10%;
     
 }
-.purple-background h3{
-    font-size:30px;
-    color: white;
-    margin-left:10%;
-    margin-bottom:10%;
-    margin-right:5%;
-    font-weight: 300;
-}
+
 
 .white-background{
     margin-left: auto;
@@ -131,18 +133,44 @@ h3 {
 .seperate-container{
     display: flex;
     flex-direction: row;
-    margin: 2% 100% 2% 0%;
+    margin: 2% 120% 2% 0%;
     padding-right: 0%;
     padding-left: 0%;
 }
 
 .white-background h3{
-    margin-left: 30%;
-    font-size: 30px;
+ 
+    font-size: 36px;
     color: #56009A;
+    font-style: italic;
+    font-weight: 600;
+}
+
+.main-container h3 {
+    font-size: 36px;
+    color: #56009A;
+    font-style: italic;
+    font-weight: 600;
 }
 
 
+
+.purple-background h3{
+    font-size:30px;
+    color: white;
+    margin-left:15%;
+    margin-bottom:10%;
+    margin-right:5%;
+    font-weight: 300;
+}
+
+.p-italic{
+    font-weight: 300;
+    font-size: 27px;
+    text-align: center;
+    font-style: italic;
+    margin-inline: 15%;
+}
 
 .form {
     width: 220%;

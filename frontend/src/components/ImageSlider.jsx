@@ -98,6 +98,7 @@ const ImageSlider = ({slides}) => {
         color: 'white',
         wordWrap:'break-word'
     }
+    
 
     const btnStyle = {
         position:'absolute',

@@ -83,11 +83,22 @@ const ImgSlider = ({slides}) => {
 
     const titleStyle = {
         position:'absolute',
+        top:'25%',
+        left:'25%',
+        right:'25%',
+        fontSize:'200%',
+        fontWeight: '800',
+        color: 'white',
+        wordWrap:'break-word'
+    }
+
+    const contentStyle = {
+        position:'absolute',
         top:'35%',
         left:'25%',
         right:'25%',
         fontSize:'200%',
-        fontWeight: '700',
+        fontWeight: '400',
         color: 'white',
         wordWrap:'break-word'
     }
@@ -97,7 +108,7 @@ const ImgSlider = ({slides}) => {
         height: '40px',
         width: '90px',
         top: '60%',
-        left: '47%',
+        left: '25%',
         color: 'white',
         background: '#56009A',
         border: 'transparent',
@@ -187,8 +198,9 @@ const ImgSlider = ({slides}) => {
         <div style={dot3Style} onClick={dot3}> {'.'} </div>
         
         <div style={titleStyle}> {slides[currentIndex].title}</div>
+        <div style={contentStyle}>{slides[currentIndex].content}</div>
         <div className='rectangle' style={btnStyle}> Read More</div>
-        <div style={{ width:'100%', height:'50%',display:'flex', justifyContent:'center'}}>
+        <div style={{ width:'200%', height:'50%',display:'flex', justifyContent:'center'}}>
             <img src={slides[currentIndex].img} style={{ height:'80%'}}></img>
         </div> 
     </div>

@@ -3,25 +3,29 @@
     margin: 6%;
 }
 
-h1{
-    font-size: 350%;
+.case-studies-container h1{
+    font-size: 78px;
+    font-weight: 400;
     color: black;
 }
 
-h2 {
-    font-size: 150%;
+.case-studies-container h2 {
+    font-size: 44px;
     text-align: left;
+    font-weight: 600;
 }
 
-h3 {
-    font-size: 170%;
+.case-studies-container h3 {
+    font-size: 50px;
     text-align: left;
+    font-weight: 700;
 }
 
-h4 {
-    font-size: 170%;
+.case-studies-container h4 {
+    font-size: 34px;
     font-style: italic;
-    color: purple;
+    color: #56009A;
+    text-align: center;
 }
 
 .left {
@@ -46,6 +50,12 @@ section{
     position: relative;
 }
 
-p {
-    font-size: 150%;
+.case-studies-container p {
+    font-style: italic;
+    font-size: 31px;
+}
+
+.case-studies-container img {
+    width: 50%;
+    height: auto;
 }

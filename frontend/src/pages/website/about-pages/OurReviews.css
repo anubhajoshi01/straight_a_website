@@ -1,12 +1,14 @@
 .our-reviews-container {
-    margin-inline: 7%;
-
+    margin-left: 2%;
+    margin-right: 5%;
+    position: relative;
 }
 
 .left-img  {
     float: left;
     width: 25%;
     margin-inline: 2%;
+    height: 455px;
 }
 
 .right-img {
@@ -18,21 +20,36 @@
 }
 
 .review-inline {
+    display: block;
     margin-block: 7%;
 }
 
+.our-reviews-container h1 {
+    font-size: 78px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+
 .our-reviews-container h2 {
-    font-size: 170%;
-    color: purple;
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px;
+    color: #56009A;
 }
 
 .our-reviews-container h3 {
-    font-size: 110%;
-    font-weight: 350;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 25px;
+    color: #56009A;
 }
 
 .our-reviews-container p{
-    font-size: 150%;
+    font-weight: 400;
+    font-style: italic;
+    font-size: 31px;
+    text-align: center;
 }
 
 .content-box {
@@ -40,23 +57,41 @@
     border-style: solid;
     margin-left: 30%;
     padding-inline: 2%;
-    padding-block: 3%;
-    height: 220px;
+    padding-block: 5%;
+    height: 328px;
     box-shadow: 1px 2px gray;
+    border-color: gray;
 }
 
 .content-box-left {
-    width: 100%;
-    border-style:double;
-    margin-right: 35%;
+    width: 70%;
+    border-style:solid;
+    margin-right: 20%;
     padding-inline: 2%;
-    padding-block: 3%;
-    height: 220px;
+    padding-block: 5%;
+    height: 328px;
     box-shadow: 1px 2px gray;
+    border-color: gray;
 }
 
 .left-content {
     float: left;
     margin-right: 3%;
+    margin-top: -5%;
 }
 
+.right-content {
+    margin-left: 30%;
+}
+
+.right-img-testimonials {
+    float: right;
+    margin-right: 17%;
+    width: 7%;
+    margin-top: -33%;
+}
+
+.right-img-testimonials img{
+
+    height: 455px;
+}

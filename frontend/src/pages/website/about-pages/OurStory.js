@@ -140,8 +140,9 @@ function OurStory(){
             </section>
             <p><br/></p>
         </div>
+        <div className='consultation'>
          <Consultation lang={lang}/>
-        
+         </div>
 
         
         <Footer lang ={lang}/>
