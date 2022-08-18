@@ -66,6 +66,7 @@ ul{
 
 .startnow{
     align-content: center;
+    margin-top: 0.5%;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -135,4 +136,8 @@ ul{
 
 .rectangle:hover{
     background: orange;
+}
+
+.lang-switcher {
+    margin-top: 0.5%;
 }

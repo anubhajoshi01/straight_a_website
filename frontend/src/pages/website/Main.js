@@ -104,7 +104,7 @@ function Main(){
                     <p><br/></p>
                 </section>
                 <section>
-                    <ul className="main-ul-hl">
+                    <ul className="main-ul-hl-2">
                         <li>
                             <div className="main-img-container-2">
                                 <img className='img1' src="https://cdn.pixabay.com/photo/2015/01/22/23/59/purple-608575_1280.jpg"/>
@@ -155,6 +155,7 @@ function Main(){
                 <section>
                     <h1>博文</h1>
                     <ImgSlider slides={slides2_zh}/>
+                    <div className='form-container'>
                     <div className='seperate-container'>
                         <div className='purple-background'>
                             <h1>
@@ -180,6 +181,7 @@ function Main(){
                             </div>
                         </div>
 
+                    </div>
                     </div>
                 </section>
             </div>
@@ -243,7 +245,7 @@ function Main(){
                     <p><br/></p>
                 </section>
                 <section>
-                    <ul className="main-ul-hl">
+                    <ul className="main-ul-hl-2">
                         <li>
                             <div className="main-img-container-2">
                                 <img className='img1' src="https://cdn.pixabay.com/photo/2015/01/22/23/59/purple-608575_1280.jpg"/>
@@ -294,7 +296,8 @@ function Main(){
                 <section>
                 <h1 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>BLOG</strong> POSTS</h1>
                     <ImgSlider slides={slides2}/>
-                    <div className='seperate-container'>
+                    <div className='form-container'>
+                    <ul className='seperate-container'>
                         <div className='purple-background'>
                             <h1>
                                 Hello, Welcome
@@ -319,6 +322,7 @@ function Main(){
                             </div>
                         </div>
 
+                    </ul>
                     </div>
                 </section>
             </div>

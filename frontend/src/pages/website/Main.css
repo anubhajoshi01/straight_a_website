@@ -14,6 +14,16 @@
     display: flex;
     flex-direction: row;
     justify-content: left;
+   
+}
+
+.main-ul-hl-2{
+    width: 90%;
+    display: flex;
+    flex-direction: row;
+    justify-content: left;
+    margin-left: 13%;
+   
 }
 
 .main-img-container img{
@@ -136,6 +146,7 @@ h3 {
     margin: 2% 120% 2% 0%;
     padding-right: 0%;
     padding-left: 0%;
+ 
 }
 
 .white-background h3{
@@ -174,4 +185,9 @@ h3 {
 
 .form {
     width: 220%;
+}
+
+.form-container {
+
+    margin-left: 13%;
 }

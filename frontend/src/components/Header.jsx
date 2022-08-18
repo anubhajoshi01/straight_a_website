@@ -44,7 +44,7 @@ const Header = ({lang, currPath}) => {
                    Start Now
                </div>
            </li>
-           <li>
+           <li className='lang-switcher'>
                <LangSwitch lang={lang} currPath={currPath}/>
            </li>
        </ul>
@@ -92,7 +92,7 @@ const Header = ({lang, currPath}) => {
                     Start Now
                 </div>
             </li>
-            <li>
+            <li className='lang-switcher'>
                 <LangSwitch lang={lang} currPath={currPath}/>
             </li>
         </ul>
