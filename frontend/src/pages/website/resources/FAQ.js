@@ -43,6 +43,7 @@ function FAQ() {
         return(
             <>
                 <Header lang={'zh'} currPath={location.pathname} />
+                <div className="faq-page">
                 <img className= 'banner' src='https://www.greenvilleadvocate.com/wp-content/uploads/sites/33/2017/06/Scantron.gif' alt='banner'/> 
                 <h1>常见问题</h1>
                 <div className='content-box-pics'>
@@ -72,6 +73,7 @@ function FAQ() {
                     </ul>
                 
                 </div>
+                </div>
                 <Footer lang={'zh'} />
             </>
         )
@@ -81,6 +83,7 @@ function FAQ() {
         <>
             <Header lang={'en'} currPath={location.pathname} />
             <img className= 'banner' src='https://www.greenvilleadvocate.com/wp-content/uploads/sites/33/2017/06/Scantron.gif' alt='banner'/> 
+            <div className="faq-page">
             <h1> FAQ </h1>
             <div className='content-box-pics'>
                 <div className="pictures" >
@@ -108,6 +111,7 @@ function FAQ() {
 
                 </ul>
             
+            </div>
             </div>
             <Footer lang={'en'} />
         </>

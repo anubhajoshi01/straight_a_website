@@ -1,7 +1,6 @@
 .categoryview {
     width: 100%;
     background-color: white;
-
   
 }
 
@@ -35,7 +34,8 @@
     font-weight: 400;
     font-size: 26px;
     text-align: center;
-    width: 90%;
+    width: 95%;
+
 }
 
 .learnmore{
@@ -46,5 +46,6 @@
     text-align: center;
     bottom: 5%;
     color: #56009A;
+    padding-bottom: 5%;
 }
 

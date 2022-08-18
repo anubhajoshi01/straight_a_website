@@ -86,7 +86,7 @@ function SummerIntern() {
                 </div>
                 <p><br/></p>
                 <div className="si-span-content">
-                    <img className="si-left" src="https://images.unsplash.com/photo-1556978082-fc2023bb5081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29ya3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                    <img className="si-left-2" src="https://images.unsplash.com/photo-1556978082-fc2023bb5081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29ya3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
                     <div className="gradient-righttoleft">
                         <h5>“感谢Straight A Prep为我申请的工作。我从没想过我能在华尔街一家知名的投资银行工作，做我喜欢做的事。你们的耐心和高效的服务是我有过最好的体验”</h5>
                     </div>
@@ -118,7 +118,7 @@ function SummerIntern() {
                     <ul className="summer-intern-ul-hl">
                         <li>
                             <div>
-                                <h3><b>|Basic</b> Internship</h3>
+                            <h3 style={{color:'#5A5A5A'}}><b style={{color:'goldenrod'}}>|</b> <strong style={{color:'#56009A'}}>Basic</strong> Internship</h3>
                                 <h4>Services:</h4>
                                 <ul className="summer-intern-list-ul">
                                     <li>Candidates who enroll in this project can get 100% internship offer</li>
@@ -130,7 +130,7 @@ function SummerIntern() {
                         </li>
                         <li>
                             <div>
-                                <h3><b>|VIP </b>Internship</h3>
+                            <h3 style={{color:'#5A5A5A'}}><b style={{color:'goldenrod'}}>|</b> <strong style={{color:'#56009A'}}>VIP</strong> Internship</h3>
                                 <h4>Services:</h4>
                                 <ul className="summer-intern-list-ul">
                                     <li>Candidates who enroll in this project can get 100% internship offer</li>
@@ -146,11 +146,11 @@ function SummerIntern() {
                 <div className="si-span-content">
                     <img className="si-right" src="https://images.unsplash.com/photo-1622554129902-bb01970e2540?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8ZW1wbG95bWVudHxlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
                     <div className="gradient-lefttoright">
-                        <h5>Straight A Prep's Internship and VIP Internship services will guarantee you the offer from big companies in the US</h5>
+                        <h5 style={{verticalAlign:'middle'}}>Straight A Prep's Internship and VIP Internship services will guarantee you the offer from big companies in the US</h5>
                     </div>
                     
                 </div>
-                <div className="si-margin">
+                <div className="si-margin-1">
                     <p><br/></p>
                     <h2><b>Our</b> Advantages</h2>
                     <h4>Partnered with all big enterprises</h4>
@@ -160,9 +160,9 @@ function SummerIntern() {
                 </div>
                 <p><br/></p>
                 <div className="si-span-content">
-                    <img className="si-left" src="https://images.unsplash.com/photo-1556978082-fc2023bb5081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29ya3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                    <img className="si-left-2" src="https://images.unsplash.com/photo-1556978082-fc2023bb5081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29ya3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
                     <div className="gradient-righttoleft">
-                        <h5>"Thanks to Straight A Prep for the job I applied for. I never thought I would be able to work at a great investment bank in Wall Street and do whatI love. Your patience and efficient service is the best experience I ever had."</h5>
+                        <h5>"Thanks to Straight A Prep for the job I applied for. I never thought I would be able to work at a great investment bank in Wall Street and do what I love. Your patience and efficient service is the best experience I ever had."</h5>
                     </div>
                     
                 </div>

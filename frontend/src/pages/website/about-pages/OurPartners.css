@@ -11,9 +11,11 @@
     color: black;
 }
 
-.our-partners-container img{
-    margin-inline: 7%;
+.partner-img {
+    display: flex;
+    justify-content: center;
 }
+
 
 .our-partners-container p {
     font-size: 31px;

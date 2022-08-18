@@ -1,27 +1,30 @@
 .our-reviews-container {
     margin-left: 2%;
-    margin-right: 5%;
+    margin-right: 7%;
     position: relative;
+    width: 90%;
 }
 
 .left-img  {
     float: left;
     width: 25%;
     margin-inline: 2%;
-    height: 455px;
+    height: 488px;
 }
 
-.right-img {
+.right-img-testimonials {
   
     float: right;
-    width: 25%;
-    margin-right: -7%;
-    
+
+   margin-top: -488px;
+   margin-left: 5%;
+   width: 25%;
 }
 
 .review-inline {
     display: block;
-    margin-block: 7%;
+    margin-block: 70px;
+   
 }
 
 .our-reviews-container h1 {
@@ -57,7 +60,7 @@
     border-style: solid;
     margin-left: 30%;
     padding-inline: 2%;
-    padding-block: 5%;
+    padding-block: 80px;
     height: 328px;
     box-shadow: 1px 2px gray;
     border-color: gray;
@@ -68,7 +71,7 @@
     border-style:solid;
     margin-right: 20%;
     padding-inline: 2%;
-    padding-block: 5%;
+    padding-block: 80px;
     height: 328px;
     box-shadow: 1px 2px gray;
     border-color: gray;
@@ -77,21 +80,16 @@
 .left-content {
     float: left;
     margin-right: 3%;
-    margin-top: -5%;
+    margin-top: -80px
 }
 
 .right-content {
     margin-left: 30%;
 }
 
-.right-img-testimonials {
-    float: right;
-    margin-right: 17%;
-    width: 7%;
-    margin-top: -33%;
-}
+
 
 .right-img-testimonials img{
 
-    height: 455px;
+    height: 488px;
 }

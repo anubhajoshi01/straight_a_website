@@ -80,8 +80,9 @@ section {
     width: 70%;
     height: 390px;
     margin-bottom: 7%;
-    background-image: linear-gradient(to right, white, #bb4eed);
-    padding: 2%;
+    background-image: linear-gradient(269.03deg, rgba(86, 0, 154, 0.72) 23.68%, rgba(86, 0, 154, 0) 78.43%);
+    padding-inline: 2%;
+    padding-block: 30px;
 }
 
 .left-rect h3{
@@ -104,6 +105,8 @@ section {
     width: 50%;
     float: right;
     margin-right: 5%;
+
+
 }
 
 .right-box h3 {

@@ -147,9 +147,9 @@ function SummerIntern() {
                     <ul className="summer-intern-ul-hl">
                         <li>
                             <div>
-                                <h3><b>|Career</b> Coaching</h3>
+                            <h3 style={{color:'#5A5A5A'}}><b style={{color:'goldenrod'}}>|</b> <strong style={{color:'#56009A'}}>Career</strong> Coaching</h3>
                                 <h4>Services:</h4>
-                                <p>We provide 1v1 career coashing service from experienced business experts in different industries.</p>
+                                <div className='li-p-style'><p>We provide 1v1 career coashing service from experienced business experts in different industries.</p></div>
                                 <ul className="summer-intern-list-ul">
                                     <li>Resume revision</li>
                                     <li>Cover letter polish</li>
@@ -160,7 +160,7 @@ function SummerIntern() {
                         </li>
                         <li>
                             <div>
-                                <h3><b>|Full-time </b>Job</h3>
+                                <h3 style={{color:'#5A5A5A'}}><b style={{color:'goldenrod'}}>|</b> <strong style={{color:'#56009A'}}>Full-time</strong> Job</h3>
                                 <h4>Services:</h4>
                                 <ul className="summer-intern-list-ul">
                                     <li>10 hours career coaching services (include resume revision, cover letter polsih, mock interview)</li>
@@ -187,7 +187,7 @@ function SummerIntern() {
                     <ul className="summer-intern-ul-hl">
                         <li>
                             <div>
-                                <h3><b>|Full Time</b> Job</h3>
+                                <h3 style={{color:'#5A5A5A'}}><b style={{color:'goldenrod'}}>|</b> <strong style={{color:'#56009A'}}>Full-time</strong> Job</h3>
                                 <h4>Services:</h4>
                                 <ul className="summer-intern-list-ul">
                                     <li>10 hours career coaching services (include resume revision, cover letter polish, mock interview)</li>
@@ -199,7 +199,7 @@ function SummerIntern() {
                         </li>
                         <li>
                             <div>
-                                <h3><b>|VIP Full Time</b> Job</h3>
+                            <h3 style={{color:'#5A5A5A'}}><b style={{color:'goldenrod'}}>|</b> <strong style={{color:'#56009A'}}>VIP Full-time</strong> Job</h3>
                                 <h4>Services:</h4>
                                 <ul className="summer-intern-list-ul">
                                     <li>2 Guaranteed internships</li>
@@ -215,7 +215,7 @@ function SummerIntern() {
                 </div>
                 <p><br/></p>
                 <div className="si-span-content">
-                    <img className="si-left" src="https://images.unsplash.com/photo-1556978082-fc2023bb5081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29ya3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
+                    <img className="si-left-2" src="https://images.unsplash.com/photo-1556978082-fc2023bb5081?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8d29ya3xlbnwwfDJ8MHx8&auto=format&fit=crop&w=800&q=60"/>
                     <div className="gradient-righttoleft">
                         <h5>"Thanks to Straight A Prep for the job I applied for. I never thought I would be able to work at a great investment bank in Wall Street and do whatI love. Your patience and efficient service is the best experience I ever had."</h5>
                     </div>

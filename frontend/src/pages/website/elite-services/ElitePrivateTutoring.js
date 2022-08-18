@@ -5,6 +5,7 @@ import Form from '../../../components/Form'
 import './ElitePrivateTutoring.css'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
+import Consultation from '../../../components/Consultation'
 
 function ElitePrivateTutoring(){
 
@@ -39,10 +40,8 @@ function ElitePrivateTutoring(){
             <p>
             Straight A Prep 为您学生学术旅程的每一步提供精英私人学术辅导。我们知道每一年的学校课程都会为您的学生带来不同的挑战，因此我们的讲师专注于各个层次的教学，包括小学、中学、高中和大学。我们的团队可以确定缺乏哪些技能，并帮助为未来的课程奠定坚实的基础。
             </p>
-            <h3>
-                <b>|Straight A Prep </b> 
-                为学生提供所有科目的辅导：
-            </h3>
+           <p><br/></p>
+            <h2 style={{color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Straight A Prep</strong> 为学生提供所有科目的辅导</h2>
             <img className="left-img-2" src="https://images.unsplash.com/photo-1534644107580-3a4dbd494a95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZXhhbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
             <div className='lists'>
             <ul className='subjects'>
@@ -78,38 +77,40 @@ function ElitePrivateTutoring(){
                 </li>
             </ul>
         </div>
-            
+        <p><br/></p>
             
 
             <section className='curriculum'>
-            <h3>
-            <b>|Straight A Prep's </b> 
-            的其他强化课程
-            </h3>
+            <h2 style={{color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Straight A Prep</strong> 的其他强化课程</h2>
             <p>
             坦率地说，我们的导师都是资历颇深的优秀师资，有着不凡的追求和才能。如果学生想要探索学校通常不涉及的兴趣领域，我们还提供其它丰富的科目，例如计算机编程（包括数据库创建和网页设计）、欧洲军事史、莎士比亚文学、歌曲创作、科幻小说、环境科学和有机农业、纪录片制作和工程。
             </p>
             </section>
-
+            <p><br/></p>
+            <p><br/></p>
+            <h2 style={{color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Straight A Prep</strong> 我们的优势</h2>
             <section className='advantage'>
-            <h3>
-            我们的优势
-            </h3>
+            
             <div className='qualities'>
-                <p>
-                专业知识
-                </p>
-                <p>
-                优质的服务
-                </p>
-                <p>
-                教育创新精神
-                </p>
+            <ul className='private-tut-hl'>
+                    <li>
+                        <p>专业知识</p>
+                   </li>
+                   <li>
+                        <p>优质的服务</p>
+                   </li>
+                </ul>
+              
+                <div className='center-quality'>
+                    <p>教育创新精神</p>
+               </div>
             </div>
             </section>
-            <div onClick={() => navigate('/start-now/zh')}><h4> 立即注册咨询 </h4></div>
+            
         </div>
-        <Form lang={'zh'}/>
+        <div className="consultation">
+                <Consultation lang={'zh'}/>
+        </div>
         <Footer />
 
         </>)
@@ -134,10 +135,8 @@ function ElitePrivateTutoring(){
             college. Our team can identify which skills are lacking and help build a strong 
             foundation for future courses.
             </p>
-            <h3>
-                <b>|Straight A Prep </b> 
-                Offers a Variety of Subjects
-            </h3>
+            <p><br/></p>
+            <h2 style={{color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Straight A Prep</strong> Offers a Variety of Subjects</h2>
             <img className="left-img-2" src="https://images.unsplash.com/photo-1534644107580-3a4dbd494a95?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8Nnx8ZXhhbXxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60"/>
             <div className='lists'>
             <ul className='subjects'>
@@ -173,14 +172,13 @@ function ElitePrivateTutoring(){
                 </li>
             </ul>
         </div>
+        <p><br/></p>
             
             
 
             <section className='curriculum'>
-            <h3>
-            <b>|Straight A Prep's </b> 
-            other Enrichment Curriculum
-            </h3>
+           
+            <h2 style={{color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Straight A Prep's</strong> Other Enrichment Curriculum</h2>
             <p>
             Our tutors are, quite frankly, amazing people with fascinating pursuits and talents. 
             If a student wants to explore areas of interest that schools generally do not cover, 
@@ -189,27 +187,31 @@ function ElitePrivateTutoring(){
             environmental science and organic farming, documentary filmmaking, and engineering.
             </p>
             </section>
-
+            <p><br/></p>
             <section className='advantage'>
-            <h3>
-            <b>|Our </b> 
-                advantages
-            </h3>
+            <h2 style={{color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Our</strong> Advantages</h2>
             <div className='qualities'>
-                <p>
-                    Professional Knowledge
-                </p>
-                <p>
-                    Quality Service
-                </p>
-                <p>
-                    Spirit of Educational Innovation
-                </p>
+              
+                <ul className='private-tut-hl'>
+                    <li>
+                        <p>PROFESSIONAL KNOWLEDGE</p>
+                   </li>
+                   <li>
+                        <p>QUALITY SERVICE</p>
+                   </li>
+                </ul>
+              
+                <div className='center-quality'>
+                    <p>SPIRIT OF EDUCATIONAL INNOVATION</p>
+               </div>
+               
             </div>
             </section>
-            <div onClick={() => navigate('/start-now')}><h4> Sign up for a free consultation today</h4></div>
+            
         </div>
-        <Form/>
+        <div className="consultation">
+                <Consultation lang={'en'}/>
+        </div>
         <Footer />
 
         </>
