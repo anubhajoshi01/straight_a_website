@@ -200,8 +200,7 @@ const Form = ({lang, type}) => {
                     <div  className='input-container'>
                     
                             <label htmlFor='phone'>Phone*</label>
-                            <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                        
+                            <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>                        
                     </div>
                     </li>
                 </ul>
@@ -210,27 +209,29 @@ const Form = ({lang, type}) => {
                 <ul className='inputs-horizontal'>
                     <li>
                     <div className='input-container'>
-                        
+                         <li>
                             <label htmlFor="grade"> Grade </label>
-                            <input type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
-                        
+                            <input style={{width:'85%'}} type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
+                        </li>
                     </div>
-                    </li>
-                    <li>
                     <div  className='input-container'>
-                        
+                        <li>
                             <label htmlFor='school'>School</label>
-                            <input type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
-                        
+                            <input style={{width:'85%'}} type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
+                        </li>
                     </div>
                     </li>
                 </ul>
             </li>
             <li>
-                <div className='input-container-long'>
-                <label htmlFor='more'>Tell us More</label>
-                <input style={{width:'80%', marginLeft:'10%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
-                </div>
+                <ul className='inputs-horizontal'>
+                    <div className='input-container'>
+                        <li>
+                            <label htmlFor='more'>Tell us More</label>
+                            <input style={{width:'200%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
+                        </li>
+                    </div>
+                </ul>
             </li>
         </ul>
         <div className='error-msg'>{errorMsg}</div>

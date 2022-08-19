@@ -1,9 +1,10 @@
 .dropdown{
     height: 2rem;
-}
 
+}
+/*checkpoint*/
 .dropdown-menu{
-    display: inline-block;
+    display: grid;
     flex-direction: column;
 }
 .dropdown-list {
