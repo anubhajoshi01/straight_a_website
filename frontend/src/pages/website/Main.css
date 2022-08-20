@@ -1,5 +1,6 @@
 .main-container{
-    margin-inline: 7%;
+    margin-left: 7%;
+    margin-right: 7%;
     width: 90%;
 }
 
@@ -13,17 +14,19 @@
     width: 90%;
     display: flex;
     flex-direction: row;
-    justify-content: left;
+    justify-content: center;
    
 }
 
 .main-ul-hl-2{
-    width: 90%;
+    width: 97%;
     display: flex;
     flex-direction: row;
-    justify-content: left;
-    margin-left: 13%;
-   
+    justify-content: center;
+    align-content: center;
+    align-self: center;
+
+
 }
 
 .main-img-container img{
@@ -185,9 +188,14 @@ h3 {
 
 .form {
     width: 220%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
 .form-container {
+    width: 100%;
 
-    margin-left: 13%;
+    align-self: center;
+    margin-left: 5%;
 }
