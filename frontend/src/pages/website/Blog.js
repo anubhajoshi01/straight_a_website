@@ -103,15 +103,20 @@ function Blog({ create }) {
                         user ? <button className="create-post-btn" onClick={navToCreatePost}>Create</button> : null
                     }
                     <ul className="blog-list-show">
+            
+                            
+               
                         {
                             displayList.map((item) => (
                                 <li>
 
-                                    <BlogListCard key={item._id} img={item.imageUrls} title={item.chineseTitle} content={item.chineseContent} id={item._id} lang={lang}/>
+                                    <BlogListCard key={item._id} img={item.imageUrls} title={item.chineseTitle} content={item.chineseContent} id={item._id} lang={'zh'}/>
 
                                 </li>
                             ))
+                            
                         }
+                        
                     </ul>
                     <ul className="navigate-horizontal">
                         <li className="navigate-item-arrow">

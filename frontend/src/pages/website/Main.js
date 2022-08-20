@@ -11,6 +11,7 @@ import Form from '../../components/Form'
 import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 
+
 function Main(){
 
     const {lang} = useParams()
@@ -293,6 +294,7 @@ function Main(){
                         </li>
                     </ul>
                 </section>
+           
                 <section>
                 <h1 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>BLOG</strong> POSTS</h1>
                     <ImgSlider slides={slides2}/>
