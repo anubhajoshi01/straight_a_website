@@ -32,7 +32,7 @@ function GradeAdmission6to8(){
             <div className="grade-admissions-container">
                 <h1>6-8年级申请</h1>
                 <section>
-                    <ul className="grade-adm-hl">
+                    <ul className="grade-adm-hl-1">
                         <li>
                             <img src="https://images.unsplash.com/photo-1558021211-6d1403321394?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8M3x8c3R1ZGVudHxlbnwwfDF8MHx8&auto=format&fit=crop&w=800&q=60"/>
                         </li>

@@ -23,6 +23,8 @@ function Blog({ create }) {
     const [displayList, setDisplayList] = useState([])
     const [numTotalPages, setNumTotalPages] = useState(0);
 
+    const [fetched, setFetched] = useState(false)
+
     useEffect(() => {
 
         if (lang == null) {
@@ -30,7 +32,9 @@ function Blog({ create }) {
 
         }
 
-        dispatch(getPosts())
+        if(!fetched){
+            dispatch(getPosts())
+        }
 
         if (isError) {
             console.log(message)
@@ -60,10 +64,15 @@ function Blog({ create }) {
             }
 
             setDisplayList(append)
+            setFetched(true)
+
+            return () => {
+                dispatch(reset())
+            }
         }
 
 
-    }, [pageNum, isLoading, isError, message, blogs, dispatch])
+    }, [pageNum, isLoading, isError, message, blogs, dispatch, fetched])
 
     const goToFirstPage = () => {
         setPageNum(0)
