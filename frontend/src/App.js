@@ -122,6 +122,7 @@ function App() {
               <Route path='career-counseling/:lang' element={<CareerCounseling/>}/>
               
               <Route path='resources' element={<ResourceCategory/>}/>
+              <Route path='resources/:lang' element={<ResourceCategory/>}/>
               <Route path='faq' element={<FAQ/>}/>
               <Route path='faq/:lang' element={<FAQ/>}/>
 

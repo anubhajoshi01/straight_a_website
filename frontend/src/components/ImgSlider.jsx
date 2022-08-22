@@ -201,7 +201,7 @@ const ImgSlider = ({slides}) => {
         
         <div style={titleStyle}> {slides[currentIndex].title}</div>
         <div style={contentStyle}>{slides[currentIndex].content}</div>
-        <div className='rectangle' style={btnStyle}> Read More</div>
+        <div className='rectangle' style={btnStyle} onClick={() => {navigate(slides.navLink)}}> Read More</div>
         <div style={{ width:'200%', height:'50%',display:'flex', justifyContent:'center'}}>
             <img src={slides[currentIndex].img} style={{ height:'80%'}}></img>
         </div> 
