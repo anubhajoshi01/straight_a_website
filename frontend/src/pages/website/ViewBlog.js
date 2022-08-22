@@ -39,6 +39,9 @@ function ViewBlog(){
     )
     
     useEffect(() => {
+        console.log('success', isSuccess)
+        console.log('displayed ', displayed)
+        console.log('blog to show ', showBlog)
 
         if(lang == null) {
             navigate('en')
@@ -59,8 +62,9 @@ function ViewBlog(){
             console.log('loading')
         }
 
-        if(isSuccess && !displayed){
+        if(isSuccess && !displayed && showBlog){
             console.log('success')
+            console.log(showBlog)
             
             setImgUrl(showBlog.imageUrls)
             
@@ -71,17 +75,24 @@ function ViewBlog(){
             setDisplayed(true)
             
         }
+
+        return () => {
+            dispatch(reset())
+        }
       
 
     }, [showBlog, isLoading, isSuccess, isError, dispatch, displayed])
 
-    if(isLoading) {
+    if(isLoading || !displayed) {
+        console.log('return is loading')
+        console.log(showBlog)
         return (
             <Spinner/>
         )
     }
 
     else if(lang === 'zh') {
+        console.log('is zh')
         return (
             <>
             <Header lang={'zh'} currPath={location.pathname}/>
@@ -90,12 +101,14 @@ function ViewBlog(){
                 <p><br/></p>
                 <h1>{titleZh}</h1>
                 <p><br/></p>
-                <p>{contentZh}</p>
+                <textarea readOnly style={{border:'none', padding:'20px', borderRadius:'10px', backgroundColor:'#e4d5f5', width:'100%', font:'caption', overflowY:'-moz-hidden-unscrollable', resize:'none', wordWrap:'break-word'}} value={contentZh}/>
             </div>
             <Footer lang={lang}/>
         </>
         )
     }
+
+    console.log('is en')
 
     return (
         <>
@@ -105,7 +118,7 @@ function ViewBlog(){
                 <p><br/></p>
                 <h1>{title}</h1>
                 <p><br/></p>
-                <p>{content}</p>
+                <textarea readOnly style={{border:'none', padding:'20px', borderRadius:'10px', backgroundColor:'#e4d5f5', width:'100%', height:'1000px', font:'caption', overflowY:'-moz-hidden-unscrollable', resize:'none', wordWrap:'break-word'}} value={content}/>
             </div>
             <Footer lang={lang}/>
         </>

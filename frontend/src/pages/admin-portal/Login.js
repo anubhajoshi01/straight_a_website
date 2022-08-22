@@ -4,6 +4,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Spinner from '../../components/Spinner';
 import { login, reset } from '../../features/auth/authSlice';
+import './Login.css'
 
 function Login() {
   
@@ -49,14 +50,14 @@ function Login() {
     return (<Spinner/>)
   }
   return (<>
-    <section className="heading">
+
       <h1>
       Login
       </h1>
       <p>Please login with given account</p>
-    </section>
 
-    <section className = "form">
+
+
       <form onSubmit={onSubmit}>
         <div className="form-group">
           <input type="text" 
@@ -87,7 +88,7 @@ function Login() {
 
         <div>{showError ? "Invalid Credentials" : ""}</div>
       </form>
-    </section>
+
   
   </>
     

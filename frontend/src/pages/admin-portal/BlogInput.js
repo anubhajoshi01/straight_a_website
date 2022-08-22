@@ -49,8 +49,9 @@ function BlogInput(){
 
     useEffect(() => {
         console.log('in')
+        console.log('deleted ',isDeleted)
 
-        if(id != 'create'){
+        if(id != 'create' && !fetchedPost){
             dispatch(getPostById(id))
             setFetchedPost(true)
         }
@@ -87,6 +88,7 @@ function BlogInput(){
             console.log('success delete')
             dispatch(reset())
             navigate('/blog')
+        
         }
 
         if(isLoading){
@@ -94,11 +96,8 @@ function BlogInput(){
         
         }
 
-        return () => {
-            console.log('returning')
-            dispatch(reset())
-        };
-    }, [showBlog, isLoading, isSuccess, isError, message, dispatch])
+       
+    }, [showBlog, isLoading, isSuccess, isError, isDeleted, message, dispatch])
 
     const onFindImage = () => {
         setImageUrl(imageUrlText)
@@ -109,6 +108,8 @@ function BlogInput(){
         return (<Spinner/>)
     }
    
+    console.log(content)
+
     return (
 
 
@@ -147,7 +148,15 @@ function BlogInput(){
             <ul className="blog-input-horizontal-ul">
                 <button className="blog-input-btn" onClick={onSubmit}>Submit</button>
                 <button className="blog-input-btn" onClick = {() =>{
+                    console.log(id)
+                    if(id === 'create'){
+                        navigate('/blog')
+                    }
+                    else{
+                    console.log('on delete')
                     dispatch(deletePost(id))
+                    }
+                  
                 }}>Delete</button>
             </ul>
         </div>
