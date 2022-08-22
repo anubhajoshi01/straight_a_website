@@ -14,6 +14,7 @@ function ViewForms() {
     const { forms, isLoading, isError, isSuccess, message } = useSelector(
         (state) => state.forms
     )
+    const [fetched, setFetched] = useState()
 
     useEffect(() => {
        // console.log('in use effect')
@@ -23,21 +24,12 @@ function ViewForms() {
             console.log(message)
         }
 
-        if(isSuccess){
-        
-
-
-            let resolvedForms = []
-            for (let i = 0; i < forms.length; i++) {
-                if (forms[i].resolved === true) {
-                    resolvedForms.push(forms[i])
-                }
-            }
-           
+        return() => {
+            dispatch(reset())
         }
 
 
-    }, [forms, isError, isSuccess, message, dispatch])
+    }, [isError, message, dispatch])
 
 
     // <div onClick = {() => {
@@ -51,23 +43,27 @@ function ViewForms() {
     // </div>
 
     if(isLoading) {
-        return <Spinner/>
+        return (<Spinner/>)
     }
 
     return (
             forms.length > 0 ?
-
+            <div style={{width:'100%'}}>
+            {
             forms.map((item) => (
-            <li>
+            <li style={{width:'100%'}}>
                 <FormResponseCard timestamp={item.createdAt} studentName={item.studentName} parentName={item.parentName}
                     phone={item.phone} email={item.email} school={item.school} id={item._id} resolved={item.resolved} more={item.more}/>
             </li>
             )
-            ):
+            )
+}
+            </div>
+            :
 
             <div>
                 <h1>
-                There are no unresolved forms.
+                There are no forms.
                 </h1>
             </div>
 
