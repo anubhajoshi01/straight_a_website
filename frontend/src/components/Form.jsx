@@ -159,10 +159,10 @@ const Form = ({lang, type}) => {
     }
 
   return (
-    
-    <div className='form-container'>
-    <form  ref={form} onSubmit={onSubmit}>
-        
+    <>
+    <div className='form-group'>
+    <h1>SIGN UP FOR A FREE </h1><h2>CONSULTATION TODAY</h2>
+    <form onSubmit={onSubmit}>
         <ul className='inputs-vertical'>
             <li>
                 <div className='in-line-form'>
@@ -188,21 +188,22 @@ const Form = ({lang, type}) => {
             </li>
             <li>
                 <ul className='inputs-horizontal'>
-                    <li>
                     <div className='input-container'>
-                        
+                        <li>
                             <label htmlFor="email"> Email* </label>
-                            <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
-                        
+                            <input style={{width:'193%'}} type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
+                        </li>
                     </div>
-                    </li>
-                    <li>
+                </ul>
+            </li>
+            <li>
+                <ul className='inputs-horizontal'>
                     <div  className='input-container'>
-                    
+                        <li>
                             <label htmlFor='phone'>Phone*</label>
-                            <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>                        
+                            <input style={{width:'193%'}} type='text' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                        </li>
                     </div>
-                    </li>
                 </ul>
             </li>
             <li>
@@ -228,7 +229,7 @@ const Form = ({lang, type}) => {
                     <div className='input-container'>
                         <li>
                             <label htmlFor='more'>Tell us More</label>
-                            <input style={{width:'200%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
+                            <textarea type="text" style={{width:'240%', height:'100px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
                         </li>
                     </div>
                 </ul>
@@ -239,6 +240,7 @@ const Form = ({lang, type}) => {
         
     </form>
     </div>
+    </>
   )
 }
 

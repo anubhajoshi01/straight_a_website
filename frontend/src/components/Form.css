@@ -10,7 +10,14 @@
 }
 
 h1 {
-    margin-left: 5%;
+    margin-left: 7%;
+    color: rgb(74, 74, 74);
+    -ms-transform: translateY(70%);
+    transform: translateY(70%);
+}
+
+h2 {
+    margin-left: 7%;
     color: rgb(74, 74, 74);
 }
 
@@ -35,9 +42,9 @@ h1 {
     text-align: left;
     top: 20%;
     left: 2%;
-    right: 7%;
+    right: 5%;
     margin-left: 1%;
-    margin-right: 3%;
+    margin-right: 0%;
 }
 
 input {
@@ -46,14 +53,19 @@ input {
     border-right: 0px;
     border-bottom: 50%;
 }
-
+textarea{
+    border:1px solid rgb(110, 110, 110);
+    background-color: rgba(209, 157, 255, 0.071);
+    border-radius: 3px;
+    text-align: left;
+}
 input, label{
     display: block;
 }
 
 label{
     align-items: flex-start;
-    font-size: 80%;
+    font-size: 70%;
     font-weight: bold;
     color: purple; 
     padding-top: 5%;
@@ -61,13 +73,13 @@ label{
 }
 
 .submit-form-btn{
-    background-color: #56009A;
+    background-color: rgb(244, 179, 17);
     color: white;
     padding: 10px 26px;
     text-align: center;
     display: inline-block;
-    margin-top: 3%;
-    margin-left: 15%;
+    margin-top: 1%;
+    margin-left: 14%;
     margin-bottom: 10%;
     border:none;
     border-radius: 5px;
@@ -75,7 +87,7 @@ label{
 }
 
 .submit-form-btn:hover{
-    background-color: rgb(244, 179, 17);
+    background-color: purple;
     font-weight: bold;
 }
 
