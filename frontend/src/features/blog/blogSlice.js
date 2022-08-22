@@ -111,6 +111,7 @@ export const blogSlice = createSlice({
                 state.isLoading = false
                 state.isSuccess = true
                 state.blogs.push(action.payload)
+                console.log('state create post')
             })
             .addCase(createPost.rejected, (state, action) => {
                 state.isLoading = false
@@ -126,6 +127,7 @@ export const blogSlice = createSlice({
                 state.isLoading = false
                 state.isSuccess = true
                 state.blogs = action.payload
+                console.log('state get posy')
             })
             .addCase(getPosts.rejected, (state, action) => {
                 state.isLoading = false
@@ -143,6 +145,7 @@ export const blogSlice = createSlice({
                 state.blogs = state.blogs.filter(
                     (goal) => goal._id !== action.payload.id
                 )
+                console.log('state delete post')
                 
             })
             .addCase(deletePost.rejected, (state, action) => {
@@ -176,6 +179,7 @@ export const blogSlice = createSlice({
                 state.isLoading = false
                 state.isSuccess = true
                 state.showBlog = action.payload
+                console.log('state get post by id')
             })
             .addCase(getPostById.rejected, (state, action) => {
                 state.isLoading = false

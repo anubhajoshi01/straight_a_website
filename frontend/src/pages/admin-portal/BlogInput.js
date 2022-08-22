@@ -108,6 +108,8 @@ function BlogInput(){
         return (<Spinner/>)
     }
    
+    console.log(content)
+
     return (
 
 
