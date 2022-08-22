@@ -2,6 +2,7 @@ import FormResponseCard from "../../components/FormResponseCard"
 import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { getForms, reset } from '../../features/forms/formSlice'
+import Spinner from "../../components/Spinner";
 
 
 function ViewForms() {
@@ -10,29 +11,33 @@ function ViewForms() {
     const dispatch = useDispatch()
     const [displayList, setDisplayList] = useState([])
     const [displayResolved, setDisplayResolved] = useState([])
-    const { forms, isLoading, isError, message } = useSelector(
+    const { forms, isLoading, isError, isSuccess, message } = useSelector(
         (state) => state.forms
     )
 
     useEffect(() => {
+       // console.log('in use effect')
+        dispatch(getForms())
+
         if (isError) {
             console.log(message)
         }
 
-        dispatch(getForms())
+        if(isSuccess){
+        
 
 
-        let resolvedForms = []
-        for (let i = 0; i < forms.length; i++) {
-            if (forms[i].resolved === true) {
-                resolvedForms.push(forms[i])
+            let resolvedForms = []
+            for (let i = 0; i < forms.length; i++) {
+                if (forms[i].resolved === true) {
+                    resolvedForms.push(forms[i])
+                }
             }
+           
         }
-        setDisplayList(forms)
-        setDisplayResolved(resolvedForms)
 
 
-    }, [forms, isError, message, dispatch])
+    }, [forms, isError, isSuccess, message, dispatch])
 
 
     // <div onClick = {() => {
@@ -45,19 +50,25 @@ function ViewForms() {
     //     toggle
     // </div>
 
-    return (
-            displayList.length > 0 ?
+    if(isLoading) {
+        return <Spinner/>
+    }
 
-            displayList.map((item) => (
+    return (
+            forms.length > 0 ?
+
+            forms.map((item) => (
             <li>
-                <FormResponseCard timestamp={item.timestamps} studentName={item.studentName} parentName={item.parentName}
-                    phone={item.phone} email={item.email} school={item.school} id={item._id} />
+                <FormResponseCard timestamp={item.createdAt} studentName={item.studentName} parentName={item.parentName}
+                    phone={item.phone} email={item.email} school={item.school} id={item._id} resolved={item.resolved} more={item.more}/>
             </li>
             )
             ):
 
             <div>
-                There is no forms unresolved.
+                <h1>
+                There are no unresolved forms.
+                </h1>
             </div>
 
 

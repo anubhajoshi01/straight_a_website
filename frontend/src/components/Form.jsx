@@ -1,9 +1,10 @@
-import React, {useState} from 'react'
+import React, {useState, useRef} from 'react'
 import { useDispatch } from 'react-redux';
 import { createForm } from '../features/forms/formSlice';
-import './Form.css'
+import './Form.css';
+import emailjs from '@emailjs/browser'
 
-const Form = () => {
+const Form = ({lang, type}) => {
     const [parentName, setParentName] = useState("");
     const [studentName, setStudentName] = useState("")
     const [email, setEmail] = useState("")
@@ -11,105 +12,234 @@ const Form = () => {
     const [grade, setGrade] = useState("")
     const [school, setSchool] = useState("")
     const [more, setMore] = useState("")
-    const [showError, setShowError] = useState(false)
+   
+    const [errorMsg, setErrorMsg] = useState("")
 
     const dispatch = useDispatch()
 
+
+    const validateEmail = (email) => {
+        return /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email)
+    }
+    
+    // email blast
+        const form = useRef();
+      
+        const sendEmail = (e) => {
+          e.preventDefault();
+      
+          emailjs.sendForm('service_kggikeu', 'template_exwhmh5', form.current, '27KtUw9_4Sazxt3vn')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+
+            emailjs.sendForm('service_kggikeu', 'template_spoaqm7', form.current, '27KtUw9_4Sazxt3vn')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
+        };
+
     const onSubmit = (e) => {
-
-        e.preventDefault()
-        try{
-            console.log('trying..')
-            if(studentName.length > 0 && email.length > 0 && phone.length > 0){
-                setShowError(false)
-                dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+            sendEmail(e);
+            e.preventDefault()
+            try{
+                console.log('trying..')
+    
+                if(studentName.length > 0 && email.length > 0 && phone.length > 0){
+                    if(! validateEmail(email)){
+                        setErrorMsg("Please enter a valid email address")
+                        
+                    }
+                    else{
+                        dispatch(createForm({parentName, studentName, email, phone, grade, school, more}))
+                    }
+                }
+                else{
+                    setErrorMsg("Please fill in the required fields")
+                }
+            }catch(e){
+                console.log(e)
             }
-            else{
-                setShowError(true);
-            }
-        }catch(e){
-            console.log(e)
+    
+            setParentName('')
+            setStudentName('')
+            setEmail('')
+            setPhone('')
+            setGrade('')
+            setSchool('')
+            setMore('')
         }
-
-        setParentName('')
-        setStudentName('')
-        setEmail('')
-        setPhone('')
-        setGrade('')
-        setSchool('')
-        setMore('')
+      
+    if(lang === 'zh') {
+        return (
+    
+            <div className={type === 'below' ? 'form-container-zh-2' : 'form-container-zh'}>
+            <form  ref={form} onSubmit={onSubmit}>
+                
+                <ul className='inputs-vertical'>
+                    <li>
+                        <div className='in-line-form'>
+                        <ul className='inputs-horizontal'>
+                            <li>
+                                <div className='input-container'>
+                            
+                                    <label htmlFor="parentname"> 家长姓名 </label>
+                                    <input type='text' name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
+                                
+                                </div>
+                            </li>
+                            <li>
+                                <div className='input-container'>
+                                
+                                    <label htmlFor='studentname'>学生姓名*</label>
+                                    <input type='text' name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
+                                
+                                </div>
+                            </li>
+                        </ul>
+                        </div>
+                    </li>
+                    <li>
+                        <ul className='inputs-horizontal'>
+                            <li>
+                            <div className='input-container'>
+                                
+                                    <label htmlFor="email"> 邮件地址* </label>
+                                    <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
+                                
+                            </div>
+                            </li>
+                            <li>
+                            <div  className='input-container'>
+                            
+                                    <label htmlFor='phone'>电话*</label>
+                                    <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                                
+                            </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <ul className='inputs-horizontal'>
+                            <li>
+                            <div className='input-container'>
+                                
+                                    <label htmlFor="grade"> 现在年级 </label>
+                                    <input type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
+                                
+                            </div>
+                            </li>
+                            <li>
+                            <div  className='input-container'>
+                                
+                                    <label htmlFor='school'>当前学校</label>
+                                    <input type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
+                                
+                            </div>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <div className='input-container-long'>
+                        <label htmlFor='more'>告诉我们更多关于学生的信息</label>
+                        <input style={{width:'100%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
+                        </div>
+                    </li>
+                </ul>
+                <div className='error-msg'>{errorMsg}</div>
+                <button type='submit' className='submit-form-btn'> Submit </button>
+                
+            </form>
+            </div>
+          )
     }
 
   return (
-    <section className='form-group'>
-    <h1>SIGN UP FOR A FREE CONSULTATION TODAY</h1>
-    <form onSubmit={onSubmit}>
+    
+    <div className='form-container'>
+    <form  ref={form} onSubmit={onSubmit}>
+        
         <ul className='inputs-vertical'>
             <li>
+                <div className='in-line-form'>
                 <ul className='inputs-horizontal'>
-                    <div className='input-container'>
-                        <li>
+                    <li>
+                        <div className='input-container'>
+                    
                             <label htmlFor="parentname"> Parent's Name </label>
                             <input type='text' name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
-                        </li>
-                    </div>
-                    <div  className='inputs-container'>
-                        <li>
-                            <label htmlFor='studentname'>Student's Name</label>
+                        
+                        </div>
+                    </li>
+                    <li>
+                        <div className='input-container'>
+                        
+                            <label htmlFor='studentname'>Student's Name*</label>
                             <input type='text' name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
-                        </li>
-                    </div>
+                        
+                        </div>
+                    </li>
                 </ul>
+                </div>
             </li>
             <li>
                 <ul className='inputs-horizontal'>
+                    <li>
                     <div className='input-container'>
-                        <li>
-                            <label htmlFor="email"> Email </label>
+                        
+                            <label htmlFor="email"> Email* </label>
                             <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
-                        </li>
+                        
                     </div>
-                    <div  className='inputs-container'>
-                        <li>
-                            <label htmlFor='phone'>Phone</label>
-                            <input type='text' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                        </li>
+                    </li>
+                    <li>
+                    <div  className='input-container'>
+                    
+                            <label htmlFor='phone'>Phone*</label>
+                            <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                        
                     </div>
+                    </li>
                 </ul>
             </li>
             <li>
                 <ul className='inputs-horizontal'>
+                    <li>
                     <div className='input-container'>
-                        <li>
+                        
                             <label htmlFor="grade"> Grade </label>
                             <input type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
-                        </li>
+                        
                     </div>
-                    <div  className='inputs-container'>
-                        <li>
+                    </li>
+                    <li>
+                    <div  className='input-container'>
+                        
                             <label htmlFor='school'>School</label>
                             <input type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
-                        </li>
+                        
                     </div>
+                    </li>
                 </ul>
             </li>
             <li>
-                <ul className='inputs-horizontal'>
-                    <div className='input-container'>
-                        <li>
-                            <label htmlFor='more'>Tell us More</label>
-                            <input style={{width:'240%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
-                        </li>
-                    </div>
-                </ul>
+                <div className='input-container-long'>
+                <label htmlFor='more'>Tell us More</label>
+                <input style={{width:'80%', marginLeft:'10%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
+                </div>
             </li>
         </ul>
-        <div className='error-msg'>{showError ? "Please fill in all the required fields" : ""}</div>
+        <div className='error-msg'>{errorMsg}</div>
         <button type='submit' className='submit-form-btn'> Submit </button>
+        
     </form>
-</section>
-    
+    </div>
   )
 }
+
 
 export default Form

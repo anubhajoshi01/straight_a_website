@@ -5,8 +5,10 @@ const Blog = require('../models/blogModel')
 const getBlogs = async (req, res) => {
     try {
         const blogs = await Blog.find()
+        const blogsReversed = blogs.reverse()
        // console.log(blogs)
-        res.status(200).json(blogs);
+        res.status(200).json(blogsReversed);
+
     } catch (error) {
         console.log(error)
         res.status(400)
@@ -30,16 +32,18 @@ const getBlogById = async (req, res) => {
 const addBlog = async (req, res) => {
     try {
         const d = new Date();
-        const { title, content, imageUrls } = req.body
+        const { title, content, imageUrls, chineseTitle, chineseContent } = req.body
         if (!title || !content) {
             res.status(400);
-            throw new Error('plz add all required fields');
+            throw new Error('please add all required fields');
         }
 
 
         const blog = await Blog.create({
             title,
             content,
+            chineseTitle,
+            chineseContent,
             imageUrls,
             dateCreated: d.toLocaleString(),
             dateModified: d.toLocaleString()
@@ -50,6 +54,8 @@ const addBlog = async (req, res) => {
                 id: blog.id,
                 title: blog.title,
                 content: blog.content,
+                chineseTitle:blog.chineseTitle,
+                chineseContent:blog.chineseContent,
                 dateCreated: blog.dateCreated,
                 dateModified: blog.dateModified
             })

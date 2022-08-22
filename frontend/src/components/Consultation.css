@@ -1,0 +1,32 @@
+.seperate-container {
+    margin-left: 7%;
+    height: 680px;
+}
+
+.seperate-container h1 {
+    color: white;
+    font-size: 180%;
+}
+
+.seperate-container h3 {
+    color: white;
+    font-size: 30px;
+    text-align: left;
+}
+
+.seperate-container p {
+    color: white;
+    font-size: 120%;
+    text-align: left;
+    font-style: italic;
+}
+
+.seperate-container h4 {
+    font-size: 70%;
+    width: 230%;
+    margin-left: 5%;
+    font-style: normal;
+    color: #56009A;
+    text-align: center;
+   
+}

@@ -1,0 +1,61 @@
+
+.case-studies-container {
+    margin: 6%;
+}
+
+.case-studies-container h1{
+    font-size: 78px;
+    font-weight: 400;
+    color: black;
+}
+
+.case-studies-container h2 {
+    font-size: 44px;
+    text-align: left;
+    font-weight: 600;
+}
+
+.case-studies-container h3 {
+    font-size: 50px;
+    text-align: left;
+    font-weight: 700;
+}
+
+.case-studies-container h4 {
+    font-size: 34px;
+    font-style: italic;
+    color: #56009A;
+    text-align: center;
+}
+
+.left {
+    float: left;
+    margin: 5px;
+    height: 500px;
+}
+
+.right {
+    float: right;
+    margin: 5px;
+    height: 500px;
+}
+
+.case-content{
+    position: relative;
+    top: 20%;
+    text-align: justify;
+}
+
+section{
+    position: relative;
+}
+
+.case-studies-container p {
+    font-style: italic;
+    font-size: 31px;
+}
+
+.case-studies-container img {
+    width: 50%;
+    height: auto;
+}

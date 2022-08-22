@@ -1,9 +1,12 @@
 import { toggleButtonClasses } from '@mui/material';
 import React, {useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import './HeaderMenu.css'
 
-function HeaderMenu({title, items=[], multiSelect= false}){
+function HeaderMenu({title, nav, items=[], multiSelect= false, margin}){
     const [open, setOpen] = useState(false);
+
+    const navigate= useNavigate()
 
     const toggle = () => setOpen(!open)
 
@@ -22,22 +25,23 @@ function HeaderMenu({title, items=[], multiSelect= false}){
 
        <div className='dropdown'>
             <div className="dropdown-menu" onMouseEnter={showDropdown} onMouseLeave={hideDropdown}>
-                <div title='title'>
+                <div className='dropdown-title' onClick={() => {navigate(nav)}}>
                 {title}
                 </div>
                 {open ? (
-                <div className='ddcontainer'>
-                <ul className='dropdown-list'>
+                <div className='ddcontainer' style={{marginTop:{margin}}}>
+                <ul style={{marginTop:{margin}}} className='dropdown-list'>
+                  
                     {items.map((item) => (
                         <li>
-                            <div className='text' type='button'>
+                            <div className='text' type='button' onClick={() => {navigate(item.nav)}}>
                             {item.value}
                             </div>
                         </li>
                     ))}
                 </ul>
                 </div>) 
-                 : null }
+                 : <div/> }
                 
             </div>
        </div>

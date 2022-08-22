@@ -1,8 +1,9 @@
 .header{
     position: absolute;
     align-content: center;
-    width: 90%;
-    height: 9%;
+    width: 100%;
+    height: 12%;
+    top: 3%;
     z-index: 2;
     background: #FFFFFF;
 }
@@ -14,23 +15,26 @@ ul{
 
 .header ul{
     display: flex;
-    align-content: center;
+    justify-content: space-between;
     top: 50%;
     -ms-transform: translateY(-30%);
     transform: translateY(-30%);
+    margin-top: 1.5%;
 }
 
 .logoimg{
     height: 100%;
-    width: 40%;
-    transform: translateY(5%);
+    width: 70%;
+    transform: translateY(-5%);
 }
 
 .header ul li{
-    flex: 1;
+    flex:2;
     text-align: center;
     position: relative;
     resize: none;
+ 
+    margin-left: 3%;
 }
 
 .litext{
@@ -39,9 +43,11 @@ ul{
     font-family: Arial, Helvetica, sans-serif;
     -ms-transform: translateY(50%);
     transform: translateY(35%);
-    margin:auto;
+    font-size: 90%;
     text-align: center;
+    width: fit-content;
 
+ 
 }
 
 .link{
@@ -51,12 +57,56 @@ ul{
 }
 
 .link:hover{
-    color: purple;
+    color: #56009A;
 }
 
 .litext:hover{
-    color: purple;
+    color: #56009A;
+}
+
+.startnow{
+    align-content: center;
+    margin-top: 0.5%;
     font-weight: 700;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+.headermenu:hover{
+    color: #56009A
+}
+
+.rectangle{
+    background: #56009A;
+    display: inline-flex; 
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    height: 30px;
+    width: 100px;
+    border-radius: 3px;
+    -ms-transform: translateY(65%);
+    transform: translateY(65%);
+}
+
+.rectangle:hover{
+    background: goldenrod;
+}
+
+
+.link{
+    color: rgb(0, 0, 0);
+    font-style: normal;
+    text-decoration: none;
+}
+
+.link:hover{
+    color: #56009A;
+}
+
+.litext:hover{
+    color: #56009A;
 }
 
 .startnow{
@@ -71,11 +121,11 @@ ul{
 }
 
 .headermenu:hover{
-    color: purple;
+    color: #56009A;
 }
 
 .rectangle{
-    background: purple;
+    background: #56009A;
     display: inline-flex; 
     flex-direction: column;
     justify-content: center;
@@ -90,4 +140,8 @@ ul{
 
 .rectangle:hover{
     background: orange;
+}
+
+.lang-switcher {
+    margin-top: 0.5%;
 }

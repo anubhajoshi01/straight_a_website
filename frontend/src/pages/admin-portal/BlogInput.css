@@ -30,3 +30,11 @@ textarea {
     font-size: 80%;
     overflow: scroll;
 }
+
+.blog-input-container h1{
+    margin-left:-10%;
+}
+
+.blog-image-sample {
+    height: 80%;
+}

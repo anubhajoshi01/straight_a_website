@@ -1,0 +1,96 @@
+.advantage p{
+    margin-left:5%;
+    margin-right:5%;
+}
+.curriculum p{
+    margin-left:5%;
+    margin-right:5%;
+    margin-bottom:-13%;
+}
+.subjects li{
+    font-weight: 500;
+    margin-left: 5%;
+    margin-right:5%;
+    font-size: 32px;
+    margin-top:5%;
+}
+.subjects h3{
+    margin-top:30%;
+    margin-left:5%;
+    font-size: 35px;
+}
+.qualities{
+    display:flex;
+    flex-direction: row;
+    font-weight:bold;
+
+}
+
+.lists{
+    display:flex;
+    flex-direction: row;
+    padding-right:3%;
+}
+
+.left-img-2{
+    float:left;
+    margin-left:5%;
+    margin-right:5%;
+    margin-top:5%;
+    width:40%;
+}
+
+.curriculum{
+    margin-top:7%;
+}
+
+.subjects{
+    margin-top:10%;
+}
+.elite-content-box{
+    margin-inline: 7%;
+}
+.elite-content-box h4{
+    font-size: 130%;
+    font-weight: 450;
+    text-decoration: underline;
+}
+
+.elite-content-box h1 {
+    color: black;
+    font-weight: 400;
+    font-size: 78px;
+    text-align: center;
+}
+
+.elite-content-box p{
+    font-style: italic;
+    font-weight: 400;
+    font-size: 31px;
+    text-align: center;
+}
+
+.qualities{
+    display: block;
+}
+
+.qualities p{
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+
+    width: max-content;
+}
+
+.private-tut-hl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 100%;
+
+}
+
+.center-quality {
+    margin-left: 30%;
+    margin-right: 30%;
+}

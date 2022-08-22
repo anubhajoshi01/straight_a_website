@@ -31,7 +31,8 @@ const deleteForm = async (id, token) => {
     }
 }
 
-const updateForm = async (id,data,token) => {
+const updateForm = async (id,token) => {
+    console.log(id)
     try {
         const config = {
             headers: {
@@ -39,10 +40,12 @@ const updateForm = async (id,data,token) => {
             }
         }
         console.log('trying to update form')
-        const response = await axios.update(API_URL+id, data, config)
+        const response = await axios.put(API_URL+id, null, config)
+        console.log(response.data)
         return response.data
     } catch (error) {
         console.log(error)
+        throw new Error(error)
     }
 }
 
@@ -53,7 +56,7 @@ const getForms = async (token) => {
       },
     }
   
-    const response = await axios.get(API_URL)
+    const response = await axios.get(API_URL, config)
   
     return response.data
   }

@@ -1,0 +1,237 @@
+.summer-intern {
+    margin-block: 7%;
+}
+
+.si-left {
+    float: left;
+
+    margin-right: 5%;
+    height: 360px;
+
+}
+
+.si-left img{
+    height: 50%;
+}
+
+.si-left-2 {
+    float: left;
+
+    margin-right: 5%;
+    height: 360px;
+
+}
+
+
+.summer-intern button{
+    margin-left: 25%;
+    background-color: goldenrod;
+    width: 100px;
+    height: 40px;
+    font-size: 100%;
+    color: white;
+    border: none;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+
+.summer-intern button:hover {
+    background-color: purple;
+}
+
+.si-margin-1 {
+    margin-inline: 7%;
+}
+
+.si-margin {
+    margin-inline: 7%;
+}
+
+.si-margin-more {
+    margin-inline: 15%;
+}
+
+.summer-intern h2 {
+    text-align: center;
+    color: #56009A;
+    font-size: 57px;
+    font-style: italic;
+    font-weight: 700;
+}
+
+.summer-intern-ul-hl {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    width: 100%;
+}
+
+.summer-intern-ul-hl li{
+  
+    width: 50%;
+}
+
+.summer-intern h3 {
+    color: #5A5A5A;
+    font-size: 47px;
+    font-weight: 600;
+}
+
+.summer-intern h3 b{
+    color: purple;
+}
+
+.summer-intern h4 {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 37px;
+    color: #56009A;
+}
+
+.summer-intern-list-ul li {
+    list-style: disc;
+    font-weight: 400;
+    font-size: 28px;
+ 
+}
+
+.si-right {
+    width: 30%;
+    float: right;
+    height: 600px;
+}
+
+
+.si-right-2-zh {
+    width: 30%;
+    float: right;
+    height: 455px;
+}
+
+.gradient-lefttoright {
+    width: 100%;
+    height: 500px;
+    display: block;
+    padding-block: 50px;
+    background-image: linear-gradient(269.03deg, #56009ab8 23.68%, rgba(86, 0, 154, 0) 78.43%);
+}
+
+.gradient-lefttoright-cc {
+    width: 100%;
+    height: 500px;
+    padding-inline: 5%;
+    padding-block: 50px;
+    background-image: linear-gradient(269.03deg, #56009ab8 23.68%, rgba(86, 0, 154, 0) 78.43%);
+}
+
+.gradient-righttoleft h5{
+    font-weight: 500;
+    font-style: italic;
+    font-size: 44px;
+    text-align: center;
+    color: #56009A;
+}
+
+.summer-intern h5 {
+    font-weight: 500;
+    font-style: italic;
+    font-size: 49px;
+    text-align: center;
+    color: #56009A;
+    padding-inline: 5%;
+}
+
+.si-left {
+    width: 30%;
+}
+
+.gradient-righttoleft {
+    width: 100%;
+    height: 500px;
+    padding-block: 50px;
+    background-image: linear-gradient(to left, white, #56009ab8);
+}
+
+
+.start-btn-bot {
+    margin-left: 40%;
+}
+
+.banner  {
+    margin-left: 4%;
+}
+
+ .summer-intern h6 {
+    text-align: center;
+    font-size: 100%;
+    font-style: italic;
+    font-weight: 450;
+    color: purple;
+ }
+
+ .summer-intern h7{
+    text-align: center;
+    font-size: 100%;
+    font-style: italic;
+    font-weight: 450;
+    color: purple;
+ }
+
+ .summer-intern-ul-hl p {
+    font-style: normal;
+    font-size: 100%;
+ }
+
+ .summer-intern h1 {
+    font-weight: 400;
+    font-size: 78px;
+    text-align: center;
+    color: black;
+ }
+
+ .summer-intern p{
+    font-style: italic;
+    font-size: 31px;
+    text-align: center;
+ }
+
+ .si-left-2 {
+    float: left;
+    width: 30%;
+    height: 600px;
+    padding-right: 5%;
+ }
+
+
+ .summer-intern.si-margin-1 p{
+    text-align: left;
+    font-style: normal;
+ }
+
+
+ .li-p-style p{
+    font-weight: 400;
+    font-size: 28px;
+    font-style: normal;
+    text-align: left;
+ }
+
+ .gradient-lefttoright h5{}
+
+ .gradient-lefttoright-cc h5{
+    font-weight: 500;
+    font-style: italic;
+    font-size: 30px;
+    text-align: center;
+    color: #56009A;
+ }
+
+ .gradient-lefttoright-cc h6{
+    font-weight: 500;
+    font-style: italic;
+    font-size: 25px;
+    text-align: center;
+    color: #56009A;
+ }

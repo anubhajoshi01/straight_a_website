@@ -1,0 +1,95 @@
+.our-reviews-container {
+    margin-left: 2%;
+    margin-right: 7%;
+    position: relative;
+    width: 90%;
+}
+
+.left-img  {
+    float: left;
+    width: 25%;
+    margin-inline: 2%;
+    height: 488px;
+}
+
+.right-img-testimonials {
+  
+    float: right;
+
+   margin-top: -488px;
+   margin-left: 5%;
+   width: 25%;
+}
+
+.review-inline {
+    display: block;
+    margin-block: 70px;
+   
+}
+
+.our-reviews-container h1 {
+    font-size: 78px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}
+
+.our-reviews-container h2 {
+    font-weight: 700;
+    font-style: italic;
+    font-size: 25px;
+    color: #56009A;
+}
+
+.our-reviews-container h3 {
+    font-weight: 400;
+    font-style: italic;
+    font-size: 25px;
+    color: #56009A;
+}
+
+.our-reviews-container p{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 31px;
+    text-align: center;
+}
+
+.content-box {
+    width: 70%;
+    border-style: solid;
+    margin-left: 30%;
+    padding-inline: 2%;
+    padding-block: 80px;
+    height: 328px;
+    box-shadow: 1px 2px gray;
+    border-color: gray;
+}
+
+.content-box-left {
+    width: 70%;
+    border-style:solid;
+    margin-right: 20%;
+    padding-inline: 2%;
+    padding-block: 80px;
+    height: 328px;
+    box-shadow: 1px 2px gray;
+    border-color: gray;
+}
+
+.left-content {
+    float: left;
+    margin-right: 3%;
+    margin-top: -80px
+}
+
+.right-content {
+    margin-left: 30%;
+}
+
+
+
+.right-img-testimonials img{
+
+    height: 488px;
+}

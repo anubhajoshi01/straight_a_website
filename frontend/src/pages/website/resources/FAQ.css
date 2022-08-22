@@ -1,0 +1,39 @@
+.banner{
+    width:100%;
+    height:300px;
+    margin-left:auto;
+    margin-right:auto;
+    object-fit: cover;
+}
+
+.pics{
+    width:300%;
+    height:10%;
+    margin:50%;
+    object-fit: cover;
+}
+
+.content-box-pics{
+    display:flex;
+    flex-direction: row;
+
+}
+
+.cards{
+    display:flex;
+    flex-direction: column;
+    margin-left:10%;
+
+}
+
+.pictures{
+    display:flex;
+    flex-direction: column;
+}
+
+.faq-page h1{
+    font-size: 78px;
+    font-weight: 400;
+    text-align: center;
+    color: black;
+}

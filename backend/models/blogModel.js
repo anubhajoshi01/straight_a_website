@@ -5,11 +5,16 @@ const blogSchema = mongoose.Schema(
         title: {
             type: String,
             required: [true, 'please add a title'],
-            unique: true
         },
         content: {
             type: String,
             required: [true, 'please add content']
+        },
+        chineseTitle: {
+            type: String,
+        },
+        chineseContent: {
+            type:String,
         },
         imageUrls: {
             type: String,

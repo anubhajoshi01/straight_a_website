@@ -1,0 +1,36 @@
+.college-transfer-container {
+    margin-inline: 7%;
+    margin-top: 7%;
+    margin-bottom: 10%;
+}
+
+.span-img-college-transfer img {
+    width: 100%;
+}
+
+.college-transfer-container h2 {
+    color: #56009A;
+    font-weight: 600;
+    font-style: italic;
+    font-size: 36px;
+}
+
+.college-transfer-container h1{
+    font-weight: 500;
+    font-size: 78px;
+    text-align: center;
+    color: black;
+}
+
+.college-transfer-container p{
+    font-weight: 400;
+    font-style: italic;
+    font-size: 31px;
+    text-align: center;
+}
+
+.college-transfer-descr p{
+    font-weight: 400;
+    font-size: 27px;
+
+}

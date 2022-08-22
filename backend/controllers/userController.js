@@ -3,6 +3,7 @@ const bcrypt = require('bcryptjs')
 const user = {
   name: process.env.EMAIL,
   password: process.env.ADMIN_PSW,
+  salt: process.env.PSW_SALT
 }
 // @desc register user
 // @route post/api/goals/:id
@@ -34,17 +35,23 @@ const registerUser = async (req, res) => {
 // @access  Public
 const loginUser = async (req, res) => {
   const { name, password } = req.body
+
+  const hashedEntered = await bcrypt.hash(password, user.salt)
+
   console.log(`name is ${name}`)
   console.log(`pwd is ${password}`)
+  console.log(`hashed pwd is ${hashedEntered}`)
+  console.log(`salt is ${user.salt}`)
  
   try {
-
-    if (name === user.name && bcrypt.compare(password, user.password)){
+    const match = user.password === hashedEntered
+    if (name === user.name && match){
       res.json({
         name: "straightaprep@gmail.com",
         email: "straightaprep@gmail.com",
         token: generateToken(process.env.TOKEN_GEN),
       })
+      console.log("VALID CREDS")
     } else {
       console.log(name)
       console.log(password)
@@ -54,6 +61,7 @@ const loginUser = async (req, res) => {
     
   } catch (error) {
     console.log(error)
+    throw new Error('Invalid credentials')
   }
   
 }
@@ -68,7 +76,7 @@ const getMe = async (req, res) => {
 
 const generateToken = (user) => {
   return jwt.sign({ user }, process.env.JWT_SECRET, {
-    expiresIn: '30d'
+    expiresIn: '1h'
   })
 }
 

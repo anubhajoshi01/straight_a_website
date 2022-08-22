@@ -1,0 +1,25 @@
+.category-container {
+    margin-block: 7%;
+    width: 100%;
+}
+
+.category-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 2%;
+}
+
+.category-flex li {
+    flex-basis: 0;
+    flex-grow: 1;
+}
+
+.category-container h1 {
+    font-weight: 350;
+}
+
+.single-category {
+    margin-inline: 40%;
+    width: 25%;
+}
