@@ -40,14 +40,14 @@ function Main(){
     
 
     const slides2 = [
-        {title:"Why do you need Straight A Prep?",content:"Straight A Prep is a concierge-style, full-service academic consulting firm founded by" ,img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
-        {title:"Why do you need Straight A Prep?",content:"Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
-        {title:"Why do you need Straight A Prep?",content:"Straight A Prep is a concierge-style, full-service academic consulting firm founded by", img:"https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2UlMjBkaXZlcnNpdHl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
+        {title:"Why do you need Straight A Prep?",content:"Straight A Prep is a concierge-style, full-service academic consulting firm founded by" , navLink:'/view-blog/6302da978f07ddb81dca59bc/en',img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
+        {title:"How to choose the right college?",content:"First, we will break down different types of universities",navLink:'/view-blog/6302da2c8f07ddb81dca59b6/en' ,img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
+        {title:"Full score Common App essay writing tips",content:"Are college applications really difficult?", navLink:'/view-blog/6302d73bbcecafa9605cbfac/en', img:"https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHN0dWRlbnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
     ]
     const slides2_zh = [
-        {title:"为什么 Straight A Prep 能帮到你?", content: "经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
-        {title:"为什么 Straight A Prep 能帮到你?", content: "经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
-        {title:"为什么 Straight A Prep 能帮到你?", content: "经验丰富的留学顾问，最一流贴心的服务质量", img:"https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MjJ8fGNvbGxlZ2UlMjBkaXZlcnNpdHl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
+        {title:"为什么 Straight A Prep 能帮到你?", content: "经验丰富的留学顾问，最一流贴心的服务质量", navLink:'/view-blog/6302da978f07ddb81dca59bc/zh' ,img:"https://images.unsplash.com/photo-1581832097732-8565eff3d361?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTg5fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60"},
+        {title:"如何选择合适的大学", content: "首先，我们将分解不同类型的大学",navLink:'/view-blog/6302da2c8f07ddb81dca59b6/zh' ,img:"https://images.unsplash.com/photo-1599687351724-dfa3c4ff81b1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8c3R1ZGVudHxlbnwwfDB8MHx8&auto=format&fit=crop&w=800&q=60"},
+        {title:"新加坡陪同簽證的優勢", content: "目前很多國家不支持隨行學生在本國學習",navLink:'/view-blog/6302d73bbcecafa9605cbfac/zh'  ,img:"https://images.unsplash.com/photo-1529070538774-1843cb3265df?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTJ8fHN0dWRlbnR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60"}
     ]
 
     if(lang === 'zh') {
