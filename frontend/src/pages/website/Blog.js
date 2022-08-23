@@ -221,6 +221,7 @@ function Blog({ create }) {
                     ))
                 }
             </ul>
+            <p><br/></p>
             <ul className="navigate-horizontal">
                 <li className="navigate-item-arrow">
                     <div className="arrow" onClick={goToFirstPage}>{'<<'}</div>
