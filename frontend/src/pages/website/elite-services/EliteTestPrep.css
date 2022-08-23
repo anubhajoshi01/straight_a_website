@@ -1,6 +1,8 @@
 .elite-test-prep-container {
-    margin-inline: 10%;
+    margin-inline: 5%;
     margin-block: 7%;
+
+
 }
 
 .elite-test-prep-container p {
@@ -13,12 +15,14 @@
 
 .left-img {
     float: left;
+ 
 }
 
 .right-img {
     float: right;
     width: 45%;
     margin-top: 14%;
+ 
 }
 
 .elite-test-prep-container h3 {
@@ -32,6 +36,7 @@
     font-size: 130%;
     font-weight: 450;
     text-decoration: underline;
+    
 }
 
 .elite-test-prep-container h1 {
@@ -55,4 +60,9 @@
 
 .etp p{
     text-align: left;
+}
+
+.consultation {
+    width: 80%;
+
 }

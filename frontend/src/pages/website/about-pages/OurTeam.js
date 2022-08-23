@@ -156,8 +156,8 @@ function OurTeam() {
         <>
             <Header lang={'en'} currPath={location.pathname}/>
             <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
-            <div className="our-team-container">
-                <h1>Our Team</h1>
+            <div className="our-team-container" >
+                <h1 >Our Team</h1>
                 <section>
                 <ul className="our-team-hl">
                         <li>
@@ -186,7 +186,7 @@ function OurTeam() {
                                         <div className='profile'>
                                         <ul className='our-story-hl-stack'>
                                             <img className='team-img' src={item.img}/>
-                                            <ul className='our-story-vl-stack'>
+                                            <ul className='our-story-vl-stack'  >
                                                 <div className='descr'>
                                                     <h6>{item.name}</h6>
                                                     <h6 className='title' onClick={(e) => onClick(e, item)}>{item.title}</h6>
