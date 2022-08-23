@@ -297,8 +297,11 @@ function Main(){
            
                 <section>
                 <h1 style={{color:'#554E5A'}}><b>|</b><strong style={{color:'#56009A'}}>BLOG</strong> POSTS</h1>
+                <div className='slider2-container'>
                     <ImgSlider slides={slides2}/>
-                    <div className='form-container'>
+                </div>
+                    
+                    <div className='form-container-1'>
                     <ul className='seperate-container'>
                         <div className='purple-background'>
                             <h1>

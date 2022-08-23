@@ -1,18 +1,18 @@
 .blog-list-card-container{
     width: 100%;
     height: 416px;
-    padding-block: 50px;
+    padding-block: 45px;
 }
 
 .blog-list-card-container:hover{
     background-color: goldenrod;
+    margin-right:5%;
 }
 
 .blog-listviewcard-horizontal{
     display: flex;
     flex-direction: row;
 }
-
 
 
 .imgdiv {
