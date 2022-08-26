@@ -66,9 +66,7 @@ const Consultation = ({lang}) => {
                             </div>
                             
                             <div className='white-background'>
-                                <h4>
-                                    Sign up for a consultation 
-                                </h4>
+                               
                                 <div className='form'>
                                 <Form lang={'en'}/>
                                 </div>

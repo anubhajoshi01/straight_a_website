@@ -75,8 +75,10 @@ function OurStory(){
                         <li><p>为每个学生提供最高质量的个人咨询和学习材料。</p></li>
                     </ul>
                 </section>
-                <h2 className='consult'> 开始咨询</h2>
-                <Consultation lang={lang}/>
+               
+                <div style={{marginBottom:'200px'}}>
+                    <Consultation lang={lang}/>
+                </div>
                 
                       
             </div>
@@ -91,8 +93,9 @@ function OurStory(){
     return(
         <>
         <Header lang={'en'} currPath={location.pathname}/>
+
         <div className='our-story-container'>
-         
+
             <section>
                 <h1 style={{color:'#56009A'}}><b>"New Era"</b> Education Consulting</h1>
                 <p style={{textAlign:'center'}}>Straight A Prep is a concierge-style, full-service academic consulting firm based in Manhattan founded by UPenn entrepreneurs and educators with a shared vision to redefine the future of K-12 and College Counseling and Admission locally, and around the globe.</p>

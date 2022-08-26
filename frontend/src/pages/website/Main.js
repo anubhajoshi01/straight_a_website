@@ -300,7 +300,7 @@ function Main(){
                 <div className='slider2-container'>
                     <ImgSlider slides={slides2}/>
                 </div>
-                    <div className='form-container'>
+                <div className='form-container'>
                     <div className='seperate-container'>
                         <div className='purple-background'>
                             <h1>
@@ -330,6 +330,7 @@ function Main(){
                     </div>
                 </section>
             </div>
+            <p><br/></p>
             <Footer lang={lang}/>
         </>
     )

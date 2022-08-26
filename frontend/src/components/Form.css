@@ -5,10 +5,13 @@
 form{
     transform: translateY(-6%);
 }
-h2 {
-    width: 75%;
+
+.form-group h2 {
+    width: 100%;
     margin-left: 8%;
     color: rgb(74, 74, 74);
+    font-size: 20px;
+    margin-bottom: 20px;
 }
 
 .chinese-head{

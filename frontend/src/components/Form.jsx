@@ -77,9 +77,9 @@ const Form = ({lang, type}) => {
     if(lang === 'zh') {
         return (
     
-            <div className={type === 'below' ? 'form-container-zh-2' : 'form-container-zh'}>
+            <div style={{ width:'100%'}} className={type === 'below' ? 'form-container-zh-2' : 'form-container-zh'}>
             
-            <h2 className='chinese-head'  style={{marginBottom:'30%', marginTop:'20%'}}>免费申请 今天开始</h2>
+            <h2 className='chinese-head'  style={{marginBottom:'30%', marginTop:'20%', fontSize:'20px', textAlign:'center', width:'100%'}}>免费申请 今天开始</h2>
             <form  ref={form} onSubmit={onSubmit}>
             <ul className='inputs-vertical'>
             <li>
@@ -145,14 +145,14 @@ const Form = ({lang, type}) => {
                     <div className='input-container'>
                         <li>
                             <label htmlFor='more'>告诉我们更多关于学生的信息</label>
-                            <textarea type="text" style={{width:'255%', height:'150px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
+                            <textarea type="text" style={{width:'100%', height:'150px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
                         </li>
                     </div>
                 </ul>
             </li>
         </ul>
         <div className='error-msg'>{errorMsg}</div>
-        <button  style={{marginLeft:'100%'}} type='submit' className='submit-form-btn'> Submit </button>
+        <button  style={{alignSelf:'center'}} type='submit' className='submit-form-btn'> Submit </button>
         
             </form>
             </div>
@@ -230,7 +230,7 @@ const Form = ({lang, type}) => {
                         <div className='input-container'>
                             <li>
                                 <label htmlFor='more'>Tell us More</label>
-                                <textarea type="text" style={{width:'193%', height:'170px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
+                                <textarea type="text" style={{width:'100%', height:'170px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
                             </li>
                         </div>
                     </ul>

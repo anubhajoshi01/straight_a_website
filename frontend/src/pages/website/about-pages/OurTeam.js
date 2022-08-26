@@ -157,7 +157,7 @@ function OurTeam() {
             <Header lang={'en'} currPath={location.pathname}/>
             <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
             <div className="our-team-container" >
-                <h1 >Our Team</h1>
+                <h1>Our Team</h1>
                 <section>
                 <ul className="our-team-hl">
                         <li>
@@ -166,16 +166,13 @@ function OurTeam() {
                         <li>
                             <div className='descr-sunny'>
                             <h5>M.S. Ed University of Pennsylvania</h5>
-                            <p>Sunny graduated from the University of Pennsylvania. She has been engaged in college application for more than 8 years and ahs helped her students win numerous American universities' offers. Sunny always pays attention to the details in the application, whether it is essay writing, academic improvement, or communication with parents, she always helps them in every detail, and it is her mastery of details that hellps students. On the other hand, Sunny's professional skills on the application for college application is another magic for her to help students successfully. She has helped students apply for various majors they like, such as finance, computer science, marketing, communications engineering, art, and so on. Now her students are all over the Ivy League universities in the United States, whether Harvard or Yale University, which is the best manifestation of her professional ability.</p>
+                            <p>Sunny graduated from the University of Pennsylvania. She has been engaged in college application for more than 8 years and has helped her students win numerous American universities' offers. Sunny always pays attention to the details in the application, whether it is essay writing, academic improvement, or communication with parents, she always helps them in every detail, and it is her mastery of details that hellps students. On the other hand, Sunny's professional skills on the application for college application is another magic for her to help students successfully. She has helped students apply for various majors they like, such as finance, computer science, marketing, communications engineering, art, and so on. Now her students are all over the Ivy League universities in the United States, whether Harvard or Yale University, which is the best manifestation of her professional ability.</p>
                             </div>
                         </li>
                     </ul>
                 </section>
                 <section>
-                    <div className='title-div'>
-                    <h2 style={{textAlign:'center', fontSize:'200%', color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Our</strong> Excellent Team is Always in Support of You</h2>
-                    </div>
-                
+                <h2 style={{textAlign:'center', fontSize:'200%', color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Our</strong> Excellent Team is Always in Support of You</h2>
                 <p><br/></p>
                     <p>Straught A Prep is rooted in New York City, USA. Our expert counselors are familiar with the American higher education system, and have developed personalized admission planning for students, and accompany students to grow together in the United States. Our expert counselors control the entire application process and dig out students' highlights in-depth; Accurate analysis of university application procedure, efficient communication with each partner university, comprehensively help students get the offer and the best overseas study experience.</p>
                 </section>

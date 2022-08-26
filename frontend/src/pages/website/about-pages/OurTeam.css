@@ -44,6 +44,12 @@
   
 }
 
+.descr-sunny {
+
+    margin-left: -50%;
+    width: 200px;
+}
+
 .our-team-container h1 {
     font-size: 300%;
     color: black;
@@ -61,7 +67,7 @@
     display: flex;
     margin: 2%;
     flex-direction: row;
-    justify-content:baseline;
+    justify-content:center;
 }
 
 .our-team-hl p {
@@ -69,13 +75,13 @@
 }
 
 .descr-sunny{
-    margin-right:5%;
+    margin-right:50%;
   
 }
 
 .descr-sunny p {
     text-align: left;
-    margin-left: -140%;
+
     width: 200%;
     font-style: italic;
     font-size: 17px;
@@ -87,7 +93,7 @@
     text-align: left;
     font-weight: 400;
     font-size: 180%;
-    margin-left: -140%;
+
     width: 150%;
     font-style: normal;
     
