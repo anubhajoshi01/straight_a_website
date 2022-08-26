@@ -118,7 +118,7 @@ function ViewBlog(){
                 <p><br/></p>
                 <h1>{title}</h1>
                 <p><br/></p>
-                <textarea readOnly style={{border:'none', padding:'20px', borderRadius:'10px', backgroundColor:'#e4d5f5', width:'100%', height:'1000px', font:'caption', overflowY:'-moz-hidden-unscrollable', resize:'none', wordWrap:'break-word'}} value={content}/>
+                <textarea readOnly style={{border:'none', paddingBlock:'20px',paddingInline:'2%',borderRadius:'10px', backgroundColor:'#e4d5f5', width:'96%', height:'1000px', font:'caption', overflowY:'-moz-hidden-unscrollable', resize:'none', wordWrap:'break-word'}} value={content}/>
             </div>
             <Footer lang={lang}/>
         </>
