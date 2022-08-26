@@ -30,7 +30,7 @@ function HeaderMenu({title, nav, items=[], multiSelect= false, margin}){
                 </div>
                 {open ? (
                 <div className='ddcontainer' style={{marginTop:{margin}}}>
-                <ul style={{marginTop:{margin}}} className='dropdown-list'>
+                <div style={{marginTop:{margin}}} className='dropdown-list'>
                   
                     {items.map((item) => (
                         <li>
@@ -39,7 +39,7 @@ function HeaderMenu({title, nav, items=[], multiSelect= false, margin}){
                             </div>
                         </li>
                     ))}
-                </ul>
+                </div>
                 </div>) 
                  : <div/> }
                 

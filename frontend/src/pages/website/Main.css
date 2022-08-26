@@ -116,11 +116,12 @@ h3 {
 .purple-background{
     background-color: #56009A;
     padding-right: 400px;
-
+    height:110%;
+    transform: translateY(2%);
 }
 .purple-background p{
     margin-top:2%;
-    margin-left: 10%;
+    margin-left: 20%;
     font-size: 20px;
     text-align: left;
     margin-right:-220%;
@@ -131,25 +132,23 @@ h3 {
     color:white;
     font-size: 40px;
     position: 'absolute';
-    margin: 10% 90% 20% 10%; 
-    padding-top: 10%;
-    
+    margin: 10% 90% 60% 20%; 
+    width: 100%;
+    -ms-transform: translateY(70%);
+    transform: translateY(70%);
 }
 
 
 .white-background{
-    margin-left: 0%;
-    margin-right: 5%;
+    margin-right: auto;
     font-size: xx-large;
+    height:100%;
 }
 
 .seperate-container{
     display: flex;
     flex-direction: row;
-    margin: 2% 120% 2% -5%;
-    padding-right: 0%;
-    padding-left: 0%;
- 
+    margin: 2% 120% 2% 0%;
 }
 
 .main-container h3 {
@@ -164,10 +163,11 @@ h3 {
 .purple-background h3{
     font-size:30px;
     color: white;
-    margin-left:15%;
+    margin-left:20%;
     margin-bottom:10%;
-    margin-right:5%;
+    margin-top: 1%;
     font-weight: 300;
+    width:200%;
 }
 
 .p-italic{
@@ -186,11 +186,13 @@ h3 {
     justify-content: center;
 }
 
-.form-container-1 {
-    align-self: center;
-    margin-left: 5%;
-}
 .slider2-container{
     margin-left:2%;
     margin-right:-2%;
+}
+.form-container {
+    width: 100%;
+    display: flex;
+    align-content: center;
+    margin-left: 4%;
 }

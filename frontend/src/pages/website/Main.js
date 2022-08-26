@@ -160,7 +160,7 @@ function Main(){
                     <div className='seperate-container'>
                         <div className='purple-background'>
                             <h1>
-                                Hello, Welcome
+                                Hello, 欢迎
                             </h1>
                             <h3>
                                 STRAIGHT A PREP
@@ -300,9 +300,8 @@ function Main(){
                 <div className='slider2-container'>
                     <ImgSlider slides={slides2}/>
                 </div>
-                    
-                    <div className='form-container-1'>
-                    <ul className='seperate-container'>
+                    <div className='form-container'>
+                    <div className='seperate-container'>
                         <div className='purple-background'>
                             <h1>
                                 Hello, Welcome
@@ -327,7 +326,7 @@ function Main(){
                             </div>
                         </div>
 
-                    </ul>
+                    </div>
                     </div>
                 </section>
             </div>

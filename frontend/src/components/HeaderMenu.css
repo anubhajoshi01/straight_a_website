@@ -1,61 +1,54 @@
 .dropdown{
     height: 2rem;
-
 }
-/*checkpoint*/
+
 .dropdown-menu{
     display: grid;
     flex-direction: column;
 }
 .dropdown-list {
-    resize: none;
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
 
 .ddcontainer{
-    -ms-transform: translateX(-20%);
-    transform: translateX(-10%);
-    width: 120%;
-    align-items: center;
-    padding-top: 39%;
+    display: grid;
 }
 
 .dropdown-menu ul{
+    margin-top: 20%;    
     color: black;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
 }
 
-.dropdown-list ul{
-
-    flex-direction: column;
-    justify-items: space-between;
-    background-color: white;
-    width: 200%;
-
+.dropdown-list{
+    background-color: rgba(255, 255, 255, 0.6);
 }
 
-.dropdown-list li{
-    text-align:left;
-
-    margin-right: 30%;
-    width: 100%;
-    align-self: center;
+.dropdown-title{
+    font-size:16px;
 }
 
 .text{
     margin-top: 2px;
     margin-bottom: 2px;
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 75%;
+    font-size: small;
+    font-weight: 200;
+    color:black;
+    padding:2px;
+    text-align: center;
 }
+
 
 .text:hover{
     color: #56009A;
+    font-weight: 700;
 }
 
-.title:hover{
+.dropdown-menu:hover{
     color: #56009A;
+    font-weight: 700;
 }
 
 

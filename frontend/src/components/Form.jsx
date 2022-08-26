@@ -78,108 +78,26 @@ const Form = ({lang, type}) => {
         return (
     
             <div className={type === 'below' ? 'form-container-zh-2' : 'form-container-zh'}>
+            
+            <h2 className='chinese-head'  style={{marginBottom:'30%', marginTop:'20%'}}>免费申请 今天开始</h2>
             <form  ref={form} onSubmit={onSubmit}>
-                
-                <ul className='inputs-vertical'>
-                    <li>
-                        <div className='in-line-form'>
-                        <ul className='inputs-horizontal'>
-                            <li>
-                                <div className='input-container'>
-                            
-                                    <label htmlFor="parentname"> 家长姓名 </label>
-                                    <input type='text' name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
-                                
-                                </div>
-                            </li>
-                            <li>
-                                <div className='input-container'>
-                                
-                                    <label htmlFor='studentname'>学生姓名*</label>
-                                    <input type='text' name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
-                                
-                                </div>
-                            </li>
-                        </ul>
-                        </div>
-                    </li>
-                    <li>
-                        <ul className='inputs-horizontal'>
-                            <li>
-                            <div className='input-container'>
-                                
-                                    <label htmlFor="email"> 邮件地址* </label>
-                                    <input type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
-                                
-                            </div>
-                            </li>
-                            <li>
-                            <div  className='input-container'>
-                            
-                                    <label htmlFor='phone'>电话*</label>
-                                    <input type='tel' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
-                                
-                            </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <ul className='inputs-horizontal'>
-                            <li>
-                            <div className='input-container'>
-                                
-                                    <label htmlFor="grade"> 现在年级 </label>
-                                    <input type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
-                                
-                            </div>
-                            </li>
-                            <li>
-                            <div  className='input-container'>
-                                
-                                    <label htmlFor='school'>当前学校</label>
-                                    <input type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
-                                
-                            </div>
-                            </li>
-                        </ul>
-                    </li>
-                    <li>
-                        <div className='input-container-long'>
-                        <label htmlFor='more'>告诉我们更多关于学生的信息</label>
-                        <input style={{width:'100%'}} type='text' name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}/>
-                        </div>
-                    </li>
-                </ul>
-                <div className='error-msg'>{errorMsg}</div>
-                <button type='submit' className='submit-form-btn'> Submit </button>
-                
-            </form>
-            </div>
-          )
-    }
-
-  return (
-    <>
-    <div className='form-group'>
-    <h1>SIGN UP FOR A FREE </h1><h2>CONSULTATION TODAY</h2>
-    <form onSubmit={onSubmit}>
-        <ul className='inputs-vertical'>
+            <ul className='inputs-vertical'>
             <li>
                 <div className='in-line-form'>
                 <ul className='inputs-horizontal'>
                     <li>
                         <div className='input-container'>
                     
-                            <label htmlFor="parentname"> Parent's Name </label>
-                            <input type='text' name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
+                            <label htmlFor="parentname"> 家长姓名* </label>
+                            <input type='text' style={{width:'85%'}} name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
                         
                         </div>
                     </li>
                     <li>
                         <div className='input-container'>
                         
-                            <label htmlFor='studentname'>Student's Name*</label>
-                            <input type='text' name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
+                            <label htmlFor='studentname'>学生姓名</label>
+                            <input type='text' style={{width:'85%'}} name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
                         
                         </div>
                     </li>
@@ -190,7 +108,7 @@ const Form = ({lang, type}) => {
                 <ul className='inputs-horizontal'>
                     <div className='input-container'>
                         <li>
-                            <label htmlFor="email"> Email* </label>
+                            <label htmlFor="email"> 邮件地址*</label>
                             <input style={{width:'193%'}} type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
                         </li>
                     </div>
@@ -200,27 +118,25 @@ const Form = ({lang, type}) => {
                 <ul className='inputs-horizontal'>
                     <div  className='input-container'>
                         <li>
-                            <label htmlFor='phone'>Phone*</label>
+                            <label htmlFor='phone'>电话*</label>
                             <input style={{width:'193%'}} type='text' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
                         </li>
                     </div>
                 </ul>
             </li>
             <li>
-                <ul className='inputs-horizontal'>
+            <ul className='inputs-horizontal'>
                     <li>
-                    <div className='input-container'>
-                         <li>
-                            <label htmlFor="grade"> Grade </label>
-                            <input style={{width:'85%'}} type='text' name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
-                        </li>
-                    </div>
-                    <div  className='input-container'>
-                        <li>
-                            <label htmlFor='school'>School</label>
-                            <input style={{width:'85%'}} type='text' name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
-                        </li>
-                    </div>
+                        <div className='input-container'>                           
+                            <label htmlFor="grade"> 现在年级 </label>
+                            <input type='text' style={{width:'85%'}} name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
+                        </div>
+                    </li>
+                    <li>
+                        <div className='input-container'>
+                            <label htmlFor='school'>当前学校</label>
+                            <input type='text' style={{width:'85%'}} name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
+                        </div>
                     </li>
                 </ul>
             </li>
@@ -228,18 +144,103 @@ const Form = ({lang, type}) => {
                 <ul className='inputs-horizontal'>
                     <div className='input-container'>
                         <li>
-                            <label htmlFor='more'>Tell us More</label>
-                            <textarea type="text" style={{width:'240%', height:'100px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
+                            <label htmlFor='more'>告诉我们更多关于学生的信息</label>
+                            <textarea type="text" style={{width:'255%', height:'150px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
                         </li>
                     </div>
                 </ul>
             </li>
         </ul>
         <div className='error-msg'>{errorMsg}</div>
-        <button type='submit' className='submit-form-btn'> Submit </button>
+        <button  style={{marginLeft:'100%'}} type='submit' className='submit-form-btn'> Submit </button>
         
-    </form>
-    </div>
+            </form>
+            </div>
+          )
+    }
+
+  return (
+    <>
+        <div className='form-group'>
+            
+        <h2>SIGN UP FOR A FREE CONSULTATION TODAY</h2>
+        <form onSubmit={onSubmit}>
+            
+            <ul className='inputs-vertical'>
+                <li>
+                    <div className='in-line-form'>
+                    <ul className='inputs-horizontal'>
+                        <li>
+                            <div className='input-container'>
+                        
+                                <label htmlFor="parentname"> Parent's Name* </label>
+                                <input type='text' style={{width:'85%'}} name='Parent Name' id='parentname' value={parentName} onChange={(e) => setParentName(e.target.value)}/> 
+                            
+                            </div>
+                        </li>
+                        <li>
+                            <div className='input-container'>
+                            
+                                <label htmlFor='studentname'>Student's Name*</label>
+                                <input type='text' style={{width:'85%'}} name='Student Name' id='studentname' value={studentName} onChange={(e) => setStudentName(e.target.value)}/>
+                            
+                            </div>
+                        </li>
+                    </ul>
+                    </div>
+                </li>
+                <li>
+                    <ul className='inputs-horizontal'>
+                        <div className='input-container'>
+                            <li>
+                                <label htmlFor="email"> Email* </label>
+                                <input style={{width:'193%'}} type='email' name='Email' id='email' value={email} onChange={(e) => setEmail(e.target.value)}/> 
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                    <ul className='inputs-horizontal'>
+                        <div  className='input-container'>
+                            <li>
+                                <label htmlFor='phone'>Phone*</label>
+                                <input style={{width:'193%'}} type='text' name='Phone' id='phone' value={phone} onChange={(e) => setPhone(e.target.value)}/>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+                <li>
+                <ul className='inputs-horizontal'>
+                        <li>
+                            <div className='input-container'>
+                                <label htmlFor="grade"> Grade </label>
+                                <input type='text' style={{width:'85%'}} name='Grade' id='grade' value={grade} onChange={(e) => setGrade(e.target.value)}/> 
+                            </div>
+                        </li>
+                        <li>
+                            <div className='input-container'>
+                                <label htmlFor='school'>School</label>
+                                <input type='text' style={{width:'85%'}} name='School' id='school' value={school} onChange={(e) => setSchool(e.target.value)}/>
+                            </div>
+                        </li>
+                    </ul>
+                </li>
+                <li>
+                    <ul className='inputs-horizontal'>
+                        <div className='input-container'>
+                            <li>
+                                <label htmlFor='more'>Tell us More</label>
+                                <textarea type="text" style={{width:'193%', height:'170px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </ul>
+            <div className='error-msg'>{errorMsg}</div>
+            <button type='submit' className='submit-form-btn'> Submit </button>
+            
+        </form>
+        </div>
     </>
   )
 }

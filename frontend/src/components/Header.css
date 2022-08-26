@@ -2,9 +2,7 @@
     position: absolute;
     align-content: center;
     width: 100%;
- 
-    height: 12%;
-    top: 3%;
+    height: 10%;
     z-index: 2;
     background: #FFFFFF;
 }
@@ -26,7 +24,7 @@ ul{
 .logoimg{
     height: 100%;
     width: 70%;
-    transform: translateY(-5%);
+    transform: translateY(-3%);
 }
 
 .header ul li{
@@ -39,16 +37,12 @@ ul{
 }
 
 .litext{
-    font-weight: 400;
-    font-size: medium;
     font-family: Arial, Helvetica, sans-serif;
     -ms-transform: translateY(50%);
     transform: translateY(35%);
     font-size: 90%;
     text-align: center;
     width: fit-content;
-
- 
 }
 
 .link{
@@ -58,10 +52,6 @@ ul{
 }
 
 .link:hover{
-    color: #56009A;
-}
-
-.litext:hover{
     color: #56009A;
 }
 
@@ -108,6 +98,7 @@ ul{
 
 .litext:hover{
     color: #56009A;
+    font-weight: 700;
 }
 
 .startnow{
@@ -118,7 +109,7 @@ ul{
 }
 
 .startnow:hover{
-    font-size: large;
+    font-size: 16px;
 }
 
 .headermenu:hover{
@@ -135,8 +126,8 @@ ul{
     height: 30px;
     width: 100px;
     border-radius: 3px;
-    -ms-transform: translateY(65%);
-    transform: translateY(65%);
+    -ms-transform: translateY(48%);
+    transform: translateY(48%);
 }
 
 .rectangle:hover{
@@ -144,5 +135,5 @@ ul{
 }
 
 .lang-switcher {
-    margin-top: 0.5%;
+    margin-top: 0.1%;
 }

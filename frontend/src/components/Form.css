@@ -1,24 +1,19 @@
-.form-container {
-    height: 100%;
-    width: 80%;
-    position: relative;
-}
-
 .form-group{
-    position: relative;
-    align-items: flex-start;
+    display: flex;
+    flex-direction: column;
 }
-
-h1 {
-    margin-left: 7%;
-    color: rgb(74, 74, 74);
-    -ms-transform: translateY(70%);
-    transform: translateY(70%);
+form{
+    transform: translateY(-6%);
 }
-
 h2 {
-    margin-left: 7%;
+    width: 75%;
+    margin-left: 8%;
     color: rgb(74, 74, 74);
+}
+
+.chinese-head{
+    width: 200%;
+    text-align: center;
 }
 
 .in-line-form {
@@ -28,21 +23,21 @@ h2 {
 .inputs-vertical{
     display: flex;
     flex-direction: column;
-    align-content: space-between;
+    justify-content: space-around;
 }
 
 .inputs-horizontal{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
+.inputs-horizontal li{
+    flex:1;
+}
 .input-container{
-
     text-align: left;
     top: 20%;
     left: 2%;
-    right: 5%;
     margin-left: 1%;
     margin-right: 0%;
 }
@@ -65,11 +60,12 @@ input, label{
 
 label{
     align-items: flex-start;
-    font-size: 70%;
+    font-size: 17px;
     font-weight: bold;
     color: purple; 
     padding-top: 5%;
     padding-bottom: 7%;
+    text-align:left;
 }
 
 .submit-form-btn{
@@ -78,12 +74,10 @@ label{
     padding: 10px 26px;
     text-align: center;
     display: inline-block;
-    margin-top: 1%;
-    margin-left: 14%;
-    margin-bottom: 10%;
     border:none;
     border-radius: 5px;
-    font-size: medium;
+    font-size: large;
+    margin-left: 45%;
 }
 
 .submit-form-btn:hover{
