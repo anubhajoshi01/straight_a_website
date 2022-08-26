@@ -67,14 +67,14 @@ const Header = ({lang, currPath}) => {
             </li>
         
             <li className='litext'>
-                <div style={{marginLeft:'1%'}}>
+                <div style={{marginLeft:'1%' , marginRight:'10%', transform: 'translateY(-6px)'}}>
                 <HeaderMenu title='Private Counseling'  nav={'/private-counseling'} items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
                     id: 4, value: 'College Transfer', nav:'/college-transfer'
                 }]}/>
                 </div>
             </li>
             <li className='litext'>
-              <div style={{marginLeft:'32.225%'}}>
+              <div style={{marginLeft:'22.225%'}}>
                 <HeaderMenu title="Elite Services" nav={'/elite-services'} items={[{id: 1, value:"Elite Test Prep", nav:'/elite-test-prep'}, {id: 2, value: 'Elite Private Academic Tutoring',nav:'/elite-private-tutoring'}, {id: 3, value: 'Summer Internship & Study Abroad', nav:'/summer-intern'},
                 {id: 4, value: 'Career Counseling & Placement', nav:'/career-counseling'}]}></HeaderMenu>
                 </div>
@@ -85,7 +85,7 @@ const Header = ({lang, currPath}) => {
                 </div>
             </li>
             <li className='litext' onClick={() => navigate('/blog')}>
-                <div>Blog</div>
+                <div style={{fontSize:'16px'}}>Blog</div>
             </li>
             <li className='startnow'>
                 <div className='rectangle' onClick={() => navigate('/start-now')}>

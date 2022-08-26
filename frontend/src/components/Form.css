@@ -1,11 +1,19 @@
-.form-container {
-    height: 100%;
-    width: 80%;
-    position: relative;
+.form-group{
+    display: flex;
+    flex-direction: column;
+}
+form{
+    transform: translateY(-6%);
+}
+h2 {
+    width: 75%;
+    margin-left: 8%;
+    color: rgb(74, 74, 74);
 }
 
-h1 {
-    margin-left: 5%;
+.chinese-head{
+    width: 200%;
+    text-align: center;
 }
 
 .in-line-form {
@@ -15,65 +23,66 @@ h1 {
 .inputs-vertical{
     display: flex;
     flex-direction: column;
-    align-content: space-between;
- 
-    width: 100%;
+    justify-content: space-around;
 }
 
 .inputs-horizontal{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
 }
 
+.inputs-horizontal li{
+    flex:1;
+}
 .input-container{
-    
-    width: 200%;
+    text-align: left;
     top: 20%;
     left: 2%;
-    right: 10%;
- 
-}
-
-.input-container-long {
-    margin-left: 5%;
+    margin-left: 1%;
+    margin-right: 0%;
 }
 
 input {
- border-top: 0px;
- border-left: 0px;
- border-right: 0px;
- border-bottom: 80%;
- 
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    border-bottom: 50%;
 }
-
+textarea{
+    border:1px solid rgb(110, 110, 110);
+    background-color: rgba(209, 157, 255, 0.071);
+    border-radius: 3px;
+    text-align: left;
+}
 input, label{
     display: block;
 }
 
 label{
-    font-size: 70%;
-    padding: 10%;
+    align-items: flex-start;
+    font-size: 17px;
+    font-weight: bold;
+    color: purple; 
+    padding-top: 5%;
+    padding-bottom: 7%;
+    text-align:left;
 }
 
-/*form {
-    margin-left: 30%;
-} */
-
 .submit-form-btn{
-    background-color: #56009A;
+    background-color: rgb(244, 179, 17);
     color: white;
-    padding: 12px 28px;
+    padding: 10px 26px;
     text-align: center;
     display: inline-block;
-    margin-inline: 50%;
-    margin-block: 5%;
-    border: none;
+    border:none;
+    border-radius: 5px;
+    font-size: large;
+    margin-left: 45%;
 }
 
 .submit-form-btn:hover{
-    background-color: goldenrod;
-    color: black;
+    background-color: purple;
+    font-weight: bold;
 }
 
 .error-msg{
