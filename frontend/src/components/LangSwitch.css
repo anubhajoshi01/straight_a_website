@@ -3,14 +3,15 @@
     width: 70px;
     text-align: center;
     margin-top: 10%;
+
 }
 
 .lang-menu {
     margin-top: 15px;
     position: relative;
-    height: 40px;
+    height: 80px;
     width: 100px;
-   
+
 }
 
 .selected-lang img {
@@ -27,6 +28,7 @@
 
 .other-lang {
     width: 70px;
+    margin-top: 0px;
 }
 
 .other-lang:hover {
@@ -75,7 +77,9 @@
 .lang-menu ul li {
     list-style: none;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content:baseline;
+
 }
 
 .lang-menu:hover ul{

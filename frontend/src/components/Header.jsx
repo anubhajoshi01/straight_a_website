@@ -41,7 +41,7 @@ const Header = ({lang, currPath}) => {
            </li>
            <li className='startnow'>
                <div className='rectangle' onClick={() => navigate('/start-now/zh')}>
-                   Start Now
+               开始咨询
                </div>
            </li>
            <li className='lang-switcher'>

@@ -2,9 +2,11 @@
     position: absolute;
     align-content: center;
     width: 100%;
-    height: 10%;
+    height: 100px;
     z-index: 2;
     background: #FFFFFF;
+
+    top: 0;
 }
 
 ul{
@@ -15,14 +17,14 @@ ul{
 .header ul{
     display: flex;
     justify-content: space-between;
-    top: 50%;
-    -ms-transform: translateY(-30%);
-    transform: translateY(-30%);
-    margin-top: 1.5%;
+
+    margin-top: 10px;
+
+
 }
 
 .logoimg{
-    height: 100%;
+    height: auto;
     width: 70%;
     transform: translateY(-3%);
 }
@@ -34,15 +36,18 @@ ul{
     resize: none;
  
     margin-left: 3%;
+
 }
 
 .litext{
     font-family: Arial, Helvetica, sans-serif;
-    -ms-transform: translateY(50%);
-    transform: translateY(35%);
+    -ms-transform: translateY(25px);
+    transform: translateY(25px);
     font-size: 90%;
     text-align: center;
     width: fit-content;
+    padding-block: 2px;
+
 }
 
 .link{
@@ -57,7 +62,7 @@ ul{
 
 .startnow{
     align-content: center;
-    margin-top: 0.5%;
+    margin-top: 7px;
     font-weight: 700;
     font-family: Arial, Helvetica, sans-serif;
     color: white;
@@ -135,5 +140,5 @@ ul{
 }
 
 .lang-switcher {
-    margin-top: 0.1%;
+    margin-top: 1px;
 }

@@ -1,6 +1,7 @@
 .seperate-container {
     margin-left: 7%;
     height: 680px;
+    width: 70%;
 }
 
 .seperate-container h1 {
@@ -30,3 +31,5 @@
     text-align: center;
    
 }
+
+

@@ -5,6 +5,7 @@
 .dropdown-menu{
     display: grid;
     flex-direction: column;
+
 }
 .dropdown-list {
     background-color: rgba(255, 255, 255, 0.6);
@@ -16,13 +17,13 @@
 }
 
 .dropdown-menu ul{
-    margin-top: 20%;    
+    margin-top: 20px;    
     color: black;
     flex-direction: column;
 }
 
 .dropdown-list{
-    background-color: rgba(255, 255, 255, 0.6);
+    background-color: white;
 }
 
 .dropdown-title{
