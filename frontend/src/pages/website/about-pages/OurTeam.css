@@ -39,8 +39,8 @@
 
 .profile{
     margin: 3%;
-    height: 170px;
-    width: 460px;
+    height: 160px;
+    width: 450px;
   
 }
 
@@ -50,14 +50,16 @@
 }
 
 .sunny-img {
-    height: 80%;
+    height: 75%;
+    width:auto;
     left: 60%;
-    
+    margin-left:-10%;
+    margin-bottom:-10%;
 }
 
 .our-team-hl{
     display: flex;
-    margin: 5%;
+    margin: 2%;
     flex-direction: row;
     justify-content:baseline;
 }
@@ -66,12 +68,18 @@
     font-size: 120%;
 }
 
+.descr-sunny{
+    margin-right:5%;
+  
+}
+
 .descr-sunny p {
     text-align: left;
-    margin-left: -25%;
-    width: 120%;
+    margin-left: -140%;
+    width: 200%;
     font-style: italic;
-  
+    font-size: 17px;
+    margin-top:-10%;
 }
 
 .descr-sunny h5 {
@@ -79,8 +87,8 @@
     text-align: left;
     font-weight: 400;
     font-size: 180%;
-    margin-left: -30%;
-    width: 200%;
+    margin-left: -140%;
+    width: 150%;
     font-style: normal;
     
 }
@@ -97,4 +105,8 @@ h6 {
 .title {
     text-decoration: underline;
     width: fit-content;
+}
+
+.title-div{
+    margin-top:-20%;
 }

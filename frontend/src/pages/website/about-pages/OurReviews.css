@@ -17,7 +17,8 @@
     float: right;
 
    margin-top: -488px;
-   margin-left: 5%;
+   margin-left: 10%;
+   margin-right: 2.5%;
    width: 25%;
 }
 
@@ -67,7 +68,7 @@
 }
 
 .content-box-left {
-    width: 70%;
+    width: 65%;
     border-style:solid;
     margin-right: 20%;
     padding-inline: 2%;

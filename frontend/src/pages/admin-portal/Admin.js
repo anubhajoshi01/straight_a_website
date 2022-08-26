@@ -23,7 +23,7 @@ const Admin = () => {
     )
 
   return (
-    <div>
+    <div style={{width:'100%'}}>
         <AdminHeader/>
         <Outlet/>
     </div>

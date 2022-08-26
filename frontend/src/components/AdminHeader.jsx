@@ -24,6 +24,10 @@ const AdminHeader = () => {
         navigate('/blog')
     }
 
+    const navToForms = () => {
+        navigate('view-forms')
+    }
+ 
   return (
     <header style={{top:'2%'}} className='header'>
        
@@ -31,7 +35,7 @@ const AdminHeader = () => {
             <li>  
                 <img className='logoimg' src={logo}/>   
             </li>
-            <li className='litext'>
+            <li className='litext' onClick={navToForms}>
                 <div>Forms</div>
             </li>
             <li className='litext' onClick={navToBlog}>

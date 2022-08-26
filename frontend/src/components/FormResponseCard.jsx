@@ -7,7 +7,7 @@ const FormResponseCard = (form) => {
    // {timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}
     const dispatch = useDispatch();
 
-    const defaultColor = form.resolved === true ? 'gray' : 'white'
+    const defaultColor = form.resolved === true ? '#cfcfcf' : 'white'
 
     const [containerColour, setContainerColour] = useState(defaultColor) 
 
@@ -29,11 +29,11 @@ const FormResponseCard = (form) => {
     <div className='form-card-container' style={{backgroundColor:containerColour}}>
         <div className='form-content'>
         <ul className='form-horizontal-ul'>
-            <li>
+            <li className='hl-li'>
                 <div className='right-side'>
                 <div>
                     
-                       <p> <b>timestamp:</b> {form.timestamps}</p>
+                       <p> <b>timestamp:</b> {form.timestamp}</p>
                         <p> <b>Student:</b> {form.studentName} <b>Parent:</b> {form.parentName}</p>
                         <p> <b>Email:</b> {form.email} <b>Phone:</b> {form.phone} </p>
                         <p> <b>School: </b> {form.school} <b>Grade: </b> {form.grade}</p>
@@ -46,7 +46,8 @@ const FormResponseCard = (form) => {
                                         <input type='checkbox' defaultChecked={form.resolved} id='resolved' onChange={checkboxChange}/>
                                     </li>
                                     <li>
-                                        <div onClick={() => {
+                                        <div style={{color:'red'}} onClick={() => {
+                                            console.log('click delete')
                                             dispatch(deleteForm(form.id))
                                         }}>
                                             Delete
@@ -61,7 +62,7 @@ const FormResponseCard = (form) => {
                 </div>
                 </div>
             </li>
-            <li>
+            <li className='hl-li'>
                 <div className='left-side'>
                 <ul className='form-vertical-ul'>
                     <li>

@@ -156,8 +156,8 @@ function OurTeam() {
         <>
             <Header lang={'en'} currPath={location.pathname}/>
             <img className='img-span' src='https://images.unsplash.com/photo-1582481725274-d63bdf929a90?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8Y2FtcHVzJTIwaG9yaXpvbnRhbHxlbnwwfHwwfHw%3D&auto=format&fit=crop&w=800&q=60'/>
-            <div className="our-team-container">
-                <h1>Our Team</h1>
+            <div className="our-team-container" >
+                <h1 >Our Team</h1>
                 <section>
                 <ul className="our-team-hl">
                         <li>
@@ -172,7 +172,10 @@ function OurTeam() {
                     </ul>
                 </section>
                 <section>
-                <h2 style={{textAlign:'center', fontSize:'200%', color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Our</strong> Excellent Team is Always in Support of You</h2>
+                    <div className='title-div'>
+                    <h2 style={{textAlign:'center', fontSize:'200%', color:'#5A5A5A'}}><b>|</b> <strong style={{color:'#56009A'}}>Our</strong> Excellent Team is Always in Support of You</h2>
+                    </div>
+                
                 <p><br/></p>
                     <p>Straught A Prep is rooted in New York City, USA. Our expert counselors are familiar with the American higher education system, and have developed personalized admission planning for students, and accompany students to grow together in the United States. Our expert counselors control the entire application process and dig out students' highlights in-depth; Accurate analysis of university application procedure, efficient communication with each partner university, comprehensively help students get the offer and the best overseas study experience.</p>
                 </section>
@@ -186,7 +189,7 @@ function OurTeam() {
                                         <div className='profile'>
                                         <ul className='our-story-hl-stack'>
                                             <img className='team-img' src={item.img}/>
-                                            <ul className='our-story-vl-stack'>
+                                            <ul className='our-story-vl-stack'  >
                                                 <div className='descr'>
                                                     <h6>{item.name}</h6>
                                                     <h6 className='title' onClick={(e) => onClick(e, item)}>{item.title}</h6>
