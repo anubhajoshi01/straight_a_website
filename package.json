@@ -12,7 +12,7 @@
     "server": "nodemon backend/index.js",
     "client": "npm start --prefix frontend",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend && npm run build --prefix frontend"
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix frontend --legacy-peer-deps && npm run build --prefix frontend --legacy-peer-deps"
   },
   "author": "",
   "license": "ISC",
