@@ -28,6 +28,9 @@ if(process.env.NODE_ENV === 'production') {
     )
 );
 }
+else {
+  app.get('/', (req,res) => res.send('change to production mode'))
+}
 
 
 app.listen(5001, () => console.log(`server started on port 5001`))
