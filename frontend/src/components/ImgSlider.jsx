@@ -1,5 +1,4 @@
 import React, {useState, useEffect, useRef} from 'react'
-import { borderRadius, color, fontSize } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 
 const ImgSlider = ({slides}) => {
