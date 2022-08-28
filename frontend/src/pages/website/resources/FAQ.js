@@ -4,7 +4,6 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom'
 import { useEffect } from 'react'
 import './FAQ.css'
 import FaqCard from "../../../components/FaqCard"
-import { NavItem } from "react-bootstrap"
 
 function FAQ() {
     const { lang } = useParams()
