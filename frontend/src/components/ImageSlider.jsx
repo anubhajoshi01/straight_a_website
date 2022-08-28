@@ -1,7 +1,6 @@
 import React, {useState, useRef, useEffect} from 'react'
 import sliderimg1 from '../res/slider_img1.jpg'
 import qrcode from '../res/qrcode.jpg'
-import { borderRadius, color, fontSize } from '@mui/system';
 import { useNavigate } from 'react-router-dom';
 
 const ImageSlider = ({slides}) => {

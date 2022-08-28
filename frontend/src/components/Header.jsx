@@ -2,7 +2,6 @@ import React from 'react'
 import {Link, useNavigate} from 'react-router-dom'
 import logo from '../res/LOGO_edited.jpg'
 import './Header.css';
-import Box from '@mui/material/Box'
 import HeaderMenu from './HeaderMenu';
 import LangSwitch from './LangSwitch';
 
