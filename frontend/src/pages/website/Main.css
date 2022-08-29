@@ -120,6 +120,7 @@ h3 {
     padding-right: 400px;
     height:110%;
     transform: translateY(2%);
+    width: 35%;
 }
 .purple-background p{
     margin-top:2%;
@@ -170,6 +171,7 @@ h3 {
     margin-top: 1%;
     font-weight: 300;
     width:200%;
+    
 }
 
 .p-italic{
