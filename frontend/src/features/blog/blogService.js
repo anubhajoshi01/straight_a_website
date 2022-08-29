@@ -1,9 +1,13 @@
 import axios from 'axios'
+//const dotenv = require('dotenv').config();
 
 const port = process.env.PORT || 5001
-const API_URL = `/api/blogs/`
+console.log(process.env.NODE_ENV)
+const API_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:5001/api/blogs/' : `/api/blogs/`
+//const API_URL = 'http://localhost:5001/api/blogs/'
 
 console.log(API_URL)
+
 
 const createPost = async(data, token) => {
     const config = {

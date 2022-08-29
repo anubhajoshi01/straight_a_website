@@ -1,7 +1,8 @@
 import axios from "axios"
 
 const port = process.env.PORT || 5001
-const API_URL = `/api/login/`
+//const API_URL = `/api/login/`
+const API_URL = process.env.NODE_ENV === 'development' ? 'http://localhost:5001/api/login/' : '/api/login'
 
 const loginUser = async(userData) => {
     try{

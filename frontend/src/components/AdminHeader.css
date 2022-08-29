@@ -1,5 +1,5 @@
-.header{
-    margin-top: 10%;
+header{
+    margin-block: 10%;
     position: relative;
     width: 100%;
     border-style: dashed;

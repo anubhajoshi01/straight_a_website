@@ -30,31 +30,17 @@ const FormResponseCard = (form) => {
         <div className='form-content'>
         <ul className='form-horizontal-ul'>
             <li className='hl-li'>
-                <div className='right-side'>
+                <div className='left-side'>
                 <div>
                     
+                    <ul className='form-horizontal-ul' style={{alignContent:'flex-start'}}>
+                        <li>
                        <p> <b>timestamp:</b> {form.timestamp}</p>
                         <p> <b>Student:</b> {form.studentName} <b>Parent:</b> {form.parentName}</p>
                         <p> <b>Email:</b> {form.email} <b>Phone:</b> {form.phone} </p>
                         <p> <b>School: </b> {form.school} <b>Grade: </b> {form.grade}</p>
-                
-                        <ul className='form-horizontal-ul' style={{alignContent:'flex-start'}}>
-                            <li>
-                                <ul className='form-horizontal-ul'>
-                                    <li>
-                                        <label htmlFor="resolved" style={{fontSize:'60%'}}> Mark Resolved </label>
-                                        <input type='checkbox' defaultChecked={form.resolved} id='resolved' onChange={checkboxChange}/>
-                                    </li>
-                                    <li>
-                                        <div style={{color:'red'}} onClick={() => {
-                                            console.log('click delete')
-                                            dispatch(deleteForm(form.id))
-                                        }}>
-                                            Delete
-                                        </div>
-                                    </li>
-                                </ul>
-                            </li>
+                        </li>
+                            
                         </ul>
                 
                 
@@ -62,8 +48,9 @@ const FormResponseCard = (form) => {
                 </div>
                 </div>
             </li>
+            
             <li className='hl-li'>
-                <div className='left-side'>
+                <div className='right-side'>
                 <ul className='form-vertical-ul'>
                     <li>
                         <b>Comments:</b>
@@ -74,6 +61,22 @@ const FormResponseCard = (form) => {
                 </ul>
                 </div>
             </li>
+            <li>
+                <ul>
+                    <li>
+                        <label htmlFor="resolved" style={{fontSize:'60%'}}> Mark Resolved </label>
+                                        <input type='checkbox' defaultChecked={form.resolved} id='resolved' onChange={checkboxChange}/>
+                                    </li>
+                                    <li>
+                                        <div className='delete-form'  onClick={() => {
+                                            console.log('click delete')
+                                            dispatch(deleteForm(form.id))
+                                        }}>
+                                            Delete
+                                        </div>
+                                    </li>
+                                </ul>
+                            </li>
         </ul>
         </div>
         
