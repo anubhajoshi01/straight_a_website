@@ -1,7 +1,7 @@
 import axios from 'axios'
 
 const port = process.env.PORT || 5001
-const API_URL = `http://localhost:${port}/api/blogs/`
+const API_URL = `/api/blogs/`
 
 console.log(API_URL)
 
