@@ -2,7 +2,7 @@
 import axios from 'axios'
 
 const port = process.env.PORT || 5001
-const API_URL = `http://localhost:${port}/api/login/`
+const API_URL = `http://localhost:${port}/api/forms/`
 
 const createForm = async(formData) => {
     try{
