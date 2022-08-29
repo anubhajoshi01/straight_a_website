@@ -1,6 +1,7 @@
 import axios from 'axios'
 
-const API_URL = 'http://localhost:5001/api/blogs/'
+const port = process.env.PORT || 5001
+const API_URL = `http://localhost:${port}/api/login/`
 
 const createPost = async(data, token) => {
     const config = {

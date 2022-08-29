@@ -1,6 +1,7 @@
 import axios from "axios"
 
-const API_URL = 'http://localhost:5001/api/login/'
+const port = process.env.PORT || 5001
+const API_URL = `http://localhost:${port}/api/login/`
 
 const loginUser = async(userData) => {
     try{

@@ -5,6 +5,8 @@ const connectDB = require('./config/db');
 const dotenv = require('dotenv').config();
 var cors = require('cors');
 
+const port = process.env.PORT || 5001
+
 const app = express();
 
 app.use(cors())
@@ -33,5 +35,5 @@ else {
 }
 
 
-app.listen(5001, () => console.log(`server started on port 5001`))
+app.listen(port, () => console.log(`server started on port ${port}`))
 
