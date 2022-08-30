@@ -3,21 +3,29 @@ import React, { useEffect, useState } from "react";
 import { useSelector, useDispatch } from 'react-redux'
 import { getForms, reset } from '../../features/forms/formSlice'
 import Spinner from "../../components/Spinner";
+import { useNavigate } from "react-router-dom";
 
 
 function ViewForms() {
     //console.log('in view forms')
 
     const dispatch = useDispatch()
+    const navigate = useNavigate();
     const [displayList, setDisplayList] = useState([])
     const [displayResolved, setDisplayResolved] = useState([])
     const { forms, isLoading, isError, isSuccess, message } = useSelector(
         (state) => state.forms
     )
+
+    const {user} = useSelector((state) => state.auth)
     const [fetched, setFetched] = useState()
 
     useEffect(() => {
        // console.log('in use effect')
+
+       if(!user){
+        navigate('/login')
+       }
         dispatch(getForms())
 
         if (isError) {
@@ -29,7 +37,7 @@ function ViewForms() {
         }
 
 
-    }, [isError, message, dispatch])
+    }, [user, isError, message, dispatch])
 
 
     // <div onClick = {() => {
