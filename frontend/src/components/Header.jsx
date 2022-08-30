@@ -66,7 +66,7 @@ const Header = ({lang, currPath}) => {
             </li>
         
             <li className='litext'>
-                <div style={{marginLeft:'1%' , marginRight:'10%', transform: 'translateY(-6px)'}}>
+                <div style={{marginLeft:'1%' , marginRight:'10%'}}>
                 <HeaderMenu title='Private Counseling'  nav={'/private-counseling'} items={[{id: 1, value: '6-8 Grade Admission', nav:'/6-8-grade-admission'}, {id: 2, value: '8-11 Grade Admission', nav:'/8-11-grade-admission'}, {id: 3, value: 'College Admission', nav:'/college-admission'}, {
                     id: 4, value: 'College Transfer', nav:'/college-transfer'
                 }]}/>

@@ -29,11 +29,11 @@ const AdminHeader = () => {
     }
  
   return (
-    <header style={{top:'2%'}} className='header'>
+    <header style={{top:'0px', paddingBottom:'5px'}} className='header'>
        
         <ul>
             <li>  
-                <img className='logoimg' src={logo}/>   
+                <img className='logoimg' style={{height:'100px', width:'auto'}} src={logo}/>   
             </li>
             <li className='litext' onClick={navToForms}>
                 <div>Forms</div>

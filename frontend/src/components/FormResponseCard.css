@@ -3,7 +3,7 @@
     margin-right: 10%;
     margin-left: 5%;
     width: 90%;
-    height: 10%;
+    height: 215px;
     border-radius: 10px 10px 10px 10px;
     border: 1px;
     border-style: solid;
@@ -16,8 +16,7 @@
     flex-direction: row;
     justify-content: left;
     align-items: flex-start;
-    align-self: stretch;
-    align-content: space-between;
+
 }
 
 .form-vertical-ul{
@@ -29,24 +28,30 @@ li.form-vertical-ul{
     padding: 2%;
 }
 
-.right-side{
+.left-side{
     position: relative;
     width: 500%;
-    margin-right: 20%;
+    margin-right: 10%;
+    margin-left: -10%;
+
+    width: 75%;
     
 }
 
-.left-side{
+.right-side{
     position: relative;
-    width: 100%
+    width: 100%;
+   
 }
 
-b {
-    font-size: 90%;
+.form-card-container b {
+    font-size: 15px;
 }
 
-p {
-    font-size: 70%;
+.form-card-container p {
+    font-size: 15px;
+
+    width: 100%;
 
 }
 
@@ -58,5 +63,19 @@ p {
 .hl-li{
 
     width: 50%;
-    padding: 10px;
+}
+
+.delete-form {
+    background-color:red;
+    margin-top:110px;
+
+    margin-right: 15%;
+    text-align: center;
+    font-size: 15px;
+    padding: 5px;
+    color: white;
+}
+
+.delete-form:hover {
+    background-color: black;
 }

@@ -15,6 +15,7 @@ function BlogInput(){
     const dispatch = useDispatch()
 
     const {showBlog,isUpdated, isLoading, isError, isSuccess, message, isDeleted} = useSelector((state) => state.blogs)
+    const {user} = useSelector((state) => state.auth)
 
     const [imageUrl, setImageUrl] = useState(null)
     const [title, setTitle] = useState('')
@@ -48,6 +49,11 @@ function BlogInput(){
     }
 
     useEffect(() => {
+
+        if(!user) {
+            navigate('/login')
+        }
+
         console.log('in')
         console.log('deleted ',isDeleted)
 
@@ -97,7 +103,7 @@ function BlogInput(){
         }
 
        
-    }, [showBlog, isLoading, isSuccess, isError, isDeleted, message, dispatch])
+    }, [user, showBlog, isLoading, isSuccess, isError, isDeleted, message, dispatch])
 
     const onFindImage = () => {
         setImageUrl(imageUrlText)
