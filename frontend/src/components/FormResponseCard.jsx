@@ -7,11 +7,16 @@ const FormResponseCard = (form) => {
    // {timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}
     const dispatch = useDispatch();
 
+    const {user} = useSelector((state) => state.auth);
+
     const defaultColor = form.resolved === true ? '#cfcfcf' : 'white'
 
     const [containerColour, setContainerColour] = useState(defaultColor) 
 
     const checkboxChange = () => {
+        if(!user){
+            navigate('/login')
+        }
         console.log(form.id)
         dispatch(updateForm(form.id))
         if(containerColour === 'white'){
@@ -69,6 +74,9 @@ const FormResponseCard = (form) => {
                                     </li>
                                     <li>
                                         <div className='delete-form'  onClick={() => {
+                                            if(!user){
+                                                navigate('/login')
+                                            }
                                             console.log('click delete')
                                             dispatch(deleteForm(form.id))
                                         }}>

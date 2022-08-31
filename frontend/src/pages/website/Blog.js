@@ -173,6 +173,8 @@ function Blog({ create }) {
                         }
                         
                     </ul>
+                    <p><br/></p>
+                    <p><br/></p>
                     <ul className="navigate-horizontal">
                         <li className="navigate-item-arrow">
                             <div className="arrow" onClick={goToFirstPage}>{'<<'}</div>
@@ -221,6 +223,7 @@ function Blog({ create }) {
                     ))
                 }
             </ul>
+            <p><br/></p>
             <p><br/></p>
             <ul className="navigate-horizontal">
                 <li className="navigate-item-arrow">

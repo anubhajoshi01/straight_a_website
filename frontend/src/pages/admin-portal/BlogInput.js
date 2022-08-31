@@ -29,6 +29,9 @@ function BlogInput(){
 
 
     const onSubmit = (e) => {
+        if(!user){
+            navigate('/login')
+        }
         console.log('click')
         e.preventDefault()
         setSubmitted(true)
@@ -154,6 +157,9 @@ function BlogInput(){
             <ul className="blog-input-horizontal-ul">
                 <button className="blog-input-btn" onClick={onSubmit}>Submit</button>
                 <button className="blog-input-btn" onClick = {() =>{
+                    if(!user){
+                        navigate('/login')
+                    }
                     console.log(id)
                     if(id === 'create'){
                         navigate('/blog')

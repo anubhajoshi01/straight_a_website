@@ -5,7 +5,7 @@ import './BlogListCard.css'
 
 const BlogListCard = ({img, title, content, id, lang}) => {
     const navigate = useNavigate()
-    const charLimit = lang === 'zh' ? 50 : 100
+    const charLimit = lang === 'zh' ? 40 : 80
 
     const {user} = useSelector((state) => state.auth)
 
