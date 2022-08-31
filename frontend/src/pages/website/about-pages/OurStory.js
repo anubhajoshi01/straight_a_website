@@ -76,7 +76,7 @@ function OurStory(){
                     </ul>
                 </section>
                
-                <div style={{marginBottom:'200px'}}>
+                <div className='consultation' style={{marginBottom:'200px'}}>
                     <Consultation lang={lang}/>
                 </div>
                 

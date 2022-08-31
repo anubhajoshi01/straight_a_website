@@ -39,7 +39,7 @@ function ProBono(){
             </section>
             <div className='square'>
                 <div className='wrap-pic'>
-                    <img id="pic" src= "https://www.commonsense.org/education/sites/default/files/styles/16_9_medium/public/blog-share/7-ways-to-make-distance-learning-more-equitable-article.png?itok=ki1Ssfnc"/>
+                    <img id="pic" src= "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNlcnZpY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"/>
                 </div>
                 
             <section>
@@ -112,7 +112,7 @@ function ProBono(){
         </section>
         <div className='square'>
             <div className='wrap-pic'>
-                <img id="pic" src= "https://www.commonsense.org/education/sites/default/files/styles/16_9_medium/public/blog-share/7-ways-to-make-distance-learning-more-equitable-article.png?itok=ki1Ssfnc"/>
+                <img id="pic" src= "https://images.unsplash.com/photo-1521791136064-7986c2920216?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTB8fHNlcnZpY2V8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"/>
             </div>
             
         <section>

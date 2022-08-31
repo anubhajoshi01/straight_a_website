@@ -4,6 +4,7 @@ import './FormResponseCard.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteForm, updateForm } from '../features/forms/formSlice'
 import { useNavigate } from 'react-router-dom'
+import { checkLoggedIn } from '../features/auth/authSlice'
 const FormResponseCard = (form) => {
    // {timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}
     const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const FormResponseCard = (form) => {
     const [containerColour, setContainerColour] = useState(defaultColor) 
 
     const checkboxChange = () => {
-        if(!user){
+        if(!checkLoggedIn()){
             navigate('/login')
         }
         console.log(form.id)
@@ -76,7 +77,7 @@ const FormResponseCard = (form) => {
                                     </li>
                                     <li>
                                         <div className='delete-form'  onClick={() => {
-                                            if(!user){
+                                            if(!checkLoggedIn()){
                                                 navigate('/login')
                                             }
                                             console.log('click delete')

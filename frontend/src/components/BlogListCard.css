@@ -1,7 +1,7 @@
 .blog-list-card-container{
     width: 100%;
-    height: 416px;
-    padding-block: 45px;
+    height: 425px;
+    padding-block: 35px;
 }
 
 .blog-list-card-container:hover{
@@ -15,8 +15,14 @@
 }
 
 
+.blog-listviewcard-vertical{
+    justify-content: space-around;
+}
+
 .imgdiv {
     width: 40%;
+    height: 100%;
+    padding-block: 25px;
 
 }
 

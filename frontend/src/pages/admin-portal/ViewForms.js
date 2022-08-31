@@ -4,6 +4,7 @@ import { useSelector, useDispatch } from 'react-redux'
 import { getForms, reset } from '../../features/forms/formSlice'
 import Spinner from "../../components/Spinner";
 import { useNavigate } from "react-router-dom";
+import { checkLoggedIn } from "../../features/auth/authSlice";
 
 
 function ViewForms() {
@@ -23,7 +24,7 @@ function ViewForms() {
     useEffect(() => {
        // console.log('in use effect')
 
-       if(!user){
+       if(!user || !checkLoggedIn()){
         navigate('/login')
        }
         dispatch(getForms())

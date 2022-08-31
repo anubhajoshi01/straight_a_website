@@ -44,6 +44,7 @@ const Form = ({lang, type}) => {
         };
 
     const onSubmit = (e) => {
+        console.log('submit')
             sendEmail(e);
             e.preventDefault()
             try{
@@ -63,6 +64,7 @@ const Form = ({lang, type}) => {
                 }
             }catch(e){
                 console.log(e)
+                setErrorMsg(e)
             }
     
             setParentName('')
@@ -79,7 +81,7 @@ const Form = ({lang, type}) => {
     
             <div style={{ width:'100%'}} className={type === 'below' ? 'form-container-zh-2' : 'form-container-zh'}>
             
-            <h2 className='chinese-head'  style={{marginBottom:'30%', marginTop:'20%', fontSize:'20px', textAlign:'center', width:'100%'}}>免费申请 今天开始</h2>
+            <h2 className='chinese-head'  style={{marginBottom:'30%', fontSize:'20px', textAlign:'center', width:'100%'}}>免费申请 今天开始</h2>
             <form  ref={form} onSubmit={onSubmit}>
             <ul className='inputs-vertical'>
             <li>
@@ -145,7 +147,7 @@ const Form = ({lang, type}) => {
                     <div className='input-container'>
                         <li>
                             <label htmlFor='more'>告诉我们更多关于学生的信息</label>
-                            <textarea type="text" style={{width:'100%', height:'150px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
+                            <textarea type="text" style={{width:'140%', height:'150px'}} name='More' id='more' value={more} onChange={(e)=> setMore(e.target.value)}></textarea>
                         </li>
                     </div>
                 </ul>
@@ -164,7 +166,7 @@ const Form = ({lang, type}) => {
         <div className='form-group'>
             
         <h2>SIGN UP FOR A FREE CONSULTATION TODAY</h2>
-        <form onSubmit={onSubmit}>
+        <form ref={form} onSubmit={onSubmit}>
             
             <ul className='inputs-vertical'>
                 <li>

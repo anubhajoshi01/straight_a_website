@@ -6,6 +6,7 @@ import { createPost, getPostById, reset, updatePost } from "../../features/blog/
 import './BlogInput.css'
 import { deletePost } from '../../features/blog/blogSlice'
 import Spinner from "../../components/Spinner"
+import { checkLoggedIn } from "../../features/auth/authSlice"
 
 function BlogInput(){
 
@@ -29,7 +30,7 @@ function BlogInput(){
 
 
     const onSubmit = (e) => {
-        if(!user){
+        if(!checkLoggedIn()){
             navigate('/login')
         }
         console.log('click')
@@ -53,7 +54,7 @@ function BlogInput(){
 
     useEffect(() => {
 
-        if(!user) {
+        if(!checkLoggedIn()) {
             navigate('/login')
         }
 
@@ -109,6 +110,9 @@ function BlogInput(){
     }, [user, showBlog, isLoading, isSuccess, isError, isDeleted, message, dispatch])
 
     const onFindImage = () => {
+        if(!checkLoggedIn()){
+            navigate('/login')
+        }
         setImageUrl(imageUrlText)
     }
 
@@ -157,7 +161,7 @@ function BlogInput(){
             <ul className="blog-input-horizontal-ul">
                 <button className="blog-input-btn" onClick={onSubmit}>Submit</button>
                 <button className="blog-input-btn" onClick = {() =>{
-                    if(!user){
+                    if(!checkLoggedIn()){
                         navigate('/login')
                     }
                     console.log(id)

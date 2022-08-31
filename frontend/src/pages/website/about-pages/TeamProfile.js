@@ -44,7 +44,7 @@ function TeamProfile(){
 
     infoDictZh['alan-g'] = {name:'Alan G', title:'留学顾问', content:"Alan本科毕业于康奈尔大学(Cornell University)，获得学士学位，研究生毕业于宾夕法尼亚大学(University of Pennsylvania)，获得硕士学位。在过去的5年里，他一直担任中国学生(包括国内和国际学生)的留学顾问，协助他们完成大学申请和入学流程。 他认为自己是一个职业教育家，一个导师，一个年轻人的捍卫者。 艾伦和妻子住在曼哈顿，他在业余时间喜欢读书、打篮球，他正在写一本书，这本书将成为他的回忆录，记录他的生活，以及所有帮助过他的有影响力的人。",
     img: "https://static.wixstatic.com/media/660eee_4851ac85c2044723b3a29c958cab1c3d~mv2.jpg/v1/crop/x_0,y_0,w_200,h_199/fill/w_280,h_279,al_c,lg_1,q_80,enc_auto/Garcia_prof%20headshot.jpg"}
-    infoDict['christina-l'] = {name:'Christina L', title:'留学顾问', content:"在过去的八年里，Christina帮助超过250名学生申请美国大学。 她关心每一个学生，珍惜每一个与他们产生共鸣的时刻。 她善于倾听，有独立的思考能力和敏锐的洞察力，善于发现别人的优点，总能发现别人独特的才能或个性。 陪伴和见证一个学生的成长，特别是精神方面上的成长是她在教育领域想要做的事情，这将使她的生活更有意义和充实。", img:'https://static.wixstatic.com/media/660eee_5d98aaecb7a148c0ba4a881d98802e34~mv2.png/v1/fill/w_416,h_384,al_c,lg_1,q_85,enc_auto/Christina%20pic%20(2).png'}
+    infoDictZh['christina-l'] = {name:'Christina L', title:'留学顾问', content:"在过去的八年里，Christina帮助超过250名学生申请美国大学。 她关心每一个学生，珍惜每一个与他们产生共鸣的时刻。 她善于倾听，有独立的思考能力和敏锐的洞察力，善于发现别人的优点，总能发现别人独特的才能或个性。 陪伴和见证一个学生的成长，特别是精神方面上的成长是她在教育领域想要做的事情，这将使她的生活更有意义和充实。", img:'https://static.wixstatic.com/media/660eee_5d98aaecb7a148c0ba4a881d98802e34~mv2.png/v1/fill/w_416,h_384,al_c,lg_1,q_85,enc_auto/Christina%20pic%20(2).png'}
 
     infoDictZh['darrian-h'] = {name:'Darrian H', title:'留学顾问', content:"Darrian毕业于纽约大学，创意写作项目的候选人。他出版过犯罪戏剧小说《只有娱乐》。Darrian有着出色的写作能力的技巧，现在他也在纽约大学参与本科生的写作课程授课。他出色的文书写作能力帮学生学生们在大学申请的过程中一路披荆斩棘，最终成功得到学校的认可，也得到学生的无数赞誉", img:'https://static.wixstatic.com/media/660eee_4bb054c404ef4783a9be017e3305db42~mv2.png/v1/fill/w_629,h_581,al_c,q_90,enc_auto/WeChat%20Screenshot_20211203145932.png'}
 
