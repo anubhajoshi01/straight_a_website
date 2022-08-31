@@ -3,9 +3,11 @@ import { useState } from 'react'
 import './FormResponseCard.css'
 import { useDispatch, useSelector } from 'react-redux'
 import { deleteForm, updateForm } from '../features/forms/formSlice'
+import { useNavigate } from 'react-router-dom'
 const FormResponseCard = (form) => {
    // {timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const {user} = useSelector((state) => state.auth);
 
