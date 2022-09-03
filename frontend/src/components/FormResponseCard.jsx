@@ -5,6 +5,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { deleteForm, updateForm } from '../features/forms/formSlice'
 import { useNavigate } from 'react-router-dom'
 import { checkLoggedIn } from '../features/auth/authSlice'
+
 const FormResponseCard = (form) => {
    // {timestamp, studentName, parentName, phone, email, school, grade, comments, resolved}
     const dispatch = useDispatch();
@@ -20,15 +21,24 @@ const FormResponseCard = (form) => {
         if(!checkLoggedIn()){
             navigate('/login')
         }
-        console.log(form.id)
-        dispatch(updateForm(form.id))
-        if(containerColour === 'white'){
-            setContainerColour('gray')
-        }
         else{
-            setContainerColour('white')
+            console.log(form.id)
+            try{
+                dispatch(updateForm(form.id))
+            }
+            catch(e){
+                console.log(e)
+                navigate('/login')
+                
+            }
+            if(containerColour === 'white'){
+                setContainerColour('#cfcfcf')
+            }
+            else{
+                setContainerColour('white')
+            }
+            console.log('changed')
         }
-        console.log('changed')
     }
 
     
@@ -79,9 +89,20 @@ const FormResponseCard = (form) => {
                                         <div className='delete-form'  onClick={() => {
                                             if(!checkLoggedIn()){
                                                 navigate('/login')
+                                                return 
                                             }
-                                            console.log('click delete')
-                                            dispatch(deleteForm(form.id))
+                                            else{
+                                                //console.log('click delete')
+                                                try{
+                                                    dispatch(deleteForm(form.id))
+                                                }
+                                                catch(e){
+                                                    //console.log(e)
+                                                    navigate('/login')
+                                                    
+                                                }
+                                                
+                                            }    
                                         }}>
                                             Delete
                                         </div>

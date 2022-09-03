@@ -38,10 +38,10 @@ const loginUser = async (req, res) => {
 
   const hashedEntered = await bcrypt.hash(password, user.salt)
 
-  console.log(`name is ${name}`)
-  console.log(`pwd is ${password}`)
-  console.log(`hashed pwd is ${hashedEntered}`)
-  console.log(`salt is ${user.salt}`)
+  //.log(`name is ${name}`)
+  //console.log(`pwd is ${password}`)
+  //console.log(`hashed pwd is ${hashedEntered}`)
+  //console.log(`salt is ${user.salt}`)
  
   try {
     const match = user.password === hashedEntered
@@ -51,16 +51,16 @@ const loginUser = async (req, res) => {
         email: "straightaprep@gmail.com",
         token: generateToken(process.env.TOKEN_GEN),
       })
-      console.log("VALID CREDS")
+     // console.log("VALID CREDS")
     } else {
-      console.log(name)
-      console.log(password)
+     // console.log(name)
+      //console.log(password)
       res.status(401)
       throw new Error('Invalid credentials')
     }
     
   } catch (error) {
-    console.log(error)
+    //console.log(error)
     throw new Error('Invalid credentials')
   }
   

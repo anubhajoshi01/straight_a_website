@@ -10,14 +10,14 @@ function OurTeam() {
 
     const navigate = useNavigate()
     const location = useLocation()
-    console.log(location.pathname)
+   // console.log(location.pathname)
    
 
     let {lang} = useParams()
-    console.log(`lang ${lang}`)
+   // console.log(`lang ${lang}`)
 
 
-    console.log(lang)
+   // console.log(lang)
 
     useEffect(() => {
       if(lang == null) {

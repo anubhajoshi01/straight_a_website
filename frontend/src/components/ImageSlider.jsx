@@ -112,7 +112,7 @@ const ImageSlider = ({slides}) => {
 
 
     const goToPrevious = () => {
-        console.log("line 92")
+       // console.log("line 92")
         const isFirstSlide = currentIndex === 0
         const newIndex = isFirstSlide ? 3 : currentIndex-1
         setCurrentIndex(newIndex)

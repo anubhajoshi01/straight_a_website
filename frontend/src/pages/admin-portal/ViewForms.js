@@ -23,11 +23,21 @@ function ViewForms() {
 
     useEffect(() => {
        // console.log('in use effect')
-
+       
        if(!user || !checkLoggedIn()){
         navigate('/login')
        }
-        dispatch(getForms())
+       else {
+        try{
+                dispatch(getForms())
+            }
+            catch(e){
+                console.log(e)
+                navigate('/login')
+            
+            }
+        }
+        
 
         if (isError) {
             console.log(message)

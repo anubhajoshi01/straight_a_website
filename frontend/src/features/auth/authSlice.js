@@ -2,10 +2,10 @@ import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import authService from './authService'
 
 export const checkLoggedIn = () => {
-  const setupTime = localStorage.getItem('setupTime');
-  const now = new Date()
+  const setupTime = new Date(parseInt(localStorage.getItem('setupTime')))
+  const now =  new Date()
 
-  const loggedIn = setupTime !== null && setupTime < now;
+  const loggedIn = setupTime !== null && setupTime > now;
   if(!loggedIn){
     localStorage.removeItem('user');
   }

@@ -30,25 +30,25 @@ const Form = ({lang, type}) => {
       
           emailjs.sendForm('service_kggikeu', 'template_exwhmh5', form.current, '27KtUw9_4Sazxt3vn')
             .then((result) => {
-                console.log(result.text);
+               // console.log(result.text);
             }, (error) => {
-                console.log(error.text);
+                //console.log(error.text);
             });
 
             emailjs.sendForm('service_kggikeu', 'template_spoaqm7', form.current, '27KtUw9_4Sazxt3vn')
             .then((result) => {
-                console.log(result.text);
+              //  console.log(result.text);
             }, (error) => {
-                console.log(error.text);
+                //console.log(error.text);
             });
         };
 
     const onSubmit = (e) => {
-        console.log('submit')
+       // console.log('submit')
             sendEmail(e);
             e.preventDefault()
             try{
-                console.log('trying..')
+                //console.log('trying..')
     
                 if(studentName.length > 0 && email.length > 0 && phone.length > 0){
                     if(! validateEmail(email)){
@@ -63,7 +63,7 @@ const Form = ({lang, type}) => {
                     setErrorMsg("Please fill in the required fields")
                 }
             }catch(e){
-                console.log(e)
+                //console.log(e)
                 setErrorMsg(e)
             }
     

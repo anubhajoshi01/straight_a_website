@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Spinner from '../../components/Spinner';
-import { login, reset } from '../../features/auth/authSlice';
+import { checkLoggedIn, login, reset } from '../../features/auth/authSlice';
 import './Login.css'
 
 function Login() {
@@ -21,22 +21,20 @@ function Login() {
   )
 
   useEffect(() => {
+
+    console.log(user)
+   
     if(isError){
       console.log("error w login")
       setShowError(true)
     }
 
-    if(isLoading){
-      console.log('loading...')
-    }
-
-    if(isSuccess || user){
-      console.log("success")
+    if((user !== null || isSuccess) && checkLoggedIn()){
       navigate('/me')
     }
 
     dispatch(reset())
-  }, [user, isError, isLoading, isSuccess, dispatch])
+  }, [user, isError, isSuccess, dispatch])
 
 
   const onSubmit= (e) =>{

@@ -19,9 +19,9 @@ export const createPost = createAsyncThunk(
             const token = thunkAPI.getState().auth.user.token
             return await blogService.createPost(data, token)
         }catch(e){
-            console.log(e)
+            //console.log(e)
             const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
-            console.log(message)
+            //console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -36,9 +36,9 @@ export const getPosts = createAsyncThunk(
             return data
         }
         catch(e){
-            console.log(e)
+            //console.log(e)
             const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
-            console.log(message)
+            //console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -47,16 +47,16 @@ export const getPosts = createAsyncThunk(
 export const getPostById = createAsyncThunk(
     'blog/get', 
     async(id, thunkAPI) => {
-        console.log('getting by id ', id)
+        //console.log('getting by id ', id)
         try{
             const data = await blogService.getPostById(id)
-            console.log(data)
+            //console.log(data)
             return data
         }
         catch(e){
-            console.log(e)
+            //console.log(e)
             const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
-            console.log(message)
+            //console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -68,14 +68,14 @@ export const updatePost = createAsyncThunk(
         try{
             const {id, data} = allData
             const token = thunkAPI.getState().auth.user.token
-            console.log(`token ${token}`)
+            //console.log(`token ${token}`)
             const result = await blogService.updatePost(id, data, token)
-            console.log(result)
+            //console.log(result)
             return result
         }catch(e){
-            console.log(e)
+            //console.log(e)
             const message = (e.response && e.response.data && e.response.data.message) || e.message || e.toString()
-            console.log(message)
+            //console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -88,9 +88,9 @@ export const deletePost = createAsyncThunk(
             const token = thunkAPI.getState().auth.user.token
             return await blogService.deletePost(id, token)
         }catch(e){
-            console.log(e)
+           // console.log(e)
             const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
-            console.log(message)
+           // console.log(message)
             return thunkAPI.rejectWithValue(message)
         }
     }
@@ -111,7 +111,7 @@ export const blogSlice = createSlice({
                 state.isLoading = false
                 state.isSuccess = true
                 state.blogs.push(action.payload)
-                console.log('state create post')
+                //console.log('state create post')
             })
             .addCase(createPost.rejected, (state, action) => {
                 state.isLoading = false
@@ -119,15 +119,15 @@ export const blogSlice = createSlice({
                 state.message = action.payload
             })
             .addCase(getPosts.pending, (state) => {
-                console.log('get posts pending')
+                //console.log('get posts pending')
                 state.isLoading = true
             })
             .addCase(getPosts.fulfilled, (state, action) => {
-                console.log('get posts fulfiled')
+                //console.log('get posts fulfiled')
                 state.isLoading = false
                 state.isSuccess = true
                 state.blogs = action.payload
-                console.log('state get posy')
+                //console.log('state get posy')
             })
             .addCase(getPosts.rejected, (state, action) => {
                 state.isLoading = false
@@ -138,14 +138,14 @@ export const blogSlice = createSlice({
                 state.isLoading = true
             })
             .addCase(deletePost.fulfilled, (state, action) => {
-                console.log('in case delete fulfilled')
+               // console.log('in case delete fulfilled')
                 state.isLoading = false
                 state.isSuccess = true
                 state.isDeleted = true
                 state.blogs = state.blogs.filter(
                     (goal) => goal._id !== action.payload.id
                 )
-                console.log('state delete post')
+                //console.log('state delete post')
                 
             })
             .addCase(deletePost.rejected, (state, action) => {
@@ -165,7 +165,7 @@ export const blogSlice = createSlice({
                     }
                 } */
                 state.isUpdated = true
-                console.log(action.payload)
+                //console.log(action.payload)
             })
             .addCase(updatePost.rejected, (state, action) => {
                 state.isLoading = false
@@ -179,7 +179,7 @@ export const blogSlice = createSlice({
                 state.isLoading = false
                 state.isSuccess = true
                 state.showBlog = action.payload
-                console.log('state get post by id')
+                //console.log('state get post by id')
             })
             .addCase(getPostById.rejected, (state, action) => {
                 state.isLoading = false

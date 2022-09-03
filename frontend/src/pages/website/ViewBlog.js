@@ -16,13 +16,13 @@ function ViewBlog(){
     
 
     const {id, lang} = useParams()
-    console.log(`blog id ${id}`)
+   // console.log(`blog id ${id}`)
 
     const location = useLocation()
-    console.log(location.pathname)
+   // console.log(location.pathname)
     const navigate = useNavigate()
 
-    console.log(`lang ${lang}`)
+   // console.log(`lang ${lang}`)
     //console.log(id)
     const dispatch = useDispatch()
     const [viewBlog, setViewBlog] = useState('')
@@ -39,9 +39,9 @@ function ViewBlog(){
     )
     
     useEffect(() => {
-        console.log('success', isSuccess)
-        console.log('displayed ', displayed)
-        console.log('blog to show ', showBlog)
+        //console.log('success', isSuccess)
+        //console.log('displayed ', displayed)
+        //console.log('blog to show ', showBlog)
 
         if(lang == null) {
             navigate('en')
@@ -50,21 +50,21 @@ function ViewBlog(){
 
         if(id && !displayed){
             dispatch(getPostById(id))
-            console.log(showBlog)
+            //console.log(showBlog)
         }
             
         if(isError){
-            console.log('in is error')
-            console.log(message)
+           // console.log('in is error')
+            //console.log(message)
         }
 
         if(isLoading){
-            console.log('loading')
+           // console.log('loading')
         }
 
         if(isSuccess && !displayed && showBlog){
-            console.log('success')
-            console.log(showBlog)
+            //console.log('success')
+           // console.log(showBlog)
             
             setImgUrl(showBlog.imageUrls)
             
@@ -84,15 +84,15 @@ function ViewBlog(){
     }, [showBlog, isLoading, isSuccess, isError, dispatch, displayed])
 
     if(isLoading || !displayed) {
-        console.log('return is loading')
-        console.log(showBlog)
+      //  console.log('return is loading')
+        //console.log(showBlog)
         return (
             <Spinner/>
         )
     }
 
     else if(lang === 'zh') {
-        console.log('is zh')
+       // console.log('is zh')
         return (
             <>
             <Header lang={'zh'} currPath={location.pathname}/>
@@ -108,7 +108,7 @@ function ViewBlog(){
         )
     }
 
-    console.log('is en')
+    //console.log('is en')
 
     return (
         <>

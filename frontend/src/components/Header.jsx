@@ -8,7 +8,7 @@ import LangSwitch from './LangSwitch';
 const Header = ({lang, currPath}) => {
 
     const navigate = useNavigate()
-    console.log(`header ${lang}`)
+    //console.log(`header ${lang}`)
 
 
     if (lang==="zh"){
@@ -30,7 +30,7 @@ const Header = ({lang, currPath}) => {
            </li>
            <li className='litext'>
                <HeaderMenu title="精英服务" nav={'/elite-services/zh'} items={[{id: 1, value:"精英考试辅导", nav:'/elite-test-prep/zh'}, {id: 2, value: '精英学术辅导',nav:'/elite-private-tutoring/zh'}, {id: 3, value: '暑假实习&海外学习', nav:'/summer-intern/zh'},
-               {id: 4, value: '职业规划和就业'}]}></HeaderMenu>
+               {id: 4, value: '职业规划和就业', nav:'/career-counseling/zh' }]}></HeaderMenu>
            </li>
            <li className='litext'>
                <HeaderMenu title="资源" nav={'/resources/zh'} items={[{id: 1, value: "常见问题",nav:'/FAQ/zh'}]}/>

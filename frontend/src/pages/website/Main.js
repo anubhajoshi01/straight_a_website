@@ -24,7 +24,7 @@ function Main(){
         }
       }, [])
 
-    console.log(`lang is ${lang}`)
+   // console.log(`lang is ${lang}`)
 
     const slides = [
         {title:"Private Counseling: Realize your dream, create your future", img:"https://images.unsplash.com/photo-1549383028-df014fa3a325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxpYnJhcnl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/private-counseling'},

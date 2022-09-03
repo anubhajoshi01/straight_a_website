@@ -33,22 +33,41 @@ function BlogInput(){
         if(!checkLoggedIn()){
             navigate('/login')
         }
-        console.log('click')
-        e.preventDefault()
-        setSubmitted(true)
-        try{
-            if(id !== 'create'){
-                console.log('updating')
-                const allData = {id, data:{title, content, imageUrls:imageUrl,chineseTitle, chineseContent}}
-                dispatch(updatePost(allData))
-            }
-            else{
-                dispatch(createPost({title, content, imageUrls:imageUrl,chineseContent,chineseTitle}))
-            }
-            navigate('/blog')
+        else{
+            console.log('click')
+            e.preventDefault()
+            setSubmitted(true)
+            try{
+                if(id !== 'create'){
+                    console.log('updating')
+                    const allData = {id, data:{title, content, imageUrls:imageUrl,chineseTitle, chineseContent}}
+                
+                    try{
+                         dispatch(updatePost(allData))
+                     }
+                    catch(e){
+                        console.log(e)
+                        navigate('/login')
+                    
+                    }
+                }
+                else{
+                
+                    try{
+                        dispatch(createPost({title, content, imageUrls:imageUrl,   chineseContent,chineseTitle}))
+                    }
+                    catch(e){
+                        console.log(e)
+                        navigate('/login')
+                    
+                    }
+                }
+            
+                navigate('/blog')
 
-        }catch(e){
-            console.log(e)
+            }catch(e){
+                console.log(e)
+            }
         }
     }
 
@@ -57,13 +76,24 @@ function BlogInput(){
         if(!checkLoggedIn()) {
             navigate('/login')
         }
+        else {
+            console.log('in')
+            console.log('deleted ',isDeleted)
 
-        console.log('in')
-        console.log('deleted ',isDeleted)
-
-        if(id != 'create' && !fetchedPost){
-            dispatch(getPostById(id))
-            setFetchedPost(true)
+            if(id != 'create' && !fetchedPost){
+                
+                try{
+                
+                    dispatch(getPostById(id))
+                    setFetchedPost(true)
+                }
+                catch(e){
+                    console.log(e)
+                    navigate('/login')
+                    
+                }
+                
+            }
         }
 
         if(isError){
@@ -164,14 +194,25 @@ function BlogInput(){
                     if(!checkLoggedIn()){
                         navigate('/login')
                     }
-                    console.log(id)
-                    if(id === 'create'){
-                        navigate('/blog')
-                    }
                     else{
-                    console.log('on delete')
-                    dispatch(deletePost(id))
+                        console.log(id)
+                        if(id === 'create'){
+                            navigate('/blog')
+                        }
+                        else{
+                        console.log('on delete')
+                        
+                        try{
+                            dispatch(deletePost(id))
+                        }
+                        catch(e){
+                            console.log(e)
+                            navigate('/login')
+                            
+                        }
+                        }
                     }
+                    
                   
                 }}>Delete</button>
             </ul>

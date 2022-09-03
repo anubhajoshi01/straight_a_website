@@ -10,7 +10,7 @@ const getBlogs = async (req, res) => {
         res.status(200).json(blogsReversed);
 
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         res.status(400)
         throw new Error("couldn't find blogs")
     }
@@ -22,7 +22,7 @@ const getBlogById = async (req, res) => {
         const blog = await Blog.findById(req.params.id)
         res.status(200).json(blog);
     }catch(error){
-        console.log(error)
+      //  console.log(error)
         res.status(200)
         throw new Error(`could not find blog with id ${req.params.id}`)
     }
@@ -63,7 +63,7 @@ const addBlog = async (req, res) => {
 
 
     } catch (error) {
-        console.log(error)
+        //console.log(error)
         res.status(400)
         throw new Error("couldn't add blog")
     }
@@ -82,7 +82,7 @@ const deleteBlog = async (req, res) => {
         await blog.remove();
         res.json(req.params.id);
     } catch (error) {
-        console.log(error)
+       // console.log(error)
         res.status(400)
         throw new Error("couldn't delete blog")
     }
@@ -93,8 +93,8 @@ const updateBlog =  async (req, res) => {
     try {
         const date = new Date()
         const blog = await Blog.findById(req.params.id)
-        console.log(`id is ${req.params.id}`)
-        console.log(`found is ${blog}`)
+       // console.log(`id is ${req.params.id}`)
+       // console.log(`found is ${blog}`)
         if(!blog){
             res.status(400)
             throw new Error('Blog not found')
@@ -107,7 +107,7 @@ const updateBlog =  async (req, res) => {
         res.json(updatedBlog);
     
     } catch (error) {
-        console.log(error)
+       // console.log(error)
         res.status(400)
         throw new Error("couldn't update blog")
     }
