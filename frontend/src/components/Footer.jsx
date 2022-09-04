@@ -6,7 +6,7 @@ import { useNavigate } from 'react-router-dom'
 
 const Footer = ({lang}) => {
 
-    console.log(`footer ${lang}`)
+    //console.log(`footer ${lang}`)
 
     const navigate = useNavigate()
 

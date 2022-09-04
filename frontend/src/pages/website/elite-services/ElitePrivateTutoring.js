@@ -10,14 +10,14 @@ import Consultation from '../../../components/Consultation'
 function ElitePrivateTutoring(){
 
     const location = useLocation()
-    console.log(location.pathname)
+   // console.log(location.pathname)
     const navigate = useNavigate()
 
     let {lang} = useParams()
-    console.log(`lang ${lang}`)
+  //  console.log(`lang ${lang}`)
 
 
-    console.log(lang)
+   //console.log(lang)
 
     useEffect(() => {
       if(lang == null) {
@@ -111,7 +111,7 @@ function ElitePrivateTutoring(){
         <div className="consultation">
                 <Consultation lang={'zh'}/>
         </div>
-        <Footer />
+        <Footer lang={lang}/>
 
         </>)
 

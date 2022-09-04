@@ -7,6 +7,7 @@ import './Blog.css'
 import { getPosts, reset } from '../../features/blog/blogSlice'
 import { useNavigate, useParams, useLocation } from "react-router-dom";
 import Spinner from "../../components/Spinner";
+import { checkLoggedIn } from "../../features/auth/authSlice";
 function Blog({ create }) {
     const { lang } = useParams()
     const navigate = useNavigate()
@@ -14,7 +15,7 @@ function Blog({ create }) {
     const dispatch = useDispatch()
 
 
-    console.log(`lang is ${lang}`)
+ //   console.log(`lang is ${lang}`)
 
     const { blogs, isLoading, isError, isSuccess, message } = useSelector((state) => state.blogs)
     const { user } = useSelector((state) => state.auth)
@@ -27,10 +28,10 @@ function Blog({ create }) {
     const [fetched, setFetched] = useState(false)
 
     useEffect(() => {
-        console.log(pageNum)
-        console.log('in use effect')
-        console.log('is loading ', isLoading)
-        console.log('is success ', isSuccess)
+       // console.log(pageNum)
+       // console.log('in use effect')
+        //console.log('is loading ', isLoading)
+        //console.log('is success ', isSuccess)
 
         if (lang == null) {
             navigate('en')
@@ -42,16 +43,16 @@ function Blog({ create }) {
         }
 
         if (isError) {
-            console.log(message)
+           // console.log(message)
         }
 
         if(isLoading) {
-            console.log('loading')    
+           // console.log('loading')    
         }
 
         if (!isLoading && isSuccess) {
 
-            console.log("success")
+           // console.log("success")
 
             setDisplayList([])
             blogs.map((data) => {
@@ -59,14 +60,14 @@ function Blog({ create }) {
                 allPosts.push(JSON.parse(JSON.stringify(data)))
     
             })
-            console.log(allPosts)
+          //  console.log(allPosts)
             setNumTotalPages(Math.ceil(allPosts.length / 3))
 
             let showFromIndex = pageNum * 3
-            console.log(showFromIndex)
+           // console.log(showFromIndex)
             let append = []
 
-            console.log(allPosts)
+           // console.log(allPosts)
 
             for (let i = showFromIndex; i < showFromIndex + 3 && i < allPosts.length; i++) {
                 //console.log(`${i} is ${allPosts[i]}`)
@@ -84,19 +85,19 @@ function Blog({ create }) {
            // console.log('before', allPosts)
             setDisplayList([])
             let showFromIndex = pageNum * 3
-            console.log(showFromIndex)
+           // console.log(showFromIndex)
             let append = []
 
-            console.log(allPosts)
+           // console.log(allPosts)
 
             for (let i = showFromIndex; i < showFromIndex + 3 && i < allPosts.length; i++) {
                 //console.log(`${i} is ${allPosts[i]}`)
                 append.push(allPosts[i])
          
             }
-            console.log(append)
+          //  console.log(append)
             setDisplayList(append)
-            console.log(displayList)
+           // console.log(displayList)
         }
 
 
@@ -120,7 +121,7 @@ function Blog({ create }) {
     const nextPage = () => {
         if (pageNum <= numTotalPages - 1) {
             setPageNum(pageNum + 1)
-            console.log('set page')
+           // console.log('set page')
         }
     }
 
@@ -138,7 +139,7 @@ function Blog({ create }) {
         navigate('../me', {replace: true})
     }
     if(isLoading && !isSuccess){
-        console.log(isSuccess)
+      //  console.log(isSuccess)
         return (<Spinner/>)
     }
 
@@ -173,6 +174,8 @@ function Blog({ create }) {
                         }
                         
                     </ul>
+                    <p><br/></p>
+                    <p><br/></p>
                     <ul className="navigate-horizontal">
                         <li className="navigate-item-arrow">
                             <div className="arrow" onClick={goToFirstPage}>{'<<'}</div>
@@ -202,7 +205,7 @@ function Blog({ create }) {
         <div className='blog-list-view'>
         <h1 style={{fontSize:'45px', color:'black'}}>Straight A Prep Blog</h1>
             {
-                user ? 
+                checkLoggedIn() && user ? 
                 <ul style={{display:'flex', flexDirection:'row', justifyContent:'left', width:'10%'}}>
                     <button className="create-post-btn" onClick={navToCreatePost}>Create</button> 
                     <button className="create-post-btn" onClick={navToAdmin}>Admin</button>
@@ -221,6 +224,7 @@ function Blog({ create }) {
                     ))
                 }
             </ul>
+            <p><br/></p>
             <p><br/></p>
             <ul className="navigate-horizontal">
                 <li className="navigate-item-arrow">

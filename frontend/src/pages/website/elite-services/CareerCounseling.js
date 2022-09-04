@@ -8,14 +8,14 @@ import bannerImg from '../../../res/industry-web.png'
 function SummerIntern() {
 
     const location = useLocation()
-    console.log(location.pathname)
+    //console.log(location.pathname)
     const navigate = useNavigate()
 
     let {lang} = useParams()
-    console.log(`lang ${lang}`)
+   // console.log(`lang ${lang}`)
 
 
-    console.log(lang)
+   // console.log(lang)
 
     useEffect(() => {
       if(lang == null) {
@@ -123,7 +123,7 @@ function SummerIntern() {
                     <img className='banner' src={bannerImg}/>
                 </div>
             </div>
-            <Footer/>
+            <Footer lang={lang}/>
         </>
         )
     }

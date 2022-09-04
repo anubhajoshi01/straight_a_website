@@ -10,14 +10,14 @@ import Consultation from "../../../components/Consultation"
 function EliteTestPrep(){
 
     const location = useLocation()
-    console.log(location.pathname)
+  //  console.log(location.pathname)
     const navigate = useNavigate()
 
     let {lang} = useParams()
-    console.log(`lang ${lang}`)
+   // console.log(`lang ${lang}`)
 
 
-    console.log(lang)
+  //  console.log(lang)
 
     useEffect(() => {
       if(lang == null) {

@@ -24,7 +24,7 @@ function Main(){
         }
       }, [])
 
-    console.log(`lang is ${lang}`)
+   // console.log(`lang is ${lang}`)
 
     const slides = [
         {title:"Private Counseling: Realize your dream, create your future", img:"https://images.unsplash.com/photo-1549383028-df014fa3a325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxpYnJhcnl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/private-counseling'},
@@ -33,7 +33,7 @@ function Main(){
     ]
 
     const slides_zh = [
-        {title:"私教辅导：实现你梦想，创造你未来", img:"https://images.unsplash.com/photo-1549383028-df014fa3a325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxpYnJhcnl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/prvate-counseling/zh'},
+        {title:"私教辅导：实现你梦想，创造你未来", img:"https://images.unsplash.com/photo-1549383028-df014fa3a325?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTR8fGxpYnJhcnl8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/private-counseling/zh'},
         {title: "精英服务: 考试辅导, 私教辅导, 职业规划", img:"https://images.unsplash.com/photo-1599689868384-59cb2b01bb21?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fHJlYWR8ZW58MHwwfDB8fA%3D%3D&auto=format&fit=crop&w=800&q=60", navLink:'/elite-services/zh'},
         {title:'大学转学服务: 常青藤名校转学', img:"https://images.unsplash.com/photo-1558168674-2505c71112eb?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTE1fHxjb2xsZWdlfGVufDB8MHwwfHw%3D&auto=format&fit=crop&w=800&q=60", navLink:'/college-transfer/zh'}
     ]

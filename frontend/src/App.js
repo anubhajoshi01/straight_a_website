@@ -43,6 +43,7 @@ import CareerCounseling from './pages/website/elite-services/CareerCounseling'
 import TermsOfService from './pages/website/TermsOfService'
 import PrivacyPolicy from './pages/website/PrivacyPolicy'
 import StartNow from './pages/website/StartNow'
+import Dashboard from './pages/admin-portal/Dashboard';
 
 
 
@@ -60,7 +61,7 @@ const defaultContent = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit,
 
 
 function App() {
-  console.log("Hello")
+ // console.log("Hello")
   //for blog input: remove id prop here, this is for testing, must be connected to list view later
   return (
     <>
@@ -78,6 +79,7 @@ function App() {
               <Route path='view-blog/:id' element={<ViewBlog/>} />
 
               <Route path='me' element={<Admin/>}>
+                <Route path='' element={<Dashboard/>}/>
                 <Route path='view-forms' element={<ViewForms/>}/>
                 <Route path='blog-input/:id' element={<BlogInput create={false}/>}/> 
                 <Route path='blog-input' element={<BlogInput create={true}/>}/>

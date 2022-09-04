@@ -10,7 +10,7 @@ const port = process.env.PORT || 5001
 const app = express();
 
 app.use(cors())
-console.log('cors done')
+//console.log('cors done')
 
 connectDB();
 

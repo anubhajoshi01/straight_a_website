@@ -4,7 +4,7 @@ import './LangSwitch.css'
 
 const LangSwitch = ({lang, currPath}) => {
 
-  console.log(lang)
+  //console.log(lang)
 
   const navigate = useNavigate()
 
@@ -14,8 +14,8 @@ const LangSwitch = ({lang, currPath}) => {
   const [selectedLang, setSelectedLang] = useState(lang)
   const [otherLang, setOtherLang] = useState(lang === 'en' ? 'zh' : 'en')
 
-  console.log(`selected lang ${selectedLang}`)
-  console.log(`other lang ${otherLang}`)
+  //console.log(`selected lang ${selectedLang}`)
+  //console.log(`other lang ${otherLang}`)
 
   const switchLang = () => {
     const newSelected = otherLang
@@ -23,7 +23,7 @@ const LangSwitch = ({lang, currPath}) => {
     setSelectedLang(newSelected)
     
     currPath = currPath.substring(0, currPath.lastIndexOf('/'))
-    console.log(currPath)
+    //console.log(currPath)
     navigate({
       pathname: `${currPath}/${otherLang}`,
     })

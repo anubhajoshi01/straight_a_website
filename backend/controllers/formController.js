@@ -15,7 +15,7 @@ const addForm = async (req, res) => {
         res.status(200).json(form)
         
     }catch(e){
-        console.log(e)
+        //console.log(e)
         res.status(400)
         throw new Error('Form could not be created')
     }
@@ -27,7 +27,7 @@ const getForms = async (req, res) => {
         res.status(200).json(forms)
     }
     catch(e){
-        console.log(e)
+       // console.log(e)
         res.status(400)
         throw new Error('Forms could not be fetched')
     }
@@ -48,14 +48,14 @@ const deleteForm = async (req, res) => {
 
         res.status(200).json({id : req.params.id})
     }catch(e){
-        console.log(e)
+      //  console.log(e)
     }
 
 }
 
 // Resolve form can only change one column, which is the boolean variable "resolved"
 const resolveForm = async (req, res) => {
-    console.log("resolving")
+   // console.log("resolving")
     try {
         const form = Form.findById(req.params.id)
         if(!form){
@@ -66,22 +66,22 @@ const resolveForm = async (req, res) => {
        
         let resolvedForm;
         if(!currentForm.resolved){
-            console.log('line 69)')
+         //   console.log('line 69)')
             resolvedForm = await Form.findByIdAndUpdate(req.params.id, {$set: {
                 resolved: true
             }});
         }
         else{
-            console.log('line 75')
+        //    console.log('line 75')
             resolvedForm = await Form.findByIdAndUpdate(req.params.id, {$set: {
                 resolved: false
             }});
         }
         res.json(resolvedForm);
-        console.log(resolvedForm)
+     //   console.log(resolvedForm)
     
     } catch (error) {
-        console.log(error)
+     //   console.log(error)
         res.status(400)
         throw new Error("couldn't resolve form")
     }

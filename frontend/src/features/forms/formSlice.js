@@ -17,7 +17,7 @@ export const createForm = createAsyncThunk(
         }catch(e){
             const msg = (e.response && e.response.data && e.response.data.message) ||
             e.message || e.toString()
-            console.log(e)
+            //console.log(e)
             return thunkAPI.rejectWithValue(msg);
         }
     }
@@ -30,7 +30,7 @@ export const deleteForm = createAsyncThunk(
             const token = thunkAPI.getState().auth.user.token
             return await formService.deleteForm(id, token)
         }catch(e){
-            console.log(e)
+           // console.log(e)
             const message = (e.respone && e.respone.data && e.respone.data.message) || e.message || e.toString()
             return thunkAPI.rejectWithValue(message)
         }
@@ -40,7 +40,7 @@ export const deleteForm = createAsyncThunk(
 export const updateForm = createAsyncThunk(
     'forms/update', 
     async(id, thunkAPI) => {
-        console.log('update')
+        //console.log('update')
         try{
             const token = thunkAPI.getState().auth.user.token
             return await formService.updateForm(id, token)
@@ -56,14 +56,14 @@ export const getForms = createAsyncThunk(
     async (_, thunkAPI) => {
       try {
         const token = thunkAPI.getState().auth.user.token
-        console.log(token)
+       // console.log(token)
         const recieved = await formService.getForms(token)
-        console.log(recieved)
+       // console.log(recieved)
         return recieved
        
        
       } catch (error) {
-        console.log(error)
+      //  console.log(error)
         const message =
           (error.response &&
             error.response.data &&

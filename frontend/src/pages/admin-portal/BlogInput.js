@@ -6,6 +6,7 @@ import { createPost, getPostById, reset, updatePost } from "../../features/blog/
 import './BlogInput.css'
 import { deletePost } from '../../features/blog/blogSlice'
 import Spinner from "../../components/Spinner"
+import { checkLoggedIn } from "../../features/auth/authSlice"
 
 function BlogInput(){
 
@@ -29,37 +30,70 @@ function BlogInput(){
 
 
     const onSubmit = (e) => {
-        console.log('click')
-        e.preventDefault()
-        setSubmitted(true)
-        try{
-            if(id !== 'create'){
-                console.log('updating')
-                const allData = {id, data:{title, content, imageUrls:imageUrl,chineseTitle, chineseContent}}
-                dispatch(updatePost(allData))
-            }
-            else{
-                dispatch(createPost({title, content, imageUrls:imageUrl,chineseContent,chineseTitle}))
-            }
-            navigate('/blog')
+        if(!checkLoggedIn()){
+            navigate('/login')
+        }
+        else{
+            console.log('click')
+            e.preventDefault()
+            setSubmitted(true)
+            try{
+                if(id !== 'create'){
+                    console.log('updating')
+                    const allData = {id, data:{title, content, imageUrls:imageUrl,chineseTitle, chineseContent}}
+                
+                    try{
+                         dispatch(updatePost(allData))
+                     }
+                    catch(e){
+                        console.log(e)
+                        navigate('/login')
+                    
+                    }
+                }
+                else{
+                
+                    try{
+                        dispatch(createPost({title, content, imageUrls:imageUrl,   chineseContent,chineseTitle}))
+                    }
+                    catch(e){
+                        console.log(e)
+                        navigate('/login')
+                    
+                    }
+                }
+            
+                navigate('/blog')
 
-        }catch(e){
-            console.log(e)
+            }catch(e){
+                console.log(e)
+            }
         }
     }
 
     useEffect(() => {
 
-        if(!user) {
+        if(!checkLoggedIn()) {
             navigate('/login')
         }
+        else {
+            console.log('in')
+            console.log('deleted ',isDeleted)
 
-        console.log('in')
-        console.log('deleted ',isDeleted)
-
-        if(id != 'create' && !fetchedPost){
-            dispatch(getPostById(id))
-            setFetchedPost(true)
+            if(id != 'create' && !fetchedPost){
+                
+                try{
+                
+                    dispatch(getPostById(id))
+                    setFetchedPost(true)
+                }
+                catch(e){
+                    console.log(e)
+                    navigate('/login')
+                    
+                }
+                
+            }
         }
 
         if(isError){
@@ -106,6 +140,9 @@ function BlogInput(){
     }, [user, showBlog, isLoading, isSuccess, isError, isDeleted, message, dispatch])
 
     const onFindImage = () => {
+        if(!checkLoggedIn()){
+            navigate('/login')
+        }
         setImageUrl(imageUrlText)
     }
 
@@ -154,14 +191,28 @@ function BlogInput(){
             <ul className="blog-input-horizontal-ul">
                 <button className="blog-input-btn" onClick={onSubmit}>Submit</button>
                 <button className="blog-input-btn" onClick = {() =>{
-                    console.log(id)
-                    if(id === 'create'){
-                        navigate('/blog')
+                    if(!checkLoggedIn()){
+                        navigate('/login')
                     }
                     else{
-                    console.log('on delete')
-                    dispatch(deletePost(id))
+                        console.log(id)
+                        if(id === 'create'){
+                            navigate('/blog')
+                        }
+                        else{
+                        console.log('on delete')
+                        
+                        try{
+                            dispatch(deletePost(id))
+                        }
+                        catch(e){
+                            console.log(e)
+                            navigate('/login')
+                            
+                        }
+                        }
                     }
+                    
                   
                 }}>Delete</button>
             </ul>

@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import { Outlet, useNavigate } from 'react-router-dom'
 import { useDispatch, useSelector } from 'react-redux'
 import AdminHeader from '../../components/AdminHeader'
+import { checkLoggedIn } from '../../features/auth/authSlice'
 
 const Admin = () => {
 
@@ -13,13 +14,15 @@ const Admin = () => {
     )
 
     useEffect(
+       
         () => {
-            if(!user){
+           // console.log(checkLoggedIn())
+            if(!checkLoggedIn()){
                 navigate('/login')
             }
 
         },
-        [user, navigate, dispatch]
+        
     )
 
   return (

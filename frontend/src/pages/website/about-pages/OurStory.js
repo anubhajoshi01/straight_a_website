@@ -11,14 +11,14 @@ import Consultation from '../../../components/Consultation'
 function OurStory(){
 
     const location = useLocation()
-    console.log(location.pathname)
+   // console.log(location.pathname)
     const navigate = useNavigate()
 
     let {lang} = useParams()
-    console.log(`lang ${lang}`)
+    //console.log(`lang ${lang}`)
 
 
-    console.log(lang)
+    //console.log(lang)
 
     useEffect(() => {
       if(lang == null) {
@@ -76,7 +76,7 @@ function OurStory(){
                     </ul>
                 </section>
                
-                <div style={{marginBottom:'200px'}}>
+                <div className='consultation' style={{marginBottom:'200px'}}>
                     <Consultation lang={lang}/>
                 </div>
                 
