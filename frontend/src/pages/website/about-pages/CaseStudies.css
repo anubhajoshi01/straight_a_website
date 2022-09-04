@@ -46,6 +46,10 @@
     text-align: justify;
 }
 
+.case-content p{
+    font-size: 16px;
+}
+
 section{
     position: relative;
 }
